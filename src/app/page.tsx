@@ -8,10 +8,10 @@ import {
   TrendingUp,
   Users,
   GraduationCap,
-  BarChart3,
   MessageSquare,
-  FileCheck,
-  Handshake,
+  Search,
+  Lightbulb,
+  Wrench,
   Rocket,
 } from "lucide-react";
 
@@ -72,27 +72,27 @@ const strengths = [
 const cases = [
   {
     industry: "フィットネス",
+    category: "データ活用",
     company: "全国展開フィットネスクラブ A社",
-    challenge: "各店舗の売上データはPOSで取得していたが、集計が手作業で帳簿のズレが常態化",
     result: "店舗別・キャスト別の売上を可視化。約330時間/月の業務削減に成功",
     metric: "330h",
     metricLabel: "月間業務削減",
   },
   {
-    industry: "飲食",
-    company: "飲食店 B社",
-    challenge: "月次の売上報告や店舗別の簡単集計にExcelで膨大な時間をかけていた",
-    result: "商品別利益率分析でセット組み換え、利益率UPを実現",
-    metric: "+15%",
-    metricLabel: "利益率改善",
+    industry: "サービス業",
+    category: "AI活用",
+    company: "経営層・PR部門向け D社",
+    result: "Gemini × Google連携でPR文案作成40%削減、情報検索60%削減を実現",
+    metric: "60%",
+    metricLabel: "業務時間削減",
   },
   {
-    industry: "人材",
-    company: "人材会社 C社",
-    challenge: "営業日報のExcelが肥大化し、管理コスト月80万円が発生",
-    result: "営業データ基盤の再設計により目標達成率+10%を実現",
-    metric: "+10%",
-    metricLabel: "目標達成率UP",
+    industry: "公益法人",
+    category: "AI活用",
+    company: "公益財団法人 E団体",
+    result: "区民向け生成AIチャットボット導入で問い合わせ対応を24時間化",
+    metric: "24h",
+    metricLabel: "対応可能時間",
   },
 ];
 
@@ -101,31 +101,31 @@ const processSteps = [
     icon: MessageSquare,
     step: "01",
     title: "ヒアリング",
-    description: "現状の課題整理、データで実現したいことを明確化",
+    description: "現状の業務フローや課題感をお伺いし、やりたいことを明確化します",
   },
   {
-    icon: BarChart3,
+    icon: Search,
     step: "02",
-    title: "データ確認",
-    description: "利用可能データの確認、変更すべきことの洗い出し",
+    title: "課題抽出・整理",
+    description: "業務のボトルネックや改善ポイントを特定し、優先順位を整理します",
   },
   {
-    icon: FileCheck,
+    icon: Lightbulb,
     step: "03",
-    title: "レポート提案",
-    description: "BIイメージの共有、要件定義とスケジュール策定",
+    title: "ご提案",
+    description: "課題に対する具体的な解決策・スケジュール・費用感をご提示します",
   },
   {
-    icon: Handshake,
+    icon: Wrench,
     step: "04",
-    title: "契約・利用開始",
-    description: "プログラム・BIの開発・構築、QAサイクルの実施",
+    title: "実装・構築",
+    description: "データ基盤やAI環境の構築、業務フローの改善を実行します",
   },
   {
     icon: Rocket,
     step: "05",
-    title: "定例支援",
-    description: "データ利活用定着支援、継続的な改善提案",
+    title: "定着・伴走支援",
+    description: "現場への定着をサポートし、継続的な改善提案で成果を最大化します",
   },
 ];
 
@@ -320,14 +320,19 @@ export default function Home() {
               <FadeIn key={i} delay={i * 120}>
                 <Link href="/cases" className="card-hover group block h-full rounded-2xl border border-border bg-white overflow-hidden">
                   {/* Metric header */}
-                  <div className="bg-gradient-to-r from-accent-blue to-blue-600 px-8 py-6 text-white">
+                  <div className={`px-8 py-6 text-white ${c.category === "AI活用" ? "bg-gradient-to-r from-emerald-600 to-emerald-500" : "bg-gradient-to-r from-accent-blue to-blue-600"}`}>
                     <p className="font-inter text-4xl font-bold">{c.metric}</p>
                     <p className="mt-1 text-sm font-medium text-white/80">{c.metricLabel}</p>
                   </div>
                   <div className="p-8">
-                    <span className="inline-flex rounded-full bg-light-blue px-3 py-1 text-xs font-medium text-accent-blue">
-                      {c.industry}
-                    </span>
+                    <div className="flex flex-wrap gap-2">
+                      <span className={`inline-flex rounded-full px-3 py-1 text-xs font-medium ${c.category === "AI活用" ? "bg-emerald-50 text-emerald-600" : "bg-light-blue text-accent-blue"}`}>
+                        {c.category}
+                      </span>
+                      <span className="inline-flex rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray">
+                        {c.industry}
+                      </span>
+                    </div>
                     <h3 className="mt-3 text-base font-bold tracking-tight">
                       {c.company}
                     </h3>
@@ -351,10 +356,10 @@ export default function Home() {
                 Process
               </p>
               <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
-                導入までの流れ
+                支援までの流れ
               </h2>
               <p className="mx-auto mt-4 max-w-lg text-sm leading-relaxed text-gray">
-                まずはお気軽にご相談ください。貴社の課題に応じて最適なステップをご提案します。
+                まずはお気軽にご相談ください。データ・AIどちらの支援でも、貴社の課題に応じて最適なステップをご提案します。
               </p>
               <div className="mx-auto mt-6 section-divider" />
             </div>

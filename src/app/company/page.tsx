@@ -43,62 +43,6 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      {/* CEO Message */}
-      <section className="pb-20 md:pb-28">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
-          <FadeIn>
-            <div className="grid gap-10 md:grid-cols-12 md:gap-16">
-              {/* Photo area */}
-              <div className="md:col-span-4">
-                <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-navy to-accent-blue aspect-[3/4]">
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-                    <div className="h-24 w-24 rounded-full bg-white/10 flex items-center justify-center">
-                      <User className="h-12 w-12 text-white/60" />
-                    </div>
-                    <p className="mt-4 text-sm font-medium text-white/60">代表取締役</p>
-                    <p className="mt-1 text-xl font-bold">片口 潤哉</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Message */}
-              <div className="md:col-span-8">
-                <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-accent-blue">
-                  Message
-                </p>
-                <h2 className="mt-2 text-2xl font-bold leading-snug tracking-tight md:text-3xl">
-                  人々が本気ではたらく社会を
-                  <br />
-                  共に創る。
-                </h2>
-
-                <div className="mt-8 space-y-4 text-sm leading-loose text-foreground/80">
-                  <p>
-                    「なりたい状態」を目指し、「やりたいこと」に向かって動けていると、
-                    人は今を幸せに生きられる。ただし現実には、「やりたい」のそばに
-                    「やりたくない」「めんどくさい」が必ずついてくる。
-                  </p>
-                  <p>
-                    たとえば、営業が好きで入社したのに、事務作業に時間の4割を取られる。
-                    本来コア業務に投下したい人と時間を、思い通りに使えない。
-                    その結果、自分（自社）が本当にやりたいことを見失ってしまう。
-                  </p>
-                  <p>
-                    だからこそ私たちは、本当にやりたいことを見出し、無駄を削減することで、
-                    個人と組織が「本気ではたらく」環境をつくっていきます。
-                  </p>
-                </div>
-
-                <div className="mt-8 border-t border-border pt-6">
-                  <p className="text-xs text-gray">代表取締役</p>
-                  <p className="mt-1 text-lg font-bold">片口 潤哉</p>
-                </div>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
       {/* Golden Circle / Philosophy */}
       <section className="bg-navy py-20 md:py-28 text-white">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">

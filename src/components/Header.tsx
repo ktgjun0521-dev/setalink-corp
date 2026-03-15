@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const navLinks = [
   { href: "/services", label: "サービス" },
-  { href: "/cases", label: "導入事例" },
+  { href: "/cases", label: "支援事例" },
   { href: "/company", label: "会社概要" },
   { href: "/contact", label: "お問い合わせ" },
 ];
