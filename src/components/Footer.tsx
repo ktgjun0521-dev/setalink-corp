@@ -4,6 +4,7 @@ const navLinks = [
   { href: "/services", label: "サービス" },
   { href: "/company", label: "会社概要" },
   { href: "/contact", label: "お問い合わせ" },
+  { href: "/notice", label: "電子公告" },
 ];
 
 export default function Footer() {

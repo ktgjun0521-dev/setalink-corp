@@ -11,8 +11,8 @@ const companyInfo = [
   { label: "会社名", value: "株式会社セタリンク" },
   { label: "英語名", value: "SETALink Inc." },
   { label: "設立", value: "2026年4月" },
-  { label: "代表者", value: "（準備中）" },
-  { label: "所在地", value: "（準備中）" },
+  { label: "代表者", value: "片口 潤哉" },
+  { label: "所在地", value: "東京都世田谷区世田谷1-15-23" },
   {
     label: "事業内容",
     value:
