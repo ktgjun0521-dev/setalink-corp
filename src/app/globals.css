@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FEFCF6;
-  --foreground: #1A1A2E;
+  --background: #FFFFFF;
+  --foreground: #0F172A;
   --accent-blue: #2D5BFF;
   --accent-lime: #C4E538;
-  --gray: #6B7280;
-  --border: #E5E5E5;
-  --light-blue: #EFF6FF;
+  --gray: #64748B;
+  --border: #E2E8F0;
+  --light-blue: #F0F4FF;
   --navy: #0F1B4C;
+  --surface: #F8FAFC;
 }
 
 @theme inline {
@@ -20,6 +21,7 @@
   --color-border: var(--border);
   --color-light-blue: var(--light-blue);
   --color-navy: var(--navy);
+  --color-surface: var(--surface);
   --font-sans: var(--font-noto-sans-jp), "Noto Sans JP", sans-serif;
   --font-inter: var(--font-inter), "Inter", sans-serif;
 }
@@ -168,17 +170,17 @@ body {
 
 /* Card hover effect */
 .card-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, var(--accent-blue), #6366F1);
+  background: linear-gradient(135deg, var(--accent-blue), #818CF8, #6366F1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -194,9 +196,17 @@ body {
 
 /* Glass card */
 .glass-card {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Mesh gradient background */
+.mesh-gradient {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(45, 91, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(99, 102, 241, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 80%, rgba(6, 182, 212, 0.05) 0%, transparent 50%);
 }
 
 /* Number badge */
@@ -225,4 +235,23 @@ body {
 .dot-pattern {
   background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
   background-size: 24px 24px;
+}
+
+/* Grid pattern */
+.grid-pattern {
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Strength card equal height */
+.strength-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.strength-card p:last-child {
+  flex: 1;
 }

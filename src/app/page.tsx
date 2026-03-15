@@ -24,6 +24,7 @@ const services = [
     description:
       "データ整備からBI開発、運用設計まで一気通貫で支援。毎月の集計業務を自動化し、正しいデータで意思決定できる環境を構築します。",
     color: "bg-blue-50 text-accent-blue",
+    accent: "from-accent-blue to-blue-600",
   },
   {
     icon: Bot,
@@ -33,6 +34,7 @@ const services = [
     description:
       "Gemini・ChatGPT等の生成AIを業務フローに最適化。AI伴走型の支援プログラムで、現場に定着するAI活用を実現します。",
     color: "bg-emerald-50 text-emerald-600",
+    accent: "from-emerald-500 to-emerald-600",
   },
   {
     icon: Settings,
@@ -42,6 +44,7 @@ const services = [
     description:
       "業務プロセスの可視化・ボトルネック特定・最適化。ツール導入だけでなく、現場の人に寄り添った改善を実行します。",
     color: "bg-amber-50 text-amber-600",
+    accent: "from-amber-500 to-orange-500",
   },
 ];
 
@@ -58,7 +61,7 @@ const strengths = [
     number: "02",
     title: "実装力 × 伴走力",
     description:
-      "エンジニアや運用設計まで社内で一気通貫対応。ミーティングだけのコンサルではなく、手を動かして現場業務を理解した支援を提供します。",
+      "エンジニアリングから運用設計まで一気通貫で対応。ミーティングだけのコンサルではなく、手を動かして現場業務を理解した支援を提供します。",
   },
   {
     icon: GraduationCap,
@@ -134,10 +137,9 @@ export default function Home() {
     <>
       {/* ===== Hero Section ===== */}
       <section className="relative flex min-h-screen items-center overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute inset-0 dot-pattern opacity-30" />
-        <div className="absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full bg-accent-blue/5 blur-3xl" />
-        <div className="absolute -left-20 bottom-0 h-[300px] w-[300px] rounded-full bg-accent-lime/10 blur-3xl" />
+        {/* Background — subtle mesh gradient */}
+        <div className="absolute inset-0 mesh-gradient" />
+        <div className="absolute inset-0 grid-pattern opacity-[0.03]" />
 
         <div className="relative mx-auto max-w-6xl px-6 py-32 lg:px-8 lg:py-40">
           <div className="max-w-3xl">
@@ -151,7 +153,7 @@ export default function Home() {
             </div>
 
             <div className="fade-in-up" style={{ animationDelay: "150ms", animationFillMode: "both" }}>
-              <h1 className="mt-8 text-4xl font-bold leading-[1.15] tracking-tight md:text-5xl lg:text-6xl">
+              <h1 className="mt-8 text-4xl font-bold leading-[1.12] tracking-tight md:text-5xl lg:text-6xl">
                 データの力で、
                 <br />
                 <span className="gradient-text">本気ではたらく</span>
@@ -161,12 +163,9 @@ export default function Home() {
             </div>
 
             <div className="fade-in-up" style={{ animationDelay: "300ms", animationFillMode: "both" }}>
-              <p className="mt-8 max-w-xl text-base leading-relaxed text-gray md:text-lg">
+              <p className="mt-8 max-w-xl text-base leading-[1.8] text-gray md:text-lg">
                 データ基盤構築とAI活用の&quot;現場伴走&quot;を強みとする
-                <br className="hidden md:block" />
-                ITコンサルティング会社。再現性ある技術を、
-                <br className="hidden md:block" />
-                個人と組織になじませます。
+                ITコンサルティング会社。再現性ある技術を、個人と組織になじませます。
               </p>
             </div>
 
@@ -200,7 +199,7 @@ export default function Home() {
       </section>
 
       {/* ===== Services Section ===== */}
-      <section className="relative py-24 md:py-32 lg:py-40">
+      <section className="relative bg-surface py-24 md:py-32 lg:py-40">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <FadeIn>
             <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -209,9 +208,7 @@ export default function Home() {
                   Services
                 </p>
                 <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
-                  3つのサービスで、
-                  <br className="sm:hidden" />
-                  DXを推進
+                  3つのサービスで、DXを推進
                 </h2>
               </div>
               <Link
@@ -228,7 +225,7 @@ export default function Home() {
           <div className="mt-16 grid gap-6 md:grid-cols-3 lg:gap-8">
             {services.map((service, i) => (
               <FadeIn key={service.number} delay={i * 120}>
-                <div className="card-hover group relative h-full rounded-2xl border border-border bg-white p-8">
+                <Link href="/services" className="card-hover group relative flex h-full flex-col rounded-2xl border border-border bg-white p-8">
                   <div className={`inline-flex h-12 w-12 items-center justify-center rounded-xl ${service.color}`}>
                     <service.icon className="h-6 w-6" />
                   </div>
@@ -241,13 +238,13 @@ export default function Home() {
                   <p className="mt-1 font-inter text-[11px] font-medium text-gray">
                     {service.titleEn}
                   </p>
-                  <p className="mt-4 text-sm leading-relaxed text-gray">
+                  <p className="mt-4 flex-1 text-sm leading-relaxed text-gray">
                     {service.description}
                   </p>
                   <div className="mt-6 flex items-center gap-1 text-sm font-medium text-accent-blue opacity-0 transition-opacity group-hover:opacity-100">
                     詳しく見る <ArrowRight className="h-3.5 w-3.5" />
                   </div>
-                </div>
+                </Link>
               </FadeIn>
             ))}
           </div>
@@ -256,7 +253,7 @@ export default function Home() {
 
       {/* ===== Strengths Section ===== */}
       <section className="relative bg-navy py-24 md:py-32 lg:py-40 text-white overflow-hidden">
-        <div className="absolute inset-0 dot-pattern opacity-5" />
+        <div className="absolute inset-0 grid-pattern opacity-[0.04]" />
         <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
           <FadeIn>
             <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-accent-blue">
@@ -271,17 +268,17 @@ export default function Home() {
           <div className="mt-16 grid gap-8 md:grid-cols-3 lg:gap-12">
             {strengths.map((strength, i) => (
               <FadeIn key={strength.number} delay={i * 120}>
-                <div className="relative rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
+                <div className="strength-card relative rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent-blue/20 text-accent-blue">
                     <strength.icon className="h-6 w-6" />
                   </div>
-                  <span className="absolute right-6 top-6 font-inter text-5xl font-bold text-white/5">
+                  <span className="absolute right-6 top-6 font-inter text-5xl font-bold text-white/[0.04]">
                     {strength.number}
                   </span>
                   <h3 className="mt-6 text-lg font-bold leading-snug tracking-tight">
                     {strength.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-white/60">
+                  <p className="mt-3 text-sm leading-[1.8] text-white/60">
                     {strength.description}
                   </p>
                 </div>
@@ -301,7 +298,7 @@ export default function Home() {
                   Case Studies
                 </p>
                 <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
-                  導入事例
+                  支援事例
                 </h2>
               </div>
               <Link
@@ -318,13 +315,13 @@ export default function Home() {
           <div className="mt-16 grid gap-6 md:grid-cols-3 lg:gap-8">
             {cases.map((c, i) => (
               <FadeIn key={i} delay={i * 120}>
-                <Link href="/cases" className="card-hover group block h-full rounded-2xl border border-border bg-white overflow-hidden">
+                <Link href="/cases" className="card-hover group flex h-full flex-col rounded-2xl border border-border bg-white overflow-hidden">
                   {/* Metric header */}
                   <div className={`px-8 py-6 text-white ${c.category === "AI活用" ? "bg-gradient-to-r from-emerald-600 to-emerald-500" : "bg-gradient-to-r from-accent-blue to-blue-600"}`}>
                     <p className="font-inter text-4xl font-bold">{c.metric}</p>
                     <p className="mt-1 text-sm font-medium text-white/80">{c.metricLabel}</p>
                   </div>
-                  <div className="p-8">
+                  <div className="flex flex-1 flex-col p-8">
                     <div className="flex flex-wrap gap-2">
                       <span className={`inline-flex rounded-full px-3 py-1 text-xs font-medium ${c.category === "AI活用" ? "bg-emerald-50 text-emerald-600" : "bg-light-blue text-accent-blue"}`}>
                         {c.category}
@@ -336,7 +333,7 @@ export default function Home() {
                     <h3 className="mt-3 text-base font-bold tracking-tight">
                       {c.company}
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-gray">
+                    <p className="mt-3 flex-1 text-sm leading-relaxed text-gray">
                       {c.result}
                     </p>
                   </div>
@@ -348,7 +345,7 @@ export default function Home() {
       </section>
 
       {/* ===== Process Section ===== */}
-      <section className="bg-light-blue py-24 md:py-32 lg:py-40">
+      <section className="bg-surface py-24 md:py-32 lg:py-40">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <FadeIn>
             <div className="text-center">
@@ -368,7 +365,7 @@ export default function Home() {
           <div className="mt-16 grid gap-4 sm:grid-cols-2 md:grid-cols-5 lg:gap-6">
             {processSteps.map((step, i) => (
               <FadeIn key={step.step} delay={i * 100}>
-                <div className="relative flex h-full flex-col items-center rounded-2xl bg-white p-6 text-center shadow-sm">
+                <div className="relative flex h-full flex-col items-center rounded-2xl border border-border bg-white p-6 text-center">
                   <div className="number-badge">{step.step}</div>
                   <div className="mt-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-light-blue text-accent-blue">
                     <step.icon className="h-5 w-5" />
@@ -387,19 +384,17 @@ export default function Home() {
       {/* ===== CTA Section ===== */}
       <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
         <div className="absolute inset-0 hero-gradient" />
+        <div className="absolute inset-0 grid-pattern opacity-[0.03]" />
         <div className="relative mx-auto max-w-6xl px-6 text-center lg:px-8">
           <FadeIn>
             <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-white/60">
               Contact
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
-              まずはお気軽に
-              <br className="md:hidden" />
-              ご相談ください
+              まずはお気軽にご相談ください
             </h2>
             <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-white/70">
-              データ活用・AI導入・業務改善に関するご相談を承っております。
-              初回のヒアリングは無料です。
+              データ活用・AI導入・業務改善に関するご相談を承っております。初回のヒアリングは無料です。
             </p>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link

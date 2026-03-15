@@ -113,7 +113,7 @@ export default function CompanyPage() {
 
           <FadeIn delay={100}>
             <div className="mx-auto mt-12 max-w-3xl">
-              <dl className="divide-y divide-border rounded-2xl border border-border bg-white overflow-hidden">
+              <dl className="divide-y divide-border rounded-2xl border border-border bg-background overflow-hidden">
                 {companyInfo.map((item) => (
                   <div
                     key={item.label}

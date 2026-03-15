@@ -114,7 +114,7 @@ export default function ServicesPage() {
       {services.map((service, i) => (
         <section
           key={service.number}
-          className={`py-20 md:py-28 ${i % 2 === 1 ? "bg-light-blue" : ""}`}
+          className={`py-20 md:py-28 ${i % 2 === 1 ? "bg-surface" : ""}`}
         >
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="grid gap-12 md:grid-cols-12 md:gap-16">
