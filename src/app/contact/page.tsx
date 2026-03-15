@@ -21,16 +21,31 @@ export default function ContactPage() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setSending(true);
+    setError("");
 
-    // Simulate send (no backend yet)
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    setSending(false);
-    setSubmitted(true);
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "送信に失敗しました");
+      }
+
+      setSending(false);
+      setSubmitted(true);
+    } catch (err) {
+      setSending(false);
+      setError(err instanceof Error ? err.message : "送信に失敗しました。時間をおいて再度お試しください。");
+    }
   };
 
   const handleChange = (
@@ -209,6 +224,13 @@ export default function ContactPage() {
                   />
                 </div>
               </div>
+
+              {/* Error message */}
+              {error && (
+                <div className="mt-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600">
+                  {error}
+                </div>
+              )}
 
               {/* Submit */}
               <div className="mt-10">
