@@ -20,26 +20,26 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "株式会社セタリンク | SETALink Inc.",
-    template: "%s | 株式会社セタリンク",
+    default: "SETALINK | データ × AI で、本気ではたらく社会を共に創る",
+    template: "%s | SETALINK",
   },
   description:
-    "データコンサルティング・AI導入支援・業務改善を一気通貫で支援。株式会社セタリンクは、企業のデータ活用とDX推進をサポートします。",
+    "データ基盤構築とAI活用の現場伴走を強みとするITコンサルティング会社。データコンサルティング・AI導入支援・業務改善(BPR)を一気通貫で支援します。",
   metadataBase: new URL("https://setalinkapp.com"),
   openGraph: {
-    title: "株式会社セタリンク | SETALink Inc.",
+    title: "SETALINK | データ × AI で、本気ではたらく社会を共に創る",
     description:
-      "データコンサルティング・AI導入支援・業務改善を一気通貫で支援。",
+      "データ基盤構築とAI活用の現場伴走を強みとするITコンサルティング会社。",
     url: "https://setalinkapp.com",
-    siteName: "株式会社セタリンク",
+    siteName: "SETALINK",
     locale: "ja_JP",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "株式会社セタリンク | SETALink Inc.",
+    title: "SETALINK | データ × AI で、本気ではたらく社会を共に創る",
     description:
-      "データコンサルティング・AI導入支援・業務改善を一気通貫で支援。",
+      "データ基盤構築とAI活用の現場伴走を強みとするITコンサルティング会社。",
   },
   robots: {
     index: true,

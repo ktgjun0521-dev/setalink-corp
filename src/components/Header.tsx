@@ -5,6 +5,7 @@ import Link from "next/link";
 
 const navLinks = [
   { href: "/services", label: "サービス" },
+  { href: "/cases", label: "導入事例" },
   { href: "/company", label: "会社概要" },
   { href: "/contact", label: "お問い合わせ" },
 ];
@@ -21,7 +22,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Lock body scroll when menu is open
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = "hidden";
@@ -45,9 +45,19 @@ export default function Header() {
         {/* Logo */}
         <Link
           href="/"
-          className="font-inter text-xl font-bold tracking-tight text-foreground transition-opacity hover:opacity-70"
+          className="flex items-center gap-2 transition-opacity hover:opacity-70"
         >
-          SETALink
+          {/* Logo mark - connected circles */}
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="8" cy="20" r="5" stroke="#2D5BFF" strokeWidth="2.5" fill="none" />
+            <circle cx="16" cy="12" r="4" stroke="#0EA5E9" strokeWidth="2.5" fill="none" />
+            <circle cx="22" cy="6" r="3" stroke="#06B6D4" strokeWidth="2" fill="none" />
+            <line x1="12" y1="17" x2="13" y2="15" stroke="#2D5BFF" strokeWidth="2" strokeLinecap="round" />
+            <line x1="19" y1="10" x2="20" y2="8" stroke="#0EA5E9" strokeWidth="2" strokeLinecap="round" />
+          </svg>
+          <span className="font-inter text-xl font-bold tracking-tight text-foreground">
+            SetaLink
+          </span>
         </Link>
 
         {/* Desktop Nav */}
@@ -61,6 +71,12 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          <Link
+            href="/contact"
+            className="inline-flex h-9 items-center justify-center rounded-full bg-accent-blue px-5 text-xs font-medium text-white transition-all duration-300 hover:shadow-lg hover:shadow-accent-blue/20"
+          >
+            無料相談
+          </Link>
         </nav>
 
         {/* Mobile Hamburger */}
@@ -92,9 +108,7 @@ export default function Header() {
       {/* Mobile Menu Overlay */}
       <div
         className={`fixed inset-0 z-40 bg-background transition-all duration-500 md:hidden ${
-          menuOpen
-            ? "visible opacity-100"
-            : "invisible opacity-0"
+          menuOpen ? "visible opacity-100" : "invisible opacity-0"
         }`}
       >
         <nav className="flex h-full flex-col items-center justify-center gap-10">
@@ -108,6 +122,13 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          <Link
+            href="/contact"
+            onClick={() => setMenuOpen(false)}
+            className="mt-4 inline-flex h-12 items-center justify-center rounded-full bg-accent-blue px-8 text-sm font-medium text-white"
+          >
+            無料相談はこちら
+          </Link>
         </nav>
       </div>
     </header>
