@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import {
   Database,
@@ -92,6 +93,10 @@ export default function ServicesPage() {
     <>
       {/* Page Header */}
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image src="/images/services-bg.jpg" alt="" fill className="object-cover" quality={60} sizes="100vw" />
+          <div className="absolute inset-0 bg-background/[0.96]" />
+        </div>
         <div className="absolute -right-32 -top-32 h-[400px] w-[400px] rounded-full bg-accent-blue/5 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
           <FadeIn>
@@ -121,7 +126,7 @@ export default function ServicesPage() {
               {/* Left: Title area */}
               <div className="md:col-span-4">
                 <FadeIn>
-                  <div className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ${service.iconBg}`}>
+                  <div className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ${service.iconBg} transition-transform duration-300 hover:scale-110`}>
                     <service.icon className="h-7 w-7" />
                   </div>
                   <p className="mt-6 font-inter text-6xl font-bold text-accent-blue/10">
@@ -173,10 +178,10 @@ export default function ServicesPage() {
                       {service.outputs.map((output) => (
                         <div
                           key={output.label}
-                          className="flex items-center gap-3 rounded-xl border border-border bg-white p-4"
+                          className="group flex items-center gap-3 rounded-xl border border-border bg-white p-4 transition-all duration-300 hover:border-accent-blue/20 hover:shadow-sm"
                         >
                           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-light-blue text-accent-blue">
-                            <output.icon className="h-4.5 w-4.5" />
+                            <output.icon className="h-4.5 w-4.5 transition-transform duration-300 group-hover:scale-110" />
                           </div>
                           <span className="text-sm font-medium">{output.label}</span>
                         </div>
@@ -208,7 +213,7 @@ export default function ServicesPage() {
               <div className="mt-8">
                 <Link
                   href="/contact"
-                  className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-accent-blue px-8 text-sm font-medium text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-accent-blue/25"
+                  className="btn-shimmer group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent-blue to-blue-600 px-8 text-sm font-medium text-white transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-accent-blue/30 active:scale-[0.98]"
                 >
                   お見積り・ご相談
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

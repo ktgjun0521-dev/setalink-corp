@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import {
   ArrowRight,
@@ -38,6 +39,7 @@ interface CaseItem {
   results: CaseResult[];
   point: string;
   tags: string[];
+  image: string;
 }
 
 const dataCases: CaseItem[] = [
@@ -58,6 +60,7 @@ const dataCases: CaseItem[] = [
     point:
       "店舗別・キャスト別の売上を可視化。経営会議や店長ミーティングでの意思決定がスムーズに。",
     tags: ["Power BI", "データ基盤構築", "業務自動化", "ダッシュボード"],
+    image: "/images/case-fitness.jpg",
   },
   {
     id: 2,
@@ -76,6 +79,7 @@ const dataCases: CaseItem[] = [
     point:
       "商品別利益率分析でセット組み換え、感覚の見直しやスタッフ配置の最適化につながりました。",
     tags: ["データ分析", "利益率分析", "可視化"],
+    image: "/images/case-food.jpg",
   },
   {
     id: 3,
@@ -94,6 +98,7 @@ const dataCases: CaseItem[] = [
     point:
       "毎日確認すべき指標が入った日別ダッシュボードで日次の判断が可能に。営業の目標達成率が約10%向上。",
     tags: ["営業データ基盤", "ダッシュボード", "KPI設計"],
+    image: "/images/case-hr.jpg",
   },
 ];
 
@@ -121,6 +126,7 @@ const aiCases: CaseItem[] = [
       "秘書業務効率化",
       "PR支援",
     ],
+    image: "/images/case-service.jpg",
   },
   {
     id: 5,
@@ -145,6 +151,7 @@ const aiCases: CaseItem[] = [
       "セキュリティ設計",
       "行政DX",
     ],
+    image: "/images/case-gov.jpg",
   },
 ];
 
@@ -152,21 +159,30 @@ function CaseCard({ c, index, bgAlt }: { c: CaseItem; index: number; bgAlt: bool
   return (
     <section className={`py-16 md:py-24 ${bgAlt ? "bg-light-blue" : ""}`}>
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        {/* Case header with image */}
         <FadeIn>
-          <div className="flex flex-wrap items-center gap-3">
-            <span className="inline-flex rounded-full bg-accent-blue/10 px-4 py-1.5 text-xs font-semibold text-accent-blue">
-              {c.industry}
-            </span>
-            <span className="font-inter text-xs text-gray">
-              CASE {String(index + 1).padStart(2, "0")}
-            </span>
+          <div className="relative overflow-hidden rounded-2xl mb-10">
+            <div className="relative h-48 md:h-64">
+              <Image src={c.image} alt="" fill className="object-cover" quality={70} sizes="(max-width: 768px) 100vw, 1152px" />
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" />
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+              <div className="flex flex-wrap items-center gap-3 mb-3">
+                <span className="inline-flex rounded-full bg-white/20 backdrop-blur-sm px-4 py-1.5 text-xs font-semibold text-white">
+                  {c.industry}
+                </span>
+                <span className="font-inter text-xs text-white/70">
+                  CASE {String(index + 1).padStart(2, "0")}
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
+                {c.company}
+              </h3>
+              <p className="mt-2 text-base font-medium text-accent-lime">
+                {c.subtitle}
+              </p>
+            </div>
           </div>
-          <h3 className="mt-4 text-2xl font-bold tracking-tight md:text-3xl">
-            {c.company}
-          </h3>
-          <p className="mt-2 text-base font-medium text-accent-blue">
-            {c.subtitle}
-          </p>
         </FadeIn>
 
         <div className="mt-10 grid gap-10 md:grid-cols-12 md:gap-16">
@@ -239,7 +255,7 @@ function CaseCard({ c, index, bgAlt }: { c: CaseItem; index: number; bgAlt: bool
                 {c.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-border bg-white px-3 py-1 text-xs text-gray"
+                    className="rounded-full border border-border bg-white px-3 py-1 text-xs text-gray transition-all duration-300 hover:border-accent-blue/30 hover:bg-accent-blue/5 hover:text-accent-blue"
                   >
                     {tag}
                   </span>
@@ -340,7 +356,7 @@ export default function CasesPage() {
               <div className="mt-8">
                 <Link
                   href="/contact"
-                  className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-accent-blue px-8 text-sm font-medium text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
+                  className="btn-shimmer group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent-blue to-blue-600 px-8 text-sm font-medium text-white transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-accent-blue/30 active:scale-[0.98]"
                 >
                   無料相談はこちら
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

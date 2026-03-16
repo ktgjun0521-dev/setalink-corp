@@ -19,6 +19,7 @@ export default function NoticePage() {
             <h1 className="mt-2 text-4xl font-bold tracking-tight md:text-5xl">
               電子公告
             </h1>
+            <div className="section-divider mt-8" />
           </FadeIn>
         </div>
       </section>
@@ -39,13 +40,13 @@ export default function NoticePage() {
 
               <div className="mt-12 border-t border-border pt-8">
                 <dl className="space-y-4 text-sm">
-                  <div className="grid grid-cols-1 gap-1 sm:grid-cols-3 sm:gap-4">
+                  <div className="row-highlight grid grid-cols-1 gap-1 sm:grid-cols-3 sm:gap-4 py-2 px-2 rounded-lg">
                     <dt className="font-medium text-gray">公告方法</dt>
                     <dd className="text-foreground sm:col-span-2">
                       電子公告（本ウェブサイトに掲載）
                     </dd>
                   </div>
-                  <div className="grid grid-cols-1 gap-1 sm:grid-cols-3 sm:gap-4">
+                  <div className="row-highlight grid grid-cols-1 gap-1 sm:grid-cols-3 sm:gap-4 py-2 px-2 rounded-lg">
                     <dt className="font-medium text-gray">公告URL</dt>
                     <dd className="sm:col-span-2">
                       <a
@@ -56,7 +57,7 @@ export default function NoticePage() {
                       </a>
                     </dd>
                   </div>
-                  <div className="grid grid-cols-1 gap-1 sm:grid-cols-3 sm:gap-4">
+                  <div className="row-highlight grid grid-cols-1 gap-1 sm:grid-cols-3 sm:gap-4 py-2 px-2 rounded-lg">
                     <dt className="font-medium text-gray">会社名</dt>
                     <dd className="text-foreground sm:col-span-2">
                       株式会社セタリンク

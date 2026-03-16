@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const navLinks = [
@@ -13,6 +14,7 @@ const navLinks = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,6 +34,9 @@ export default function Header() {
       document.body.style.overflow = "";
     };
   }, [menuOpen]);
+
+  // Determine if hero has dark background (home page)
+  const isHomePage = pathname === "/";
 
   return (
     <header
@@ -55,7 +60,9 @@ export default function Header() {
             <line x1="12" y1="17" x2="13" y2="15" stroke="#2D5BFF" strokeWidth="2" strokeLinecap="round" />
             <line x1="19" y1="10" x2="20" y2="8" stroke="#0EA5E9" strokeWidth="2" strokeLinecap="round" />
           </svg>
-          <span className="font-inter text-xl font-bold tracking-tight text-foreground">
+          <span className={`font-inter text-xl font-bold tracking-tight transition-colors duration-300 ${
+            !scrolled && isHomePage ? "text-white" : "text-foreground"
+          }`}>
             SetaLink
           </span>
         </Link>
@@ -66,14 +73,20 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="link-underline text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
+              className={`link-underline text-sm font-medium transition-colors ${
+                pathname === link.href
+                  ? "text-accent-blue"
+                  : !scrolled && isHomePage
+                    ? "text-white/80 hover:text-white"
+                    : "text-foreground/80 hover:text-foreground"
+              }`}
             >
               {link.label}
             </Link>
           ))}
           <Link
             href="/contact"
-            className="inline-flex h-9 items-center justify-center rounded-full bg-accent-blue px-5 text-xs font-medium text-white transition-all duration-300 hover:shadow-lg hover:shadow-accent-blue/20"
+            className="btn-shimmer inline-flex h-9 items-center justify-center rounded-full bg-gradient-to-r from-accent-blue to-blue-600 px-5 text-xs font-medium text-white transition-all duration-300 hover:shadow-lg hover:shadow-accent-blue/25 hover:scale-[1.05] active:scale-[0.97]"
           >
             無料相談
           </Link>
@@ -87,18 +100,24 @@ export default function Header() {
         >
           <div className="flex flex-col gap-1.5">
             <span
-              className={`block h-0.5 w-6 bg-foreground transition-all duration-300 ${
-                menuOpen ? "translate-y-2 rotate-45" : ""
+              className={`block h-0.5 w-6 transition-all duration-300 ${
+                menuOpen
+                  ? "translate-y-2 rotate-45 bg-foreground"
+                  : !scrolled && isHomePage ? "bg-white" : "bg-foreground"
               }`}
             />
             <span
-              className={`block h-0.5 w-6 bg-foreground transition-all duration-300 ${
-                menuOpen ? "opacity-0" : ""
+              className={`block h-0.5 w-6 transition-all duration-300 ${
+                menuOpen
+                  ? "opacity-0 bg-foreground"
+                  : !scrolled && isHomePage ? "bg-white" : "bg-foreground"
               }`}
             />
             <span
-              className={`block h-0.5 w-6 bg-foreground transition-all duration-300 ${
-                menuOpen ? "-translate-y-2 -rotate-45" : ""
+              className={`block h-0.5 w-6 transition-all duration-300 ${
+                menuOpen
+                  ? "-translate-y-2 -rotate-45 bg-foreground"
+                  : !scrolled && isHomePage ? "bg-white" : "bg-foreground"
               }`}
             />
           </div>
@@ -117,7 +136,9 @@ export default function Header() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="text-2xl font-bold text-foreground transition-colors hover:text-accent-blue"
+              className={`text-2xl font-bold transition-colors hover:text-accent-blue ${
+                pathname === link.href ? "text-accent-blue" : "text-foreground"
+              }`}
             >
               {link.label}
             </Link>
@@ -125,7 +146,7 @@ export default function Header() {
           <Link
             href="/contact"
             onClick={() => setMenuOpen(false)}
-            className="mt-4 inline-flex h-12 items-center justify-center rounded-full bg-accent-blue px-8 text-sm font-medium text-white"
+            className="btn-shimmer mt-4 inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-accent-blue to-blue-600 px-8 text-sm font-medium text-white transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]"
           >
             無料相談はこちら
           </Link>

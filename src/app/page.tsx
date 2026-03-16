@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
+import CountUp from "@/components/CountUp";
 import {
   Database,
   Bot,
@@ -78,24 +80,30 @@ const cases = [
     category: "データ活用",
     company: "全国展開フィットネスクラブ A社",
     result: "店舗別・キャスト別の売上を可視化。約330時間/月の業務削減に成功",
-    metric: "330h",
+    metric: 330,
+    metricSuffix: "h",
     metricLabel: "月間業務削減",
+    image: "/images/case-fitness.jpg",
   },
   {
     industry: "サービス業",
     category: "AI活用",
     company: "経営層・PR部門向け D社",
     result: "Gemini × Google連携でPR文案作成40%削減、情報検索60%削減を実現",
-    metric: "60%",
+    metric: 60,
+    metricSuffix: "%",
     metricLabel: "業務時間削減",
+    image: "/images/case-service.jpg",
   },
   {
     industry: "公益法人",
     category: "AI活用",
     company: "公益財団法人 E団体",
     result: "区民向け生成AIチャットボット導入で問い合わせ対応を24時間化",
-    metric: "24h",
+    metric: 24,
+    metricSuffix: "h",
     metricLabel: "対応可能時間",
+    image: "/images/case-gov.jpg",
   },
 ];
 
@@ -137,33 +145,47 @@ export default function Home() {
     <>
       {/* ===== Hero Section ===== */}
       <section className="relative flex min-h-screen items-center overflow-hidden">
-        {/* Background — subtle mesh gradient */}
-        <div className="absolute inset-0 mesh-gradient" />
-        <div className="absolute inset-0 grid-pattern opacity-[0.03]" />
+        {/* Background image with overlay */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero-bg.jpg"
+            alt=""
+            fill
+            className="object-cover scale-105"
+            quality={80}
+            priority
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0F1B4C]/95 via-[#0F1B4C]/85 to-[#2D5BFF]/60" />
+        </div>
+
+        {/* Decorative floating shapes */}
+        <div className="floating-shape bg-accent-blue h-64 w-64 top-20 right-[15%]" style={{ animationDelay: "0s" }} />
+        <div className="floating-shape bg-accent-lime h-40 w-40 bottom-32 right-[10%]" style={{ animationDelay: "2s" }} />
+        <div className="floating-shape bg-cyan-400 h-24 w-24 top-[40%] right-[5%]" style={{ animationDelay: "4s" }} />
 
         <div className="relative mx-auto max-w-6xl px-6 py-32 lg:px-8 lg:py-40">
           <div className="max-w-3xl">
             <div className="fade-in-up">
-              <div className="inline-flex items-center gap-2 rounded-full border border-accent-blue/20 bg-accent-blue/5 px-4 py-1.5">
-                <span className="h-2 w-2 rounded-full bg-accent-blue animate-pulse" />
-                <span className="font-inter text-xs font-medium text-accent-blue">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-4 py-1.5">
+                <span className="h-2 w-2 rounded-full bg-accent-lime animate-pulse" />
+                <span className="font-inter text-xs font-medium text-white/90">
                   DX / AX / Data Consulting
                 </span>
               </div>
             </div>
 
             <div className="fade-in-up" style={{ animationDelay: "150ms", animationFillMode: "both" }}>
-              <h1 className="mt-8 text-4xl font-bold leading-[1.12] tracking-tight md:text-5xl lg:text-6xl">
-                データの力で、
-                <br />
-                <span className="gradient-text">本気ではたらく</span>
+              <h1 className="mt-8 text-4xl font-bold leading-[1.12] tracking-tight text-white md:text-5xl lg:text-6xl">
+                人々が
+                <span className="bg-gradient-to-r from-accent-lime to-emerald-300 bg-clip-text text-transparent">本気ではたらく</span>
                 <br />
                 社会を共に創る。
               </h1>
             </div>
 
             <div className="fade-in-up" style={{ animationDelay: "300ms", animationFillMode: "both" }}>
-              <p className="mt-8 max-w-xl text-base leading-[1.8] text-gray md:text-lg">
+              <p className="mt-8 max-w-xl text-base leading-[1.8] text-white/70 md:text-lg">
                 データ基盤構築とAI活用の&quot;現場伴走&quot;を強みとする
                 ITコンサルティング会社。再現性ある技術を、個人と組織になじませます。
               </p>
@@ -173,14 +195,14 @@ export default function Home() {
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <Link
                   href="/contact"
-                  className="group inline-flex h-14 items-center justify-center gap-2 rounded-full bg-accent-blue px-8 text-sm font-medium text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-accent-blue/25"
+                  className="btn-shimmer group inline-flex h-14 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent-blue to-blue-600 px-8 text-sm font-medium text-white transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-accent-blue/30 active:scale-[0.98]"
                 >
                   無料相談はこちら
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
                 <Link
                   href="/services"
-                  className="inline-flex h-14 items-center justify-center rounded-full border border-foreground/20 px-8 text-sm font-medium text-foreground transition-all duration-300 hover:border-foreground hover:scale-[1.02]"
+                  className="gradient-border-hover inline-flex h-14 items-center justify-center rounded-full border border-white/20 px-8 text-sm font-medium text-white transition-all duration-300 hover:border-transparent hover:scale-[1.03] hover:bg-white/5 active:scale-[0.98]"
                 >
                   サービスを見る
                 </Link>
@@ -192,14 +214,14 @@ export default function Home() {
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 fade-in" style={{ animationDelay: "1s", animationFillMode: "both" }}>
           <div className="flex flex-col items-center gap-2">
-            <span className="font-inter text-[10px] uppercase tracking-widest text-gray">Scroll</span>
-            <div className="h-8 w-px bg-gradient-to-b from-gray to-transparent" />
+            <span className="font-inter text-[10px] uppercase tracking-widest text-white/50">Scroll</span>
+            <div className="h-8 w-px bg-gradient-to-b from-white/40 to-transparent" />
           </div>
         </div>
       </section>
 
       {/* ===== Services Section ===== */}
-      <section className="relative bg-surface py-24 md:py-32 lg:py-40">
+      <section className="relative section-depth py-24 md:py-32 lg:py-40">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <FadeIn>
             <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -216,7 +238,7 @@ export default function Home() {
                 className="group inline-flex items-center gap-1 text-sm font-medium text-foreground/70 transition-colors hover:text-accent-blue"
               >
                 詳しく見る
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </div>
             <div className="section-divider mt-6" />
@@ -226,8 +248,8 @@ export default function Home() {
             {services.map((service, i) => (
               <FadeIn key={service.number} delay={i * 120}>
                 <Link href="/services" className="card-hover group relative flex h-full flex-col rounded-2xl border border-border bg-white p-8">
-                  <div className={`inline-flex h-12 w-12 items-center justify-center rounded-xl ${service.color}`}>
-                    <service.icon className="h-6 w-6" />
+                  <div className={`inline-flex h-12 w-12 items-center justify-center rounded-xl ${service.color} transition-transform duration-300`}>
+                    <service.icon className="h-6 w-6 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
                   </div>
                   <p className="mt-6 font-inter text-xs font-semibold text-accent-blue">
                     {service.number}
@@ -241,7 +263,7 @@ export default function Home() {
                   <p className="mt-4 flex-1 text-sm leading-relaxed text-gray">
                     {service.description}
                   </p>
-                  <div className="mt-6 flex items-center gap-1 text-sm font-medium text-accent-blue opacity-0 transition-opacity group-hover:opacity-100">
+                  <div className="mt-6 flex items-center gap-1 text-sm font-medium text-accent-blue opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1">
                     詳しく見る <ArrowRight className="h-3.5 w-3.5" />
                   </div>
                 </Link>
@@ -268,9 +290,9 @@ export default function Home() {
           <div className="mt-16 grid gap-8 md:grid-cols-3 lg:gap-12">
             {strengths.map((strength, i) => (
               <FadeIn key={strength.number} delay={i * 120}>
-                <div className="strength-card relative rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent-blue/20 text-accent-blue">
-                    <strength.icon className="h-6 w-6" />
+                <div className="strength-card group relative rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-500 hover:bg-white/10 hover:border-white/20">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent-blue/20 text-accent-blue transition-transform duration-500 group-hover:scale-110">
+                    <strength.icon className="h-6 w-6" style={{ animation: `float 3s ease-in-out ${i * 0.7}s infinite` }} />
                   </div>
                   <span className="absolute right-6 top-6 font-inter text-5xl font-bold text-white/[0.04]">
                     {strength.number}
@@ -306,7 +328,7 @@ export default function Home() {
                 className="group inline-flex items-center gap-1 text-sm font-medium text-foreground/70 transition-colors hover:text-accent-blue"
               >
                 すべての事例を見る
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </div>
             <div className="section-divider mt-6" />
@@ -316,10 +338,16 @@ export default function Home() {
             {cases.map((c, i) => (
               <FadeIn key={i} delay={i * 120}>
                 <Link href="/cases" className="card-hover group flex h-full flex-col rounded-2xl border border-border bg-white overflow-hidden">
-                  {/* Metric header */}
-                  <div className={`px-8 py-6 text-white ${c.category === "AI活用" ? "bg-gradient-to-r from-emerald-600 to-emerald-500" : "bg-gradient-to-r from-accent-blue to-blue-600"}`}>
-                    <p className="font-inter text-4xl font-bold">{c.metric}</p>
-                    <p className="mt-1 text-sm font-medium text-white/80">{c.metricLabel}</p>
+                  {/* Image + Metric header */}
+                  <div className="relative h-44 overflow-hidden">
+                    <Image src={c.image} alt="" fill className="object-cover transition-transform duration-500 group-hover:scale-105" quality={70} sizes="(max-width: 768px) 100vw, 384px" />
+                    <div className={`absolute inset-0 ${c.category === "AI活用" ? "bg-gradient-to-t from-emerald-900/80 to-emerald-800/20" : "bg-gradient-to-t from-[#0F1B4C]/80 to-accent-blue/20"}`} />
+                    <div className="absolute bottom-0 left-0 px-8 py-5 text-white">
+                      <p className="font-inter text-4xl font-bold">
+                        <CountUp target={c.metric} suffix={c.metricSuffix} />
+                      </p>
+                      <p className="mt-1 text-sm font-medium text-white/80">{c.metricLabel}</p>
+                    </div>
                   </div>
                   <div className="flex flex-1 flex-col p-8">
                     <div className="flex flex-wrap gap-2">
@@ -345,7 +373,7 @@ export default function Home() {
       </section>
 
       {/* ===== Process Section ===== */}
-      <section className="bg-surface py-24 md:py-32 lg:py-40">
+      <section className="section-depth py-24 md:py-32 lg:py-40">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <FadeIn>
             <div className="text-center">
@@ -365,9 +393,9 @@ export default function Home() {
           <div className="mt-16 grid gap-4 sm:grid-cols-2 md:grid-cols-5 lg:gap-6">
             {processSteps.map((step, i) => (
               <FadeIn key={step.step} delay={i * 100}>
-                <div className="relative flex h-full flex-col items-center rounded-2xl border border-border bg-white p-6 text-center">
+                <div className={`relative flex h-full flex-col items-center rounded-2xl border border-border bg-white p-6 text-center ${i < processSteps.length - 1 ? "process-connector" : ""}`}>
                   <div className="number-badge">{step.step}</div>
-                  <div className="mt-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-light-blue text-accent-blue">
+                  <div className="mt-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-light-blue text-accent-blue icon-hover-bounce">
                     <step.icon className="h-5 w-5" />
                   </div>
                   <h3 className="mt-3 text-sm font-bold">{step.title}</h3>
@@ -383,7 +411,17 @@ export default function Home() {
 
       {/* ===== CTA Section ===== */}
       <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
-        <div className="absolute inset-0 hero-gradient" />
+        <div className="absolute inset-0">
+          <Image
+            src="/images/cta-bg.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            quality={75}
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0F1B4C]/95 via-[#1A1A2E]/90 to-[#2D5BFF]/80" />
+        </div>
         <div className="absolute inset-0 grid-pattern opacity-[0.03]" />
         <div className="relative mx-auto max-w-6xl px-6 text-center lg:px-8">
           <FadeIn>
@@ -399,10 +437,10 @@ export default function Home() {
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
                 href="/contact"
-                className="group inline-flex h-14 items-center justify-center gap-2 rounded-full bg-white px-10 text-sm font-bold text-navy transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
+                className="btn-shimmer group inline-flex h-14 items-center justify-center gap-2 rounded-full bg-white px-10 text-sm font-bold text-navy transition-all duration-300 hover:scale-[1.03] hover:shadow-xl active:scale-[0.98]"
               >
                 無料相談はこちら
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </div>
           </FadeIn>

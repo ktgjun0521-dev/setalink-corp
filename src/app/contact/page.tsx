@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 
 interface FormData {
@@ -62,18 +63,20 @@ export default function ContactPage() {
       <section className="flex min-h-[70vh] items-center pt-20">
         <div className="mx-auto max-w-6xl px-6 py-24 text-center lg:px-8">
           <FadeIn>
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent-lime/30">
+            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-emerald-100" style={{ animation: "scaleIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards" }}>
               <svg
-                className="h-8 w-8 text-foreground"
+                className="h-10 w-10 text-emerald-600"
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth={2}
+                strokeWidth={2.5}
                 stroke="currentColor"
+                style={{ opacity: 0, animation: "fadeIn 0.4s 0.3s ease forwards" }}
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   d="M4.5 12.75l6 6 9-13.5"
+                  style={{ strokeDasharray: 40, strokeDashoffset: 40, animation: "checkmark-draw 0.6s 0.5s ease forwards" }}
                 />
               </svg>
             </div>
@@ -94,8 +97,12 @@ export default function ContactPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="pt-32 pb-8 md:pt-40 md:pb-12">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+      <section className="relative pt-32 pb-8 md:pt-40 md:pb-12 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image src="/images/contact-bg.jpg" alt="" fill className="object-cover" quality={60} sizes="100vw" />
+          <div className="absolute inset-0 bg-background/[0.97]" />
+        </div>
+        <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
           <FadeIn>
             <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-gray">
               Contact
@@ -237,9 +244,17 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={sending}
-                  className="inline-flex h-12 w-full items-center justify-center rounded-full bg-foreground px-8 text-sm font-medium text-background transition-all duration-300 hover:scale-[1.01] hover:shadow-xl disabled:opacity-60 disabled:hover:scale-100 sm:w-auto"
+                  className="btn-shimmer inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-foreground to-foreground/90 px-8 text-sm font-medium text-background transition-all duration-300 hover:scale-[1.02] hover:shadow-xl active:scale-[0.98] disabled:opacity-60 disabled:hover:scale-100 sm:w-auto"
                 >
-                  {sending ? "送信中..." : "送信する"}
+                  {sending ? (
+                    <>
+                      <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3" strokeLinecap="round" className="opacity-25" />
+                        <path d="M4 12a8 8 0 018-8" stroke="currentColor" strokeWidth="3" strokeLinecap="round" className="opacity-75" />
+                      </svg>
+                      送信中...
+                    </>
+                  ) : "送信する"}
                 </button>
               </div>
             </form>

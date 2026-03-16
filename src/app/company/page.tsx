@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import { MapPin, Globe, Building2, Calendar, User, Briefcase, Banknote } from "lucide-react";
 
@@ -44,8 +45,12 @@ export default function CompanyPage() {
       </section>
 
       {/* Golden Circle / Philosophy */}
-      <section className="bg-navy py-20 md:py-28 text-white">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+      <section className="relative bg-navy py-20 md:py-28 text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <Image src="/images/company-bg.jpg" alt="" fill className="object-cover" quality={60} sizes="100vw" />
+          <div className="absolute inset-0 bg-navy/90" />
+        </div>
+        <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
           <FadeIn>
             <div className="text-center">
               <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-accent-blue">
@@ -61,7 +66,7 @@ export default function CompanyPage() {
           <div className="mt-16 grid gap-8 md:grid-cols-3">
             <FadeIn delay={0}>
               <div className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-500 text-white font-inter font-bold text-lg">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-500 text-white font-inter font-bold text-lg transition-all duration-500 hover:scale-110 hover:shadow-lg hover:shadow-orange-500/30">
                   WHY
                 </div>
                 <h3 className="mt-6 text-lg font-bold">存在意義</h3>
@@ -72,7 +77,7 @@ export default function CompanyPage() {
             </FadeIn>
             <FadeIn delay={120}>
               <div className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-2 border-orange-400 text-orange-400 font-inter font-bold text-lg">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-2 border-orange-400 text-orange-400 font-inter font-bold text-lg transition-all duration-500 hover:scale-110 hover:shadow-lg hover:shadow-orange-400/20">
                   HOW
                 </div>
                 <h3 className="mt-6 text-lg font-bold">アプローチ</h3>
@@ -83,7 +88,7 @@ export default function CompanyPage() {
             </FadeIn>
             <FadeIn delay={240}>
               <div className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-2 border-orange-300 text-orange-300 font-inter font-bold text-lg">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-2 border-orange-300 text-orange-300 font-inter font-bold text-lg transition-all duration-500 hover:scale-110 hover:shadow-lg hover:shadow-orange-300/20">
                   WHAT
                 </div>
                 <h3 className="mt-6 text-lg font-bold">提供価値</h3>
@@ -117,7 +122,7 @@ export default function CompanyPage() {
                 {companyInfo.map((item) => (
                   <div
                     key={item.label}
-                    className="grid grid-cols-1 gap-1 px-6 py-5 sm:grid-cols-3 sm:gap-4 sm:py-6"
+                    className="row-highlight grid grid-cols-1 gap-1 px-6 py-5 sm:grid-cols-3 sm:gap-4 sm:py-6"
                   >
                     <dt className="flex items-center gap-2 text-sm font-medium text-gray">
                       <item.icon className="h-4 w-4 text-accent-blue" />

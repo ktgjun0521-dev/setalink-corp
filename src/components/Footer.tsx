@@ -11,14 +11,17 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-navy text-white">
-      <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
+    <footer className="relative border-t border-border bg-navy text-white overflow-hidden">
+      {/* Subtle dot pattern */}
+      <div className="absolute inset-0 dot-pattern opacity-[0.02]" />
+
+      <div className="relative mx-auto max-w-6xl px-6 py-16 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <Link
               href="/"
-              className="flex items-center gap-2"
+              className="group flex items-center gap-2 transition-opacity hover:opacity-80"
             >
               <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="8" cy="20" r="5" stroke="#2D5BFF" strokeWidth="2.5" fill="none" />
@@ -38,14 +41,14 @@ export default function Footer() {
               <br />
               ITコンサルティング会社。
             </p>
-            <div className="mt-6 flex flex-col gap-2 text-sm text-white/50">
-              <div className="flex items-center gap-2">
-                <MapPin className="h-4 w-4" />
-                <span>東京都世田谷区世田谷1-15-23</span>
+            <div className="mt-6 flex flex-col gap-3 text-sm text-white/50">
+              <div className="group flex items-center gap-2">
+                <MapPin className="h-4 w-4 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:text-accent-blue" />
+                <span className="transition-colors duration-300 group-hover:text-white/70">東京都世田谷区世田谷1-15-23</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Mail className="h-4 w-4" />
-                <a href="mailto:info@setalinkapp.com" className="transition-colors hover:text-white">
+              <div className="group flex items-center gap-2">
+                <Mail className="h-4 w-4 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:text-accent-blue" />
+                <a href="mailto:info@setalinkapp.com" className="transition-colors duration-300 hover:text-white">
                   info@setalinkapp.com
                 </a>
               </div>
@@ -62,7 +65,7 @@ export default function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-white/60 transition-colors hover:text-white"
+                  className="text-sm text-white/60 transition-all duration-300 hover:text-white hover:translate-x-1"
                 >
                   {link.label}
                 </Link>
