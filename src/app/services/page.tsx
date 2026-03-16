@@ -14,6 +14,8 @@ import {
   ClipboardCheck,
   Cog,
   CheckCircle2,
+  Sparkles,
+  TrendingUp,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -85,6 +87,33 @@ const services = [
       { icon: Cog, label: "ツール導入による業務自動化" },
       { icon: CheckCircle2, label: "業務マニュアル整備・定着支援" },
     ],
+  },
+];
+
+const packageServices = [
+  {
+    name: "今すぐAI",
+    tagline: "中小企業のための実践型AI活用・定着支援",
+    nameEn: "IMASUGU AI",
+    href: "/services/imasugu-ai",
+    icon: Sparkles,
+    color: "from-emerald-500 to-emerald-600",
+    iconBg: "bg-emerald-50 text-emerald-600",
+    borderHover: "hover:border-emerald-300",
+    description:
+      "「AIを入れたい」ではなく「業務が変わった」を目指す。御社に合った生成AI活用を伴走支援で定着させるパッケージプランです。",
+  },
+  {
+    name: "今すぐインサイト",
+    tagline: "データを事業を動かす戦略に変える",
+    nameEn: "IMASUGU INSIGHT",
+    href: "/services/imasugu-insight",
+    icon: TrendingUp,
+    color: "from-accent-blue to-blue-600",
+    iconBg: "bg-blue-50 text-accent-blue",
+    borderHover: "hover:border-accent-blue/50",
+    description:
+      "散在するデータを整備し、経営判断に使える形に変える。BI開発・KPI設計・運用定着まで一気通貫で支援するパッケージプランです。",
   },
 ];
 
@@ -195,18 +224,76 @@ export default function ServicesPage() {
         </section>
       ))}
 
-      {/* Pricing CTA */}
+      {/* Package Services Section */}
+      <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image src="/images/hero-bg.jpg" alt="" fill className="object-cover" quality={60} sizes="100vw" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0F1B4C]/95 via-[#0F1B4C]/90 to-[#2D5BFF]/70" />
+        </div>
+        <div className="absolute inset-0 grid-pattern opacity-[0.03]" />
+
+        <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
+          <FadeIn>
+            <div className="text-center">
+              <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-accent-lime">
+                Package Plans
+              </p>
+              <h2 className="mt-2 text-3xl font-bold tracking-tight text-white md:text-4xl">
+                パッケージサービス
+              </h2>
+              <p className="mx-auto mt-6 max-w-lg text-sm leading-relaxed text-white/60">
+                セタリンクの強みを凝縮した、すぐに始められるパッケージプラン。
+                料金・支援内容が明確で、導入しやすい形にまとめています。
+              </p>
+              <div className="mx-auto mt-6 section-divider" />
+            </div>
+          </FadeIn>
+
+          <div className="mt-16 grid gap-8 md:grid-cols-2">
+            {packageServices.map((pkg, i) => (
+              <FadeIn key={pkg.nameEn} delay={i * 150}>
+                <Link
+                  href={pkg.href}
+                  className={`card-hover group relative flex h-full flex-col rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 md:p-10 transition-all duration-500 hover:bg-white/10 hover:border-white/20`}
+                >
+                  <div className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ${pkg.iconBg}`}>
+                    <pkg.icon className="h-7 w-7 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
+                  </div>
+                  <h3 className="mt-6 text-2xl font-bold text-white md:text-3xl">
+                    {pkg.name}
+                  </h3>
+                  <p className={`mt-2 text-sm font-medium ${i === 0 ? "text-emerald-400" : "text-accent-blue"}`}>
+                    {pkg.tagline}
+                  </p>
+                  <p className="mt-1 font-inter text-xs text-white/40">
+                    {pkg.nameEn}
+                  </p>
+                  <p className="mt-5 flex-1 text-sm leading-relaxed text-white/60">
+                    {pkg.description}
+                  </p>
+                  <div className="mt-6 flex items-center gap-2 text-sm font-medium text-white opacity-70 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1">
+                    詳しく見る
+                    <ArrowRight className="h-4 w-4" />
+                  </div>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
       <section className="py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <FadeIn>
-            <div className="mx-auto max-w-2xl rounded-3xl bg-navy p-10 text-center text-white md:p-16">
+            <div className="mx-auto max-w-2xl text-center">
               <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-accent-blue">
-                Pricing
+                Contact
               </p>
-              <h2 className="mt-2 text-3xl font-bold tracking-tight">
-                料金について
+              <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
+                まずはお気軽にご相談ください
               </h2>
-              <p className="mt-6 text-sm leading-relaxed text-white/60">
+              <p className="mt-6 text-sm leading-relaxed text-gray">
                 プロジェクトの規模・内容に応じて、月額制・プロジェクト制の両方に対応。
                 まずはお気軽にご相談ください。ヒアリングのうえ、最適なプランをご提案します。
               </p>

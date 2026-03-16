@@ -15,6 +15,8 @@ import {
   Lightbulb,
   Wrench,
   Rocket,
+  Sparkles,
+  BarChart3,
 } from "lucide-react";
 
 const services = [
@@ -47,6 +49,27 @@ const services = [
       "業務プロセスの可視化・ボトルネック特定・最適化。ツール導入だけでなく、現場の人に寄り添った改善を実行します。",
     color: "bg-amber-50 text-amber-600",
     accent: "from-amber-500 to-orange-500",
+  },
+];
+
+const packageServices = [
+  {
+    icon: Sparkles,
+    name: "今すぐAI",
+    tagline: "中小企業のための実践型AI活用・定着支援",
+    href: "/services/imasugu-ai",
+    color: "bg-emerald-50 text-emerald-600",
+    borderColor: "hover:border-emerald-300",
+    tagColor: "text-emerald-600",
+  },
+  {
+    icon: BarChart3,
+    name: "今すぐインサイト",
+    tagline: "データを事業を動かす戦略に変える",
+    href: "/services/imasugu-insight",
+    color: "bg-blue-50 text-accent-blue",
+    borderColor: "hover:border-accent-blue/50",
+    tagColor: "text-accent-blue",
   },
 ];
 
@@ -230,7 +253,7 @@ export default function Home() {
                   Services
                 </p>
                 <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
-                  3つのサービスで、DXを推進
+                  3つの専門領域で、DXを推進
                 </h2>
               </div>
               <Link
@@ -270,6 +293,38 @@ export default function Home() {
               </FadeIn>
             ))}
           </div>
+
+          {/* Package Services */}
+          <FadeIn delay={400}>
+            <div className="mt-20">
+              <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-accent-blue">
+                Package Plans
+              </p>
+              <h3 className="mt-2 text-2xl font-bold tracking-tight">
+                パッケージサービス
+              </h3>
+              <div className="section-divider mt-4" />
+
+              <div className="mt-8 grid gap-6 md:grid-cols-2">
+                {packageServices.map((pkg) => (
+                  <Link
+                    key={pkg.name}
+                    href={pkg.href}
+                    className={`card-hover group flex items-center gap-5 rounded-2xl border border-border bg-white p-6 md:p-8 ${pkg.borderColor}`}
+                  >
+                    <div className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl ${pkg.color}`}>
+                      <pkg.icon className="h-7 w-7 transition-transform duration-300 group-hover:scale-110" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-lg font-bold tracking-tight">{pkg.name}</h4>
+                      <p className={`mt-1 text-sm font-medium ${pkg.tagColor}`}>{pkg.tagline}</p>
+                    </div>
+                    <ArrowRight className="h-5 w-5 text-gray opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 

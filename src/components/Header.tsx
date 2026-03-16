@@ -1,11 +1,17 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { ChevronDown, Sparkles, TrendingUp } from "lucide-react";
+
+const serviceSubLinks = [
+  { href: "/services", label: "サービス概要", labelEn: "Overview" },
+  { href: "/services/imasugu-ai", label: "今すぐAI", labelEn: "AI活用・定着支援", icon: Sparkles, color: "text-emerald-500" },
+  { href: "/services/imasugu-insight", label: "今すぐインサイト", labelEn: "データ戦略", icon: TrendingUp, color: "text-accent-blue" },
+];
 
 const navLinks = [
-  { href: "/services", label: "サービス" },
   { href: "/cases", label: "支援事例" },
   { href: "/company", label: "会社概要" },
   { href: "/contact", label: "お問い合わせ" },
@@ -14,6 +20,9 @@ const navLinks = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false);
+  const [mobileServiceOpen, setMobileServiceOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -35,8 +44,19 @@ export default function Header() {
     };
   }, [menuOpen]);
 
-  // Determine if hero has dark background (home page)
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setServiceDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   const isHomePage = pathname === "/";
+  const isServicePage = pathname.startsWith("/services");
 
   return (
     <header
@@ -52,7 +72,6 @@ export default function Header() {
           href="/"
           className="flex items-center gap-2 transition-opacity hover:opacity-70"
         >
-          {/* Logo mark - connected circles */}
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="8" cy="20" r="5" stroke="#2D5BFF" strokeWidth="2.5" fill="none" />
             <circle cx="16" cy="12" r="4" stroke="#0EA5E9" strokeWidth="2.5" fill="none" />
@@ -69,6 +88,64 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden items-center gap-8 md:flex">
+          {/* Services Dropdown */}
+          <div ref={dropdownRef} className="relative">
+            <button
+              onClick={() => setServiceDropdownOpen(!serviceDropdownOpen)}
+              onMouseEnter={() => setServiceDropdownOpen(true)}
+              className={`link-underline flex items-center gap-1 text-sm font-medium transition-colors ${
+                isServicePage
+                  ? "text-accent-blue"
+                  : !scrolled && isHomePage
+                    ? "text-white/80 hover:text-white"
+                    : "text-foreground/80 hover:text-foreground"
+              }`}
+            >
+              サービス
+              <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${serviceDropdownOpen ? "rotate-180" : ""}`} />
+            </button>
+
+            {/* Dropdown Menu */}
+            <div
+              onMouseLeave={() => setServiceDropdownOpen(false)}
+              className={`absolute left-1/2 top-full mt-3 -translate-x-1/2 transition-all duration-200 ${
+                serviceDropdownOpen
+                  ? "visible opacity-100 translate-y-0"
+                  : "invisible opacity-0 -translate-y-2"
+              }`}
+            >
+              <div className="w-72 rounded-2xl border border-border bg-white p-2 shadow-xl shadow-black/10">
+                {serviceSubLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setServiceDropdownOpen(false)}
+                    className={`group flex items-center gap-3 rounded-xl px-4 py-3 transition-colors hover:bg-surface ${
+                      pathname === link.href ? "bg-light-blue" : ""
+                    }`}
+                  >
+                    {link.icon ? (
+                      <div className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface ${link.color}`}>
+                        <link.icon className="h-4 w-4" />
+                      </div>
+                    ) : (
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface text-gray">
+                        <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                      </div>
+                    )}
+                    <div>
+                      <p className="text-sm font-medium text-foreground">{link.label}</p>
+                      <p className="text-[11px] text-gray">{link.labelEn}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Other Nav Links */}
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -130,7 +207,37 @@ export default function Header() {
           menuOpen ? "visible opacity-100" : "invisible opacity-0"
         }`}
       >
-        <nav className="flex h-full flex-col items-center justify-center gap-10">
+        <nav className="flex h-full flex-col items-center justify-center gap-8">
+          {/* Mobile Services Accordion */}
+          <div className="flex flex-col items-center">
+            <button
+              onClick={() => setMobileServiceOpen(!mobileServiceOpen)}
+              className={`flex items-center gap-2 text-2xl font-bold transition-colors hover:text-accent-blue ${
+                isServicePage ? "text-accent-blue" : "text-foreground"
+              }`}
+            >
+              サービス
+              <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${mobileServiceOpen ? "rotate-180" : ""}`} />
+            </button>
+            <div className={`overflow-hidden transition-all duration-300 ${mobileServiceOpen ? "mt-4 max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
+              <div className="flex flex-col items-center gap-3">
+                {serviceSubLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => { setMenuOpen(false); setMobileServiceOpen(false); }}
+                    className={`text-base font-medium transition-colors hover:text-accent-blue ${
+                      pathname === link.href ? "text-accent-blue" : "text-foreground/70"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Other Links */}
           {navLinks.map((link) => (
             <Link
               key={link.href}
