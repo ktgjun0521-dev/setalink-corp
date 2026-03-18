@@ -166,7 +166,7 @@ function CaseCard({ c, index, bgAlt }: { c: CaseItem; index: number; bgAlt: bool
               <Image src={c.image} alt="" fill className="object-cover" quality={70} sizes="(max-width: 768px) 100vw, 1152px" />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" />
             </div>
-            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+            <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8">
               <div className="flex flex-wrap items-center gap-3 mb-3">
                 <span className="inline-flex rounded-full bg-white/20 backdrop-blur-sm px-4 py-1.5 text-xs font-semibold text-white">
                   {c.industry}
@@ -175,10 +175,10 @@ function CaseCard({ c, index, bgAlt }: { c: CaseItem; index: number; bgAlt: bool
                   CASE {String(index + 1).padStart(2, "0")}
                 </span>
               </div>
-              <h3 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
+              <h3 className="text-xl font-bold tracking-tight text-white sm:text-2xl md:text-3xl">
                 {c.company}
               </h3>
-              <p className="mt-2 text-base font-medium text-accent-lime">
+              <p className="mt-1.5 text-sm font-medium text-accent-lime sm:mt-2 sm:text-base">
                 {c.subtitle}
               </p>
             </div>
@@ -280,12 +280,11 @@ export default function CasesPage() {
             <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-accent-blue">
               Case Studies
             </p>
-            <h1 className="mt-2 text-4xl font-bold tracking-tight md:text-5xl">
+            <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
               支援事例
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-gray">
-              データ活用支援・AI導入支援の実績をご紹介します。
-              業界・課題に合わせた最適なソリューションで、成果を出しています。
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-gray sm:mt-6 sm:text-base">
+              データ活用支援・AI導入支援の実績をご紹介します。業界・課題に合わせた最適なソリューションで、成果を出しています。
             </p>
             <div className="section-divider mt-8" />
           </FadeIn>
@@ -347,7 +346,7 @@ export default function CasesPage() {
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <FadeIn>
             <div className="mx-auto max-w-2xl rounded-3xl bg-navy p-10 text-center text-white md:p-16">
-              <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
+              <h2 className="text-xl font-bold tracking-tight sm:text-2xl md:text-3xl">
                 同じような課題をお持ちですか？
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-white/60">

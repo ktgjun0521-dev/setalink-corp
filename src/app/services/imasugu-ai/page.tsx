@@ -148,13 +148,13 @@ export default function ImasuguAiPage() {
                   Package Service
                 </span>
               </div>
-              <h1 className="mt-6 text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
+              <h1 className="mt-6 text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
                 今すぐAI
               </h1>
-              <p className="mt-3 text-lg font-medium text-emerald-300 md:text-xl">
+              <p className="mt-3 text-base font-medium text-emerald-300 sm:text-lg md:text-xl">
                 中小企業のための実践型AI活用・定着支援
               </p>
-              <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70">
+              <p className="mt-5 max-w-xl text-sm leading-relaxed text-white/70 sm:mt-6 sm:text-base">
                 Gemini・ChatGPT等の生成AIを、御社の業務に合わせて導入・定着させます。
                 「AIを入れたい」ではなく「業務が変わった」を目指す、伴走型の支援プログラムです。
               </p>
@@ -186,25 +186,25 @@ export default function ImasuguAiPage() {
               <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-emerald-600">
                 Challenges
               </p>
-              <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
+              <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
                 こんな課題はありませんか？
               </h2>
               <div className="mx-auto mt-6 section-divider" />
             </div>
           </FadeIn>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-6 md:grid-cols-3">
             {[
               { icon: MessageSquare, text: "AIを導入したいが何から始めるべきか分からない" },
               { icon: Shield, text: "ツールを入れても現場で使いこなせない" },
               { icon: Zap, text: "自社に合ったAI活用の方法が見えない" },
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 100}>
-                <div className="flex h-full flex-col items-center justify-center rounded-2xl border border-border bg-white p-8 text-center transition-all duration-300 hover:border-emerald-200 hover:shadow-md">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-red-50 text-red-400">
-                    <item.icon className="h-6 w-6" />
+                <div className="flex h-full flex-col items-center justify-center rounded-2xl border border-border bg-white p-6 sm:p-8 text-center transition-all duration-300 hover:border-emerald-200 hover:shadow-md">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-50 text-red-400 sm:h-12 sm:w-12">
+                    <item.icon className="h-5 w-5 sm:h-6 sm:w-6" />
                   </div>
-                  <p className="mt-4 text-sm font-medium leading-relaxed text-foreground/80">
+                  <p className="mt-3 text-sm font-medium leading-relaxed text-foreground/80 sm:mt-4">
                     {item.text}
                   </p>
                 </div>
@@ -222,22 +222,22 @@ export default function ImasuguAiPage() {
               <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-emerald-600">
                 What We Offer
               </p>
-              <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
+              <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
                 支援内容
               </h2>
               <div className="mx-auto mt-6 section-divider" />
             </div>
           </FadeIn>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:gap-8">
+          <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-6 md:grid-cols-2 lg:gap-8">
             {features.map((feature, i) => (
               <FadeIn key={feature.title} delay={i * 100}>
-                <div className="group flex gap-5 rounded-2xl border border-border bg-white p-8 transition-all duration-300 hover:border-emerald-200 hover:shadow-md hover:-translate-y-1">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600">
-                    <feature.icon className="h-6 w-6 transition-transform duration-300 group-hover:scale-110" />
+                <div className="group flex gap-4 rounded-2xl border border-border bg-white p-6 sm:gap-5 sm:p-8 transition-all duration-300 hover:border-emerald-200 hover:shadow-md hover:-translate-y-1">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 sm:h-12 sm:w-12">
+                    <feature.icon className="h-5 w-5 sm:h-6 sm:w-6 transition-transform duration-300 group-hover:scale-110" />
                   </div>
-                  <div>
-                    <h3 className="text-lg font-bold">{feature.title}</h3>
+                  <div className="min-w-0">
+                    <h3 className="text-base font-bold sm:text-lg">{feature.title}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-gray">
                       {feature.description}
                     </p>
@@ -257,14 +257,14 @@ export default function ImasuguAiPage() {
               <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-emerald-600">
                 Process
               </p>
-              <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
+              <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
                 導入の流れ
               </h2>
               <div className="mx-auto mt-6 section-divider" />
             </div>
           </FadeIn>
 
-          <div className="mt-14 grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:gap-6">
+          <div className="mt-10 grid gap-4 grid-cols-2 sm:mt-14 md:grid-cols-4 lg:gap-6">
             {flow.map((step, i) => (
               <FadeIn key={step.step} delay={i * 100}>
                 <div className={`relative flex h-full flex-col items-center rounded-2xl border border-border bg-white p-6 text-center ${i < flow.length - 1 ? "process-connector" : ""}`}>
@@ -303,11 +303,11 @@ export default function ImasuguAiPage() {
             </div>
           </FadeIn>
 
-          <div className="mt-16 grid gap-6 md:grid-cols-3 lg:gap-8">
+          <div className="mt-12 grid gap-6 sm:mt-16 md:grid-cols-3 lg:gap-8">
             {plans.map((plan, i) => (
               <FadeIn key={plan.name} delay={i * 120}>
                 <div
-                  className={`relative flex h-full flex-col rounded-2xl p-8 transition-all duration-500 ${
+                  className={`relative flex h-full flex-col rounded-2xl p-6 sm:p-8 transition-all duration-500 ${
                     plan.recommended
                       ? "border-2 border-emerald-400 bg-white shadow-2xl shadow-emerald-500/20 z-10"
                       : "border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-white/20"
@@ -333,10 +333,10 @@ export default function ImasuguAiPage() {
 
                   <div className="mt-6 text-center">
                     <div className="flex items-baseline justify-center gap-1">
-                      <span className={`font-inter text-5xl font-bold tracking-tight ${plan.recommended ? "text-foreground" : "text-white"}`}>
+                      <span className={`font-inter text-4xl font-bold tracking-tight sm:text-5xl ${plan.recommended ? "text-foreground" : "text-white"}`}>
                         {plan.price}
                       </span>
-                      <span className={`text-lg font-bold ${plan.recommended ? "text-foreground" : "text-white"}`}>
+                      <span className={`text-base font-bold sm:text-lg ${plan.recommended ? "text-foreground" : "text-white"}`}>
                         {plan.unit}
                       </span>
                     </div>
@@ -405,7 +405,7 @@ export default function ImasuguAiPage() {
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <FadeIn>
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
+              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
                 AI活用、まずは相談から
               </h2>
               <p className="mt-6 text-sm leading-relaxed text-gray">

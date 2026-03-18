@@ -107,12 +107,11 @@ export default function ContactPage() {
             <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-gray">
               Contact
             </p>
-            <h1 className="mt-2 text-4xl font-bold tracking-tight md:text-5xl">
+            <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
               お問い合わせ
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-gray">
-              データ活用・AI導入・業務改善に関するご相談を承っております。
-              お気軽にお問い合わせください。
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-gray sm:mt-6 sm:text-base">
+              データ活用・AI導入・業務改善に関するご相談を承っております。お気軽にお問い合わせください。
             </p>
           </FadeIn>
         </div>

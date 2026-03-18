@@ -132,12 +132,11 @@ export default function ServicesPage() {
             <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-accent-blue">
               Services
             </p>
-            <h1 className="mt-2 text-4xl font-bold tracking-tight md:text-5xl">
+            <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
               サービス
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-gray">
-              データ基盤構築とAI活用の&quot;現場伴走&quot;を強みに、3つのサービスで
-              企業のDX・AXを推進します。
+            <p className="mt-6 max-w-2xl text-sm leading-relaxed text-gray sm:text-base">
+              データ基盤構築とAI活用の&quot;現場伴走&quot;を強みに、3つのサービスで企業のDX・AXを推進します。
             </p>
             <div className="section-divider mt-8" />
           </FadeIn>
@@ -241,9 +240,8 @@ export default function ServicesPage() {
               <h2 className="mt-2 text-3xl font-bold tracking-tight text-white md:text-4xl">
                 パッケージサービス
               </h2>
-              <p className="mx-auto mt-6 max-w-lg text-sm leading-relaxed text-white/60">
-                セタリンクの強みを凝縮した、すぐに始められるパッケージプラン。
-                料金・支援内容が明確で、導入しやすい形にまとめています。
+              <p className="mx-auto mt-6 max-w-lg text-xs leading-relaxed text-white/60 sm:text-sm">
+                セタリンクの強みを凝縮した、すぐに始められるパッケージプラン。料金・支援内容が明確で、導入しやすい形にまとめています。
               </p>
               <div className="mx-auto mt-6 section-divider" />
             </div>
@@ -290,7 +288,7 @@ export default function ServicesPage() {
               <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-accent-blue">
                 Contact
               </p>
-              <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
+              <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
                 まずはお気軽にご相談ください
               </h2>
               <p className="mt-6 text-sm leading-relaxed text-gray">

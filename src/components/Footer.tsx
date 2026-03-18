@@ -35,11 +35,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-white/60">
-              SETALINK株式会社
-              <br />
-              データ基盤構築とAI活用の"現場伴走"を強みとする
-              <br />
-              ITコンサルティング会社。
+              SETALINK株式会社 ― データ基盤構築とAI活用の&quot;現場伴走&quot;を強みとするITコンサルティング会社。
             </p>
             <div className="mt-6 flex flex-col gap-3 text-sm text-white/50">
               <div className="group flex items-center gap-2">

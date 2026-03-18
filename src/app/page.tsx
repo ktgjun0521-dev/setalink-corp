@@ -199,16 +199,17 @@ export default function Home() {
             </div>
 
             <div className="fade-in-up" style={{ animationDelay: "150ms", animationFillMode: "both" }}>
-              <h1 className="mt-8 text-4xl font-bold leading-[1.12] tracking-tight text-white md:text-5xl lg:text-6xl">
+              <h1 className="mt-8 text-3xl font-bold leading-[1.15] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
                 人々が
                 <span className="bg-gradient-to-r from-accent-lime to-emerald-300 bg-clip-text text-transparent">本気ではたらく</span>
-                <br />
+                <br className="hidden sm:block" />
+                <span className="sm:hidden"> </span>
                 社会を共に創る。
               </h1>
             </div>
 
             <div className="fade-in-up" style={{ animationDelay: "300ms", animationFillMode: "both" }}>
-              <p className="mt-8 max-w-xl text-base leading-[1.8] text-white/70 md:text-lg">
+              <p className="mt-6 max-w-xl text-sm leading-[1.8] text-white/70 sm:mt-8 sm:text-base md:text-lg">
                 データ基盤構築とAI活用の&quot;現場伴走&quot;を強みとする
                 ITコンサルティング会社。再現性ある技術を、個人と組織になじませます。
               </p>
@@ -252,7 +253,7 @@ export default function Home() {
                 <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-accent-blue">
                   Services
                 </p>
-                <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
+                <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
                   3つの専門領域で、DXを推進
                 </h2>
               </div>
@@ -336,7 +337,7 @@ export default function Home() {
             <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-accent-blue">
               Why SetaLink
             </p>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
+            <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
               選ばれる3つの理由
             </h2>
             <div className="section-divider mt-6" />
@@ -374,7 +375,7 @@ export default function Home() {
                 <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-accent-blue">
                   Case Studies
                 </p>
-                <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
+                <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
                   支援事例
                 </h2>
               </div>
@@ -435,7 +436,7 @@ export default function Home() {
               <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-accent-blue">
                 Process
               </p>
-              <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
+              <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
                 支援までの流れ
               </h2>
               <p className="mx-auto mt-4 max-w-lg text-sm leading-relaxed text-gray">
@@ -445,10 +446,10 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          <div className="mt-16 grid gap-4 sm:grid-cols-2 md:grid-cols-5 lg:gap-6">
+          <div className="mt-16 grid gap-4 grid-cols-2 md:grid-cols-5 lg:gap-6">
             {processSteps.map((step, i) => (
               <FadeIn key={step.step} delay={i * 100}>
-                <div className={`relative flex h-full flex-col items-center rounded-2xl border border-border bg-white p-6 text-center ${i < processSteps.length - 1 ? "process-connector" : ""}`}>
+                <div className={`relative flex h-full flex-col items-center rounded-2xl border border-border bg-white p-5 sm:p-6 text-center ${i < processSteps.length - 1 ? "process-connector" : ""}`}>
                   <div className="number-badge">{step.step}</div>
                   <div className="mt-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-light-blue text-accent-blue icon-hover-bounce">
                     <step.icon className="h-5 w-5" />
@@ -483,7 +484,7 @@ export default function Home() {
             <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-white/60">
               Contact
             </p>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
+            <h2 className="mt-4 text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
               まずはお気軽にご相談ください
             </h2>
             <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-white/70">

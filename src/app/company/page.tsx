@@ -36,7 +36,7 @@ export default function CompanyPage() {
             <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-accent-blue">
               Company
             </p>
-            <h1 className="mt-2 text-4xl font-bold tracking-tight md:text-5xl">
+            <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
               会社概要
             </h1>
             <div className="section-divider mt-8" />
@@ -56,7 +56,7 @@ export default function CompanyPage() {
               <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-accent-blue">
                 Philosophy
               </p>
-              <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
+              <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
                 セタリンクの考え方
               </h2>
               <div className="mx-auto mt-6 section-divider" />
@@ -109,7 +109,7 @@ export default function CompanyPage() {
               <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-accent-blue">
                 Corporate Information
               </p>
-              <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
+              <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
                 会社情報
               </h2>
               <div className="mx-auto mt-6 section-divider" />
