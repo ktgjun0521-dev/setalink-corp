@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
-import { MapPin, Globe, Building2, Calendar, User, Briefcase, Banknote } from "lucide-react";
+import { MapPin, Globe, Building2, Calendar, User, Briefcase, Banknote, Users, Shield, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "会社概要",
@@ -94,6 +94,62 @@ export default function CompanyPage() {
                 <h3 className="mt-6 text-lg font-bold">提供価値</h3>
                 <p className="mt-3 text-sm leading-relaxed text-white/60">
                   データドリブン経営支援・AI導入支援
+                </p>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Structure */}
+      <section className="py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <FadeIn>
+            <div className="text-center">
+              <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-accent-blue">
+                Our Team
+              </p>
+              <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
+                支援体制
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-gray sm:text-base">
+                セタリンクは、大手企業・メガベンチャーで活躍する現役スペシャリストと連携。各領域のプロフェッショナルがプロジェクトごとに最適なチームを組み、現場ベースの最適解を提供します。
+              </p>
+              <div className="mx-auto mt-6 section-divider" />
+            </div>
+          </FadeIn>
+
+          <div className="mt-14 grid gap-6 md:grid-cols-3 lg:gap-8">
+            <FadeIn delay={0}>
+              <div className="group rounded-2xl border border-border bg-white p-8 text-center transition-all duration-300 hover:border-accent-blue/20 hover:shadow-md">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-accent-blue transition-transform duration-300 group-hover:scale-110">
+                  <Users className="h-7 w-7" />
+                </div>
+                <h3 className="mt-6 text-base font-bold sm:text-lg">現役プレイヤーによる支援</h3>
+                <p className="mt-3 text-sm leading-relaxed text-gray">
+                  コンサルタントではなく、大手企業やメガベンチャーの最前線で実務を担う現役のスペシャリストが参画。今の現場感覚に基づいた、実践的なアドバイスと実装を提供します。
+                </p>
+              </div>
+            </FadeIn>
+            <FadeIn delay={120}>
+              <div className="group rounded-2xl border border-border bg-white p-8 text-center transition-all duration-300 hover:border-accent-blue/20 hover:shadow-md">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600 transition-transform duration-300 group-hover:scale-110">
+                  <Zap className="h-7 w-7" />
+                </div>
+                <h3 className="mt-6 text-base font-bold sm:text-lg">課題ごとに最適チームを編成</h3>
+                <p className="mt-3 text-sm leading-relaxed text-gray">
+                  プロジェクトの課題を分解し、データ・AI・業務設計など各領域の得意分野を持つスペシャリストをアサイン。一人の担当者に依存しない、専門性の高い支援体制を実現します。
+                </p>
+              </div>
+            </FadeIn>
+            <FadeIn delay={240}>
+              <div className="group rounded-2xl border border-border bg-white p-8 text-center transition-all duration-300 hover:border-accent-blue/20 hover:shadow-md">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-50 text-amber-600 transition-transform duration-300 group-hover:scale-110">
+                  <Shield className="h-7 w-7" />
+                </div>
+                <h3 className="mt-6 text-base font-bold sm:text-lg">セタリンクが責任を持って統括</h3>
+                <p className="mt-3 text-sm leading-relaxed text-gray">
+                  お客様との窓口はセタリンクが一貫して担当。プロジェクト全体のマネジメントと品質管理を行い、スペシャリストの知見を最大限活かしながら、成果にコミットします。
                 </p>
               </div>
             </FadeIn>
