@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   title: "今すぐインサイト｜データ戦略コンサルティング",
   description:
     "データを事業を動かす戦略に変えるパッケージ「今すぐインサイト」。BI開発・KPI設計・運用定着まで一気通貫で支援。SETALINK株式会社。",
+  alternates: {
+    canonical: "https://setalinkapp.com/services/imasugu-insight",
+  },
 };
 
 const features = [

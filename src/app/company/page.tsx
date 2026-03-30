@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "会社概要",
   description:
     "SETALINK株式会社の会社情報。データコンサルティング・AI導入支援・業務改善を提供。",
+  alternates: {
+    canonical: "https://setalinkapp.com/company",
+  },
 };
 
 const companyInfo = [
