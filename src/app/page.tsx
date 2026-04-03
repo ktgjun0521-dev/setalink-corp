@@ -335,7 +335,7 @@ export default function Home() {
         <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
           <FadeIn>
             <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-accent-blue">
-              Why SetaLink
+              Why セタリンク
             </p>
             <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
               選ばれる3つの理由

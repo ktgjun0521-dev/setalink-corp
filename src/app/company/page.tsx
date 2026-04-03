@@ -6,14 +6,14 @@ import { MapPin, Globe, Building2, Calendar, User, Briefcase, Banknote, Users, S
 export const metadata: Metadata = {
   title: "会社概要",
   description:
-    "SETALINK株式会社の会社情報。データコンサルティング・AI導入支援・業務改善を提供。",
+    "株式会社セタリンクの会社情報。データコンサルティング・AI導入支援・業務改善を提供。",
   alternates: {
     canonical: "https://setalinkapp.com/company",
   },
 };
 
 const companyInfo = [
-  { icon: Building2, label: "会社名", value: "SETALINK株式会社（セタリンク）" },
+  { icon: Building2, label: "会社名", value: "株式会社セタリンク" },
   { icon: Globe, label: "英語名", value: "SETALINK Inc." },
   { icon: Calendar, label: "設立", value: "2026年4月" },
   { icon: User, label: "代表者", value: "片口 潤哉" },
@@ -128,11 +128,11 @@ export default function CompanyPage() {
           {/* 体制図 */}
           <FadeIn delay={100}>
             <div className="mt-14">
-              {/* SETALINK Hub */}
+              {/* セタリンク Hub */}
               <div className="flex justify-center">
                 <div className="w-full max-w-sm rounded-2xl bg-navy px-8 py-6 text-center text-white shadow-lg shadow-navy/20">
                   <p className="font-inter text-[10px] font-semibold uppercase tracking-[0.2em] text-accent-blue">
-                    SETALINK
+                    セタリンク
                   </p>
                   <p className="mt-1 text-lg font-bold sm:text-xl">窓口・統括・品質管理</p>
                   <p className="mt-2 text-xs leading-relaxed text-white/60">

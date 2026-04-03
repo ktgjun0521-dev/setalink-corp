@@ -20,7 +20,7 @@ import {
 export const metadata: Metadata = {
   title: "支援事例",
   description:
-    "データ活用支援・AI導入支援の支援事例。SETALINK株式会社の支援実績をご紹介。",
+    "データ活用支援・AI導入支援の支援事例。株式会社セタリンクの支援実績をご紹介。",
   alternates: {
     canonical: "https://setalinkapp.com/cases",
   },

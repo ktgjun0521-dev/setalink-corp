@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description:
       "データ基盤構築とAI活用の現場伴走を強みとするITコンサルティング会社。",
     url: "https://setalinkapp.com",
-    siteName: "SETALINK",
+    siteName: "セタリンク",
     locale: "ja_JP",
     type: "website",
     images: [

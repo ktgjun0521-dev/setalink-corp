@@ -21,7 +21,7 @@ import {
 export const metadata: Metadata = {
   title: "サービス",
   description:
-    "データコンサルティング・AI導入支援・業務改善（BPR）。SETALINK株式会社のサービス一覧。",
+    "データコンサルティング・AI導入支援・業務改善（BPR）。株式会社セタリンクのサービス一覧。",
   alternates: {
     canonical: "https://setalinkapp.com/services",
   },

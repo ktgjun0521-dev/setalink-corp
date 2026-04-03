@@ -20,7 +20,7 @@ import {
 export const metadata: Metadata = {
   title: "今すぐAI｜実践型AI活用・定着支援",
   description:
-    "中小企業のための実践型AI活用・定着支援パッケージ「今すぐAI」。Gemini・ChatGPT等の生成AIを御社の業務に合わせて導入・定着。SETALINK株式会社。",
+    "中小企業のための実践型AI活用・定着支援パッケージ「今すぐAI」。Gemini・ChatGPT等の生成AIを御社の業務に合わせて導入・定着。株式会社セタリンク。",
   alternates: {
     canonical: "https://setalinkapp.com/services/imasugu-ai",
   },

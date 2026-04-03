@@ -82,7 +82,7 @@ export default function Header() {
           <span className={`font-inter text-xl font-bold tracking-tight transition-colors duration-300 ${
             !scrolled && isHomePage ? "text-white" : "text-foreground"
           }`}>
-            SetaLink
+            セタリンク
           </span>
         </Link>
 

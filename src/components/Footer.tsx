@@ -31,11 +31,11 @@ export default function Footer() {
                 <line x1="19" y1="10" x2="20" y2="8" stroke="#0EA5E9" strokeWidth="2" strokeLinecap="round" />
               </svg>
               <span className="font-inter text-xl font-bold tracking-tight">
-                SetaLink
+                セタリンク
               </span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-white/60">
-              SETALINK株式会社 ― データ基盤構築とAI活用の&quot;現場伴走&quot;を強みとするITコンサルティング会社。
+              株式会社セタリンク ― データ基盤構築とAI活用の&quot;現場伴走&quot;を強みとするITコンサルティング会社。
             </p>
             <div className="mt-6 flex flex-col gap-3 text-sm text-white/50">
               <div className="group flex items-center gap-2">
@@ -73,7 +73,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 md:flex-row">
           <p className="font-inter text-xs text-white/40">
-            &copy; 2026 SETALINK Inc. All rights reserved.
+            &copy; 2026 株式会社セタリンク All rights reserved.
           </p>
           <p className="font-inter text-xs text-white/40">
             setalinkapp.com
