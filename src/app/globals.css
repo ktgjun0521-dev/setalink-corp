@@ -1,15 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FFFFFF;
-  --foreground: #0F172A;
+  --background: #FEFCF6;
+  --foreground: #1A1A2E;
   --accent-blue: #2D5BFF;
   --accent-lime: #C4E538;
-  --gray: #64748B;
-  --border: #E2E8F0;
-  --light-blue: #F0F4FF;
-  --navy: #0F1B4C;
-  --surface: #F8FAFC;
+  --gray: #5F6577;
+  --border: #EAE4D6;
+  --light-blue: #EAF0FF;
+  --navy: #1A1A2E;
+  --surface: #F6F1E6;
+  --lime-soft: #F1F8D0;
+  --mint: #E3F5EA;
+  --peach: #FFEBDD;
+  --sky: #E6EEFF;
 }
 
 @theme inline {
@@ -22,8 +26,34 @@
   --color-light-blue: var(--light-blue);
   --color-navy: var(--navy);
   --color-surface: var(--surface);
+  --color-lime-soft: var(--lime-soft);
+  --color-mint: var(--mint);
+  --color-peach: var(--peach);
+  --color-sky: var(--sky);
   --font-sans: var(--font-noto-sans-jp), "Noto Sans JP", sans-serif;
   --font-inter: var(--font-inter), "Inter", sans-serif;
+  --font-maru: var(--font-zen-maru), "Zen Maru Gothic", var(--font-noto-sans-jp), sans-serif;
+}
+
+/* 日本語を文節の途中で改行しない（対応ブラウザのみ） */
+h1, h2, h3, p, li, summary {
+  word-break: auto-phrase;
+}
+
+/* 蛍光ペンで引いたようなマーカー */
+.marker {
+  background: linear-gradient(transparent 62%, var(--accent-lime) 62%, var(--accent-lime) 92%, transparent 92%);
+  padding: 0 0.1em;
+}
+
+/* 手書き風の点線矢印などに使う */
+.dash-line {
+  stroke-dasharray: 6 8;
+}
+
+/* ゆっくり揺れるイラスト */
+.sway {
+  animation: float 5s ease-in-out infinite;
 }
 
 html {

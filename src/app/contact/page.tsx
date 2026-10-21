@@ -9,8 +9,17 @@ interface FormData {
   company: string;
   email: string;
   phone: string;
+  topic: string;
   message: string;
 }
+
+const topics = [
+  "施策の効果が分からない・どこを改善すべきか決めたい",
+  "数字が合わない・見たい数字がすぐ見られない",
+  "AIで業務の手間を減らしたい",
+  "業務の流れを整えたい・自動化したい",
+  "まだ整理できていないが、まず話を聞いてほしい",
+];
 
 export default function ContactPage() {
   const [formData, setFormData] = useState<FormData>({
@@ -18,6 +27,7 @@ export default function ContactPage() {
     company: "",
     email: "",
     phone: "",
+    topic: "",
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -50,7 +60,7 @@ export default function ContactPage() {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     setFormData((prev) => ({
       ...prev,
@@ -86,7 +96,7 @@ export default function ContactPage() {
             <p className="mt-4 text-sm leading-relaxed text-gray">
               お問い合わせありがとうございます。
               <br />
-              内容を確認のうえ、担当者よりご連絡いたします。
+              内容を確認のうえ、2営業日以内にご連絡いたします。
             </p>
           </FadeIn>
         </div>
@@ -107,11 +117,11 @@ export default function ContactPage() {
             <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-gray">
               Contact
             </p>
-            <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              お問い合わせ
+            <h1 className="mt-2 font-maru text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+              無料相談・お問い合わせ
             </h1>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-gray sm:mt-6 sm:text-base">
-              データ活用・AI導入・業務改善に関するご相談を承っております。お気軽にお問い合わせください。
+              初回相談（60分・オンライン）は無料です。「何から相談すればいいか分からない」という段階でも大丈夫です。2営業日以内にご連絡します。
             </p>
           </FadeIn>
         </div>
@@ -209,6 +219,31 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {/* Topic */}
+                <div>
+                  <label
+                    htmlFor="topic"
+                    className="block text-sm font-medium text-foreground"
+                  >
+                    ご相談のテーマ
+                    <span className="ml-2 text-xs text-gray">（任意）</span>
+                  </label>
+                  <select
+                    id="topic"
+                    name="topic"
+                    value={formData.topic}
+                    onChange={handleChange}
+                    className="mt-2 block w-full rounded-lg border border-border bg-white px-4 py-3 text-sm text-foreground transition-colors focus:border-accent-blue focus:outline-none focus:ring-1 focus:ring-accent-blue"
+                  >
+                    <option value="">選択してください</option>
+                    {topics.map((t) => (
+                      <option key={t} value={t}>
+                        {t}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
                 {/* Message */}
                 <div>
                   <label
@@ -226,7 +261,7 @@ export default function ContactPage() {
                     value={formData.message}
                     onChange={handleChange}
                     className="mt-2 block w-full resize-none rounded-lg border border-border bg-white px-4 py-3 text-sm text-foreground placeholder:text-gray/50 transition-colors focus:border-accent-blue focus:outline-none focus:ring-1 focus:ring-accent-blue"
-                    placeholder="ご相談内容をお書きください"
+                    placeholder="いま取り組んでいることや、困っていることをお書きください（箇条書きで大丈夫です）"
                   />
                 </div>
               </div>
@@ -243,7 +278,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={sending}
-                  className="btn-shimmer inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-foreground to-foreground/90 px-8 text-sm font-medium text-background transition-all duration-300 hover:scale-[1.02] hover:shadow-xl active:scale-[0.98] disabled:opacity-60 disabled:hover:scale-100 sm:w-auto"
+                  className="inline-flex h-14 w-full items-center justify-center gap-2 rounded-full bg-accent-blue px-10 text-[15px] font-bold text-white shadow-[0_5px_0_#1E3FC4] transition-all duration-200 hover:-translate-y-0.5 active:translate-y-1 active:shadow-[0_1px_0_#1E3FC4] disabled:opacity-60 disabled:hover:translate-y-0 sm:w-auto"
                 >
                   {sending ? (
                     <>
@@ -253,7 +288,7 @@ export default function ContactPage() {
                       </svg>
                       送信中...
                     </>
-                  ) : "送信する"}
+                  ) : "無料相談を申し込む"}
                 </button>
               </div>
             </form>

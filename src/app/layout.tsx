@@ -1,13 +1,21 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP, Inter } from "next/font/google";
+import { Noto_Sans_JP, Inter, Zen_Maru_Gothic } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileCta from "@/components/MobileCta";
 import "./globals.css";
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
   subsets: ["latin"],
   weight: ["400", "500", "700", "900"],
+  display: "swap",
+});
+
+const zenMaru = Zen_Maru_Gothic({
+  variable: "--font-zen-maru",
+  subsets: ["latin"],
+  weight: ["500", "700"],
   display: "swap",
 });
 
@@ -20,19 +28,19 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "SETALINK | データ × AI で、本気ではたらく社会を共に創る",
-    template: "%s | SETALINK",
+    default: "セタリンク | がんばっている改善を、ちゃんと成果につなげる",
+    template: "%s | セタリンク",
   },
   description:
-    "データ基盤構築とAI活用の現場伴走を強みとするITコンサルティング会社。データコンサルティング・AI導入支援・業務改善(BPR)を一気通貫で支援します。",
+    "どこを直せば一番効くのか、その施策は効いたのか。セタリンクは、数字で判断できる状態をつくり、改善が回り続けるまで伴走する会社です。データコンサルティング・AI導入支援・業務改善（BPR）。初回相談は無料（60分）。",
   metadataBase: new URL("https://setalinkapp.com"),
   alternates: {
     canonical: "https://setalinkapp.com",
   },
   openGraph: {
-    title: "SETALINK | データ × AI で、本気ではたらく社会を共に創る",
+    title: "セタリンク | がんばっている改善を、ちゃんと成果につなげる",
     description:
-      "データ基盤構築とAI活用の現場伴走を強みとするITコンサルティング会社。",
+      "改善活動はしているのに、どこを直せば一番効くのか分からない。そんな会社の改善を、数字で判断できる状態にして伴走します。",
     url: "https://setalinkapp.com",
     siteName: "セタリンク",
     locale: "ja_JP",
@@ -42,15 +50,15 @@ export const metadata: Metadata = {
         url: "/images/hero-bg.jpg",
         width: 1200,
         height: 630,
-        alt: "SETALINK | データ × AI で、本気ではたらく社会を共に創る",
+        alt: "セタリンク | がんばっている改善を、ちゃんと成果につなげる",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SETALINK | データ × AI で、本気ではたらく社会を共に創る",
+    title: "セタリンク | がんばっている改善を、ちゃんと成果につなげる",
     description:
-      "データ基盤構築とAI活用の現場伴走を強みとするITコンサルティング会社。",
+      "改善活動はしているのに、どこを直せば一番効くのか分からない。そんな会社の改善を、数字で判断できる状態にして伴走します。",
     images: ["/images/hero-bg.jpg"],
   },
   robots: {
@@ -70,7 +78,7 @@ const organizationSchema = {
   url: "https://setalinkapp.com",
   logo: "https://setalinkapp.com/images/hero-bg.jpg",
   description:
-    "データコンサルティング・AI導入支援・業務改善（BPR）を提供するITコンサルティング会社。",
+    "改善活動の精度を高める会社。データコンサルティング・AI導入支援・業務改善（BPR）を提供。",
   address: {
     "@type": "PostalAddress",
     streetAddress: "世田谷1-15-23",
@@ -102,7 +110,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${notoSansJP.variable} ${inter.variable} font-sans antialiased`}
+        className={`${notoSansJP.variable} ${zenMaru.variable} ${inter.variable} font-sans antialiased`}
       >
         <script
           type="application/ld+json"
@@ -111,6 +119,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <MobileCta />
       </body>
     </html>
   );
