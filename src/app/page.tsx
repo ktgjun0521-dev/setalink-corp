@@ -134,14 +134,6 @@ const subAreas = [
   },
 ];
 
-// お客様の声（2026-10-14のインタビューより。話し言葉を読みやすく整えている）
-// ※ 本番公開の前に、先方（フィットネス多店舗のご担当者）の掲載了承を取ること
-const voices = [
-  { quote: "言われたときに「これです」と渡せるものができた。", who: "フィットネス多店舗 データ担当の方" },
-  { quote: "ノウハウとしては、1年前と比べたら全然ついた。", who: "フィットネス多店舗 データ担当の方" },
-  { quote: "安定した土台を作っていきたいのであれば、お勧めしたい。", who: "フィットネス多店舗 データ担当の方" },
-];
-
 const cases = [
   {
     industry: "フィットネス（全国展開）",
@@ -460,32 +452,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== 05 お客様の声 ===== */}
-      <section id="voice" className="scroll-mt-20 border-t border-ink py-20 md:py-28">
-        <div className={container}>
-          <FadeIn>
-            <SectionTitle no="05" label="Voice">お客様の声</SectionTitle>
-          </FadeIn>
-          <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
-            {voices.map((v, i) => (
-              <FadeIn key={v.quote} delay={i * 100}>
-                <figure className="h-full border-t-2 border-ink pt-6">
-                  <span className="font-mincho text-6xl leading-none text-accent-blue">“</span>
-                  <blockquote className="mt-2 font-mincho text-xl leading-[1.75] sm:text-[1.4rem]">{v.quote}</blockquote>
-                  <figcaption className="mt-5 text-xs font-bold text-gray">― {v.who}</figcaption>
-                </figure>
-              </FadeIn>
-            ))}
-          </div>
-          <p className="mt-8 text-xs text-gray">※ インタビューでのお話を、読みやすいように一部整えています。</p>
-        </div>
-      </section>
-
-      {/* ===== 06 Before → After ===== */}
+      {/* ===== 05 Before → After ===== */}
       <section id="cases" className="scroll-mt-20 border-t border-ink bg-paper py-20 md:py-28">
         <div className={container}>
           <FadeIn>
-            <SectionTitle no="06" label="Before → After">支援で、こう変わりました</SectionTitle>
+            <SectionTitle no="05" label="Before → After">支援で、こう変わりました</SectionTitle>
           </FadeIn>
           <div className="mt-12 border-t-2 border-ink">
             {cases.map((c, i) => (
@@ -520,12 +491,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== 07 初回相談でやること ===== */}
+      {/* ===== 06 初回相談でやること ===== */}
       <section id="first-meeting" className="scroll-mt-20 border-t border-ink py-20 md:py-28">
         <div className={container}>
           <FadeIn>
             <SectionTitle
-              no="07"
+              no="06"
               label="First meeting"
               lead="「どんなダッシュボードが欲しいですか？」からは始めません。事業のお話を伺いながら、改善すべきポイントを一緒に整理します。"
             >
@@ -569,11 +540,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== 08 ご相談の流れ ===== */}
+      {/* ===== 07 ご相談の流れ ===== */}
       <section id="flow" className="scroll-mt-20 border-t border-ink bg-paper py-20 md:py-28">
         <div className={container}>
           <FadeIn>
-            <SectionTitle no="08" label="Flow">ご相談から、支援開始までの流れ</SectionTitle>
+            <SectionTitle no="07" label="Flow">ご相談から、支援開始までの流れ</SectionTitle>
           </FadeIn>
           <ol className="mt-12 grid border-t-2 border-ink sm:grid-cols-2 lg:grid-cols-4">
             {flow.map((f, i) => (
@@ -589,12 +560,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== 09 向いている会社 ===== */}
+      {/* ===== 08 向いている会社 ===== */}
       <section id="fit" className="scroll-mt-20 border-t border-ink py-20 md:py-28">
         <div className={`${container} grid items-start gap-10 lg:grid-cols-2`}>
           <FadeIn>
             <SectionTitle
-              no="09"
+              no="08"
               label="For you"
               lead="たとえば人材サービス、多店舗展開のサービス業、フィットネスなど、集客から契約・継続までの流れが長い事業で、特にお役に立てます。"
             >
@@ -618,12 +589,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== 10 私たちの想い ===== */}
+      {/* ===== 09 私たちの想い ===== */}
       <section id="philosophy" className="scroll-mt-20 border-t border-ink bg-paper py-20 md:py-28">
         <div className={container}>
           <FadeIn>
             <SectionTitle
-              no="10"
+              no="09"
               label="Our belief"
               lead="最後は、お客様が自分たちで改善を回せる状態をゴールにしています。"
             >
@@ -646,11 +617,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== 11 よくある質問 ===== */}
+      {/* ===== 10 よくある質問 ===== */}
       <section id="faq" className="scroll-mt-20 border-t border-ink py-20 md:py-28">
         <div className={`${container} grid gap-10 lg:grid-cols-[1fr_1.4fr]`}>
           <FadeIn>
-            <SectionTitle no="11" label="FAQ">よくある質問</SectionTitle>
+            <SectionTitle no="10" label="FAQ">よくある質問</SectionTitle>
             <div className="mt-8">
               <TextLink href="/faq">よくある質問をすべて見る</TextLink>
             </div>
