@@ -1,83 +1,72 @@
 import Link from "next/link";
-import { Mail, MapPin } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import LogoMark from "@/components/LogoMark";
 
 const navLinks = [
-  { href: "/services", label: "サービス" },
-  { href: "/cases", label: "支援事例" },
+  { href: "/#support", label: "支援内容" },
+  { href: "/cases", label: "支援実績・事例" },
   { href: "/company", label: "会社概要" },
+  { href: "/faq", label: "よくある質問" },
   { href: "/contact", label: "お問い合わせ" },
   { href: "/notice", label: "電子公告" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-border bg-navy text-white overflow-hidden">
-      {/* Subtle dot pattern */}
-      <div className="absolute inset-0 dot-pattern opacity-[0.02]" />
-
-      <div className="relative mx-auto max-w-6xl px-6 py-16 lg:px-8">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <Link
-              href="/"
-              className="group flex items-center gap-2 transition-opacity hover:opacity-80"
-            >
-              <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="8" cy="20" r="5" stroke="#2D5BFF" strokeWidth="2.5" fill="none" />
-                <circle cx="16" cy="12" r="4" stroke="#0EA5E9" strokeWidth="2.5" fill="none" />
-                <circle cx="22" cy="6" r="3" stroke="#06B6D4" strokeWidth="2" fill="none" />
-                <line x1="12" y1="17" x2="13" y2="15" stroke="#2D5BFF" strokeWidth="2" strokeLinecap="round" />
-                <line x1="19" y1="10" x2="20" y2="8" stroke="#0EA5E9" strokeWidth="2" strokeLinecap="round" />
-              </svg>
-              <span className="font-inter text-xl font-bold tracking-tight">
-                セタリンク
-              </span>
-            </Link>
-            <p className="mt-4 text-sm leading-relaxed text-white/60">
-              株式会社セタリンク ― データ基盤構築とAI活用の&quot;現場伴走&quot;を強みとするITコンサルティング会社。
-            </p>
-            <div className="mt-6 flex flex-col gap-3 text-sm text-white/50">
-              <div className="group flex items-center gap-2">
-                <MapPin className="h-4 w-4 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:text-accent-blue" />
-                <span className="transition-colors duration-300 group-hover:text-white/70">東京都世田谷区世田谷1-15-23</span>
-              </div>
-              <div className="group flex items-center gap-2">
-                <Mail className="h-4 w-4 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:text-accent-blue" />
-                <a href="mailto:info@setalinkapp.com" className="transition-colors duration-300 hover:text-white">
-                  info@setalinkapp.com
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Navigation */}
+    <footer className="border-t border-paper/15 bg-ink pb-24 text-paper md:pb-0">
+      <div className="mx-auto max-w-6xl px-6 pt-16 pb-10 lg:px-8">
+        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr]">
           <div>
-            <p className="font-inter text-xs font-semibold uppercase tracking-widest text-white/40">
-              Navigation
+            <Link href="/" className="inline-flex items-center gap-2 transition-opacity hover:opacity-80">
+              <LogoMark size={24} />
+              <span className="font-display text-xl font-black tracking-tight">セタリンク</span>
+            </Link>
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-paper/65">
+              株式会社セタリンク ― データコンサルティングを中心に、改善活動の精度を高める会社。どこを直せば一番効くのかを数字で判断できる状態をつくり、改善が回り続けるまで伴走します。
             </p>
-            <nav className="mt-4 flex flex-col gap-3">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm text-white/60 transition-all duration-300 hover:text-white hover:translate-x-1"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
+            <dl className="mt-6 space-y-1.5 text-sm text-paper/55">
+              <div className="flex gap-3">
+                <dt className="w-16 shrink-0">所在地</dt>
+                <dd>〒154-0023 東京都世田谷区世田谷1-15-23</dd>
+              </div>
+              <div className="flex gap-3">
+                <dt className="w-16 shrink-0">メール</dt>
+                <dd>
+                  <a href="mailto:info@setalinkapp.com" className="transition-colors hover:text-paper">
+                    info@setalinkapp.com
+                  </a>
+                </dd>
+              </div>
+            </dl>
+            <Link
+              href="/contact"
+              className="group mt-8 inline-flex h-12 items-center gap-3 border-2 border-accent-lime bg-accent-lime px-5 text-sm font-bold text-ink transition-colors hover:bg-paper"
+            >
+              無料で相談する（60分）
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </Link>
           </div>
+
+          <nav className="border-t border-paper/20 md:border-t-0">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="flex items-center justify-between border-b border-paper/20 py-3 text-sm text-paper/75 transition-colors hover:text-paper"
+              >
+                {link.label}
+                <ArrowRight className="h-3.5 w-3.5 opacity-50" />
+              </Link>
+            ))}
+          </nav>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 md:flex-row">
-          <p className="font-inter text-xs text-white/40">
-            &copy; 2026 株式会社セタリンク All rights reserved.
-          </p>
-          <p className="font-inter text-xs text-white/40">
-            setalinkapp.com
-          </p>
+        <p className="mt-16 select-none font-display text-[16vw] font-black leading-none tracking-tight text-paper/[0.06] md:text-[10rem]" aria-hidden="true">
+          セタリンク
+        </p>
+        <div className="mt-6 flex flex-col items-center justify-between gap-3 border-t border-paper/15 pt-6 md:flex-row">
+          <p className="font-inter text-xs text-paper/40">&copy; 2026 株式会社セタリンク All rights reserved.</p>
+          <p className="font-inter text-xs text-paper/40">setalinkapp.com</p>
         </div>
       </div>
     </footer>

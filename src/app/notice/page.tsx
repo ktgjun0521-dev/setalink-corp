@@ -3,7 +3,7 @@ import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "電子公告",
-  description: "株式会社セタリンク（SETALink Inc.）の電子公告ページ。",
+  description: "株式会社セタリンクの電子公告ページ。",
 };
 
 export default function NoticePage() {
@@ -29,7 +29,7 @@ export default function NoticePage() {
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <FadeIn>
             <div className="mx-auto max-w-3xl">
-              <div className="rounded-lg border border-border bg-white p-8 md:p-12">
+              <div className="rounded-lg border border-ink bg-paper p-8 md:p-12">
                 <p className="text-sm leading-loose text-gray">
                   現在、掲載中の公告はありません。
                 </p>
@@ -38,7 +38,7 @@ export default function NoticePage() {
                 </p>
               </div>
 
-              <div className="mt-12 border-t border-border pt-8">
+              <div className="mt-12 border-t border-ink pt-8">
                 <dl className="space-y-4 text-sm">
                   <div className="row-highlight grid grid-cols-1 gap-1 sm:grid-cols-3 sm:gap-4 py-2 px-2 rounded-lg">
                     <dt className="font-medium text-gray">公告方法</dt>
