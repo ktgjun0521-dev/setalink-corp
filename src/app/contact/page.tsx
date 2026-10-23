@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { PageHero } from "@/components/Section";
 import FadeIn from "@/components/FadeIn";
+import { EVENTS, trackEvent } from "@/lib/analytics";
 
 interface FormData {
   name: string;
@@ -21,6 +22,13 @@ const topics = [
   "まだ整理できていないが、まず話を聞いてほしい",
 ];
 
+// サービスのカード（?topic=data など）から来たときに、相談テーマを最初から選んでおく
+const topicFromQuery: Record<string, string> = {
+  data: topics[0],
+  ai: topics[2],
+  bpr: topics[3],
+};
+
 export default function ContactPage() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -33,6 +41,19 @@ export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
+  const started = useRef(false);
+
+  useEffect(() => {
+    const key = new URLSearchParams(window.location.search).get("topic") ?? "";
+    if (topicFromQuery[key]) setFormData((prev) => ({ ...prev, topic: topicFromQuery[key] }));
+  }, []);
+
+  // 入力を始めたら1回だけ計測する
+  const handleFocus = () => {
+    if (started.current) return;
+    started.current = true;
+    trackEvent(EVENTS.formStart);
+  };
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -53,6 +74,7 @@ export default function ContactPage() {
 
       setSending(false);
       setSubmitted(true);
+      trackEvent(EVENTS.formSubmit, { topic: formData.topic || "未選択" });
     } catch (err) {
       setSending(false);
       setError(err instanceof Error ? err.message : "送信に失敗しました。時間をおいて再度お試しください。");
@@ -118,6 +140,7 @@ export default function ContactPage() {
           <FadeIn>
             <form
               onSubmit={handleSubmit}
+              onFocus={handleFocus}
               className="mx-auto max-w-2xl"
             >
               <div className="grid gap-6">

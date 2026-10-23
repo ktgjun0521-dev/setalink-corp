@@ -18,16 +18,21 @@ export default function MobileCta() {
   }, []);
 
   if (pathname === "/contact") return null;
+  const dark = pathname === "/concept"; // 検討用のコンセプト案は暗い配色
 
   return (
     <div
-      className={`fixed inset-x-0 bottom-0 z-40 border-t border-ink bg-background/95 px-4 pb-[calc(env(safe-area-inset-bottom)+12px)] pt-3 backdrop-blur-md transition-transform duration-300 md:hidden ${
+      className={`fixed inset-x-0 bottom-0 z-40 border-t px-4 ${dark ? "border-white/10 bg-[#060A14]/90" : "border-ink bg-background/95"} pb-[calc(env(safe-area-inset-bottom)+12px)] pt-3 backdrop-blur-md transition-transform duration-300 md:hidden ${
         visible ? "translate-y-0" : "translate-y-full"
       }`}
     >
       <Link
         href="/contact"
-        className="flex h-12 w-full items-center justify-center gap-2 border-2 border-ink bg-accent-blue text-sm font-bold text-white"
+        data-track="cta_click"
+        data-track-location="mobile_sticky"
+        className={`flex h-12 w-full items-center justify-center gap-2 text-sm font-bold ${
+          dark ? "rounded-full bg-accent-lime text-[#0B1020]" : "border-2 border-ink bg-accent-blue text-white"
+        }`}
       >
         無料で相談する（60分・オンライン）
         <ArrowRight className="h-4 w-4" />
