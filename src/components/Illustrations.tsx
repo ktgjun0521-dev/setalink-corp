@@ -149,3 +149,62 @@ export function TalkIllustration({ className = "" }: { className?: string }) {
     </svg>
   );
 }
+
+/* データコンサルティング：散らばったシート → 整理 → いつでも見られる画面 */
+export function DataIllustration({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 440 300" className={className} role="img" aria-label="散らばったシートのデータが整理され、ひとつの画面で見られるようになるイラスト">
+      <path d="M40 150c0-80 70-130 170-130s200 40 210 120-60 140-190 140S40 230 40 150z" fill="#F6F1E6" />
+      {/* 散らばったシート */}
+      {[
+        { x: 22, y: 58, r: -10 },
+        { x: 40, y: 140, r: 6 },
+        { x: 18, y: 214, r: -4 },
+      ].map((s, i) => (
+        <g key={i} transform={`translate(${s.x} ${s.y}) rotate(${s.r})`}>
+          <rect width="62" height="56" rx="8" fill="#fff" stroke={INK} strokeWidth="2" />
+          <line x1="10" y1="16" x2="52" y2="16" stroke="#C9D3EE" strokeWidth="4" strokeLinecap="round" />
+          <line x1="10" y1="28" x2="44" y2="28" stroke="#C9D3EE" strokeWidth="4" strokeLinecap="round" />
+          <line x1="10" y1="40" x2="48" y2="40" stroke="#C9D3EE" strokeWidth="4" strokeLinecap="round" />
+        </g>
+      ))}
+      {/* 整理の矢印 */}
+      {[86, 166, 240].map((y) => (
+        <path key={y} d={`M96 ${y} C 128 ${y}, 128 150, 152 150`} fill="none" stroke={BLUE} strokeWidth="2" strokeLinecap="round" className="dash-line" />
+      ))}
+      {/* データの箱（整理済み） */}
+      <g transform="translate(152 112)">
+        <ellipse cx="30" cy="10" rx="30" ry="10" fill="#E6EEFF" stroke={INK} strokeWidth="2" />
+        <path d="M0 10v50c0 6 13 10 30 10s30-4 30-10V10" fill="#E6EEFF" stroke={INK} strokeWidth="2" />
+        <path d="M0 35c0 6 13 10 30 10s30-4 30-10" fill="none" stroke={INK} strokeWidth="2" />
+      </g>
+      <path d="M216 150 L246 150" stroke={INK} strokeWidth="2.5" strokeLinecap="round" />
+      <path d="M238 142 L248 150 L238 158" fill="none" stroke={INK} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      {/* いつでも見られる画面 */}
+      <g transform="translate(254 60)">
+        <rect width="170" height="150" rx="16" fill="#fff" stroke={INK} strokeWidth="2.5" />
+        <rect x="14" y="16" width="64" height="34" rx="8" fill={LIME} />
+        <rect x="88" y="16" width="68" height="34" rx="8" fill="#E6EEFF" />
+        <text x="46" y="39" textAnchor="middle" fontSize="13" fontWeight="700" fill={INK} fontFamily="var(--font-inter), sans-serif">KPI</text>
+        <path d="M100 38 L114 30 L126 34 L142 24" fill="none" stroke={BLUE} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        <line x1="14" y1="130" x2="156" y2="130" stroke={INK} strokeWidth="2" strokeLinecap="round" />
+        <rect x="24" y="96" width="18" height="34" rx="4" fill="#E6EEFF" />
+        <rect x="52" y="84" width="18" height="46" rx="4" fill="#E6EEFF" />
+        <rect x="80" y="74" width="18" height="56" rx="4" fill="#E6EEFF" />
+        <rect x="108" y="64" width="18" height="66" rx="4" fill={BLUE} />
+        <rect x="136" y="70" width="12" height="60" rx="4" fill="#E6EEFF" />
+      </g>
+      {/* 見ている人 */}
+      <g transform="translate(340 262)">
+        <path d="M-30 30c0-26 13-42 30-42s30 16 30 42z" fill={BLUE} stroke={INK} strokeWidth="2.5" />
+        <circle cx="0" cy="-26" r="20" fill="#FFE3CF" stroke={INK} strokeWidth="2.5" />
+        <path d="M-20 -30c2-14 12-20 22-20s18 6 18 18c-8-6-18-8-26-6s-10 4-14 8z" fill={INK} />
+        <path d="M-6 -18c4 3 8 3 12 0" fill="none" stroke={INK} strokeWidth="2" strokeLinecap="round" />
+      </g>
+      <g stroke={INK} strokeWidth="2.5" strokeLinecap="round">
+        <line x1="420" y1="34" x2="420" y2="48" />
+        <line x1="413" y1="41" x2="427" y2="41" />
+      </g>
+    </svg>
+  );
+}

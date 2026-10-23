@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     template: "%s | セタリンク",
   },
   description:
-    "どこを直せば一番効くのか、その施策は効いたのか。セタリンクは、数字で判断できる状態をつくり、改善が回り続けるまで伴走する会社です。データコンサルティング・AI導入支援・業務改善（BPR）。初回相談は無料（60分）。",
+    "どこを直せば一番効くのか、その施策は効いたのか。セタリンクは、数字で判断できる状態をつくり、改善が回り続けるまで伴走する会社です。データコンサルティングを中心に、AI導入支援・業務改善（BPR）も提供。初回相談は無料（60分）。",
   metadataBase: new URL("https://setalinkapp.com"),
   alternates: {
     canonical: "https://setalinkapp.com",

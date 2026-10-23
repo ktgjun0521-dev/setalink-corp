@@ -1,10 +1,15 @@
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
+import FaqList from "@/components/FaqList";
+import { SectionTitle, PrimaryCta, CtaPanel } from "@/components/Section";
 import {
   HeroIllustration,
   WorryIllustration,
   TalkIllustration,
+  DataIllustration,
 } from "@/components/Illustrations";
+import { topFaqs } from "@/lib/faq";
+import { beliefs } from "@/lib/company";
 import {
   ArrowRight,
   ArrowDown,
@@ -17,7 +22,6 @@ import {
   UserPlus,
   Hourglass,
   RotateCcw,
-  Plus,
 } from "lucide-react";
 
 /* ===== 文言（Miro「ICP・事業方向性 整理」PART 1〜3 と営業コンサルのフレームから） ===== */
@@ -66,21 +70,26 @@ const alternatives = [
   },
 ];
 
-const areas = [
-  {
-    icon: Database,
-    name: "データコンサルティング",
-    headline: "判断に使える数字を、そろえる",
-    body: "散らばった数字を整理して見るべき指標を決め、いつでも正しい数字が見られる状態をつくります。",
-    tags: ["KPI設計", "データ整備", "Power BI・Looker Studio"],
-    color: "bg-sky text-accent-blue",
-  },
+// 支援の中心はデータコンサルティング。AI・BPRはあわせて提供する
+const mainArea = {
+  icon: Database,
+  name: "データコンサルティング",
+  headline: "判断に使える数字を、そろえる",
+  body: "散らばった数字を整理して見るべき指標を決め、いつでも正しい数字が見られる状態をつくります。そのうえで、数字を見ながら改善を回すところまで伴走します。",
+  steps: [
+    "見るべき指標（KPI）を、事業の流れから決める",
+    "Excel・スプレッドシート・各種システムに散らばったデータを整理する",
+    "Power BI・Looker Studioなどで、いつでも見られる状態にする",
+    "定例ミーティングで、数字を見ながら改善を回す",
+  ],
+};
+
+const subAreas = [
   {
     icon: Bot,
     name: "AI導入支援",
     headline: "手作業の時間を、改善の時間に変える",
     body: "生成AIを業務の流れに組み込み、集計・資料づくり・問い合わせ対応などの手間を減らします。現場で使い続けられるところまで伴走します。",
-    tags: ["ChatGPT・Gemini", "業務への組み込み", "社内での定着"],
     color: "bg-mint text-emerald-700",
   },
   {
@@ -88,7 +97,6 @@ const areas = [
     name: "業務改善（BPR）",
     headline: "仕事の流れを整えて、定着させる",
     body: "業務の流れを見える形にしてボトルネックを特定し、GASやAPI連携での自動化も含めて、続けられる仕組みに落とし込みます。",
-    tags: ["業務フローの整理", "自動化", "仕組み化"],
     color: "bg-peach text-orange-700",
   },
 ];
@@ -99,25 +107,25 @@ const cases = [
     area: "データ",
     before: "店舗別・スタッフ別の売上を、毎月手作業で集計していた",
     after: "店舗別・スタッフ別の売上がすぐ見られるようになり、集計の手間が大きく減った",
-    metric: 330,
+    metric: "330",
     suffix: "時間",
     metricLabel: "月あたりの業務削減",
   },
   {
-    industry: "サービス業（経営層・PR部門）",
-    area: "AI",
-    before: "PR文案づくりや情報探しに、多くの時間をとられていた",
-    after: "GeminiとGoogleのツールを連携し、PR文案の作成は40%、情報検索は60%の時間を削減",
-    metric: 60,
+    industry: "飲食",
+    area: "データ",
+    before: "店舗別の売上報告をExcelでまとめていて、更新と確認に時間がかかっていた",
+    after: "店舗別の売上と人件費のバランスがすぐ見られるようになり、商品別の利益率をもとにセットを組み替えた",
+    metric: "+15",
     suffix: "%",
-    metricLabel: "情報検索の時間削減",
+    metricLabel: "利益率の改善",
   },
   {
     industry: "公益法人",
     area: "AI",
     before: "区民からの問い合わせには、受付時間内でしか対応できなかった",
     after: "区民向けの生成AIチャットボットを導入し、問い合わせ対応を24時間化",
-    metric: 24,
+    metric: "24",
     suffix: "時間",
     metricLabel: "問い合わせに対応できる時間",
   },
@@ -147,90 +155,6 @@ const fits = [
   "改善のためなら、いまのやり方を変えることにも時間を使える",
 ];
 
-const beliefs = [
-  {
-    label: "WHY",
-    title: "人々が本気ではたらく社会を共に創る",
-    body: "改善の手応えが数字で分かると、仕事はもっとおもしろくなる。そんな職場を、一社ずつ増やしていきたいと考えています。",
-  },
-  {
-    label: "HOW",
-    title: "再現性ある技術を、個人と組織になじませる",
-    body: "一部の人しか使えない仕組みでは、改善は続きません。現場で使い続けられる形に落とし込みます。",
-  },
-  {
-    label: "WHAT",
-    title: "データドリブン経営支援・AI導入支援",
-    body: "数字で判断し、AIで手間を減らす。その両方から、お客様の改善活動を支えます。",
-  },
-];
-
-const faqs = [
-  {
-    q: "費用はどのくらいかかりますか？",
-    a: "月額制の伴走支援が中心です。ご相談の内容と、解決したい課題に合わせてお見積りします。初回相談（60分）は無料です。",
-  },
-  {
-    q: "小さく始めることはできますか？",
-    a: "はい。まずは一つの事業・一つのテーマに絞って始め、成果を確かめながら広げていく進め方もできます。",
-  },
-  {
-    q: "社内にデータやITに詳しい人がいなくても大丈夫ですか？",
-    a: "大丈夫です。何の数字を取り、どう集計するかの設計から一緒に行います。最終的には、社内で改善を回せる状態をゴールにしています。",
-  },
-  {
-    q: "どのくらいの期間で成果が出ますか？",
-    a: "テーマや、いまあるデータの状態によって変わります。初回相談で、進め方とおおよその期間の見通しをお伝えします。",
-  },
-  {
-    q: "オンラインでも相談できますか？",
-    a: "はい。初回相談も、その後の定例ミーティングも、オンラインで対応しています。",
-  },
-  {
-    q: "どんなツールに対応していますか？",
-    a: "Power BI・Looker StudioなどのBIツール、ChatGPT・Geminiなどの生成AI、Google Apps Scriptや各種API連携などに対応しています。いまお使いのツールを活かす形でご提案します。",
-  },
-];
-
-/* ===== 共通パーツ ===== */
-
-function SectionTitle({
-  label,
-  children,
-  lead,
-  center = false,
-}: {
-  label: string;
-  children: React.ReactNode;
-  lead?: React.ReactNode;
-  center?: boolean;
-}) {
-  return (
-    <div className={center ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
-      <p className="font-inter text-xs font-bold uppercase tracking-[0.25em] text-accent-blue">
-        {label}
-      </p>
-      <h2 className="mt-3 font-maru text-[1.6rem] font-bold leading-[1.45] tracking-tight sm:text-3xl md:text-4xl">
-        {children}
-      </h2>
-      {lead && (
-        <p className="mt-5 text-[15px] leading-[1.9] text-gray">{lead}</p>
-      )}
-    </div>
-  );
-}
-
-function PrimaryCta({ children = "無料で相談する（60分）", className = "" }: { children?: React.ReactNode; className?: string }) {
-  return (
-    <Link
-      href="/contact"
-      className={`group inline-flex h-14 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-accent-blue px-8 text-[15px] font-bold text-white shadow-[0_5px_0_#1E3FC4] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_7px_0_#1E3FC4] active:translate-y-1 active:shadow-[0_1px_0_#1E3FC4] ${className}`}
-    >
-      {children}
-      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-    </Link>
-  );
-}
 
 /* ===== ページ ===== */
 
@@ -293,10 +217,20 @@ export default function Home() {
 
         {/* 支援領域 */}
         <div className="relative mx-auto mt-12 max-w-6xl px-5 sm:px-6 lg:mt-16 lg:px-8">
-          <div className="flex flex-col gap-3 rounded-3xl border border-border bg-white/80 p-5 sm:flex-row sm:items-center sm:gap-6 sm:px-8">
-            <p className="shrink-0 text-xs font-bold text-gray">支援領域</p>
-            <div className="flex flex-wrap gap-2">
-              {areas.map((a) => (
+          <div className="flex flex-col gap-4 rounded-3xl border border-border bg-white/80 p-5 md:flex-row md:items-center md:gap-8 md:px-8">
+            <a href="#areas" className="group flex items-center gap-3">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-sky text-accent-blue">
+                <Database className="h-5 w-5" />
+              </span>
+              <span>
+                <span className="block text-[11px] font-bold text-gray">支援の中心</span>
+                <span className="block font-maru text-lg font-bold group-hover:text-accent-blue">データコンサルティング</span>
+              </span>
+            </a>
+            <div className="hidden h-10 w-px bg-border md:block" />
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-xs font-bold text-gray">あわせて</span>
+              {subAreas.map((a) => (
                 <a
                   key={a.name}
                   href="#areas"
@@ -442,35 +376,63 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== 3つの支援領域 ===== */}
+      {/* ===== 支援領域（データコンサルが中心） ===== */}
       <section id="areas" className="scroll-mt-20 py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
           <FadeIn>
             <SectionTitle
               label="Services"
-              lead="入口はひとつでなくて大丈夫です。「数字」「手間」「仕事の流れ」のどこに課題があるかに合わせて、組み合わせてご提案します。"
+              lead="数字で判断できる状態をつくることが、私たちの支援の中心です。そのうえで必要に応じて、手間を減らすAI導入や、仕事の流れを整える業務改善を組み合わせます。"
             >
-              課題に合わせて、
+              支援の中心は、
               <br className="hidden sm:block" />
-              3つの領域を組み合わせます
+              データコンサルティング
             </SectionTitle>
           </FadeIn>
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
-            {areas.map((a, i) => (
-              <FadeIn key={a.name} delay={i * 100}>
-                <div className="card-hover flex h-full flex-col rounded-3xl border border-border bg-white p-7">
-                  <span className={`flex h-14 w-14 items-center justify-center rounded-2xl ${a.color}`}>
-                    <a.icon className="h-7 w-7" />
+
+          <FadeIn delay={100}>
+            <div className="mt-12 grid items-center gap-8 rounded-[2rem] border-2 border-foreground bg-white p-6 sm:p-8 lg:grid-cols-[1.15fr_1fr] lg:p-10">
+              <div>
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky text-accent-blue">
+                    <mainArea.icon className="h-7 w-7" />
                   </span>
-                  <p className="mt-6 text-xs font-bold text-gray">{a.name}</p>
-                  <h3 className="mt-1.5 font-maru text-xl font-bold leading-snug">{a.headline}</h3>
-                  <p className="mt-4 flex-1 text-sm leading-[1.85] text-gray">{a.body}</p>
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    {a.tags.map((t) => (
-                      <span key={t} className="rounded-full bg-surface px-3 py-1 text-xs font-medium text-foreground/80">
-                        {t}
+                  <div>
+                    <span className="inline-flex whitespace-nowrap rounded-full bg-foreground px-3 py-1 text-[11px] font-bold text-accent-lime">メインの支援</span>
+                    <p className="mt-1 text-sm font-bold">{mainArea.name}</p>
+                  </div>
+                </div>
+                <h3 className="mt-6 font-maru text-2xl font-bold leading-snug sm:text-[1.7rem]">{mainArea.headline}</h3>
+                <p className="mt-4 text-[15px] leading-[1.9] text-gray">{mainArea.body}</p>
+                <ol className="mt-6 space-y-2.5">
+                  {mainArea.steps.map((step, i) => (
+                    <li key={step} className="flex items-start gap-3 rounded-2xl bg-surface px-4 py-3">
+                      <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent-blue font-inter text-xs font-bold text-white">
+                        {i + 1}
                       </span>
-                    ))}
+                      <span className="text-sm font-medium leading-relaxed">{step}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+              <DataIllustration className="mx-auto w-full max-w-[440px]" />
+            </div>
+          </FadeIn>
+
+          <FadeIn>
+            <p className="mt-14 font-maru text-lg font-bold">あわせて、こんな支援もできます</p>
+          </FadeIn>
+          <div className="mt-5 grid gap-5 md:grid-cols-2">
+            {subAreas.map((a, i) => (
+              <FadeIn key={a.name} delay={i * 100}>
+                <div className="flex h-full gap-5 rounded-3xl border border-border bg-white p-6 sm:p-7">
+                  <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${a.color}`}>
+                    <a.icon className="h-6 w-6" />
+                  </span>
+                  <div>
+                    <p className="text-xs font-bold text-gray">{a.name}</p>
+                    <h3 className="mt-1 font-maru text-lg font-bold leading-snug">{a.headline}</h3>
+                    <p className="mt-3 text-sm leading-[1.85] text-gray">{a.body}</p>
                   </div>
                 </div>
               </FadeIn>
@@ -489,7 +451,7 @@ export default function Home() {
                 href="/cases"
                 className="group inline-flex items-center gap-1 text-sm font-bold text-foreground/75 transition-colors hover:text-accent-blue"
               >
-                支援事例をもっと見る
+                支援実績・事例をもっと見る
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
@@ -660,20 +622,6 @@ export default function Home() {
             ))}
           </div>
 
-          <FadeIn>
-            <div className="mt-8 flex flex-col gap-5 rounded-3xl bg-surface p-6 sm:flex-row sm:items-center sm:p-8">
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white font-maru text-xl font-bold text-accent-blue">
-                片口
-              </div>
-              <div>
-                <p className="text-xs font-bold text-gray">代表取締役</p>
-                <p className="mt-1 font-maru text-lg font-bold">片口 潤哉</p>
-                <p className="mt-2 text-sm leading-[1.85] text-gray">
-                  人材大手の経営企画部門で6年間、役員向けのレポートづくりから社内研修の講師まで、データの活用に携わる。経営とデータの両方が分かる人が足りない現場を数多く見てきた経験から、2026年4月に株式会社セタリンクを設立。
-                </p>
-              </div>
-            </div>
-          </FadeIn>
         </div>
       </section>
 
@@ -685,57 +633,23 @@ export default function Home() {
               よくある質問
             </SectionTitle>
           </FadeIn>
-          <div className="mt-10 space-y-3">
-            {faqs.map((f) => (
-              <details key={f.q} className="group rounded-2xl bg-white px-5 py-1 open:pb-4 sm:px-6">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-[15px] font-bold [&::-webkit-details-marker]:hidden">
-                  <span className="flex items-start gap-3">
-                    <span className="font-inter text-accent-blue">Q.</span>
-                    {f.q}
-                  </span>
-                  <Plus className="h-5 w-5 shrink-0 text-accent-blue transition-transform duration-300 group-open:rotate-45" />
-                </summary>
-                <p className="border-t border-border pt-4 text-sm leading-[1.9] text-gray">{f.a}</p>
-              </details>
-            ))}
+          <div className="mt-10">
+            <FaqList items={topFaqs} />
+          </div>
+          <div className="mt-8 text-center">
+            <Link
+              href="/faq"
+              className="group inline-flex items-center gap-1 text-sm font-bold text-foreground/75 transition-colors hover:text-accent-blue"
+            >
+              よくある質問をすべて見る
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
           </div>
         </div>
       </section>
 
       {/* ===== 最後のCTA ===== */}
-      <section className="py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
-          <FadeIn>
-            <div className="relative overflow-hidden rounded-[2rem] bg-navy px-6 py-14 text-center text-white sm:px-10 md:py-20">
-              <div className="pointer-events-none absolute -left-16 -top-16 h-56 w-56 rounded-full bg-accent-blue/40 blur-3xl" />
-              <div className="pointer-events-none absolute -bottom-20 -right-10 h-56 w-56 rounded-full bg-accent-lime/30 blur-3xl" />
-              <p className="relative font-inter text-xs font-bold uppercase tracking-[0.25em] text-accent-lime">
-                Contact
-              </p>
-              <h2 className="relative mt-4 font-maru text-[1.6rem] font-bold leading-[1.5] sm:text-3xl md:text-4xl">
-                まずは60分、
-                <br className="sm:hidden" />
-                いまの改善の話を
-                <br />
-                聞かせてください。
-              </h2>
-              <p className="relative mx-auto mt-5 max-w-md text-sm leading-[1.9] text-white/70">
-                「何から相談すればいいか分からない」という段階でも大丈夫です。初回相談は無料、オンラインで対応します。
-              </p>
-              <div className="relative mt-9 flex justify-center">
-                <Link
-                  href="/contact"
-                  className="group inline-flex h-14 items-center justify-center gap-2 rounded-full bg-accent-lime px-9 text-[15px] font-bold text-navy shadow-[0_5px_0_#8FAE1C] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_7px_0_#8FAE1C] active:translate-y-1 active:shadow-[0_1px_0_#8FAE1C]"
-                >
-                  無料で相談する（60分）
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </div>
-              <p className="relative mt-4 text-xs text-white/50">2営業日以内にご連絡します</p>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
+      <CtaPanel />
     </>
   );
 }

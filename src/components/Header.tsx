@@ -8,9 +8,9 @@ import LogoMark from "@/components/LogoMark";
 
 const navLinks = [
   { href: "/#support", label: "支援内容" },
-  { href: "/cases", label: "支援事例" },
+  { href: "/cases", label: "支援実績・事例" },
   { href: "/company", label: "会社概要" },
-  { href: "/#faq", label: "よくある質問" },
+  { href: "/faq", label: "よくある質問" },
 ];
 
 export default function Header() {

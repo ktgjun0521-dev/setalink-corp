@@ -1,373 +1,341 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
-import {
-  ArrowRight,
-  Clock,
-  TrendingUp,
-  DollarSign,
-  Target,
-  Database,
-  Bot,
-  Users,
-  Search,
-  FileText,
-  Zap,
-  type LucideIcon,
-} from "lucide-react";
+import { SectionTitle, PageHero, CtaPanel } from "@/components/Section";
+import { DataIllustration } from "@/components/Illustrations";
+import { ArrowRight, ArrowDown, Database, Bot, Workflow, type LucideIcon } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "支援事例",
+  title: "支援実績・事例",
   description:
-    "データ活用支援・AI導入支援の支援事例。株式会社セタリンクの支援実績をご紹介。",
+    "データコンサルティングを中心とした、株式会社セタリンクの支援実績と事例。業種・テーマ別の実績と、支援の前後で何が変わったかをご紹介します。",
   alternates: {
     canonical: "https://setalinkapp.com/cases",
   },
 };
 
-interface CaseResult {
-  icon: LucideIcon;
-  metric: string;
-  label: string;
-}
+/* ===== 支援実績（社名は出さず業種で表記） ===== */
+
+type AreaKey = "data" | "ai" | "bpr";
+
+const areaMeta: Record<AreaKey, { name: string; icon: LucideIcon; color: string }> = {
+  data: { name: "データコンサルティング", icon: Database, color: "bg-sky text-accent-blue" },
+  ai: { name: "AI導入支援", icon: Bot, color: "bg-mint text-emerald-700" },
+  bpr: { name: "業務改善（BPR）", icon: Workflow, color: "bg-peach text-orange-700" },
+};
+
+const track: { area: AreaKey; items: { industry: string; theme: string; tags: string[] }[] }[] = [
+  {
+    area: "data",
+    items: [
+      { industry: "パーソナルジム（多店舗）", theme: "店舗別の実績と売上がそろって見られる仕組みづくり", tags: ["KPI設計", "データ基盤", "Looker Studio"] },
+      { industry: "パーソナルジム（多店舗）", theme: "物販・ECの販売実績を一か所で見られる仕組みと、人事データの分析", tags: ["物販・EC", "人事データ"] },
+      { industry: "人材紹介", theme: "流入から入社までの流れを数字で見える形にし、改善ポイントを特定", tags: ["ファネル分析", "KPI設計"] },
+      { industry: "大手メーカー", theme: "Power BIの活用についてのスポットコンサルティング", tags: ["Power BI"] },
+      { industry: "小規模事業者", theme: "経営管理シートと収益性の分析、経営ミーティングへの同席", tags: ["経営管理", "収益性分析"] },
+    ],
+  },
+  {
+    area: "ai",
+    items: [
+      { industry: "公益財団（行政系）", theme: "区民向け生成AIチャットボットの導入と、職員向けの研修・6か月の伴走", tags: ["生成AI", "チャットボット"] },
+      { industry: "老舗酒蔵（製造業）", theme: "Google Workspaceへの移行と、Geminiを使った業務フローづくり", tags: ["Gemini", "GAS"] },
+    ],
+  },
+  {
+    area: "bpr",
+    items: [
+      { industry: "人材サービス（看護師の転職支援）", theme: "スプレッドシートとSaaSをAPIでつなぎ、手作業を自動化", tags: ["API連携", "自動化"] },
+      { industry: "農業協同組合", theme: "kintoneアプリの構築と、現場への定着支援", tags: ["kintone", "定着支援"] },
+    ],
+  },
+];
+
+const industries = [
+  "フィットネス",
+  "人材サービス",
+  "飲食",
+  "製造",
+  "公益法人・行政系",
+  "農業団体",
+  "サービス業",
+];
+
+/* ===== 支援事例（支援の前後） ===== */
 
 interface CaseItem {
-  id: number;
+  area: AreaKey;
   industry: string;
   company: string;
-  subtitle: string;
-  challenge: string;
-  solution: string;
-  results: CaseResult[];
+  title: string;
+  before: string;
+  after: string;
+  results: { metric: string; label: string }[];
   point: string;
   tags: string[];
-  image: string;
 }
 
-const dataCases: CaseItem[] = [
+const cases: CaseItem[] = [
   {
-    id: 1,
+    area: "data",
     industry: "フィットネス",
-    company: "全国展開 フィットネスクラブ A社",
-    subtitle: "全国37店舗・約200名の状況をPower BIで一目で把握",
-    challenge:
-      "各店舗の売上データはPOSで取得していたものの、集計が手作業で帳簿のズレや費用の分類ミスが常態化。タイムリーに売上を正確に把握することができない状態でした。",
-    solution:
-      "完全自動で正しいデータを毎日工数0でプログラムにて集計。基幹システム、POSレジデータを連携し、業績利用の入力工数がほぼ0に。",
+    company: "全国展開のフィットネスクラブ A社",
+    title: "全国37店舗・約200名の状況を、ひと目で把握できるように",
+    before:
+      "各店舗の売上データはPOSで取得していたものの、集計が手作業で、帳簿のズレや費用の分類ミスが常態化。売上をタイムリーに正確に把握できない状態でした。",
+    after:
+      "基幹システムとPOSレジのデータを連携し、正しいデータを毎日自動で集計。業績管理のための入力作業がほぼゼロになりました。",
     results: [
-      { icon: Clock, metric: "330h/月", label: "業務時間削減" },
-      { icon: DollarSign, metric: "約60万円/月", label: "人件費削減" },
-      { icon: TrendingUp, metric: "リアルタイム", label: "経営判断スピード" },
+      { metric: "330h/月", label: "業務時間の削減" },
+      { metric: "約60万円/月", label: "人件費の削減" },
+      { metric: "リアルタイム", label: "経営判断のスピード" },
     ],
-    point:
-      "店舗別・キャスト別の売上を可視化。経営会議や店長ミーティングでの意思決定がスムーズに。",
-    tags: ["Power BI", "データ基盤構築", "業務自動化", "ダッシュボード"],
-    image: "/images/case-fitness.jpg",
+    point: "店舗別・キャスト別の売上が見えるようになり、経営会議や店長ミーティングでの意思決定がスムーズに。",
+    tags: ["Power BI", "データ基盤構築", "業務自動化"],
   },
   {
-    id: 2,
+    area: "data",
     industry: "飲食",
     company: "飲食店 B社",
-    subtitle: "商品別利益率分析でセット組み換え、利益率UP",
-    challenge:
-      "月次の売上報告や店舗別の簡易集計をExcelで行っていたが、更新に時間がかかり、数字の確認も手間がかかる状態。現場のオペレーション改善に手をつけられていませんでした。",
-    solution:
-      "データが自動で集計・可視化されることにより、各店舗の売上×人件費バランスがすぐ確認でき、改善点を部長判断で即対応可能に。",
+    title: "商品別の利益率を見て、セットを組み替え。利益率が改善",
+    before:
+      "月次の売上報告や店舗別の集計をExcelで行っていて、更新にも確認にも時間がかかる状態。現場のオペレーション改善に手をつけられていませんでした。",
+    after:
+      "データが自動で集計されるようになり、各店舗の売上と人件費のバランスがすぐ確認できるように。改善点に部長がその場で対応できるようになりました。",
     results: [
-      { icon: TrendingUp, metric: "+15%", label: "利益率改善" },
-      { icon: Clock, metric: "大幅削減", label: "報告作成時間" },
-      { icon: Target, metric: "即座に把握", label: "店舗別パフォーマンス" },
+      { metric: "+15%", label: "利益率の改善" },
+      { metric: "大幅削減", label: "報告づくりの時間" },
+      { metric: "すぐ把握", label: "店舗別の状況" },
     ],
-    point:
-      "商品別利益率分析でセット組み換え、感覚の見直しやスタッフ配置の最適化につながりました。",
-    tags: ["データ分析", "利益率分析", "可視化"],
-    image: "/images/case-food.jpg",
+    point: "商品別の利益率をもとにセットを組み替え、感覚に頼っていた判断やスタッフ配置の見直しにつながりました。",
+    tags: ["利益率分析", "データ整備"],
   },
   {
-    id: 3,
+    area: "data",
     industry: "人材",
     company: "人材会社 C社",
-    subtitle: "営業データ基盤の再設計により目標達成率+10%を実現",
-    challenge:
-      "営業日報のExcelが肥大化し、管理の外注コストとして月80万円が発生。さらに指標の増加によるタブや集計数が肥大し、売上数字の確認にも時間を要する状態でした。",
-    solution:
-      "営業日報Excelを完全移管し、データ集計→活用の仕組みまでを自動化。営業指標の重要度を整理し、現場に基づいたダッシュボードUIを設計。",
+    title: "営業データの仕組みを作り直し、目標達成率が約10%向上",
+    before:
+      "営業日報のExcelが肥大化し、管理の外注費が月80万円。指標が増えるたびにタブや集計が増え、売上の数字を確認するだけでも時間がかかっていました。",
+    after:
+      "営業日報のExcelを移行し、集計から活用までを自動化。営業指標の重要度を整理し、現場で使いやすい画面を設計しました。",
     results: [
-      { icon: TrendingUp, metric: "+10%", label: "目標達成率UP" },
-      { icon: DollarSign, metric: "80万円/月", label: "外注コスト削減" },
-      { icon: Target, metric: "10%UP", label: "営業交渉達成率" },
+      { metric: "+10%", label: "目標達成率" },
+      { metric: "80万円/月", label: "外注費の削減" },
+      { metric: "毎日", label: "見るべき指標を確認" },
     ],
-    point:
-      "毎日確認すべき指標が入った日別ダッシュボードで日次の判断が可能に。営業の目標達成率が約10%向上。",
-    tags: ["営業データ基盤", "ダッシュボード", "KPI設計"],
-    image: "/images/case-hr.jpg",
+    point: "毎日確認すべき指標をまとめた日別の画面で、日々の判断ができるように。",
+    tags: ["KPI設計", "営業データ基盤"],
   },
-];
-
-const aiCases: CaseItem[] = [
   {
-    id: 4,
+    area: "ai",
     industry: "サービス業",
-    company: "経営層・PR部門向け D社",
-    subtitle: "Gemini × Google連携でPR・経営部門の業務を大幅効率化",
-    challenge:
-      "経営層・PR部門の業務時間の多くが情報検索・資料作成・スケジュール調整などの間接業務に費やされ、本来注力すべき経営判断やコア業務に集中できない状態でした。",
-    solution:
-      "Google Workspace × Geminiを連携したAI伴走支援プログラムを導入。秘書業務の自動化、PR文案のAI支援、情報検索の効率化を実現。週1回の定例MTGとチャット相談で継続的にサポート。",
+    company: "経営層・PR部門 D社",
+    title: "Gemini × Googleのツールで、経営層・PR部門の手間を大きく削減",
+    before:
+      "経営層・PR部門の業務時間の多くが、情報探し・資料づくり・日程調整などの間接業務に費やされ、本来注力すべき経営判断やコア業務に集中できない状態でした。",
+    after:
+      "Google WorkspaceとGeminiを連携した伴走支援で、秘書業務の自動化、PR文案づくりのAI活用、情報検索の効率化を実現。週1回の定例とチャット相談で継続的にサポートしました。",
     results: [
-      { icon: Search, metric: "60%削減", label: "情報検索・ファイル探し時間" },
-      { icon: FileText, metric: "40%削減", label: "PR文案・資料作成時間" },
-      { icon: Clock, metric: "90%削減", label: "会議調整・スケジュール管理" },
+      { metric: "60%削減", label: "情報検索・ファイル探し" },
+      { metric: "40%削減", label: "PR文案・資料づくり" },
+      { metric: "90%削減", label: "会議調整・日程管理" },
     ],
-    point:
-      "AI秘書によるスケジュール調整・会食手配・メール文書作成を自動化。経営層が本来注力すべき「経営判断」「戦略策定」に集中できる環境を実現。",
-    tags: [
-      "Gemini",
-      "Google Workspace",
-      "AI伴走支援",
-      "秘書業務効率化",
-      "PR支援",
-    ],
-    image: "/images/case-service.jpg",
+    point: "日程調整・会食手配・メール文書づくりをAIで効率化。経営判断や戦略づくりに集中できる環境に。",
+    tags: ["Gemini", "Google Workspace", "伴走支援"],
   },
   {
-    id: 5,
+    area: "ai",
     industry: "公益法人",
     company: "公益財団法人 E団体",
-    subtitle: "区民向け生成AIチャットボットで利便性向上とコスト削減を両立",
-    challenge:
-      "区民からの問い合わせが電話・窓口に集中し、職員の対応負荷が高い状態。特に定型的な質問（施設予約、手続き案内など）が多く、本来の業務に時間を割けない課題がありました。",
-    solution:
-      "公式サイトに生成AIチャットボットを導入。高齢者にも配慮した「大きな文字」「やさしい言葉」のUI設計。NGワードブロック・回答ガードレールなどセキュリティ対策を徹底し、6ヶ月の段階的導入（PoC → 限定公開 → 全体運用）で定着。",
+    title: "区民向け生成AIチャットボットで、使いやすさと負担軽減を両立",
+    before:
+      "区民からの問い合わせが電話・窓口に集中し、職員の対応負荷が高い状態。施設予約や手続き案内などの定型的な質問が多く、本来の業務に時間を割けていませんでした。",
+    after:
+      "公式サイトに生成AIチャットボットを導入。高齢の方にも配慮した「大きな文字」「やさしい言葉」の画面設計と、回答のガードレールなどのセキュリティ対策を徹底し、6か月かけて段階的に定着させました。",
     results: [
-      { icon: Users, metric: "40%削減", label: "電話・窓口の問い合わせ" },
-      { icon: Clock, metric: "24時間", label: "対応可能時間" },
-      { icon: Zap, metric: "即時回答", label: "定型質問への応答" },
+      { metric: "40%削減", label: "電話・窓口の問い合わせ" },
+      { metric: "24時間", label: "対応できる時間" },
+      { metric: "即時回答", label: "定型の質問への応答" },
     ],
-    point:
-      "行政水準のセキュリティ（個人情報フィルタリング・監査ログ・定期レビュー）を担保しつつ、利用者アンケートで高い満足度を獲得。段階的な導入で職員の理解と信頼も獲得。",
-    tags: [
-      "生成AIチャットボット",
-      "LLM",
-      "RAG",
-      "セキュリティ設計",
-      "行政DX",
-    ],
-    image: "/images/case-gov.jpg",
+    point: "行政水準のセキュリティを守りながら、利用者アンケートで高い満足度。段階的に進めたことで、職員の理解も得られました。",
+    tags: ["生成AI", "チャットボット", "セキュリティ設計"],
   },
 ];
 
-function CaseCard({ c, index, bgAlt }: { c: CaseItem; index: number; bgAlt: boolean }) {
+function CaseCard({ c, index }: { c: CaseItem; index: number }) {
+  const meta = areaMeta[c.area];
   return (
-    <section className={`py-16 md:py-24 ${bgAlt ? "bg-light-blue" : ""}`}>
-      <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        {/* Case header with image */}
-        <FadeIn>
-          <div className="relative overflow-hidden rounded-2xl mb-10">
-            <div className="relative h-48 md:h-64">
-              <Image src={c.image} alt="" fill className="object-cover" quality={70} sizes="(max-width: 768px) 100vw, 1152px" />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" />
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8">
-              <div className="flex flex-wrap items-center gap-3 mb-3">
-                <span className="inline-flex rounded-full bg-white/20 backdrop-blur-sm px-4 py-1.5 text-xs font-semibold text-white">
-                  {c.industry}
-                </span>
-                <span className="font-inter text-xs text-white/70">
-                  CASE {String(index + 1).padStart(2, "0")}
-                </span>
-              </div>
-              <h3 className="text-xl font-bold tracking-tight text-white sm:text-2xl md:text-3xl">
-                {c.company}
-              </h3>
-              <p className="mt-1.5 text-sm font-medium text-accent-lime sm:mt-2 sm:text-base">
-                {c.subtitle}
-              </p>
-            </div>
+    <FadeIn>
+      <article className="rounded-[2rem] bg-white p-6 shadow-[0_3px_0_var(--border)] sm:p-8 lg:p-10">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="font-inter text-xs font-bold tracking-widest text-accent-blue">
+            CASE {String(index + 1).padStart(2, "0")}
+          </span>
+          <span className="rounded-full bg-surface px-3 py-1 text-xs font-bold">{c.industry}</span>
+          <span className={`rounded-full px-3 py-1 text-xs font-bold ${meta.color}`}>{meta.name}</span>
+        </div>
+        <h3 className="mt-4 font-maru text-xl font-bold leading-snug sm:text-2xl">{c.title}</h3>
+        <p className="mt-1.5 text-xs text-gray">{c.company}</p>
+
+        <div className="mt-7 grid items-stretch gap-3 lg:grid-cols-[1fr_auto_1fr] lg:gap-4">
+          <div className="rounded-2xl border border-dashed border-foreground/25 p-5">
+            <p className="font-inter text-[11px] font-bold uppercase tracking-widest text-gray">Before</p>
+            <p className="mt-2 text-sm leading-[1.85] text-gray">{c.before}</p>
           </div>
-        </FadeIn>
-
-        <div className="mt-10 grid gap-10 md:grid-cols-12 md:gap-16">
-          <div className="md:col-span-7">
-            <FadeIn delay={100}>
-              <div className="rounded-2xl border border-red-100 bg-red-50/50 p-6">
-                <p className="flex items-center gap-2 font-inter text-xs font-semibold uppercase tracking-widest text-red-500">
-                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-red-100 text-red-500 text-[10px] font-bold">
-                    !
-                  </span>
-                  支援前の課題
-                </p>
-                <p className="mt-3 text-sm leading-relaxed text-foreground/80">
-                  {c.challenge}
-                </p>
-              </div>
-
-              <div className="flex justify-center py-4">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-blue text-white">
-                  <ArrowRight className="h-4 w-4 rotate-90" />
-                </div>
-              </div>
-
-              <div className="rounded-2xl border border-blue-100 bg-blue-50/50 p-6">
-                <p className="flex items-center gap-2 font-inter text-xs font-semibold uppercase tracking-widest text-accent-blue">
-                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-blue-100 text-accent-blue text-[10px] font-bold">
-                    ✓
-                  </span>
-                  支援による解決
-                </p>
-                <p className="mt-3 text-sm leading-relaxed text-foreground/80">
-                  {c.solution}
-                </p>
-              </div>
-
-              <div className="mt-6 rounded-xl bg-accent-lime/10 p-4">
-                <p className="text-sm font-medium leading-relaxed text-foreground/80">
-                  <span className="font-bold text-foreground">Point：</span>
-                  {c.point}
-                </p>
-              </div>
-            </FadeIn>
+          <div className="flex items-center justify-center">
+            <ArrowRight className="hidden h-6 w-6 text-accent-blue lg:block" />
+            <ArrowDown className="h-6 w-6 text-accent-blue lg:hidden" />
           </div>
-
-          <div className="md:col-span-5">
-            <FadeIn delay={200}>
-              <div className="rounded-2xl bg-navy p-8 text-white">
-                <p className="font-inter text-xs font-semibold uppercase tracking-widest text-accent-blue">
-                  Results
-                </p>
-                <h4 className="mt-2 text-lg font-bold">成果</h4>
-                <div className="mt-6 space-y-6">
-                  {c.results.map((result) => (
-                    <div key={result.label} className="flex items-center gap-4">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10">
-                        <result.icon className="h-6 w-6 text-accent-blue" />
-                      </div>
-                      <div>
-                        <p className="font-inter text-2xl font-bold">
-                          {result.metric}
-                        </p>
-                        <p className="text-xs text-white/60">{result.label}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-6 flex flex-wrap gap-2">
-                {c.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full border border-border bg-white px-3 py-1 text-xs text-gray transition-all duration-300 hover:border-accent-blue/30 hover:bg-accent-blue/5 hover:text-accent-blue"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </FadeIn>
+          <div className="rounded-2xl bg-lime-soft p-5">
+            <p className="font-inter text-[11px] font-bold uppercase tracking-widest">After</p>
+            <p className="mt-2 text-sm font-medium leading-[1.85]">{c.after}</p>
           </div>
         </div>
-      </div>
-    </section>
+
+        <div className="mt-5 grid gap-2 sm:grid-cols-3 sm:gap-3">
+          {c.results.map((r) => (
+            <div key={r.label} className="flex items-baseline justify-between gap-3 rounded-2xl bg-sky px-5 py-3 sm:block sm:py-4">
+              <p className="font-inter text-xl font-bold text-accent-blue sm:text-2xl">{r.metric}</p>
+              <p className="text-right text-xs font-medium text-foreground/75 sm:mt-1 sm:text-left">{r.label}</p>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-5 text-sm leading-[1.85]">
+          <span className="mr-2 rounded-full bg-foreground px-2.5 py-0.5 text-[11px] font-bold text-accent-lime">ポイント</span>
+          {c.point}
+        </p>
+        <div className="mt-5 flex flex-wrap gap-2">
+          {c.tags.map((t) => (
+            <span key={t} className="rounded-full bg-surface px-3 py-1 text-xs font-medium text-foreground/80">
+              {t}
+            </span>
+          ))}
+        </div>
+      </article>
+    </FadeIn>
   );
 }
 
 export default function CasesPage() {
+  const dataCases = cases.filter((c) => c.area === "data");
+  const aiCases = cases.filter((c) => c.area !== "data");
+
   return (
     <>
-      {/* Page Header */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">
-        <div className="absolute -right-32 -top-32 h-[400px] w-[400px] rounded-full bg-accent-blue/5 blur-3xl" />
-        <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
+      <PageHero
+        label="Results & Cases"
+        title="支援実績・事例"
+        lead="データコンサルティングを中心に、業種もテーマもさまざまな会社の改善活動をご一緒してきました。社名は伏せ、業種でご紹介しています。"
+        illustration={<DataIllustration className="w-[360px]" />}
+      />
+
+      {/* ===== 支援実績 ===== */}
+      <section id="results" className="scroll-mt-20 bg-surface py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
           <FadeIn>
-            <p className="font-inter text-xs font-semibold uppercase tracking-[0.25em] text-accent-blue">
-              Case Studies
-            </p>
-            <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            <SectionTitle label="Results" lead="これまでにご一緒した主な業種と、支援のテーマです。">
+              支援実績
+            </SectionTitle>
+          </FadeIn>
+
+          <FadeIn>
+            <div className="mt-10 flex flex-wrap gap-2">
+              {industries.map((name) => (
+                <span key={name} className="rounded-full border-2 border-foreground bg-white px-4 py-2 text-sm font-bold">
+                  {name}
+                </span>
+              ))}
+            </div>
+          </FadeIn>
+
+          <div className="mt-12 space-y-10">
+            {track.map((group) => {
+              const meta = areaMeta[group.area];
+              return (
+                <FadeIn key={group.area}>
+                  <div>
+                    <div className="flex items-center gap-3">
+                      <span className={`flex h-10 w-10 items-center justify-center rounded-xl ${meta.color}`}>
+                        <meta.icon className="h-5 w-5" />
+                      </span>
+                      <h3 className="font-maru text-lg font-bold">{meta.name}</h3>
+                      {group.area === "data" && (
+                        <span className="shrink-0 whitespace-nowrap rounded-full bg-foreground px-2.5 py-0.5 text-[11px] font-bold text-accent-lime">メインの支援</span>
+                      )}
+                    </div>
+                    <ul className="mt-4 grid gap-3 md:grid-cols-2">
+                      {group.items.map((item) => (
+                        <li key={item.theme} className="flex h-full flex-col rounded-2xl bg-white p-5">
+                          <p className="text-xs font-bold text-gray">{item.industry}</p>
+                          <p className="mt-1.5 text-[15px] font-bold leading-relaxed">{item.theme}</p>
+                          <div className="mt-3 flex flex-wrap gap-1.5">
+                            {item.tags.map((t) => (
+                              <span key={t} className="rounded-full bg-surface px-2.5 py-0.5 text-[11px] font-medium text-foreground/75">
+                                {t}
+                              </span>
+                            ))}
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </FadeIn>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== 支援事例 ===== */}
+      <section id="cases" className="scroll-mt-20 py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
+          <FadeIn>
+            <SectionTitle label="Before → After" lead="支援の前に困っていたことと、支援のあとに変わったことです。">
               支援事例
-            </h1>
-            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-gray sm:mt-6 sm:text-base">
-              データ活用支援・AI導入支援の実績をご紹介します。業界・課題に合わせた最適なソリューションで、成果を出しています。
-            </p>
-            <div className="section-divider mt-8" />
+            </SectionTitle>
           </FadeIn>
-        </div>
-      </section>
 
-      {/* ===== Data Cases Section ===== */}
-      <section className="py-8">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <FadeIn>
-            <div className="flex items-center gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-accent-blue">
-                <Database className="h-6 w-6" />
-              </div>
-              <div>
-                <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
-                  データ活用支援事例
-                </h2>
-                <p className="mt-1 text-sm text-gray">
-                  Data Consulting Case Studies
-                </p>
-              </div>
-            </div>
+            <h3 className="mt-14 flex items-center gap-3 font-maru text-xl font-bold">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-sky text-accent-blue">
+                <Database className="h-5 w-5" />
+              </span>
+              データコンサルティングの事例
+            </h3>
           </FadeIn>
-        </div>
-      </section>
+          <div className="mt-6 space-y-6">
+            {dataCases.map((c, i) => (
+              <CaseCard key={c.title} c={c} index={i} />
+            ))}
+          </div>
 
-      {dataCases.map((c, i) => (
-        <CaseCard key={c.id} c={c} index={i} bgAlt={i % 2 === 1} />
-      ))}
-
-      {/* ===== AI Cases Section ===== */}
-      <section className="py-8 mt-8 border-t-4 border-accent-blue/10">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <FadeIn>
-            <div className="flex items-center gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600">
-                <Bot className="h-6 w-6" />
-              </div>
-              <div>
-                <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
-                  AI活用支援事例
-                </h2>
-                <p className="mt-1 text-sm text-gray">
-                  AI Implementation Case Studies
-                </p>
-              </div>
-            </div>
+            <h3 className="mt-16 flex items-center gap-3 font-maru text-xl font-bold">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-mint text-emerald-700">
+                <Bot className="h-5 w-5" />
+              </span>
+              AI導入支援の事例
+            </h3>
           </FadeIn>
+          <div className="mt-6 space-y-6">
+            {aiCases.map((c, i) => (
+              <CaseCard key={c.title} c={c} index={dataCases.length + i} />
+            ))}
+          </div>
         </div>
       </section>
 
-      {aiCases.map((c, i) => (
-        <CaseCard key={c.id} c={c} index={dataCases.length + i} bgAlt={i % 2 === 1} />
-      ))}
-
-      {/* CTA */}
-      <section className="py-24 md:py-32">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
-          <FadeIn>
-            <div className="mx-auto max-w-2xl rounded-3xl bg-navy p-10 text-center text-white md:p-16">
-              <h2 className="text-xl font-bold tracking-tight sm:text-2xl md:text-3xl">
-                同じような課題をお持ちですか？
-              </h2>
-              <p className="mt-4 text-sm leading-relaxed text-white/60">
-                まずは無料でヒアリングいたします。貴社の状況に合わせた最適なご提案をお約束します。
-              </p>
-              <div className="mt-8">
-                <Link
-                  href="/contact"
-                  className="btn-shimmer group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent-blue to-blue-600 px-8 text-sm font-medium text-white transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-accent-blue/30 active:scale-[0.98]"
-                >
-                  無料相談はこちら
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
+      <CtaPanel
+        title={
+          <>
+            同じような課題を、
+            <br />
+            お持ちではありませんか？
+          </>
+        }
+        lead="まずは60分の無料相談で、いまの改善活動と困っていることを伺います。オンラインで対応します。"
+      />
     </>
   );
 }
