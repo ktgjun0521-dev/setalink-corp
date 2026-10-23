@@ -8,7 +8,6 @@ const escapeHtml = (value: unknown) =>
   );
 
 export async function POST(request: Request) {
-  const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     const { name, company, email, phone, topic, message } = await request.json();
 
@@ -19,6 +18,9 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
+
+    // 入力チェックのあとに作る（APIキー未設定の環境でも入力チェックは動くように）
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     const safe = {
       name: escapeHtml(name),
@@ -31,7 +33,7 @@ export async function POST(request: Request) {
 
     // Send notification email to SetaLink
     await resend.emails.send({
-      from: "SETALINK お問い合わせ <noreply@setalinkapp.com>",
+      from: "セタリンク お問い合わせ <noreply@setalinkapp.com>",
       to: ["junya.kataguchi@setalinkapp.com"],
       subject: `【お問い合わせ】${company} ${name}様`,
       html: `
@@ -76,14 +78,14 @@ export async function POST(request: Request) {
 
     // Send auto-reply to the customer
     await resend.emails.send({
-      from: "SETALINK株式会社 <noreply@setalinkapp.com>",
+      from: "株式会社セタリンク <noreply@setalinkapp.com>",
       to: [email],
-      subject: "【SETALINK】お問い合わせありがとうございます",
+      subject: "【セタリンク】お問い合わせありがとうございます",
       html: `
         <div style="font-family: 'Helvetica Neue', Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 32px;">
           <p style="color: #0F172A; font-size: 15px; line-height: 1.8;">
             ${safe.name} 様<br /><br />
-            この度はSETALINK株式会社へお問い合わせいただき、誠にありがとうございます。<br />
+            この度は株式会社セタリンクへお問い合わせいただき、誠にありがとうございます。<br />
             以下の内容でお問い合わせを受け付けいたしました。<br /><br />
             担当者より2営業日以内にご連絡させていただきますので、今しばらくお待ちください。
           </p>
@@ -93,7 +95,7 @@ export async function POST(request: Request) {
           </div>
           <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 24px 0;" />
           <p style="color: #94a3b8; font-size: 12px; line-height: 1.6;">
-            SETALINK株式会社<br />
+            株式会社セタリンク<br />
             〒154-0023 東京都世田谷区世田谷1-15-23<br />
             E-mail: junya.kataguchi@setalinkapp.com<br />
             Web: https://setalinkapp.com

@@ -61,8 +61,8 @@ export default function Footer() {
           </nav>
         </div>
 
-        <p className="mt-16 select-none font-inter text-[17vw] font-black leading-none tracking-tighter text-paper/[0.06] md:text-[11rem]">
-          SETALINK
+        <p className="mt-16 select-none font-display text-[16vw] font-black leading-none tracking-tight text-paper/[0.06] md:text-[10rem]" aria-hidden="true">
+          セタリンク
         </p>
         <div className="mt-6 flex flex-col items-center justify-between gap-3 border-t border-paper/15 pt-6 md:flex-row">
           <p className="font-inter text-xs text-paper/40">&copy; 2026 株式会社セタリンク All rights reserved.</p>

@@ -3,7 +3,7 @@ import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "電子公告",
-  description: "株式会社セタリンク（SETALink Inc.）の電子公告ページ。",
+  description: "株式会社セタリンクの電子公告ページ。",
 };
 
 export default function NoticePage() {

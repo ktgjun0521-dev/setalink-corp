@@ -216,8 +216,8 @@ function HireScene() {
       </g>
       {/* 応募 0件 */}
       <g transform="rotate(-6 214 60)">
-        <rect x="184" y="44" width="72" height="30" fill={PEACH} stroke={INK} strokeWidth="1.8" />
-        <text x="220" y="65" textAnchor="middle" fontSize="15" fill={RED} fontFamily={HAND}>応募 0件</text>
+        <rect x="180" y="44" width="86" height="30" fill={PEACH} stroke={INK} strokeWidth="1.8" />
+        <text x="223" y="65" textAnchor="middle" fontSize="15" fill={RED} fontFamily={HAND}>応募 0件</text>
       </g>
       {/* 待つ人と砂時計 */}
       <Person x={282} y={102} />

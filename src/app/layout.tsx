@@ -82,8 +82,8 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "SETALINK株式会社",
-  alternateName: "セタリンク",
+  name: "株式会社セタリンク",
+  alternateName: ["セタリンク", "SETALINK Inc."],
   url: "https://setalinkapp.com",
   logo: "https://setalinkapp.com/images/hero-bg.jpg",
   description:

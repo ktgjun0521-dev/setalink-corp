@@ -94,9 +94,9 @@ export function WorryIllustration({ className = "" }: { className?: string }) {
           <text x="56" y="34" fontSize="15" fill={INK} fontFamily={GOTHIC} fontWeight="700">{f}</text>
         </g>
       ))}
-      <path d="M300 120 C 330 132, 336 160, 318 182" fill="none" stroke={RED} strokeWidth="2.5" strokeLinecap="round" />
-      <path d="M318 182 L 314 168 M 318 182 L 330 174" stroke={RED} strokeWidth="2.5" strokeLinecap="round" />
-      <text x="248" y="108" fontSize="19" fill={RED} fontFamily={HAND}>どれが正しい…？</text>
+      <path d="M60 238 C 52 222, 62 206, 84 202" fill="none" stroke={RED} strokeWidth="2.5" strokeLinecap="round" />
+      <path d="M84 202 L 72 198 M 84 202 L 76 212" stroke={RED} strokeWidth="2.5" strokeLinecap="round" />
+      <text x="14" y="264" fontSize="18" fill={RED} fontFamily={HAND}>どれが正しい…？</text>
     </svg>
   );
 }
@@ -117,16 +117,16 @@ export function TalkIllustration({ className = "" }: { className?: string }) {
       <Person x={270} y={130} scale={1.25} fill="#E8EEFF" />
       {/* ふきだし */}
       <g>
-        <rect x="14" y="20" width="132" height="44" fill={PAPER} stroke={INK} strokeWidth="2" />
+        <rect x="8" y="20" width="152" height="44" fill={PAPER} stroke={INK} strokeWidth="2" />
         <path d="M58 64 L 64 78 L 74 64" fill={PAPER} stroke={INK} strokeWidth="2" strokeLinejoin="round" />
         <line x1="59" y1="64" x2="73" y2="64" stroke={PAPER} strokeWidth="3" />
-        <text x="80" y="48" textAnchor="middle" fontSize="16" fill={INK} fontFamily={HAND}>どこを直せば…？</text>
+        <text x="84" y="48" textAnchor="middle" fontSize="15" fill={INK} fontFamily={HAND}>どこを直せば…？</text>
       </g>
       <g>
-        <rect x="192" y="26" width="136" height="44" fill={LIME} stroke={INK} strokeWidth="2" />
+        <rect x="176" y="26" width="160" height="44" fill={LIME} stroke={INK} strokeWidth="2" />
         <path d="M262 70 L 270 84 L 278 70" fill={LIME} stroke={INK} strokeWidth="2" strokeLinejoin="round" />
         <line x1="263" y1="70" x2="277" y2="70" stroke={LIME} strokeWidth="3" />
-        <text x="260" y="54" textAnchor="middle" fontSize="16" fill={INK} fontFamily={HAND}>ここかもしれない！</text>
+        <text x="256" y="54" textAnchor="middle" fontSize="15" fill={INK} fontFamily={HAND}>ここかもしれない！</text>
       </g>
     </svg>
   );

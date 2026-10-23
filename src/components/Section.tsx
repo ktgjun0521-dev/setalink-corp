@@ -79,7 +79,7 @@ export function PageHero({
         <div className="flex items-center gap-4 border-b border-ink pb-3">
           <span className="font-inter text-[11px] font-bold uppercase tracking-[0.3em]">{label}</span>
           <span className="h-px flex-1 bg-ink/20" />
-          <span className="font-inter text-[11px] font-bold uppercase tracking-[0.3em] text-gray">SETALINK</span>
+          <span className="font-inter text-[11px] font-bold uppercase tracking-[0.3em] text-gray">セタリンク</span>
         </div>
         <div className="mt-10 grid items-end gap-8 md:grid-cols-[1fr_auto]">
           <div className="fade-in-up">
