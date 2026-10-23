@@ -8,6 +8,7 @@ import {
   TalkIllustration,
   DataIllustration,
 } from "@/components/Illustrations";
+import { ImprovementCycle, StumbleRoad } from "@/components/Diagrams";
 import { topFaqs } from "@/lib/faq";
 import { beliefs } from "@/lib/company";
 import {
@@ -21,7 +22,6 @@ import {
   MonitorSmartphone,
   UserPlus,
   Hourglass,
-  RotateCcw,
 } from "lucide-react";
 
 /* ===== 文言（Miro「ICP・事業方向性 整理」PART 1〜3 と営業コンサルのフレームから） ===== */
@@ -34,38 +34,77 @@ const worries = [
   "ツールを入れてみたものの、更新する人がいなくて止まってしまった",
 ];
 
-const cycle = [
-  { step: "01", title: "いまの改善活動を知る", body: "広告・営業・店舗施策など、いま取り組んでいることと目標を伺います。" },
-  { step: "02", title: "仮説を立てる", body: "事業の流れを分解して、何が成果を左右しているのかを考えます。" },
-  { step: "03", title: "データで確かめる", body: "散らばった数字を整理し、見るべき指標をそろえて確かめます。" },
-  { step: "04", title: "ボトルネックを見つける", body: "どこで成果が落ちているのか、いちばん効く改善ポイントを特定します。", highlight: true },
-  { step: "05", title: "改善施策を実行する", body: "現場の行動に落とし込み、必要なら仕組みづくりや自動化まで手を動かします。" },
-  { step: "06", title: "成果を測って、次へ", body: "施策が効いたのかを測り、次の改善につなげます。" },
+// 図の円に入れる短いラベル（short）と、横の一覧の説明（title・body）
+const cycle: {
+  step: string;
+  short: [string, string];
+  title: string;
+  body: string;
+  note?: string;
+  noteClass?: string;
+}[] = [
+  { step: "01", short: ["いまの改善", "を知る"], title: "いまの改善活動を知る", body: "広告・営業・店舗施策など、いま取り組んでいることと目標を伺います。" },
+  { step: "02", short: ["仮説を", "立てる"], title: "仮説を立てる", body: "事業の流れを分解して、何が成果を左右しているのかを考えます。" },
+  {
+    step: "03",
+    short: ["数字を", "見える化"],
+    title: "数字を見える化する",
+    body: "散らばった数字を整理して見るべき指標をそろえ、いつでも見られる状態にします。",
+    note: "多くの支援はここまで",
+    noteClass: "bg-peach text-foreground",
+  },
+  {
+    step: "04",
+    short: ["ボトルネック", "を見つける"],
+    title: "ボトルネックを見つける",
+    body: "どこで成果が落ちているのか、いちばん効く改善ポイントを特定します。",
+    note: "ここからが本番",
+    noteClass: "bg-foreground text-accent-lime",
+  },
+  { step: "05", short: ["施策を", "実行する"], title: "改善施策を実行する", body: "現場の行動に落とし込み、必要なら仕組みづくりや自動化まで手を動かします。" },
+  { step: "06", short: ["成果を", "測る"], title: "成果を測って、次へ", body: "施策が効いたのかを測り、次の改善（01）につなげます。" },
 ];
 
-const alternatives = [
+const alternatives: {
+  icon: typeof Users;
+  title: string;
+  good: string;
+  stumble: string;
+  variant?: "stumble" | "stay";
+  detail: string;
+  setalink: string;
+}[] = [
   {
     icon: Users,
     title: "自分たちでやる",
-    stall: "費用はかからない。でも本業の時間が削られ、担当の人がいないと止まってしまいがち。",
+    good: "費用がかからない",
+    stumble: "本業が忙しくて止まる",
+    detail: "本業の時間が削られ、担当の人が異動・退職すると止まってしまいがち。",
     setalink: "何の数字を取り、どう集計するか。設計の段階から一緒に入ります。",
   },
   {
     icon: MonitorSmartphone,
     title: "ツールを入れる・一部だけ外注する",
-    stall: "形にはなる。でも「何を判断するための画面か」が決まっていないと、だんだん見なくなる。",
+    good: "すぐに形になる",
+    stumble: "だんだん誰も見なくなる",
+    detail: "「何を判断するための画面か」が決まっていないと、作っただけで使われなくなる。",
     setalink: "会社の方針から、見るべき指標と現場の行動まで逆算して組み立てます。",
   },
   {
     icon: UserPlus,
     title: "データ担当を採用する",
-    stall: "ノウハウは社内に残る。でも採用は難しく、経営とデータの両方が分かる人はなかなかいない。",
+    good: "ノウハウが社内に残る",
+    stumble: "そもそも採用できない",
+    detail: "採用は難しく、経営とデータの両方が分かる人はなかなか見つからない。",
     setalink: "その役割を初月から担い、社内に引き継げる形で進めます。",
   },
   {
     icon: Hourglass,
     title: "いまは様子を見る",
-    stall: "いまのままでも回る。でも1年後も同じ「勘と経験」のまま、伸びしろを逃しているかもしれない。",
+    good: "手間がかからない",
+    stumble: "1年後も同じ場所",
+    variant: "stay",
+    detail: "いまのままでも回る。でも1年後も同じ「勘と経験」のまま、伸びしろを逃しているかもしれない。",
     setalink: "まずは60分の無料相談で、伸びしろがどこにありそうかを一緒に見てみましょう。",
   },
 ];
@@ -302,39 +341,40 @@ export default function Home() {
             </SectionTitle>
           </FadeIn>
 
-          <div className="relative mt-14">
-            <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-10 lg:gap-y-6">
+          <div className="mt-12 grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
+            <FadeIn direction="scale">
+              <ImprovementCycle steps={cycle} className="mx-auto w-full max-w-[480px]" />
+            </FadeIn>
+            <ol className="space-y-2.5">
               {cycle.map((c, i) => (
-                <FadeIn key={c.step} delay={i * 90}>
+                <FadeIn key={c.step} delay={i * 70}>
                   <li
-                    className={`relative flex h-full flex-col rounded-3xl border-2 p-6 ${
-                      c.highlight
-                        ? "border-foreground bg-lime-soft"
-                        : "border-border bg-white"
+                    className={`flex gap-4 rounded-2xl px-5 py-4 ${
+                      i === 3
+                        ? "border-2 border-foreground bg-lime-soft"
+                        : i > 3
+                          ? "border border-transparent bg-lime-soft/60"
+                          : "border border-border bg-white"
                     }`}
                   >
-                    <div className="flex items-center gap-3">
-                      <span className={`flex h-10 w-10 items-center justify-center rounded-full font-inter text-sm font-bold ${c.highlight ? "bg-foreground text-accent-lime" : "bg-sky text-accent-blue"}`}>
-                        {c.step}
-                      </span>
-                      <h3 className="font-maru text-lg font-bold">{c.title}</h3>
+                    <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full font-inter text-sm font-bold ${i === 3 ? "bg-foreground text-accent-lime" : "bg-sky text-accent-blue"}`}>
+                      {c.step}
+                    </span>
+                    <div>
+                      <div className="flex flex-wrap items-center gap-2">
+                        <h3 className="font-maru text-base font-bold sm:text-lg">{c.title}</h3>
+                        {c.note && (
+                          <span className={`whitespace-nowrap rounded-full px-2.5 py-0.5 text-[11px] font-bold ${c.noteClass}`}>
+                            {c.note}
+                          </span>
+                        )}
+                      </div>
+                      <p className="mt-1 text-sm leading-[1.8] text-gray">{c.body}</p>
                     </div>
-                    <p className="mt-3 text-sm leading-[1.85] text-gray">{c.body}</p>
-                    {c.highlight && (
-                      <span className="absolute -top-3 right-5 rounded-full bg-foreground px-3 py-1 text-[11px] font-bold text-white">
-                        いちばん大事なところ
-                      </span>
-                    )}
                   </li>
                 </FadeIn>
               ))}
             </ol>
-            <FadeIn>
-              <div className="mt-6 flex items-center justify-center gap-2 rounded-full bg-sky px-5 py-3 text-sm font-bold text-accent-blue">
-                <RotateCcw className="h-4 w-4" />
-                01に戻って、改善をくり返す。この一周を、一緒に回します。
-              </div>
-            </FadeIn>
           </div>
         </div>
       </section>
@@ -345,7 +385,7 @@ export default function Home() {
           <FadeIn>
             <SectionTitle
               label="Why us"
-              lead="どの方法にも良さがあります。ただ、それぞれに止まりやすいところがあります。"
+              lead="どの方法にも良さがあります。ただ、成果にたどり着く前に、つまずきやすいところがあります。"
             >
               よくある4つの選択肢と、
               <br className="hidden sm:block" />
@@ -357,14 +397,20 @@ export default function Home() {
               <FadeIn key={a.title} delay={i * 90}>
                 <div className="flex h-full flex-col rounded-3xl bg-white p-6 shadow-[0_3px_0_var(--border)] md:p-7">
                   <div className="flex items-center gap-3">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-surface">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-surface">
                       <a.icon className="h-5 w-5" />
                     </span>
-                    <h3 className="font-maru text-lg font-bold">{a.title}</h3>
+                    <div>
+                      <h3 className="font-maru text-lg font-bold leading-snug">{a.title}</h3>
+                      <p className="mt-0.5 text-xs font-bold text-emerald-700">よいところ：{a.good}</p>
+                    </div>
                   </div>
-                  <p className="mt-4 text-sm leading-[1.85] text-gray">{a.stall}</p>
-                  <div className="mt-5 flex flex-1 items-start gap-3 rounded-2xl bg-sky px-4 py-4">
-                    <span className="shrink-0 rounded-full bg-accent-blue px-2.5 py-1 text-[11px] font-bold text-white">
+                  <div className="mt-4 rounded-2xl bg-surface px-2 pt-1">
+                    <StumbleRoad label={a.stumble} variant={a.variant} className="w-full" />
+                  </div>
+                  <p className="mt-4 text-sm leading-[1.85] text-gray">{a.detail}</p>
+                  <div className="mt-4 flex flex-1 items-start gap-3 rounded-2xl bg-sky px-4 py-4">
+                    <span className="shrink-0 whitespace-nowrap rounded-full bg-accent-blue px-2.5 py-1 text-[11px] font-bold text-white">
                       セタリンクなら
                     </span>
                     <p className="text-sm font-medium leading-[1.8] text-foreground">{a.setalink}</p>
