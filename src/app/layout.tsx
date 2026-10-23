@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP, Inter, Zen_Maru_Gothic } from "next/font/google";
+import { Noto_Sans_JP, Inter, Zen_Old_Mincho, Klee_One } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileCta from "@/components/MobileCta";
@@ -12,10 +12,19 @@ const notoSansJP = Noto_Sans_JP({
   display: "swap",
 });
 
-const zenMaru = Zen_Maru_Gothic({
-  variable: "--font-zen-maru",
+// お客様の声・大きな数字に使う明朝
+const zenOldMincho = Zen_Old_Mincho({
+  variable: "--font-zen-old-mincho",
   subsets: ["latin"],
-  weight: ["500", "700"],
+  weight: ["700"],
+  display: "swap",
+});
+
+// イラストの書き込み（会議メモ風）に使う手書き風
+const kleeOne = Klee_One({
+  variable: "--font-klee-one",
+  subsets: ["latin"],
+  weight: ["600"],
   display: "swap",
 });
 
@@ -110,7 +119,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${notoSansJP.variable} ${zenMaru.variable} ${inter.variable} font-sans antialiased`}
+        className={`${notoSansJP.variable} ${zenOldMincho.variable} ${kleeOne.variable} ${inter.variable} font-sans antialiased`}
       >
         <script
           type="application/ld+json"

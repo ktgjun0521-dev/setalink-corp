@@ -21,13 +21,13 @@ export default function MobileCta() {
 
   return (
     <div
-      className={`fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 px-4 pb-[calc(env(safe-area-inset-bottom)+12px)] pt-3 backdrop-blur-md transition-transform duration-300 md:hidden ${
+      className={`fixed inset-x-0 bottom-0 z-40 border-t border-ink bg-background/95 px-4 pb-[calc(env(safe-area-inset-bottom)+12px)] pt-3 backdrop-blur-md transition-transform duration-300 md:hidden ${
         visible ? "translate-y-0" : "translate-y-full"
       }`}
     >
       <Link
         href="/contact"
-        className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-accent-blue text-sm font-bold text-white shadow-[0_3px_0_#1E3FC4]"
+        className="flex h-12 w-full items-center justify-center gap-2 border-2 border-ink bg-accent-blue text-sm font-bold text-white"
       >
         無料で相談する（60分・オンライン）
         <ArrowRight className="h-4 w-4" />

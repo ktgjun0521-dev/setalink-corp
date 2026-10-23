@@ -1,210 +1,184 @@
-// トップページ用の線画イラスト（写真は使わず、変化が見えるように描く）
+// 線画のイラスト（雑誌の挿絵・会議メモのように。塗りは差し色だけ）
 
-const INK = "#1A1A2E";
+const INK = "#16161D";
+const PAPER = "#FFFDF7";
 const BLUE = "#2D5BFF";
 const LIME = "#C4E538";
+const PEACH = "#FCE6D6";
+const RED = "#E8590C"; // 赤ペン
+const RULE = "#E3DDCF";
+const HAND = "var(--font-klee-one), cursive";
+const GOTHIC = "var(--font-noto-sans-jp), sans-serif";
 
-/* ファーストビュー：ばらばらの施策 → 1本の右肩上がりの線へ */
+/* 線で描く人（頭・胴・腕） */
+function Person({ x, y, scale = 1, fill = PAPER }: { x: number; y: number; scale?: number; fill?: string }) {
+  return (
+    <g transform={`translate(${x} ${y}) scale(${scale})`} stroke={INK} strokeWidth={2 / scale} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M-18 40 C -18 12, 18 12, 18 40" fill={fill} />
+      <circle cx="0" cy="-2" r="12" fill={PAPER} />
+      <path d="M-9 -8 C -6 -16, 6 -16, 9 -8" fill="none" />
+    </g>
+  );
+}
+
+/* ファーストビュー：改善会議のメモ。流れを分解して、詰まっている所に赤丸 */
 export function HeroIllustration({ className = "" }: { className?: string }) {
-  const cards = [
-    { x: 18, y: 40, r: -8, label: "広告" },
-    { x: 92, y: 118, r: 6, label: "営業" },
-    { x: 14, y: 196, r: 4, label: "キャンペーン" },
-    { x: 96, y: 276, r: -5, label: "店舗施策" },
+  const rows = [
+    { label: "問い合わせ", value: "1,200", w: 210 },
+    { label: "面談", value: "480", w: 150 },
+    { label: "提案", value: "130", w: 52, hot: true },
+    { label: "契約", value: "42", w: 26 },
   ];
   return (
-    <svg viewBox="0 0 520 420" className={className} role="img" aria-label="ばらばらの施策が、データでつながって成果のグラフになるイラスト">
-      {/* 背景のやわらかい形 */}
-      <path d="M300 40c90-20 190 30 205 120s-35 190-130 215-205 5-235-80 70-235 160-255z" fill="#E6EEFF" />
-      <circle cx="140" cy="350" r="52" fill="#F1F8D0" />
+    <svg viewBox="0 0 520 440" className={className} role="img" aria-label="改善会議のメモのイラスト。問い合わせから契約までの数を分解し、面談から提案で大きく減っているところに赤丸で「ここが詰まってる」と書き込んでいる">
+      {/* ノート */}
+      <g transform="rotate(-2 260 220)">
+        <rect x="36" y="34" width="430" height="370" fill={PAPER} stroke={INK} strokeWidth="2" />
+        {Array.from({ length: 11 }).map((_, i) => (
+          <line key={i} x1="36" x2="466" y1={96 + i * 28} y2={96 + i * 28} stroke={RULE} strokeWidth="1" />
+        ))}
+        <line x1="78" y1="34" x2="78" y2="404" stroke="#F2B8A0" strokeWidth="1" />
+        {/* リング */}
+        {Array.from({ length: 9 }).map((_, i) => (
+          <ellipse key={i} cx={70 + i * 45} cy="34" rx="5" ry="10" fill={PAPER} stroke={INK} strokeWidth="1.8" />
+        ))}
 
-      {/* 施策カード */}
-      {cards.map((c, i) => (
-        // 位置は外側の g、揺れるアニメーションは内側の g（CSSのtransformが位置指定を上書きしないように）
-        <g key={c.label} transform={`translate(${c.x} ${c.y}) rotate(${c.r})`}>
-          <g className="sway" style={{ animationDelay: `${i * 0.6}s` }}>
-            <rect width="118" height="52" rx="14" fill="#fff" stroke={INK} strokeWidth="2" />
-            <text x="59" y="32" textAnchor="middle" fontSize="15" fontWeight="700" fill={INK} fontFamily="var(--font-zen-maru), sans-serif">
-              {c.label}
-            </text>
-            <circle cx="112" cy="4" r="11" fill="#FFEBDD" stroke={INK} strokeWidth="1.5" />
-            <text x="112" y="9" textAnchor="middle" fontSize="13" fontWeight="700" fill={INK}>?</text>
-          </g>
-        </g>
-      ))}
+        <text x="92" y="80" fontSize="20" fill={INK} fontFamily={HAND}>問い合わせ → 契約、どこで減ってる？</text>
 
-      {/* つながる点線 */}
-      {[66, 144, 222, 302].map((y, i) => (
-        <path key={y} d={`M${i % 2 ? 214 : 138} ${y} C 230 ${y}, 240 210, 286 210`} fill="none" stroke={BLUE} strokeWidth="2" strokeLinecap="round" className="dash-line" opacity="0.7" />
-      ))}
+        {rows.map((r, i) => {
+          const y = 118 + i * 56;
+          return (
+            <g key={r.label}>
+              <text x="92" y={y + 20} fontSize="16" fill={INK} fontFamily={HAND}>{r.label}</text>
+              <rect x="190" y={y} width={r.w} height="28" fill={r.hot ? PEACH : "#E8EEFF"} stroke={INK} strokeWidth="1.8" />
+              <text x={196 + r.w + 6} y={y + 20} fontSize="15" fill={INK} fontFamily={GOTHIC} fontWeight="700">{r.value}</text>
+            </g>
+          );
+        })}
 
-      {/* グラフのボード */}
-      <g transform="translate(286 110)">
-        <rect width="200" height="200" rx="20" fill="#fff" stroke={INK} strokeWidth="2.5" />
-        <line x1="28" y1="168" x2="176" y2="168" stroke={INK} strokeWidth="2" strokeLinecap="round" />
-        <line x1="28" y1="168" x2="28" y2="34" stroke={INK} strokeWidth="2" strokeLinecap="round" />
-        <rect x="44" y="128" width="20" height="40" rx="4" fill="#E6EEFF" />
-        <rect x="76" y="112" width="20" height="56" rx="4" fill="#E6EEFF" />
-        <rect x="108" y="92" width="20" height="76" rx="4" fill="#E6EEFF" />
-        <rect x="140" y="62" width="20" height="106" rx="4" fill={LIME} />
-        <path d="M44 132 L86 112 L118 118 L150 64" fill="none" stroke={BLUE} strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M138 62 L152 60 L150 74" fill="none" stroke={BLUE} strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
-        {/* 虫めがね：ボトルネック発見 */}
-        <g transform="translate(86 112)">
-          <circle r="20" fill="#FFF" fillOpacity="0.6" stroke={INK} strokeWidth="3" />
-          <line x1="14" y1="14" x2="30" y2="30" stroke={INK} strokeWidth="5" strokeLinecap="round" />
-        </g>
+        {/* 赤丸と書き込み */}
+        <path d="M180 236 C 176 216, 232 208, 272 212 C 312 216, 316 256, 276 264 C 230 272, 182 266, 184 240" fill="none" stroke={RED} strokeWidth="3" strokeLinecap="round" />
+        <path d="M318 302 C 330 286, 322 266, 304 254" fill="none" stroke={RED} strokeWidth="2.5" strokeLinecap="round" />
+        <path d="M304 254 L 318 254 M 304 254 L 308 268" stroke={RED} strokeWidth="2.5" strokeLinecap="round" />
+        <text x="284" y="326" fontSize="18" fill={RED} fontFamily={HAND}>ここが詰まってる！</text>
+
+        <text x="92" y="372" fontSize="15" fill="#5A5D66" fontFamily={HAND}>→ 面談の中身を見てみる</text>
       </g>
 
-      {/* きらっ */}
-      <g stroke={INK} strokeWidth="2.5" strokeLinecap="round">
-        <line x1="478" y1="88" x2="478" y2="104" />
-        <line x1="470" y1="96" x2="486" y2="96" />
-        <line x1="500" y1="330" x2="500" y2="342" />
-        <line x1="494" y1="336" x2="506" y2="336" />
+      {/* 付箋 */}
+      <g transform="rotate(6 440 196)">
+        <rect x="392" y="152" width="100" height="84" fill={LIME} stroke={INK} strokeWidth="2" />
+        <text x="406" y="184" fontSize="17" fill={INK} fontFamily={HAND}>施策A</text>
+        <text x="406" y="212" fontSize="17" fill={INK} fontFamily={HAND}>効いた？</text>
+      </g>
+
+      {/* ペン */}
+      <g transform="rotate(-22 460 386)">
+        <rect x="420" y="380" width="88" height="12" fill={BLUE} stroke={INK} strokeWidth="1.8" />
+        <path d="M420 380 L 404 386 L 420 392 Z" fill={PAPER} stroke={INK} strokeWidth="1.8" strokeLinejoin="round" />
       </g>
     </svg>
   );
 }
 
-/* お悩み：数字が散らばって、頭をかかえる人 */
+/* お悩み：どれが最新か分からないファイルの山 */
 export function WorryIllustration({ className = "" }: { className?: string }) {
+  const files = ["売上_最新.xlsx", "売上_最新(2).xlsx", "売上_最新_修正版.xlsx", "本当の最新.xlsx"];
   return (
-    <svg viewBox="0 0 320 260" className={className} role="img" aria-label="スプレッドシートが散らばって悩んでいる人のイラスト">
-      <ellipse cx="160" cy="232" rx="130" ry="14" fill="#F6F1E6" />
-      {/* 散らばったシート */}
-      {[
-        { x: 18, y: 120, r: -12 },
-        { x: 230, y: 110, r: 10 },
-        { x: 40, y: 30, r: 8 },
-        { x: 222, y: 22, r: -6 },
-      ].map((s, i) => (
-        <g key={i} transform={`translate(${s.x} ${s.y}) rotate(${s.r})`}>
-          <rect width="72" height="88" rx="8" fill="#fff" stroke={INK} strokeWidth="2" />
-          <line x1="12" y1="22" x2="60" y2="22" stroke="#C9D3EE" strokeWidth="4" strokeLinecap="round" />
-          <line x1="12" y1="38" x2="52" y2="38" stroke="#C9D3EE" strokeWidth="4" strokeLinecap="round" />
-          <line x1="12" y1="54" x2="58" y2="54" stroke="#C9D3EE" strokeWidth="4" strokeLinecap="round" />
-          <line x1="12" y1="70" x2="40" y2="70" stroke="#C9D3EE" strokeWidth="4" strokeLinecap="round" />
+    <svg viewBox="0 0 360 280" className={className} role="img" aria-label="「売上_最新」「本当の最新」など、どれが正しいか分からないファイルが積み重なっているイラスト">
+      {files.map((f, i) => (
+        <g key={f} transform={`translate(${26 + i * 22} ${30 + i * 44}) rotate(${i % 2 ? 2 : -2})`}>
+          <rect width="240" height="56" fill={PAPER} stroke={INK} strokeWidth="2" />
+          <rect x="14" y="14" width="28" height="28" fill={i === 3 ? LIME : "#E8EEFF"} stroke={INK} strokeWidth="1.5" />
+          <path d="M14 23 H42 M14 32 H42 M24 14 V42 M33 14 V42" stroke={INK} strokeWidth="1" />
+          <text x="56" y="34" fontSize="15" fill={INK} fontFamily={GOTHIC} fontWeight="700">{f}</text>
         </g>
       ))}
-      {/* 人 */}
-      <g transform="translate(160 0)">
-        <path d="M-52 232c0-50 22-82 52-82s52 32 52 82z" fill={BLUE} stroke={INK} strokeWidth="2.5" />
-        <circle cx="0" cy="112" r="34" fill="#FFE3CF" stroke={INK} strokeWidth="2.5" />
-        <path d="M-34 104c4-26 22-36 38-36s32 12 30 34c-10-10-24-14-38-12s-22 8-30 14z" fill={INK} />
-        <circle cx="-11" cy="116" r="3" fill={INK} />
-        <circle cx="13" cy="116" r="3" fill={INK} />
-        <path d="M-8 133c5-4 11-4 16 0" fill="none" stroke={INK} strokeWidth="2.5" strokeLinecap="round" />
-        {/* 汗 */}
-        <path d="M38 96c4 6 6 10 3 14s-9 2-9-3 3-7 6-11z" fill="#9CC0FF" stroke={INK} strokeWidth="1.5" />
-      </g>
-      {/* はてな */}
-      <g fontFamily="var(--font-zen-maru), sans-serif" fontWeight="700" fill={INK}>
-        <text x="118" y="54" fontSize="30">?</text>
-        <text x="188" y="40" fontSize="22">?</text>
-      </g>
+      <path d="M300 120 C 330 132, 336 160, 318 182" fill="none" stroke={RED} strokeWidth="2.5" strokeLinecap="round" />
+      <path d="M318 182 L 314 168 M 318 182 L 330 174" stroke={RED} strokeWidth="2.5" strokeLinecap="round" />
+      <text x="248" y="108" fontSize="19" fill={RED} fontFamily={HAND}>どれが正しい…？</text>
     </svg>
   );
 }
 
-/* 初回相談：対話している2人 */
+/* 初回相談：机をはさんで話す2人 */
 export function TalkIllustration({ className = "" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 320 220" className={className} role="img" aria-label="お客様とセタリンクが、改善したいことについて話しているイラスト">
-      <ellipse cx="160" cy="202" rx="140" ry="12" fill="#F6F1E6" />
-      {/* 机 */}
-      <rect x="70" y="150" width="180" height="12" rx="6" fill={INK} />
-      {/* ノートのグラフ */}
-      <rect x="128" y="118" width="64" height="34" rx="6" fill="#fff" stroke={INK} strokeWidth="2" />
-      <path d="M138 142 L152 134 L164 138 L182 124" fill="none" stroke={BLUE} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-      {/* 左の人（お客様） */}
-      <g transform="translate(70 0)">
-        <path d="M-40 200c0-42 18-66 40-66s40 24 40 66z" fill="#FFB98A" stroke={INK} strokeWidth="2.5" />
-        <circle cx="0" cy="100" r="28" fill="#FFE3CF" stroke={INK} strokeWidth="2.5" />
-        <path d="M-28 94c2-22 16-30 30-30s26 10 26 28c-14-6-34-8-56 2z" fill="#6B4A3A" />
-        <circle cx="-8" cy="104" r="2.5" fill={INK} />
-        <circle cx="10" cy="104" r="2.5" fill={INK} />
-        <path d="M-6 116c4 3 9 3 13 0" fill="none" stroke={INK} strokeWidth="2" strokeLinecap="round" />
+    <svg viewBox="0 0 340 230" className={className} role="img" aria-label="お客様とセタリンクが、ノートを見ながら改善したいことを話しているイラスト">
+      <line x1="40" y1="190" x2="300" y2="190" stroke={INK} strokeWidth="2" strokeLinecap="round" />
+      {/* 机とノート */}
+      <rect x="90" y="166" width="160" height="10" fill={PAPER} stroke={INK} strokeWidth="2" />
+      <g transform="rotate(-3 170 150)">
+        <rect x="132" y="134" width="76" height="32" fill={PAPER} stroke={INK} strokeWidth="1.8" />
+        <path d="M142 158 L 158 150 L 172 154 L 196 140" fill="none" stroke={BLUE} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="158" cy="150" r="8" fill="none" stroke={RED} strokeWidth="2" />
       </g>
-      {/* 右の人（セタリンク） */}
-      <g transform="translate(250 0)">
-        <path d="M-40 200c0-42 18-66 40-66s40 24 40 66z" fill={BLUE} stroke={INK} strokeWidth="2.5" />
-        <circle cx="0" cy="100" r="28" fill="#FFE3CF" stroke={INK} strokeWidth="2.5" />
-        <path d="M-28 92c4-20 16-28 30-28s26 8 26 26c-10-8-22-10-34-8s-16 6-22 10z" fill={INK} />
-        <circle cx="-9" cy="104" r="2.5" fill={INK} />
-        <circle cx="9" cy="104" r="2.5" fill={INK} />
-        <path d="M-7 115c4 4 10 4 14 0" fill="none" stroke={INK} strokeWidth="2" strokeLinecap="round" />
-      </g>
+      <Person x={70} y={130} scale={1.25} />
+      <Person x={270} y={130} scale={1.25} fill="#E8EEFF" />
       {/* ふきだし */}
       <g>
-        <rect x="22" y="10" width="124" height="44" rx="14" fill="#fff" stroke={INK} strokeWidth="2" />
-        <path d="M58 54 L66 66 L74 54" fill="#fff" stroke={INK} strokeWidth="2" strokeLinejoin="round" />
-        <text x="84" y="38" textAnchor="middle" fontSize="13" fontWeight="700" fill={INK} fontFamily="var(--font-zen-maru), sans-serif">どこを直せば…？</text>
+        <rect x="14" y="20" width="132" height="44" fill={PAPER} stroke={INK} strokeWidth="2" />
+        <path d="M58 64 L 64 78 L 74 64" fill={PAPER} stroke={INK} strokeWidth="2" strokeLinejoin="round" />
+        <line x1="59" y1="64" x2="73" y2="64" stroke={PAPER} strokeWidth="3" />
+        <text x="80" y="48" textAnchor="middle" fontSize="16" fill={INK} fontFamily={HAND}>どこを直せば…？</text>
       </g>
       <g>
-        <rect x="176" y="18" width="124" height="44" rx="14" fill={LIME} stroke={INK} strokeWidth="2" />
-        <path d="M240 62 L248 74 L256 62" fill={LIME} stroke={INK} strokeWidth="2" strokeLinejoin="round" />
-        <text x="238" y="46" textAnchor="middle" fontSize="13" fontWeight="700" fill={INK} fontFamily="var(--font-zen-maru), sans-serif">ここかもしれない！</text>
+        <rect x="192" y="26" width="136" height="44" fill={LIME} stroke={INK} strokeWidth="2" />
+        <path d="M262 70 L 270 84 L 278 70" fill={LIME} stroke={INK} strokeWidth="2" strokeLinejoin="round" />
+        <line x1="263" y1="70" x2="277" y2="70" stroke={LIME} strokeWidth="3" />
+        <text x="260" y="54" textAnchor="middle" fontSize="16" fill={INK} fontFamily={HAND}>ここかもしれない！</text>
       </g>
     </svg>
   );
 }
 
-/* データコンサルティング：散らばったシート → 整理 → いつでも見られる画面 */
+/* データコンサルティング：バラバラ → そろえる → いつでも見られる */
 export function DataIllustration({ className = "" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 440 300" className={className} role="img" aria-label="散らばったシートのデータが整理され、ひとつの画面で見られるようになるイラスト">
-      <path d="M40 150c0-80 70-130 170-130s200 40 210 120-60 140-190 140S40 230 40 150z" fill="#F6F1E6" />
-      {/* 散らばったシート */}
+    <svg viewBox="0 0 440 300" className={className} role="img" aria-label="ばらばらのシートを整理して、いつでも見られる画面にするイラスト">
+      {/* バラバラのシート */}
       {[
-        { x: 22, y: 58, r: -10 },
-        { x: 40, y: 140, r: 6 },
-        { x: 18, y: 214, r: -4 },
+        { x: 18, y: 60, r: -8 },
+        { x: 34, y: 128, r: 5 },
+        { x: 14, y: 194, r: -3 },
       ].map((s, i) => (
         <g key={i} transform={`translate(${s.x} ${s.y}) rotate(${s.r})`}>
-          <rect width="62" height="56" rx="8" fill="#fff" stroke={INK} strokeWidth="2" />
-          <line x1="10" y1="16" x2="52" y2="16" stroke="#C9D3EE" strokeWidth="4" strokeLinecap="round" />
-          <line x1="10" y1="28" x2="44" y2="28" stroke="#C9D3EE" strokeWidth="4" strokeLinecap="round" />
-          <line x1="10" y1="40" x2="48" y2="40" stroke="#C9D3EE" strokeWidth="4" strokeLinecap="round" />
+          <rect width="72" height="52" fill={PAPER} stroke={INK} strokeWidth="2" />
+          <path d="M10 16 H62 M10 28 H52 M10 40 H58" stroke={RULE} strokeWidth="4" strokeLinecap="round" />
         </g>
       ))}
-      {/* 整理の矢印 */}
-      {[86, 166, 240].map((y) => (
-        <path key={y} d={`M96 ${y} C 128 ${y}, 128 150, 152 150`} fill="none" stroke={BLUE} strokeWidth="2" strokeLinecap="round" className="dash-line" />
+      <text x="20" y="282" fontSize="16" fill="#5A5D66" fontFamily={HAND}>バラバラ</text>
+
+      {[86, 154, 220].map((y) => (
+        <path key={y} d={`M100 ${y} C 130 ${y}, 128 150, 150 150`} fill="none" stroke={INK} strokeWidth="1.8" strokeDasharray="5 6" strokeLinecap="round" />
       ))}
-      {/* データの箱（整理済み） */}
-      <g transform="translate(152 112)">
-        <ellipse cx="30" cy="10" rx="30" ry="10" fill="#E6EEFF" stroke={INK} strokeWidth="2" />
-        <path d="M0 10v50c0 6 13 10 30 10s30-4 30-10V10" fill="#E6EEFF" stroke={INK} strokeWidth="2" />
-        <path d="M0 35c0 6 13 10 30 10s30-4 30-10" fill="none" stroke={INK} strokeWidth="2" />
+
+      {/* そろえる */}
+      <g transform="translate(152 116)">
+        <rect width="64" height="68" fill="#E8EEFF" stroke={INK} strokeWidth="2" />
+        <path d="M0 22 H64 M0 45 H64 M21 0 V68 M42 0 V68" stroke={INK} strokeWidth="1.2" />
       </g>
-      <path d="M216 150 L246 150" stroke={INK} strokeWidth="2.5" strokeLinecap="round" />
-      <path d="M238 142 L248 150 L238 158" fill="none" stroke={INK} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      <text x="152" y="214" fontSize="16" fill="#5A5D66" fontFamily={HAND}>そろえる</text>
+
+      <path d="M226 150 H 252" stroke={INK} strokeWidth="2.5" strokeLinecap="round" />
+      <path d="M244 142 L 254 150 L 244 158" fill="none" stroke={INK} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+
       {/* いつでも見られる画面 */}
-      <g transform="translate(254 60)">
-        <rect width="170" height="150" rx="16" fill="#fff" stroke={INK} strokeWidth="2.5" />
-        <rect x="14" y="16" width="64" height="34" rx="8" fill={LIME} />
-        <rect x="88" y="16" width="68" height="34" rx="8" fill="#E6EEFF" />
-        <text x="46" y="39" textAnchor="middle" fontSize="13" fontWeight="700" fill={INK} fontFamily="var(--font-inter), sans-serif">KPI</text>
-        <path d="M100 38 L114 30 L126 34 L142 24" fill="none" stroke={BLUE} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-        <line x1="14" y1="130" x2="156" y2="130" stroke={INK} strokeWidth="2" strokeLinecap="round" />
-        <rect x="24" y="96" width="18" height="34" rx="4" fill="#E6EEFF" />
-        <rect x="52" y="84" width="18" height="46" rx="4" fill="#E6EEFF" />
-        <rect x="80" y="74" width="18" height="56" rx="4" fill="#E6EEFF" />
-        <rect x="108" y="64" width="18" height="66" rx="4" fill={BLUE} />
-        <rect x="136" y="70" width="12" height="60" rx="4" fill="#E6EEFF" />
+      <g transform="translate(262 70)">
+        <rect width="166" height="150" fill={PAPER} stroke={INK} strokeWidth="2.5" />
+        <rect y="0" width="166" height="20" fill={INK} />
+        <circle cx="12" cy="10" r="3" fill={PAPER} />
+        <circle cx="22" cy="10" r="3" fill={PAPER} />
+        <rect x="12" y="32" width="66" height="34" fill={LIME} stroke={INK} strokeWidth="1.5" />
+        <text x="45" y="55" textAnchor="middle" fontSize="13" fontWeight="700" fill={INK} fontFamily="var(--font-inter), sans-serif">KPI</text>
+        <rect x="88" y="32" width="66" height="34" fill={PAPER} stroke={INK} strokeWidth="1.5" />
+        <path d="M96 58 L 110 50 L 122 54 L 146 40" fill="none" stroke={BLUE} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+        <line x1="12" y1="136" x2="154" y2="136" stroke={INK} strokeWidth="1.5" />
+        {[24, 50, 76, 102, 128].map((x, i) => (
+          <rect key={x} x={x} y={136 - [24, 34, 42, 52, 46][i]} width="16" height={[24, 34, 42, 52, 46][i]} fill={i === 3 ? BLUE : "#E8EEFF"} stroke={INK} strokeWidth="1.2" />
+        ))}
       </g>
-      {/* 見ている人 */}
-      <g transform="translate(340 262)">
-        <path d="M-30 30c0-26 13-42 30-42s30 16 30 42z" fill={BLUE} stroke={INK} strokeWidth="2.5" />
-        <circle cx="0" cy="-26" r="20" fill="#FFE3CF" stroke={INK} strokeWidth="2.5" />
-        <path d="M-20 -30c2-14 12-20 22-20s18 6 18 18c-8-6-18-8-26-6s-10 4-14 8z" fill={INK} />
-        <path d="M-6 -18c4 3 8 3 12 0" fill="none" stroke={INK} strokeWidth="2" strokeLinecap="round" />
-      </g>
-      <g stroke={INK} strokeWidth="2.5" strokeLinecap="round">
-        <line x1="420" y1="34" x2="420" y2="48" />
-        <line x1="413" y1="41" x2="427" y2="41" />
-      </g>
+      <text x="262" y="246" fontSize="16" fill="#5A5D66" fontFamily={HAND}>いつでも見られる</text>
     </svg>
   );
 }

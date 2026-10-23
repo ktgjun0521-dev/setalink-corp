@@ -44,7 +44,7 @@ export default function FaqPage() {
               <a
                 key={g.title}
                 href={`#faq-${i + 1}`}
-                className="rounded-full border-2 border-foreground bg-white px-4 py-2 text-sm font-bold transition-colors hover:bg-foreground hover:text-white"
+                className="border-2 border-ink bg-paper px-4 py-2 text-sm font-bold transition-colors hover:bg-foreground hover:text-white"
               >
                 {g.title}
               </a>
@@ -55,8 +55,8 @@ export default function FaqPage() {
             {faqGroups.map((g, i) => (
               <FadeIn key={g.title}>
                 <div id={`faq-${i + 1}`} className="scroll-mt-24">
-                  <h2 className="flex items-center gap-3 font-maru text-xl font-bold sm:text-2xl">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent-blue font-inter text-sm font-bold text-white">
+                  <h2 className="flex items-center gap-3 font-display text-xl font-bold sm:text-2xl">
+                    <span className="flex h-9 w-9 items-center justify-center bg-accent-blue font-inter text-sm font-bold text-white">
                       {i + 1}
                     </span>
                     {g.title}

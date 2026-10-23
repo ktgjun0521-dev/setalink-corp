@@ -1,22 +1,38 @@
 @import "tailwindcss";
 
+/* 雑誌風（エディトリアル）：紙の地色＋墨の線＋差し色（青・ライム） */
 :root {
-  --background: #FEFCF6;
-  --foreground: #1A1A2E;
+  --background: #F7F4EC;
+  --foreground: #16161D;
   --accent-blue: #2D5BFF;
   --accent-lime: #C4E538;
-  --gray: #5F6577;
-  --border: #EAE4D6;
-  --light-blue: #EAF0FF;
-  --navy: #1A1A2E;
-  --surface: #F6F1E6;
-  --lime-soft: #F1F8D0;
-  --mint: #E3F5EA;
-  --peach: #FFEBDD;
-  --sky: #E6EEFF;
+  --gray: #5A5D66;
+  --border: #D9D3C4;
+  --light-blue: #E8EEFF;
+  --navy: #16161D;
+  --surface: #EFEBE0;
+  --lime-soft: #EEF6C9;
+  --mint: #E1F2E6;
+  --peach: #FCE6D6;
+  --sky: #E8EEFF;
+  --paper: #FFFDF7;
+  --ink: #16161D;
+}
+
+/* 角丸は控えめに（丸み・ぼかし・影に頼らない） */
+@theme {
+  --radius-lg: 4px;
+  --radius-xl: 4px;
+  --radius-2xl: 6px;
+  --radius-3xl: 6px;
 }
 
 @theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --font-display: var(--font-noto-sans-jp), "Noto Sans JP", sans-serif;
+  --font-mincho: var(--font-zen-old-mincho), "Zen Old Mincho", serif;
+  --font-hand: var(--font-klee-one), "Klee One", cursive;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent-blue: var(--accent-blue);
@@ -32,12 +48,16 @@
   --color-sky: var(--sky);
   --font-sans: var(--font-noto-sans-jp), "Noto Sans JP", sans-serif;
   --font-inter: var(--font-inter), "Inter", sans-serif;
-  --font-maru: var(--font-zen-maru), "Zen Maru Gothic", var(--font-noto-sans-jp), sans-serif;
 }
 
 /* 日本語を文節の途中で改行しない（対応ブラウザのみ） */
 h1, h2, h3, p, li, summary {
   word-break: auto-phrase;
+}
+
+/* 見出しは詰め組み（雑誌の組版に寄せる） */
+h1, h2, h3 {
+  font-feature-settings: "palt";
 }
 
 /* 蛍光ペンで引いたようなマーカー */

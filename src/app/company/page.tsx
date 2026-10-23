@@ -104,11 +104,11 @@ export default function CompanyPage() {
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {beliefs.map((b, i) => (
               <FadeIn key={b.label} delay={i * 100}>
-                <div className="h-full rounded-3xl bg-white p-7">
-                  <span className="inline-flex rounded-full bg-foreground px-3 py-1 font-inter text-xs font-bold tracking-widest text-accent-lime">
+                <div className="h-full border border-ink bg-paper p-7">
+                  <span className="inline-flex bg-foreground px-3 py-1 font-inter text-xs font-bold tracking-widest text-accent-lime">
                     {b.label}
                   </span>
-                  <h3 className="mt-4 font-maru text-lg font-bold leading-snug">{b.title}</h3>
+                  <h3 className="mt-4 font-display text-lg font-bold leading-snug">{b.title}</h3>
                   <p className="mt-3 text-sm leading-[1.85] text-gray">{b.body}</p>
                 </div>
               </FadeIn>
@@ -128,16 +128,16 @@ export default function CompanyPage() {
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {businesses.map((b, i) => (
               <FadeIn key={b.name} delay={i * 100}>
-                <div className={`relative h-full rounded-3xl bg-white p-7 ${b.main ? "border-2 border-foreground" : "border border-border"}`}>
+                <div className={`relative h-full border border-ink bg-paper p-7 ${b.main ? "border-2 border-ink" : "border border-ink"}`}>
                   {b.main && (
-                    <span className="absolute -top-3 right-6 whitespace-nowrap rounded-full bg-foreground px-3 py-1 text-[11px] font-bold text-accent-lime">
+                    <span className="absolute -top-3 right-6 whitespace-nowrap bg-foreground px-3 py-1 text-[11px] font-bold text-accent-lime">
                       メインの支援
                     </span>
                   )}
                   <span className={`flex h-12 w-12 items-center justify-center rounded-2xl ${b.color}`}>
                     <b.icon className="h-6 w-6" />
                   </span>
-                  <h3 className="mt-5 font-maru text-lg font-bold">{b.name}</h3>
+                  <h3 className="mt-5 font-display text-lg font-bold">{b.name}</h3>
                   <p className="mt-3 text-sm leading-[1.85] text-gray">{b.body}</p>
                 </div>
               </FadeIn>
@@ -162,9 +162,9 @@ export default function CompanyPage() {
           <FadeIn delay={100}>
             <div className="mt-12">
               <div className="flex justify-center">
-                <div className="w-full max-w-sm rounded-3xl border-2 border-foreground bg-white px-8 py-6 text-center">
-                  <p className="font-maru text-sm font-bold text-accent-blue">セタリンク</p>
-                  <p className="mt-1 font-maru text-xl font-bold">窓口・統括・品質管理</p>
+                <div className="w-full max-w-sm rounded-3xl border-2 border-ink bg-paper px-8 py-6 text-center">
+                  <p className="font-display text-sm font-bold text-accent-blue">セタリンク</p>
+                  <p className="mt-1 font-display text-xl font-bold">窓口・統括・品質管理</p>
                   <p className="mt-2 text-xs leading-relaxed text-gray">プロジェクト全体の管理と、成果への責任</p>
                 </div>
               </div>
@@ -183,13 +183,13 @@ export default function CompanyPage() {
 
               <div className="grid gap-4 md:grid-cols-3">
                 {specialists.map((sp) => (
-                  <div key={sp.name} className="rounded-3xl bg-white p-6 text-center">
+                  <div key={sp.name} className="border border-ink bg-paper p-6 text-center">
                     <p className="font-inter text-[11px] font-bold uppercase tracking-widest text-gray">Specialist</p>
-                    <h3 className="mt-1 font-maru text-lg font-bold">{sp.name}</h3>
+                    <h3 className="mt-1 font-display text-lg font-bold">{sp.name}</h3>
                     <p className="mt-2 text-xs leading-relaxed text-gray">{sp.body}</p>
                     <div className="mt-3 flex flex-wrap justify-center gap-1.5">
                       {sp.tags.map((t) => (
-                        <span key={t} className={`rounded-full px-2.5 py-0.5 text-[11px] font-bold ${sp.color}`}>
+                        <span key={t} className={`px-2.5 py-0.5 text-[11px] font-bold ${sp.color}`}>
                           {t}
                         </span>
                       ))}
@@ -203,7 +203,7 @@ export default function CompanyPage() {
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {features.map((f, i) => (
               <FadeIn key={f.title} delay={i * 100}>
-                <div className="flex h-full gap-4 rounded-2xl bg-white p-5">
+                <div className="flex h-full gap-4 border border-ink bg-paper p-5">
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-lime-soft">
                     <f.icon className="h-5 w-5" />
                   </span>
@@ -227,7 +227,7 @@ export default function CompanyPage() {
             </SectionTitle>
           </FadeIn>
           <FadeIn delay={100}>
-            <dl className="mx-auto mt-10 max-w-3xl divide-y divide-border overflow-hidden rounded-3xl border border-border bg-white">
+            <dl className="mx-auto mt-10 max-w-3xl divide-y divide-border overflow-hidden rounded-3xl border border-ink bg-paper">
               {companyInfo.map((item) => (
                 <div key={item.label} className="grid grid-cols-1 gap-1 px-6 py-5 sm:grid-cols-3 sm:gap-4">
                   <dt className="flex items-center gap-2 text-sm font-bold text-gray">

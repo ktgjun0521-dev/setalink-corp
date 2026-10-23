@@ -166,19 +166,19 @@ function CaseCard({ c, index }: { c: CaseItem; index: number }) {
   const meta = areaMeta[c.area];
   return (
     <FadeIn>
-      <article className="rounded-[2rem] bg-white p-6 shadow-[0_3px_0_var(--border)] sm:p-8 lg:p-10">
+      <article className="bg-paper p-6 border border-ink sm:p-8 lg:p-10">
         <div className="flex flex-wrap items-center gap-2">
           <span className="font-inter text-xs font-bold tracking-widest text-accent-blue">
             CASE {String(index + 1).padStart(2, "0")}
           </span>
-          <span className="rounded-full bg-surface px-3 py-1 text-xs font-bold">{c.industry}</span>
-          <span className={`rounded-full px-3 py-1 text-xs font-bold ${meta.color}`}>{meta.name}</span>
+          <span className="bg-surface px-3 py-1 text-xs font-bold">{c.industry}</span>
+          <span className={`px-3 py-1 text-xs font-bold ${meta.color}`}>{meta.name}</span>
         </div>
-        <h3 className="mt-4 font-maru text-xl font-bold leading-snug sm:text-2xl">{c.title}</h3>
+        <h3 className="mt-4 font-display text-xl font-bold leading-snug sm:text-2xl">{c.title}</h3>
         <p className="mt-1.5 text-xs text-gray">{c.company}</p>
 
         <div className="mt-7 grid items-stretch gap-3 lg:grid-cols-[1fr_auto_1fr] lg:gap-4">
-          <div className="rounded-2xl border border-dashed border-foreground/25 p-5">
+          <div className="rounded-2xl border border-dashed border-ink/40 p-5">
             <p className="font-inter text-[11px] font-bold uppercase tracking-widest text-gray">Before</p>
             <p className="mt-2 text-sm leading-[1.85] text-gray">{c.before}</p>
           </div>
@@ -202,12 +202,12 @@ function CaseCard({ c, index }: { c: CaseItem; index: number }) {
         </div>
 
         <p className="mt-5 text-sm leading-[1.85]">
-          <span className="mr-2 rounded-full bg-foreground px-2.5 py-0.5 text-[11px] font-bold text-accent-lime">ポイント</span>
+          <span className="mr-2 bg-foreground px-2.5 py-0.5 text-[11px] font-bold text-accent-lime">ポイント</span>
           {c.point}
         </p>
         <div className="mt-5 flex flex-wrap gap-2">
           {c.tags.map((t) => (
-            <span key={t} className="rounded-full bg-surface px-3 py-1 text-xs font-medium text-foreground/80">
+            <span key={t} className="bg-surface px-3 py-1 text-xs font-medium text-foreground/80">
               {t}
             </span>
           ))}
@@ -242,7 +242,7 @@ export default function CasesPage() {
           <FadeIn>
             <div className="mt-10 flex flex-wrap gap-2">
               {industries.map((name) => (
-                <span key={name} className="rounded-full border-2 border-foreground bg-white px-4 py-2 text-sm font-bold">
+                <span key={name} className="border-2 border-ink bg-paper px-4 py-2 text-sm font-bold">
                   {name}
                 </span>
               ))}
@@ -259,19 +259,19 @@ export default function CasesPage() {
                       <span className={`flex h-10 w-10 items-center justify-center rounded-xl ${meta.color}`}>
                         <meta.icon className="h-5 w-5" />
                       </span>
-                      <h3 className="font-maru text-lg font-bold">{meta.name}</h3>
+                      <h3 className="font-display text-lg font-bold">{meta.name}</h3>
                       {group.area === "data" && (
-                        <span className="shrink-0 whitespace-nowrap rounded-full bg-foreground px-2.5 py-0.5 text-[11px] font-bold text-accent-lime">メインの支援</span>
+                        <span className="shrink-0 whitespace-nowrap bg-foreground px-2.5 py-0.5 text-[11px] font-bold text-accent-lime">メインの支援</span>
                       )}
                     </div>
                     <ul className="mt-4 grid gap-3 md:grid-cols-2">
                       {group.items.map((item) => (
-                        <li key={item.theme} className="flex h-full flex-col rounded-2xl bg-white p-5">
+                        <li key={item.theme} className="flex h-full flex-col border border-ink bg-paper p-5">
                           <p className="text-xs font-bold text-gray">{item.industry}</p>
                           <p className="mt-1.5 text-[15px] font-bold leading-relaxed">{item.theme}</p>
                           <div className="mt-3 flex flex-wrap gap-1.5">
                             {item.tags.map((t) => (
-                              <span key={t} className="rounded-full bg-surface px-2.5 py-0.5 text-[11px] font-medium text-foreground/75">
+                              <span key={t} className="bg-surface px-2.5 py-0.5 text-[11px] font-medium text-foreground/75">
                                 {t}
                               </span>
                             ))}
@@ -297,7 +297,7 @@ export default function CasesPage() {
           </FadeIn>
 
           <FadeIn>
-            <h3 className="mt-14 flex items-center gap-3 font-maru text-xl font-bold">
+            <h3 className="mt-14 flex items-center gap-3 font-display text-xl font-bold">
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-sky text-accent-blue">
                 <Database className="h-5 w-5" />
               </span>
@@ -311,7 +311,7 @@ export default function CasesPage() {
           </div>
 
           <FadeIn>
-            <h3 className="mt-16 flex items-center gap-3 font-maru text-xl font-bold">
+            <h3 className="mt-16 flex items-center gap-3 font-display text-xl font-bold">
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-mint text-emerald-700">
                 <Bot className="h-5 w-5" />
               </span>
