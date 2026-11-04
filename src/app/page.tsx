@@ -17,14 +17,6 @@ import { ArrowDown, Check, Database, Bot, Workflow } from "lucide-react";
 
 const container = "mx-auto max-w-6xl px-5 sm:px-6 lg:px-8";
 
-// 実績の数字（/cases の事例と同じもの）
-const proofs = [
-  { value: "330", unit: "時間/月", label: "集計作業の削減", who: "フィットネス（全国展開）" },
-  { value: "+15", unit: "%", label: "利益率の改善", who: "飲食" },
-  { value: "+10", unit: "%", label: "営業の目標達成率", who: "人材" },
-  { value: "24", unit: "時間", label: "問い合わせに対応", who: "公益法人" },
-];
-
 const worries = [
   "広告・営業・キャンペーン…施策は打っているのに、どれが効いたのか分からない",
   "結局、どこを改善すればいちばん成果が出るのかを決められない",
@@ -241,30 +233,6 @@ export default function Home() {
               <HeroIllustration className="mx-auto w-full max-w-[500px]" />
             </div>
           </div>
-        </div>
-
-        {/* 実績の数字 */}
-        <div className="border-y-2 border-ink bg-paper">
-          <div className={container}>
-            <div className="grid grid-cols-2 lg:grid-cols-4">
-              {proofs.map((p, i) => (
-                <div
-                  key={p.label}
-                  className={`py-6 pr-4 ${i % 2 === 1 ? "border-l border-ink pl-4 sm:pl-6" : ""} ${i >= 2 ? "border-t border-ink lg:border-t-0" : ""} ${i === 2 ? "lg:border-l lg:pl-6" : ""} ${i > 0 && i !== 2 ? "lg:pl-6" : ""}`}
-                >
-                  <p className="text-[11px] font-bold text-gray">{p.who}</p>
-                  <p className="mt-1 font-mincho text-[2.4rem] leading-none sm:text-5xl">
-                    {p.value}
-                    <span className="ml-1 font-display text-sm font-bold">{p.unit}</span>
-                  </p>
-                  <p className="mt-2 text-sm font-bold">{p.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className={`${container} flex justify-end py-4`}>
-          <TextLink href="/cases">支援実績・事例を見る</TextLink>
         </div>
       </section>
 
