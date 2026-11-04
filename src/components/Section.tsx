@@ -1,36 +1,16 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import FadeIn from "@/components/FadeIn";
+import Image from "next/image";
+import { ChevronRight } from "lucide-react";
 
-/* 各ページ共通のパーツ（雑誌風：罫線・通し番号・太い角ゴシック） */
+/* 各ページ共通のパーツ */
 
-export function SectionTitle({
-  no,
-  label,
-  children,
-  lead,
-  center = false,
-}: {
-  no?: string;
-  label: string;
-  children: React.ReactNode;
-  lead?: React.ReactNode;
-  center?: boolean;
-}) {
+// 中央ぞろえの見出し＋短い線
+export function SectionTitle({ children, lead }: { children: React.ReactNode; lead?: React.ReactNode }) {
   return (
-    <div>
-      <div className="flex items-baseline gap-4 border-t-2 border-ink pt-3">
-        {no && <span className="font-inter text-sm font-bold tabular-nums">{no}</span>}
-        <span className="font-inter text-[11px] font-bold uppercase tracking-[0.3em] text-gray">{label}</span>
-      </div>
-      <div className={center ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
-        <h2 className="mt-8 font-display text-[1.7rem] font-black leading-[1.4] tracking-tight sm:text-[2.2rem] md:text-[2.6rem]">
-          {children}
-        </h2>
-        {lead && (
-          <p className={`mt-5 text-[15px] leading-[1.95] text-gray ${center ? "mx-auto max-w-2xl" : "max-w-2xl"}`}>{lead}</p>
-        )}
-      </div>
+    <div className="text-center">
+      <h2 className="font-display text-[1.45rem] font-bold leading-[1.6] tracking-[0.1em] sm:text-[1.9rem]">{children}</h2>
+      <span className="mx-auto mt-5 block h-[3px] w-10 bg-accent-blue" />
+      {lead && <p className="mx-auto mt-7 max-w-3xl text-[15px] leading-[2] sm:text-base">{lead}</p>}
     </div>
   );
 }
@@ -39,67 +19,71 @@ export function PrimaryCta({ children = "無料で相談する（60分）", clas
   return (
     <Link
       href="/contact"
-      className={`group inline-flex h-14 items-center justify-between gap-5 whitespace-nowrap border-2 border-ink bg-accent-blue pl-6 pr-2 text-[15px] font-bold text-white transition-colors duration-200 hover:bg-ink ${className}`}
+      className={`inline-flex h-[54px] items-center justify-center gap-2 whitespace-nowrap rounded-[2px] bg-accent-blue px-9 text-[15px] font-bold text-white transition-colors duration-200 hover:bg-navy ${className}`}
     >
       {children}
-      <span className="flex h-10 w-10 items-center justify-center bg-white/15 transition-transform group-hover:translate-x-0.5">
-        <ArrowRight className="h-4 w-4" />
-      </span>
+      <ChevronRight className="h-4 w-4" />
+    </Link>
+  );
+}
+
+export function SecondaryCta({ href, children, className = "" }: { href: string; children: React.ReactNode; className?: string }) {
+  return (
+    <Link
+      href={href}
+      className={`inline-flex h-[54px] items-center justify-center gap-2 whitespace-nowrap rounded-[2px] border border-accent-blue bg-white px-9 text-[15px] font-bold text-accent-blue transition-colors duration-200 hover:bg-light-blue ${className}`}
+    >
+      {children}
+      <ChevronRight className="h-4 w-4" />
     </Link>
   );
 }
 
 export function TextLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
-    <Link
-      href={href}
-      className="group inline-flex items-center gap-2 border-b-2 border-ink pb-0.5 text-sm font-bold transition-colors hover:border-accent-blue hover:text-accent-blue"
-    >
+    <Link href={href} className="group inline-flex items-center gap-1.5 text-sm font-bold transition-colors hover:text-accent-blue">
+      <ChevronRight className="h-4 w-4 text-accent-blue" />
       {children}
-      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
     </Link>
   );
 }
 
-/* 下層ページの見出し（雑誌の扉のように） */
+/* 下層ページの見出し：写真の帯＋パンくず＋ページ名 */
 export function PageHero({
-  label,
   title,
+  crumb,
   lead,
-  illustration,
+  image = "/images/cta-bg.jpg",
 }: {
-  label: string;
-  title: React.ReactNode;
+  title: string;
+  crumb?: string;
   lead?: React.ReactNode;
-  illustration?: React.ReactNode;
+  image?: string;
 }) {
   return (
-    <section className="border-b-2 border-ink pt-24 pb-12 sm:pt-28 md:pt-32 md:pb-16">
-      <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-4 border-b border-ink pb-3">
-          <span className="font-inter text-[11px] font-bold uppercase tracking-[0.3em]">{label}</span>
-          <span className="h-px flex-1 bg-ink/20" />
-          <span className="font-inter text-[11px] font-bold uppercase tracking-[0.3em] text-gray">セタリンク</span>
+    <>
+      <section className="relative h-[220px] overflow-hidden pt-[64px] text-white md:h-[300px]">
+        <Image src={image} alt="" fill priority sizes="100vw" className="object-cover" />
+        <div className="absolute inset-0 bg-[#3B4F6E]/70" />
+        <div className="relative mx-auto flex h-full max-w-6xl flex-col px-5 sm:px-6 lg:px-8">
+          <p className="pt-4 text-xs">
+            <Link href="/" className="hover:underline">ホーム</Link>
+            <span className="mx-2">/</span>
+            {crumb ?? title}
+          </p>
+          <h1 className="flex flex-1 items-center font-serif-jp text-[1.9rem] font-medium tracking-[0.1em] sm:text-[2.6rem]">{title}</h1>
         </div>
-        <div className="mt-10 grid items-end gap-8 md:grid-cols-[1fr_auto]">
-          <div className="fade-in-up">
-            <h1 className="font-display text-[2.4rem] font-black leading-[1.2] tracking-tight sm:text-5xl md:text-6xl">
-              {title}
-            </h1>
-            {lead && (
-              <p className="mt-6 max-w-2xl text-[15px] leading-[1.95] text-gray sm:text-base">
-                {lead}
-              </p>
-            )}
-          </div>
-          {illustration && <div className="hidden md:block">{illustration}</div>}
-        </div>
-      </div>
-    </section>
+      </section>
+      {lead && (
+        <section className="bg-surface py-10 md:py-14">
+          <p className="mx-auto max-w-3xl px-5 text-center text-[15px] leading-[2] sm:px-6 sm:text-base">{lead}</p>
+        </section>
+      )}
+    </>
   );
 }
 
-/* ページ下部の相談（墨色の帯） */
+/* ページ下部の相談の帯 */
 export function CtaPanel({
   title = (
     <>
@@ -114,31 +98,20 @@ export function CtaPanel({
   lead?: React.ReactNode;
 }) {
   return (
-    <section className="bg-ink text-paper">
-      <div className="mx-auto max-w-6xl px-5 py-20 sm:px-6 md:py-28 lg:px-8">
-        <FadeIn>
-          <div className="flex items-baseline gap-4 border-t-2 border-paper pt-3">
-            <span className="font-inter text-[11px] font-bold uppercase tracking-[0.3em] text-accent-lime">Contact</span>
-          </div>
-          <div className="mt-8 grid items-end gap-10 lg:grid-cols-[1fr_auto]">
-            <div>
-              <h2 className="font-display text-[1.7rem] font-black leading-[1.45] sm:text-4xl md:text-[2.6rem]">{title}</h2>
-              <p className="mt-5 max-w-xl text-sm leading-[1.95] text-paper/70">{lead}</p>
-            </div>
-            <div>
-              <Link
-                href="/contact"
-                className="group inline-flex h-16 w-full items-center justify-between gap-6 whitespace-nowrap border-2 border-accent-lime bg-accent-lime pl-7 pr-2 text-base font-bold text-ink transition-colors hover:bg-paper sm:w-auto"
-              >
-                無料で相談する（60分）
-                <span className="flex h-12 w-12 items-center justify-center bg-ink text-accent-lime transition-transform group-hover:translate-x-0.5">
-                  <ArrowRight className="h-5 w-5" />
-                </span>
-              </Link>
-              <p className="mt-3 text-xs text-paper/50">2営業日以内にご連絡します</p>
-            </div>
-          </div>
-        </FadeIn>
+    <section className="relative overflow-hidden text-white">
+      <Image src="/images/contact-bg.jpg" alt="" fill sizes="100vw" className="object-cover" />
+      <div className="absolute inset-0 bg-navy/85" />
+      <div className="relative mx-auto max-w-4xl px-5 py-16 text-center sm:px-6 md:py-20">
+        <h2 className="font-display text-[1.4rem] font-bold leading-[1.7] tracking-[0.08em] sm:text-[1.8rem]">{title}</h2>
+        <p className="mx-auto mt-5 max-w-2xl text-sm leading-[2] sm:text-[15px]">{lead}</p>
+        <Link
+          href="/contact"
+          className="mt-8 inline-flex h-[58px] items-center justify-center gap-2 whitespace-nowrap rounded-[2px] bg-white px-12 text-base font-bold text-accent-blue transition-colors hover:bg-light-blue"
+        >
+          無料で相談する（60分）
+          <ChevronRight className="h-4 w-4" />
+        </Link>
+        <p className="mt-3 text-xs">2営業日以内にご連絡します</p>
       </div>
     </section>
   );

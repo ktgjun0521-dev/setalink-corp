@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP, Inter, Zen_Old_Mincho, Klee_One } from "next/font/google";
+import { Noto_Sans_JP, Noto_Serif_JP, Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileCta from "@/components/MobileCta";
@@ -12,19 +12,11 @@ const notoSansJP = Noto_Sans_JP({
   display: "swap",
 });
 
-// お客様の声・大きな数字に使う明朝
-const zenOldMincho = Zen_Old_Mincho({
-  variable: "--font-zen-old-mincho",
+// ページの大見出しに使う明朝
+const notoSerifJP = Noto_Serif_JP({
+  variable: "--font-noto-serif-jp",
   subsets: ["latin"],
-  weight: ["700"],
-  display: "swap",
-});
-
-// イラストの書き込み（会議メモ風）に使う手書き風
-const kleeOne = Klee_One({
-  variable: "--font-klee-one",
-  subsets: ["latin"],
-  weight: ["600"],
+  weight: ["500"],
   display: "swap",
 });
 
@@ -119,7 +111,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${notoSansJP.variable} ${zenOldMincho.variable} ${kleeOne.variable} ${inter.variable} font-sans antialiased`}
+        className={`${notoSansJP.variable} ${notoSerifJP.variable} ${inter.variable} font-sans antialiased`}
       >
         <script
           type="application/ld+json"

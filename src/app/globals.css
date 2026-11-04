@@ -1,38 +1,37 @@
 @import "tailwindcss";
 
-/* 雑誌風（エディトリアル）：紙の地色＋墨の線＋差し色（青・ライム） */
+/* 白地＋グレー＋コーポレートブルー1色。写真を主役にして、装飾は足さない */
 :root {
-  --background: #F7F4EC;
-  --foreground: #16161D;
-  --accent-blue: #2D5BFF;
-  --accent-lime: #C4E538;
-  --gray: #5A5D66;
-  --border: #D9D3C4;
-  --light-blue: #E8EEFF;
-  --navy: #16161D;
-  --surface: #EFEBE0;
-  --lime-soft: #EEF6C9;
-  --mint: #E1F2E6;
-  --peach: #FCE6D6;
-  --sky: #E8EEFF;
-  --paper: #FFFDF7;
-  --ink: #16161D;
+  --background: #FFFFFF;
+  --foreground: #333333;
+  --accent-blue: #1B4A9C;
+  --accent-lime: #1B4A9C;
+  --gray: #666666;
+  --border: #DCE0E5;
+  --light-blue: #EEF2F8;
+  --navy: #0F2A52;
+  --surface: #F3F5F7;
+  --lime-soft: #EEF2F8;
+  --mint: #EEF2F8;
+  --peach: #F3F5F7;
+  --sky: #EEF2F8;
+  --paper: #FFFFFF;
+  --ink: #333333;
 }
 
-/* 角丸は控えめに（丸み・ぼかし・影に頼らない） */
+/* 角丸はほぼ付けない */
 @theme {
-  --radius-lg: 4px;
-  --radius-xl: 4px;
-  --radius-2xl: 6px;
-  --radius-3xl: 6px;
+  --radius-lg: 2px;
+  --radius-xl: 2px;
+  --radius-2xl: 2px;
+  --radius-3xl: 2px;
 }
 
 @theme inline {
   --color-paper: var(--paper);
   --color-ink: var(--ink);
   --font-display: var(--font-noto-sans-jp), "Noto Sans JP", sans-serif;
-  --font-mincho: var(--font-zen-old-mincho), "Zen Old Mincho", serif;
-  --font-hand: var(--font-klee-one), "Klee One", cursive;
+  --font-serif-jp: var(--font-noto-serif-jp), "Noto Serif JP", serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent-blue: var(--accent-blue);
@@ -55,25 +54,10 @@ h1, h2, h3, p, li, summary {
   word-break: auto-phrase;
 }
 
-/* 見出しは詰め組み（雑誌の組版に寄せる） */
-h1, h2, h3 {
-  font-feature-settings: "palt";
-}
-
-/* 蛍光ペンで引いたようなマーカー */
-.marker {
-  background: linear-gradient(transparent 62%, var(--accent-lime) 62%, var(--accent-lime) 92%, transparent 92%);
-  padding: 0 0.1em;
-}
-
-/* 手書き風の点線矢印などに使う */
-.dash-line {
-  stroke-dasharray: 6 8;
-}
-
-/* ゆっくり揺れるイラスト */
-.sway {
-  animation: float 5s ease-in-out infinite;
+/* 日本語サイトらしい字間と行間 */
+body {
+  letter-spacing: 0.05em;
+  line-height: 1.8;
 }
 
 html {
