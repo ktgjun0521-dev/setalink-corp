@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import { SectionTitle, PageHero, CtaPanel } from "@/components/Section";
-import { DataIllustration } from "@/components/Illustrations";
 import { ArrowRight, ArrowDown, Database, Bot, Workflow, type LucideIcon } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -19,8 +19,8 @@ type AreaKey = "data" | "ai" | "bpr";
 
 const areaMeta: Record<AreaKey, { name: string; icon: LucideIcon; color: string }> = {
   data: { name: "データコンサルティング", icon: Database, color: "bg-sky text-accent-blue" },
-  ai: { name: "AI導入支援", icon: Bot, color: "bg-mint text-emerald-700" },
-  bpr: { name: "業務改善（BPR）", icon: Workflow, color: "bg-peach text-orange-700" },
+  ai: { name: "AI導入支援", icon: Bot, color: "bg-mint text-accent-blue" },
+  bpr: { name: "業務改善（BPR）", icon: Workflow, color: "bg-peach text-accent-blue" },
 };
 
 const track: { area: AreaKey; items: { industry: string; theme: string; tags: string[] }[] }[] = [
@@ -66,6 +66,7 @@ interface CaseItem {
   area: AreaKey;
   industry: string;
   company: string;
+  image: string;
   title: string;
   before: string;
   after: string;
@@ -79,6 +80,7 @@ const cases: CaseItem[] = [
     area: "data",
     industry: "フィットネス",
     company: "全国展開のフィットネスクラブ A社",
+    image: "/images/case-fitness.jpg",
     title: "全国37店舗・約200名の状況を、ひと目で把握できるように",
     before:
       "各店舗の売上データはPOSで取得していたものの、集計が手作業で、帳簿のズレや費用の分類ミスが常態化。売上をタイムリーに正確に把握できない状態でした。",
@@ -96,6 +98,7 @@ const cases: CaseItem[] = [
     area: "data",
     industry: "飲食",
     company: "飲食店 B社",
+    image: "/images/case-food.jpg",
     title: "商品別の利益率を見て、セットを組み替え。利益率が改善",
     before:
       "月次の売上報告や店舗別の集計をExcelで行っていて、更新にも確認にも時間がかかる状態。現場のオペレーション改善に手をつけられていませんでした。",
@@ -113,6 +116,7 @@ const cases: CaseItem[] = [
     area: "data",
     industry: "人材",
     company: "人材会社 C社",
+    image: "/images/case-hr.jpg",
     title: "営業データの仕組みを作り直し、目標達成率が約10%向上",
     before:
       "営業日報のExcelが肥大化し、管理の外注費が月80万円。指標が増えるたびにタブや集計が増え、売上の数字を確認するだけでも時間がかかっていました。",
@@ -130,6 +134,7 @@ const cases: CaseItem[] = [
     area: "ai",
     industry: "サービス業",
     company: "経営層・PR部門 D社",
+    image: "/images/case-service.jpg",
     title: "Gemini × Googleのツールで、経営層・PR部門の手間を大きく削減",
     before:
       "経営層・PR部門の業務時間の多くが、情報探し・資料づくり・日程調整などの間接業務に費やされ、本来注力すべき経営判断やコア業務に集中できない状態でした。",
@@ -147,6 +152,7 @@ const cases: CaseItem[] = [
     area: "ai",
     industry: "公益法人",
     company: "公益財団法人 E団体",
+    image: "/images/company-bg.jpg",
     title: "区民向け生成AIチャットボットで、使いやすさと負担軽減を両立",
     before:
       "区民からの問い合わせが電話・窓口に集中し、職員の対応負荷が高い状態。施設予約や手続き案内などの定型的な質問が多く、本来の業務に時間を割けていませんでした。",
@@ -166,20 +172,27 @@ function CaseCard({ c, index }: { c: CaseItem; index: number }) {
   const meta = areaMeta[c.area];
   return (
     <FadeIn>
-      <article className="bg-paper p-6 border border-ink sm:p-8 lg:p-10">
+      <article className="bg-white p-6 border border-border sm:p-8 lg:p-10">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="font-inter text-xs font-bold tracking-widest text-accent-blue">
+          <span className="text-xs font-bold tracking-widest text-accent-blue">
             CASE {String(index + 1).padStart(2, "0")}
           </span>
           <span className="bg-surface px-3 py-1 text-xs font-bold">{c.industry}</span>
           <span className={`px-3 py-1 text-xs font-bold ${meta.color}`}>{meta.name}</span>
         </div>
-        <h3 className="mt-4 font-display text-xl font-bold leading-snug sm:text-2xl">{c.title}</h3>
-        <p className="mt-1.5 text-xs text-gray">{c.company}</p>
+        <div className="mt-4 grid items-start gap-5 md:grid-cols-[1fr_240px]">
+          <div>
+            <h3 className="font-display text-xl font-bold leading-snug sm:text-2xl">{c.title}</h3>
+            <p className="mt-1.5 text-xs text-gray">{c.company}</p>
+          </div>
+          <div className="relative aspect-[16/10]">
+            <Image src={c.image} alt="" fill sizes="240px" className="object-cover" />
+          </div>
+        </div>
 
         <div className="mt-7 grid items-stretch gap-3 lg:grid-cols-[1fr_auto_1fr] lg:gap-4">
-          <div className="rounded-2xl border border-dashed border-ink/40 p-5">
-            <p className="font-inter text-[11px] font-bold uppercase tracking-widest text-gray">Before</p>
+          <div className="rounded-2xl border border-border p-5">
+            <p className="text-[11px] font-bold uppercase tracking-widest text-gray">Before</p>
             <p className="mt-2 text-sm leading-[1.85] text-gray">{c.before}</p>
           </div>
           <div className="flex items-center justify-center">
@@ -187,7 +200,7 @@ function CaseCard({ c, index }: { c: CaseItem; index: number }) {
             <ArrowDown className="h-6 w-6 text-accent-blue lg:hidden" />
           </div>
           <div className="rounded-2xl bg-lime-soft p-5">
-            <p className="font-inter text-[11px] font-bold uppercase tracking-widest">After</p>
+            <p className="text-[11px] font-bold uppercase tracking-widest">After</p>
             <p className="mt-2 text-sm font-medium leading-[1.85]">{c.after}</p>
           </div>
         </div>
@@ -195,14 +208,14 @@ function CaseCard({ c, index }: { c: CaseItem; index: number }) {
         <div className="mt-5 grid gap-2 sm:grid-cols-3 sm:gap-3">
           {c.results.map((r) => (
             <div key={r.label} className="flex items-baseline justify-between gap-3 rounded-2xl bg-sky px-5 py-3 sm:block sm:py-4">
-              <p className="font-inter text-xl font-bold text-accent-blue sm:text-2xl">{r.metric}</p>
+              <p className="text-xl font-bold text-accent-blue sm:text-2xl">{r.metric}</p>
               <p className="text-right text-xs font-medium text-foreground/75 sm:mt-1 sm:text-left">{r.label}</p>
             </div>
           ))}
         </div>
 
         <p className="mt-5 text-sm leading-[1.85]">
-          <span className="mr-2 bg-foreground px-2.5 py-0.5 text-[11px] font-bold text-accent-lime">ポイント</span>
+          <span className="mr-2 bg-accent-blue px-2.5 py-0.5 text-[11px] font-bold text-white">ポイント</span>
           {c.point}
         </p>
         <div className="mt-5 flex flex-wrap gap-2">
@@ -224,17 +237,15 @@ export default function CasesPage() {
   return (
     <>
       <PageHero
-        label="Results & Cases"
         title="支援実績・事例"
         lead="データコンサルティングを中心に、業種もテーマもさまざまな会社の改善活動をご一緒してきました。社名は伏せ、業種でご紹介しています。"
-        illustration={<DataIllustration className="w-[360px]" />}
       />
 
       {/* ===== 支援実績 ===== */}
       <section id="results" className="scroll-mt-20 bg-surface py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
           <FadeIn>
-            <SectionTitle label="Results" lead="これまでにご一緒した主な業種と、支援のテーマです。">
+            <SectionTitle lead="これまでにご一緒した主な業種と、支援のテーマです。">
               支援実績
             </SectionTitle>
           </FadeIn>
@@ -242,7 +253,7 @@ export default function CasesPage() {
           <FadeIn>
             <div className="mt-10 flex flex-wrap gap-2">
               {industries.map((name) => (
-                <span key={name} className="border-2 border-ink bg-paper px-4 py-2 text-sm font-bold">
+                <span key={name} className="border border-border bg-white px-4 py-2 text-sm font-bold">
                   {name}
                 </span>
               ))}
@@ -261,12 +272,12 @@ export default function CasesPage() {
                       </span>
                       <h3 className="font-display text-lg font-bold">{meta.name}</h3>
                       {group.area === "data" && (
-                        <span className="shrink-0 whitespace-nowrap bg-foreground px-2.5 py-0.5 text-[11px] font-bold text-accent-lime">メインの支援</span>
+                        <span className="shrink-0 whitespace-nowrap bg-accent-blue px-2.5 py-0.5 text-[11px] font-bold text-white">メインの支援</span>
                       )}
                     </div>
                     <ul className="mt-4 grid gap-3 md:grid-cols-2">
                       {group.items.map((item) => (
-                        <li key={item.theme} className="flex h-full flex-col border border-ink bg-paper p-5">
+                        <li key={item.theme} className="flex h-full flex-col border border-border bg-white p-5">
                           <p className="text-xs font-bold text-gray">{item.industry}</p>
                           <p className="mt-1.5 text-[15px] font-bold leading-relaxed">{item.theme}</p>
                           <div className="mt-3 flex flex-wrap gap-1.5">
@@ -291,7 +302,7 @@ export default function CasesPage() {
       <section id="cases" className="scroll-mt-20 py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
           <FadeIn>
-            <SectionTitle label="Before → After" lead="支援の前に困っていたことと、支援のあとに変わったことです。">
+            <SectionTitle lead="支援の前に困っていたことと、支援のあとに変わったことです。">
               支援事例
             </SectionTitle>
           </FadeIn>
@@ -312,7 +323,7 @@ export default function CasesPage() {
 
           <FadeIn>
             <h3 className="mt-16 flex items-center gap-3 font-display text-xl font-bold">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-mint text-emerald-700">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-mint text-accent-blue">
                 <Bot className="h-5 w-5" />
               </span>
               AI導入支援の事例

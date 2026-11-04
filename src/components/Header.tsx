@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import LogoMark from "@/components/LogoMark";
 
 const navLinks = [
@@ -25,33 +25,30 @@ export default function Header() {
   }, [menuOpen]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-ink bg-background/95 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 sm:px-6 lg:px-8">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-[0_1px_0_var(--border)]">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 transition-opacity hover:opacity-70">
           <LogoMark />
-          <span className="font-display text-xl font-black tracking-tight text-foreground">セタリンク</span>
+          <span className="text-xl font-bold tracking-[0.08em]">セタリンク</span>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`link-underline text-sm font-bold transition-colors ${
-                pathname === link.href ? "text-accent-blue" : "text-foreground/80 hover:text-foreground"
-              }`}
+              className={`text-sm font-medium transition-colors hover:text-accent-blue ${pathname === link.href ? "text-accent-blue" : ""}`}
             >
               {link.label}
             </Link>
           ))}
           <Link
             href="/contact"
-            className="group inline-flex h-10 items-center justify-center gap-2 border-2 border-ink bg-accent-blue px-4 text-sm font-bold text-white transition-colors hover:bg-ink"
+            className="inline-flex h-9 items-center justify-center rounded-[2px] bg-accent-blue px-5 text-[13px] font-bold text-white transition-colors hover:bg-navy"
           >
             無料相談
-            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
           </Link>
         </nav>
 
@@ -69,31 +66,30 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-40 bg-background transition-all duration-300 md:hidden ${
+        className={`fixed inset-x-0 bottom-0 top-16 z-40 bg-white transition-all duration-200 md:hidden ${
           menuOpen ? "visible opacity-100" : "invisible opacity-0"
         }`}
       >
-        <nav className="flex h-full flex-col justify-center px-8">
-          {navLinks.map((link, i) => (
+        <nav className="flex flex-col px-5 pt-2">
+          {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="flex items-baseline gap-4 border-b border-ink py-5 font-display text-2xl font-black transition-colors hover:text-accent-blue"
+              className="flex items-center justify-between border-b border-border py-4 text-base font-medium"
             >
-              <span className="font-inter text-xs font-bold text-gray">0{i + 1}</span>
               {link.label}
+              <ChevronRight className="h-4 w-4 text-accent-blue" />
             </Link>
           ))}
           <Link
             href="/contact"
             onClick={() => setMenuOpen(false)}
-            className="mt-10 inline-flex h-14 items-center justify-center gap-2 border-2 border-ink bg-accent-blue px-8 text-base font-bold text-white"
+            className="mt-8 inline-flex h-[54px] items-center justify-center rounded-[2px] bg-accent-blue text-[15px] font-bold text-white"
           >
             無料で相談する（60分）
-            <ArrowRight className="h-4 w-4" />
           </Link>
         </nav>
       </div>

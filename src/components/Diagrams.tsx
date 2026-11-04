@@ -1,14 +1,13 @@
 // トップページの図解（改善サイクル・4つの選択肢のつまずき）。線画＋差し色
 
-const INK = "#16161D";
-const PAPER = "#FFFDF7";
-const BLUE = "#2D5BFF";
-const LIME = "#C4E538";
-const PEACH = "#FCE6D6";
-const RED = "#E8590C";
-const GRAY = "#5A5D66";
-const HAND = "var(--font-klee-one), cursive";
+const INK = "#4A4F57";
+const PAPER = "#FFFFFF";
+const BLUE = "#1B4A9C";
+const LIME = "#D5E0F2"; // 薄い青
+const RED = "#B3392F"; // つまずきの強調だけに使う
+const GRAY = "#666666";
 const GOTHIC = "var(--font-noto-sans-jp), sans-serif";
+const HAND = GOTHIC;
 
 const CX = 260;
 const CY = 260;
@@ -41,10 +40,10 @@ export function ImprovementCycle({
         d={`M ${r1(arcStart.x)} ${r1(arcStart.y)} A ${R} ${R} 0 0 1 ${r1(arcEnd.x)} ${r1(arcEnd.y)}`}
         fill="none"
         stroke={LIME}
-        strokeWidth="18"
+        strokeWidth="14"
       />
       {/* 円の線 */}
-      <circle cx={CX} cy={CY} r={R} fill="none" stroke={INK} strokeWidth="2" />
+      <circle cx={CX} cy={CY} r={R} fill="none" stroke="#B9C1CC" strokeWidth="1.5" />
       {/* 進む向きの矢印 */}
       {[-60, 0, 60, 120, 180, 240].map((deg) => {
         const p = pos(deg);
@@ -54,7 +53,7 @@ export function ImprovementCycle({
             d="M-7 -9 L5 0 L-7 9"
             transform={`translate(${r1(p.x)} ${r1(p.y)}) rotate(${deg + 90})`}
             fill="none"
-            stroke={INK}
+            stroke={BLUE}
             strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -63,10 +62,10 @@ export function ImprovementCycle({
       })}
 
       {/* 中央 */}
-      <text x={CX} y={CY - 4} textAnchor="middle" fontSize="26" fontWeight="900" fill={INK} fontFamily={GOTHIC}>
+      <text x={CX} y={CY - 4} textAnchor="middle" fontSize="24" fontWeight="700" fill="#333333" fontFamily={GOTHIC}>
         改善サイクル
       </text>
-      <text x={CX} y={CY + 28} textAnchor="middle" fontSize="16" fill={GRAY} fontFamily={HAND}>
+      <text x={CX} y={CY + 28} textAnchor="middle" fontSize="13" fill={GRAY} fontFamily={GOTHIC}>
         回すたびに、精度が上がる
       </text>
 
@@ -76,14 +75,14 @@ export function ImprovementCycle({
         const key = i === 3;
         return (
           <g key={s.step} transform={`translate(${r1(p.x)} ${r1(p.y)})`}>
-            <circle r={NODE_R} fill={key ? LIME : PAPER} stroke={INK} strokeWidth="2" />
-            <text y="-17" textAnchor="middle" fontSize="14" fontWeight="700" fill={key ? INK : BLUE} fontFamily="var(--font-inter), sans-serif">
+            <circle r={NODE_R} fill={key ? BLUE : PAPER} stroke={key ? BLUE : "#B9C1CC"} strokeWidth="1.5" />
+            <text y="-17" textAnchor="middle" fontSize="14" fontWeight="700" fill={key ? "#FFFFFF" : BLUE} fontFamily={GOTHIC}>
               {s.step}
             </text>
-            <text y="6" textAnchor="middle" fontSize="16" fontWeight="700" fill={INK} fontFamily={GOTHIC}>
+            <text y="6" textAnchor="middle" fontSize="15" fontWeight="700" fill={key ? "#FFFFFF" : "#333333"} fontFamily={GOTHIC}>
               {s.short[0]}
             </text>
-            <text y="26" textAnchor="middle" fontSize="16" fontWeight="700" fill={INK} fontFamily={GOTHIC}>
+            <text y="26" textAnchor="middle" fontSize="15" fontWeight="700" fill={key ? "#FFFFFF" : "#333333"} fontFamily={GOTHIC}>
               {s.short[1]}
             </text>
           </g>
@@ -93,20 +92,20 @@ export function ImprovementCycle({
       {/* 書き込み：多くの支援はここで終わり（03の横） */}
       <path d="M440 428 C 444 416, 436 408, 426 402" fill="none" stroke={RED} strokeWidth="2" strokeLinecap="round" />
       <path d="M426 402 L 438 402 M 426 402 L 430 414" stroke={RED} strokeWidth="2" strokeLinecap="round" />
-      <rect x="380" y="430" width="116" height="60" fill={PEACH} stroke={INK} strokeWidth="1.8" />
-      <text x="438" y="455" textAnchor="middle" fontSize="16" fill={INK} fontFamily={HAND}>
+      <rect x="380" y="430" width="116" height="60" fill="#FFFFFF" stroke="#B9C1CC" strokeWidth="1.2" />
+      <text x="438" y="455" textAnchor="middle" fontSize="14" fontWeight="700" fill="#333333" fontFamily={GOTHIC}>
         多くの支援は
       </text>
-      <text x="438" y="478" textAnchor="middle" fontSize="16" fill={INK} fontFamily={HAND}>
+      <text x="438" y="478" textAnchor="middle" fontSize="14" fontWeight="700" fill="#333333" fontFamily={GOTHIC}>
         ここで終わり
       </text>
 
       {/* 書き込み：ここからが本番（04〜06の横） */}
-      <rect x="22" y="430" width="134" height="60" fill={LIME} stroke={INK} strokeWidth="1.8" />
-      <text x="89" y="455" textAnchor="middle" fontSize="16" fill={INK} fontFamily={HAND}>
+      <rect x="22" y="430" width="134" height="60" fill={BLUE} stroke={BLUE} strokeWidth="1.2" />
+      <text x="89" y="455" textAnchor="middle" fontSize="14" fontWeight="700" fill="#FFFFFF" fontFamily={GOTHIC}>
         セタリンクは
       </text>
-      <text x="89" y="478" textAnchor="middle" fontSize="16" fill={INK} fontFamily={HAND}>
+      <text x="89" y="478" textAnchor="middle" fontSize="14" fontWeight="700" fill="#FFFFFF" fontFamily={GOTHIC}>
         ここからが本番
       </text>
     </svg>
@@ -216,7 +215,7 @@ function HireScene() {
       </g>
       {/* 応募 0件 */}
       <g transform="rotate(-6 214 60)">
-        <rect x="180" y="44" width="86" height="30" fill={PEACH} stroke={INK} strokeWidth="1.8" />
+        <rect x="180" y="44" width="86" height="30" fill="#FFFFFF" stroke="#B9C1CC" strokeWidth="1.2" />
         <text x="223" y="65" textAnchor="middle" fontSize="15" fill={RED} fontFamily={HAND}>応募 0件</text>
       </g>
       {/* 待つ人と砂時計 */}

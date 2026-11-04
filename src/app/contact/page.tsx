@@ -90,7 +90,7 @@ export default function ContactPage() {
                 />
               </svg>
             </div>
-            <h1 className="mt-6 text-3xl font-bold tracking-tight md:text-4xl">
+            <h1 className="mt-6 text-3xl font-bold tracking-[0.04em] md:text-4xl">
               送信完了
             </h1>
             <p className="mt-4 text-sm leading-relaxed text-gray">
@@ -107,7 +107,6 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
-        label="Contact"
         title="無料相談・お問い合わせ"
         lead="初回相談（60分・オンライン）は無料です。「何から相談すればいいか分からない」という段階でも大丈夫です。2営業日以内にご連絡します。"
       />
@@ -128,7 +127,7 @@ export default function ContactPage() {
                     className="block text-sm font-medium text-foreground"
                   >
                     お名前
-                    <span className="ml-1 text-accent-blue">*</span>
+                    <span className="ml-1 text-[#B3392F]">*</span>
                   </label>
                   <input
                     type="text"
@@ -137,7 +136,7 @@ export default function ContactPage() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="mt-2 block w-full border-2 border-ink bg-paper px-4 py-3 text-sm text-foreground placeholder:text-gray/50 transition-colors focus:border-accent-blue focus:outline-none focus:ring-1 focus:ring-accent-blue"
+                    className="mt-2 block w-full rounded-[2px] border border-[#B9C1CC] bg-white px-4 py-3 text-sm text-foreground placeholder:text-gray/50 transition-colors focus:border-accent-blue focus:outline-none focus:ring-1 focus:ring-accent-blue"
                     placeholder="山田 太郎"
                   />
                 </div>
@@ -149,7 +148,7 @@ export default function ContactPage() {
                     className="block text-sm font-medium text-foreground"
                   >
                     会社名
-                    <span className="ml-1 text-accent-blue">*</span>
+                    <span className="ml-1 text-[#B3392F]">*</span>
                   </label>
                   <input
                     type="text"
@@ -158,7 +157,7 @@ export default function ContactPage() {
                     required
                     value={formData.company}
                     onChange={handleChange}
-                    className="mt-2 block w-full border-2 border-ink bg-paper px-4 py-3 text-sm text-foreground placeholder:text-gray/50 transition-colors focus:border-accent-blue focus:outline-none focus:ring-1 focus:ring-accent-blue"
+                    className="mt-2 block w-full rounded-[2px] border border-[#B9C1CC] bg-white px-4 py-3 text-sm text-foreground placeholder:text-gray/50 transition-colors focus:border-accent-blue focus:outline-none focus:ring-1 focus:ring-accent-blue"
                     placeholder="株式会社〇〇"
                   />
                 </div>
@@ -170,7 +169,7 @@ export default function ContactPage() {
                     className="block text-sm font-medium text-foreground"
                   >
                     メールアドレス
-                    <span className="ml-1 text-accent-blue">*</span>
+                    <span className="ml-1 text-[#B3392F]">*</span>
                   </label>
                   <input
                     type="email"
@@ -179,7 +178,7 @@ export default function ContactPage() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="mt-2 block w-full border-2 border-ink bg-paper px-4 py-3 text-sm text-foreground placeholder:text-gray/50 transition-colors focus:border-accent-blue focus:outline-none focus:ring-1 focus:ring-accent-blue"
+                    className="mt-2 block w-full rounded-[2px] border border-[#B9C1CC] bg-white px-4 py-3 text-sm text-foreground placeholder:text-gray/50 transition-colors focus:border-accent-blue focus:outline-none focus:ring-1 focus:ring-accent-blue"
                     placeholder="info@example.com"
                   />
                 </div>
@@ -199,7 +198,7 @@ export default function ContactPage() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="mt-2 block w-full border-2 border-ink bg-paper px-4 py-3 text-sm text-foreground placeholder:text-gray/50 transition-colors focus:border-accent-blue focus:outline-none focus:ring-1 focus:ring-accent-blue"
+                    className="mt-2 block w-full rounded-[2px] border border-[#B9C1CC] bg-white px-4 py-3 text-sm text-foreground placeholder:text-gray/50 transition-colors focus:border-accent-blue focus:outline-none focus:ring-1 focus:ring-accent-blue"
                     placeholder="03-1234-5678"
                   />
                 </div>
@@ -218,7 +217,7 @@ export default function ContactPage() {
                     name="topic"
                     value={formData.topic}
                     onChange={handleChange}
-                    className="mt-2 block w-full border-2 border-ink bg-paper px-4 py-3 text-sm text-foreground transition-colors focus:border-accent-blue focus:outline-none focus:ring-1 focus:ring-accent-blue"
+                    className="mt-2 block w-full rounded-[2px] border border-[#B9C1CC] bg-white px-4 py-3 text-sm text-foreground transition-colors focus:border-accent-blue focus:outline-none focus:ring-1 focus:ring-accent-blue"
                   >
                     <option value="">選択してください</option>
                     {topics.map((t) => (
@@ -236,7 +235,7 @@ export default function ContactPage() {
                     className="block text-sm font-medium text-foreground"
                   >
                     お問い合わせ内容
-                    <span className="ml-1 text-accent-blue">*</span>
+                    <span className="ml-1 text-[#B3392F]">*</span>
                   </label>
                   <textarea
                     id="message"
@@ -245,7 +244,7 @@ export default function ContactPage() {
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
-                    className="mt-2 block w-full resize-none border-2 border-ink bg-paper px-4 py-3 text-sm text-foreground placeholder:text-gray/50 transition-colors focus:border-accent-blue focus:outline-none focus:ring-1 focus:ring-accent-blue"
+                    className="mt-2 block w-full resize-none rounded-[2px] border border-[#B9C1CC] bg-white px-4 py-3 text-sm text-foreground placeholder:text-gray/50 transition-colors focus:border-accent-blue focus:outline-none focus:ring-1 focus:ring-accent-blue"
                     placeholder="いま取り組んでいることや、困っていることをお書きください（箇条書きで大丈夫です）"
                   />
                 </div>
@@ -263,7 +262,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={sending}
-                  className="inline-flex h-14 w-full items-center justify-center gap-2 border-2 border-ink bg-accent-blue px-10 text-[15px] font-bold text-white transition-colors duration-200 hover:bg-ink disabled:opacity-60 sm:w-auto"
+                  className="inline-flex h-[54px] w-full items-center justify-center gap-2 rounded-[2px] bg-accent-blue px-12 text-[15px] font-bold text-white transition-colors duration-200 hover:bg-navy disabled:opacity-60 sm:w-auto"
                 >
                   {sending ? (
                     <>

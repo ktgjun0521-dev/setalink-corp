@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import FadeIn from "@/components/FadeIn";
 import { SectionTitle, PageHero, CtaPanel } from "@/components/Section";
-import { TalkIllustration } from "@/components/Illustrations";
 import { beliefs } from "@/lib/company";
 import {
   MapPin,
@@ -40,20 +39,20 @@ const businesses = [
     icon: Bot,
     name: "AI導入支援",
     body: "生成AIを業務の流れに組み込み、手作業の時間を減らします。現場で使い続けられるところまで伴走します。",
-    color: "bg-mint text-emerald-700",
+    color: "bg-mint text-accent-blue",
   },
   {
     icon: Workflow,
     name: "業務改善（BPR）",
     body: "業務の流れを見える形にしてボトルネックを特定し、自動化も含めて続けられる仕組みにします。",
-    color: "bg-peach text-orange-700",
+    color: "bg-peach text-accent-blue",
   },
 ];
 
 const specialists = [
   { name: "データ領域", body: "データ基盤づくり・BIツール・分析設計の現役プレイヤー", tags: ["データ基盤", "BI", "分析設計"], color: "bg-sky text-accent-blue" },
-  { name: "AI領域", body: "生成AI・機械学習・AI導入設計の現役プレイヤー", tags: ["生成AI", "機械学習", "AI実装"], color: "bg-mint text-emerald-700" },
-  { name: "業務改善領域", body: "業務改善・プロセス設計・組織づくりの現役プレイヤー", tags: ["業務改善", "プロセス設計", "組織づくり"], color: "bg-peach text-orange-700" },
+  { name: "AI領域", body: "生成AI・機械学習・AI導入設計の現役プレイヤー", tags: ["生成AI", "機械学習", "AI実装"], color: "bg-mint text-accent-blue" },
+  { name: "業務改善領域", body: "業務改善・プロセス設計・組織づくりの現役プレイヤー", tags: ["業務改善", "プロセス設計", "組織づくり"], color: "bg-peach text-accent-blue" },
 ];
 
 const features = [
@@ -81,10 +80,9 @@ export default function CompanyPage() {
   return (
     <>
       <PageHero
-        label="Company"
         title="会社概要"
+        image="/images/company-bg.jpg"
         lead="株式会社セタリンクは、データコンサルティングを中心に、企業の改善活動をより効果的にする会社です。"
-        illustration={<TalkIllustration className="w-[340px]" />}
       />
 
       {/* ===== 想い ===== */}
@@ -92,8 +90,6 @@ export default function CompanyPage() {
         <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
           <FadeIn>
             <SectionTitle
-              label="Our belief"
-              center
               lead="最後は、お客様が自分たちで改善を回せる状態をゴールにしています。"
             >
               人々が本気ではたらく社会を、
@@ -104,8 +100,8 @@ export default function CompanyPage() {
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {beliefs.map((b, i) => (
               <FadeIn key={b.label} delay={i * 100}>
-                <div className="h-full border border-ink bg-paper p-7">
-                  <span className="inline-flex bg-foreground px-3 py-1 font-inter text-xs font-bold tracking-widest text-accent-lime">
+                <div className="h-full border border-border bg-white p-7">
+                  <span className="inline-flex bg-foreground px-3 py-1 text-xs font-bold tracking-widest text-white">
                     {b.label}
                   </span>
                   <h3 className="mt-4 font-display text-lg font-bold leading-snug">{b.title}</h3>
@@ -121,16 +117,16 @@ export default function CompanyPage() {
       <section id="business" className="scroll-mt-20 py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
           <FadeIn>
-            <SectionTitle label="Business" lead="中心はデータコンサルティング。課題に合わせて、AI導入支援と業務改善を組み合わせます。">
+            <SectionTitle lead="中心はデータコンサルティング。課題に合わせて、AI導入支援と業務改善を組み合わせます。">
               事業内容
             </SectionTitle>
           </FadeIn>
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {businesses.map((b, i) => (
               <FadeIn key={b.name} delay={i * 100}>
-                <div className={`relative h-full border border-ink bg-paper p-7 ${b.main ? "border-2 border-ink" : "border border-ink"}`}>
+                <div className={`relative h-full border border-border bg-white p-7 ${b.main ? "border border-border" : "border border-border"}`}>
                   {b.main && (
-                    <span className="absolute -top-3 right-6 whitespace-nowrap bg-foreground px-3 py-1 text-[11px] font-bold text-accent-lime">
+                    <span className="absolute -top-3 right-6 whitespace-nowrap bg-accent-blue px-3 py-1 text-[11px] font-bold text-white">
                       メインの支援
                     </span>
                   )}
@@ -151,8 +147,6 @@ export default function CompanyPage() {
         <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
           <FadeIn>
             <SectionTitle
-              label="Our team"
-              center
               lead="大手企業・メガベンチャーで活躍する現役のスペシャリストと連携し、課題ごとに最適なチームを組んでご支援します。"
             >
               支援体制
@@ -162,7 +156,7 @@ export default function CompanyPage() {
           <FadeIn delay={100}>
             <div className="mt-12">
               <div className="flex justify-center">
-                <div className="w-full max-w-sm rounded-3xl border-2 border-ink bg-paper px-8 py-6 text-center">
+                <div className="w-full max-w-sm rounded-3xl border border-border bg-white px-8 py-6 text-center">
                   <p className="font-display text-sm font-bold text-accent-blue">セタリンク</p>
                   <p className="mt-1 font-display text-xl font-bold">窓口・統括・品質管理</p>
                   <p className="mt-2 text-xs leading-relaxed text-gray">プロジェクト全体の管理と、成果への責任</p>
@@ -183,8 +177,8 @@ export default function CompanyPage() {
 
               <div className="grid gap-4 md:grid-cols-3">
                 {specialists.map((sp) => (
-                  <div key={sp.name} className="border border-ink bg-paper p-6 text-center">
-                    <p className="font-inter text-[11px] font-bold uppercase tracking-widest text-gray">Specialist</p>
+                  <div key={sp.name} className="border border-border bg-white p-6 text-center">
+                    <p className="text-[11px] font-bold uppercase tracking-widest text-gray">Specialist</p>
                     <h3 className="mt-1 font-display text-lg font-bold">{sp.name}</h3>
                     <p className="mt-2 text-xs leading-relaxed text-gray">{sp.body}</p>
                     <div className="mt-3 flex flex-wrap justify-center gap-1.5">
@@ -203,7 +197,7 @@ export default function CompanyPage() {
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {features.map((f, i) => (
               <FadeIn key={f.title} delay={i * 100}>
-                <div className="flex h-full gap-4 border border-ink bg-paper p-5">
+                <div className="flex h-full gap-4 border border-border bg-white p-5">
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-lime-soft">
                     <f.icon className="h-5 w-5" />
                   </span>
@@ -222,12 +216,12 @@ export default function CompanyPage() {
       <section id="info" className="scroll-mt-20 py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
           <FadeIn>
-            <SectionTitle label="Corporate information" center>
+            <SectionTitle>
               会社情報
             </SectionTitle>
           </FadeIn>
           <FadeIn delay={100}>
-            <dl className="mx-auto mt-10 max-w-3xl divide-y divide-border overflow-hidden rounded-3xl border border-ink bg-paper">
+            <dl className="mx-auto mt-10 max-w-3xl divide-y divide-border overflow-hidden rounded-3xl border border-border bg-white">
               {companyInfo.map((item) => (
                 <div key={item.label} className="grid grid-cols-1 gap-1 px-6 py-5 sm:grid-cols-3 sm:gap-4">
                   <dt className="flex items-center gap-2 text-sm font-bold text-gray">
@@ -240,7 +234,7 @@ export default function CompanyPage() {
                         href={item.value}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-inter text-accent-blue underline-offset-4 hover:underline"
+                        className="text-accent-blue underline-offset-4 hover:underline"
                       >
                         {item.value}
                       </a>
