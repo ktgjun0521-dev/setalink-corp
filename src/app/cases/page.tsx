@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import FadeIn from "@/components/FadeIn";
 import { SectionTitle, PageHero, CtaPanel } from "@/components/Section";
 import { DataIllustration } from "@/components/Illustrations";
+import ArticleList from "@/components/ArticleList";
+import { getPublishedArticles } from "@/lib/articles";
 import { ArrowRight, ArrowDown, Database, Bot, Workflow, type LucideIcon } from "lucide-react";
+
+// 事例記事が公開時刻（publishedAt）を過ぎたら、再デプロイなしで一覧に出すために5分ごとに作り直す
+export const revalidate = 300;
 
 export const metadata: Metadata = {
   title: "支援実績・事例",
@@ -220,6 +225,8 @@ function CaseCard({ c, index }: { c: CaseItem; index: number }) {
 export default function CasesPage() {
   const dataCases = cases.filter((c) => c.area === "data");
   const aiCases = cases.filter((c) => c.area !== "data");
+  // 記事として公開している事例（content/cases/）。1本も無ければセクションごと出さない
+  const caseArticles = getPublishedArticles("case");
 
   return (
     <>
@@ -325,6 +332,22 @@ export default function CasesPage() {
           </div>
         </div>
       </section>
+
+      {/* ===== 事例を詳しく読む（事例記事があるときだけ） ===== */}
+      {caseArticles.length > 0 && (
+        <section id="articles" className="scroll-mt-20 bg-surface py-20 md:py-28">
+          <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
+            <FadeIn>
+              <SectionTitle label="Read more" lead="支援の進め方と、そこで分かったことを、事例ごとに記事にまとめています。">
+                事例を詳しく読む
+              </SectionTitle>
+            </FadeIn>
+            <div className="mt-10">
+              <ArticleList articles={caseArticles} heading="h3" />
+            </div>
+          </div>
+        </section>
+      )}
 
       <CtaPanel
         title={

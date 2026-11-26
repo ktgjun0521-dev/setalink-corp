@@ -476,3 +476,218 @@ body {
     display: none;
   }
 }
+
+/* ===== 記事本文（コラム・事例・編集方針・プライバシーポリシー） =====
+   Markdown から作った HTML と、方針ページの文章に使う読み物用の組み。
+   色は上の変数だけを使う（デザインを変えるときは変数に追従する） */
+@layer components {
+  .article-body {
+    font-size: 1rem;
+    line-height: 1.95;
+    color: var(--foreground);
+    overflow-wrap: anywhere;
+  }
+
+  .article-body > * + * {
+    margin-top: 1.6em;
+  }
+
+  .article-body > :first-child {
+    margin-top: 0;
+  }
+
+  .article-body h2 {
+    margin-top: 3.2em;
+    border-top: 2px solid var(--ink);
+    padding-top: 1em;
+    font-size: 1.45rem;
+    font-weight: 900;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    scroll-margin-top: 6rem;
+  }
+
+  .article-body h3 {
+    margin-top: 2.4em;
+    border-left: 4px solid var(--accent-blue);
+    padding-left: 0.75em;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.6;
+    scroll-margin-top: 6rem;
+  }
+
+  .article-body h4 {
+    margin-top: 2em;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .article-body h2 + *,
+  .article-body h3 + *,
+  .article-body h4 + * {
+    margin-top: 1em;
+  }
+
+  .article-body a {
+    color: var(--accent-blue);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.2s ease;
+  }
+
+  .article-body a:hover {
+    color: var(--ink);
+  }
+
+  .article-body strong {
+    font-weight: 700;
+  }
+
+  .article-body ul,
+  .article-body ol {
+    padding-left: 1.5em;
+  }
+
+  .article-body ul {
+    list-style: disc;
+  }
+
+  .article-body ol {
+    list-style: decimal;
+  }
+
+  .article-body li + li,
+  .article-body li > ul,
+  .article-body li > ol {
+    margin-top: 0.5em;
+  }
+
+  .article-body li::marker {
+    color: var(--gray);
+  }
+
+  .article-body ol > li::marker {
+    font-family: var(--font-inter);
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  /* チェックリスト（- [ ] ）。行頭の点のかわりにチェック欄を置き、折り返しは文字の位置にそろえる */
+  .article-body li.task {
+    position: relative;
+    margin-left: -1.5em;
+    padding-left: 1.9em;
+    list-style: none;
+  }
+
+  .article-body li.task input {
+    position: absolute;
+    top: 0.5em;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    accent-color: var(--accent-blue);
+  }
+
+  .article-body blockquote {
+    border-left: 4px solid var(--ink);
+    background: var(--surface);
+    padding: 1em 1.25em;
+    font-size: 0.95em;
+  }
+
+  .article-body blockquote > * + * {
+    margin-top: 0.8em;
+  }
+
+  /* 表：罫線つき。幅が足りないときは横にスクロールする */
+  .article-body .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--ink);
+    background: var(--paper);
+  }
+
+  .article-body table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    line-height: 1.75;
+  }
+
+  /* 列の多い表は、詰めすぎずに横スクロールへ回す */
+  .article-body table:has(th:nth-child(4)) {
+    min-width: 38rem;
+  }
+
+  .article-body table:has(th:nth-child(6)) {
+    min-width: 52rem;
+  }
+
+  .article-body th,
+  .article-body td {
+    min-width: 6em;
+    border: 1px solid var(--border);
+    padding: 0.75em 1em;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .article-body thead th {
+    border-bottom: 2px solid var(--ink);
+    background: var(--surface);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  /* 外枠は .table-scroll の線に任せる */
+  .article-body tr > :first-child {
+    border-left: 0;
+  }
+
+  .article-body tr > :last-child {
+    border-right: 0;
+  }
+
+  .article-body thead tr:first-child > * {
+    border-top: 0;
+  }
+
+  .article-body tbody tr:last-child > * {
+    border-bottom: 0;
+  }
+
+  .article-body img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--border);
+  }
+
+  .article-body hr {
+    margin: 3em 0;
+    border: 0;
+    border-top: 1px solid var(--ink);
+  }
+
+  .article-body code {
+    background: var(--surface);
+    padding: 0.1em 0.4em;
+    font-size: 0.9em;
+  }
+
+  .article-body pre {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    padding: 1em 1.25em;
+    font-size: 0.85rem;
+    line-height: 1.7;
+  }
+
+  .article-body pre code {
+    background: none;
+    padding: 0;
+    font-size: inherit;
+  }
+}

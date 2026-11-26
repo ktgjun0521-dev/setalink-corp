@@ -3,6 +3,8 @@
 import { useState, type FormEvent } from "react";
 import { PageHero } from "@/components/Section";
 import FadeIn from "@/components/FadeIn";
+import { readAttribution } from "@/lib/attribution";
+import { trackEvent } from "@/lib/gtag";
 
 interface FormData {
   name: string;
@@ -10,7 +12,11 @@ interface FormData {
   email: string;
   phone: string;
   topic: string;
+  source: string;
   message: string;
+  // 迷惑送信よけの隠し項目（人には見えない。入力されていたら送信を捨てる）。
+  // ブラウザの自動入力が反応しない名前にしておく
+  hpCheck: string;
 }
 
 const topics = [
@@ -21,6 +27,16 @@ const topics = [
   "まだ整理できていないが、まず話を聞いてほしい",
 ];
 
+const sources = [
+  "検索（Google・Yahoo!など）",
+  "AI（ChatGPT・Gemini・Copilotなど）",
+  "X",
+  "LinkedIn",
+  "Threads",
+  "ご紹介",
+  "その他",
+];
+
 export default function ContactPage() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -28,7 +44,9 @@ export default function ContactPage() {
     email: "",
     phone: "",
     topic: "",
+    source: "",
     message: "",
+    hpCheck: "",
   });
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
@@ -43,7 +61,8 @@ export default function ContactPage() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        // 流入元（最初に見たページ・参照元・UTM・直前に読んだ記事）も一緒に送る
+        body: JSON.stringify({ ...formData, ...readAttribution() }),
       });
 
       if (!res.ok) {
@@ -51,6 +70,10 @@ export default function ContactPage() {
         throw new Error(data.error || "送信に失敗しました");
       }
 
+      // 計測（隠し項目が埋まっている送信は数えない）
+      if (!formData.hpCheck) {
+        trackEvent("generate_lead", { lead_source: formData.source || "未回答" });
+      }
       setSending(false);
       setSubmitted(true);
     } catch (err) {
@@ -227,6 +250,45 @@ export default function ContactPage() {
                       </option>
                     ))}
                   </select>
+                </div>
+
+                {/* Source */}
+                <div>
+                  <label
+                    htmlFor="source"
+                    className="block text-sm font-medium text-foreground"
+                  >
+                    セタリンクをどこでお知りになりましたか
+                    <span className="ml-2 text-xs text-gray">（任意）</span>
+                  </label>
+                  <select
+                    id="source"
+                    name="source"
+                    value={formData.source}
+                    onChange={handleChange}
+                    className="mt-2 block w-full border-2 border-ink bg-paper px-4 py-3 text-sm text-foreground transition-colors focus:border-accent-blue focus:outline-none focus:ring-1 focus:ring-accent-blue"
+                  >
+                    <option value="">選択してください</option>
+                    {sources.map((s) => (
+                      <option key={s} value={s}>
+                        {s}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Honeypot（迷惑送信よけ。画面にも読み上げにも出さない） */}
+                <div className="absolute left-[-9999px] h-px w-px overflow-hidden" aria-hidden="true">
+                  <label htmlFor="hpCheck">この欄には入力しないでください</label>
+                  <input
+                    type="text"
+                    id="hpCheck"
+                    name="hpCheck"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={formData.hpCheck}
+                    onChange={handleChange}
+                  />
                 </div>
 
                 {/* Message */}

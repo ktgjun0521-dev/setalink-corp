@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# 記事データ（scripts/build-articles.mjs が content/ から作る）
+/src/generated/
