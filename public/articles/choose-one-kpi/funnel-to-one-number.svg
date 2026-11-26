@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="1082" viewBox="0 0 560 1082" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">流れを段階に分け、いちばん落ちている所を選び、行動の数字に言い換える（計算例）</title>
+  <desc id="fig-desc">説明のための計算例で、実在の会社の数字ではない。流れを段階に分ける。問い合わせ200人、体験の予約120人（前の段階から進んだ割合60%）、体験に来店60人（50%）、入会36人（60%）。いちばん落ちているのは、予約から来店に進む割合の50%。今月直すのは、この割合。これを行動の数字に言い換える。現場が毎週追う数字の例は、予約の前日に確認の連絡を入れた件数。入会数や売上は、結果として出る数字なので、追う数字にはしない。</desc>
+  <rect x="0" y="0" width="560" height="1082" fill="#FFFDF7"/>
+  <rect x="24" y="24" width="230.5" height="34" fill="#16161D"/>
+  <text x="139.2" y="48.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">流れを段階に分ける</text>
+  <text x="24" y="86" font-size="20" font-weight="500" fill="#16161D" text-anchor="start"><tspan x="24" dy="0">※ 数字は、説明のための計算例です。</tspan><tspan x="24" dy="28">実在の会社の数字ではありません。</tspan></text>
+  <rect x="24" y="130" width="512" height="74" fill="#EFEBE0"/>
+  <text x="44" y="162" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">問い合わせ</text>
+  <text x="516" y="162" font-size="22" font-weight="700" fill="#16161D" text-anchor="end">200人</text>
+  <rect x="44" y="176" width="472" height="14" fill="#FFFDF7"/>
+  <rect x="44" y="176" width="472" height="14" fill="#16161D"/>
+  <line x1="60" y1="211" x2="60" y2="241.1" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="60,251 53.2,237.2 66.8,237.2" fill="#16161D"/>
+  <text x="92" y="238" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">進んだ割合 60%</text>
+  <rect x="24" y="258" width="512" height="74" fill="#EFEBE0"/>
+  <text x="44" y="290" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">体験の予約</text>
+  <text x="516" y="290" font-size="22" font-weight="700" fill="#16161D" text-anchor="end">120人</text>
+  <rect x="44" y="304" width="472" height="14" fill="#FFFDF7"/>
+  <rect x="44" y="304" width="283.2" height="14" fill="#16161D"/>
+  <line x1="60" y1="339" x2="60" y2="367.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="60,379 51.9,362.8 68.1,362.8" fill="#2D5BFF"/>
+  <text x="92" y="367" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="start">進んだ割合 50%</text>
+  <rect x="305.5" y="342" width="230.5" height="34" fill="#2D5BFF"/>
+  <text x="420.8" y="366.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">いちばん落ちている</text>
+  <rect x="24" y="386" width="512" height="74" fill="#EFEBE0"/>
+  <text x="44" y="418" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">体験に来店</text>
+  <text x="516" y="418" font-size="22" font-weight="700" fill="#16161D" text-anchor="end">60人</text>
+  <rect x="44" y="432" width="472" height="14" fill="#FFFDF7"/>
+  <rect x="44" y="432" width="141.6" height="14" fill="#16161D"/>
+  <line x1="60" y1="467" x2="60" y2="497.1" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="60,507 53.2,493.2 66.8,493.2" fill="#16161D"/>
+  <text x="92" y="494" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">進んだ割合 60%</text>
+  <rect x="24" y="514" width="512" height="74" fill="#EFEBE0"/>
+  <text x="44" y="546" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">入会</text>
+  <text x="516" y="546" font-size="22" font-weight="700" fill="#16161D" text-anchor="end">36人</text>
+  <rect x="44" y="560" width="472" height="14" fill="#FFFDF7"/>
+  <rect x="44" y="560" width="85" height="14" fill="#16161D"/>
+  <line x1="280" y1="598" x2="280" y2="624.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="280,636 271.9,619.8 288.1,619.8" fill="#2D5BFF"/>
+  <rect x="24" y="648" width="332.9" height="34" fill="#16161D"/>
+  <text x="190.5" y="672.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">いちばん落ちている所を選ぶ</text>
+  <rect x="24" y="694" width="512" height="104" fill="#E8EEFF"/>
+  <text x="48" y="732" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">今月直すのは、</text>
+  <text x="48" y="770" font-size="23" font-weight="700" fill="#16161D" text-anchor="start">予約から来店に進む割合（50%）</text>
+  <line x1="280" y1="808" x2="280" y2="834.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="280,846 271.9,829.8 288.1,829.8" fill="#2D5BFF"/>
+  <rect x="24" y="858" width="281.7" height="34" fill="#16161D"/>
+  <text x="164.9" y="882.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">行動の数字に言い換える</text>
+  <rect x="24" y="904" width="512" height="154" fill="#EEF6C9"/>
+  <rect x="24" y="904" width="6" height="154" fill="#2D5BFF"/>
+  <text x="46" y="940" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">現場が毎週追う数字（例）</text>
+  <text x="46" y="974" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">予約の前日に確認の連絡を入れた件数</text>
+  <text x="46" y="1008" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="46" dy="0">入会数や売上は、結果として出る数字。</tspan><tspan x="46" dy="28">追う数字にはしない</tspan></text>
+</svg>

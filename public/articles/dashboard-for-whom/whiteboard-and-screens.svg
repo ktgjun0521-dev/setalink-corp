@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="981" viewBox="0 0 560 981" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">監督のホワイトボードと、会社の数字の画面。どちらも、意識させることを絞って伝える</title>
+  <desc id="fig-desc">上は、サッカーの監督のホワイトボード。監督は、メディカル（体を管理するスタッフ）へは、たとえば「月150kmを超えさせない」と伝える。選手へは「ここにクロスを上げる。フォワードは相手を引きつける」と伝える。下は、会社に置き換えたもの。会社の数字の画面にあたる。数字はどれも大事。そのうえで、意識させる数字を、絞って伝える。だから、どんな画面を作るかは、メンバーにどう動いてほしいかで決まる。どちらも、意識させることを絞って伝える。「みんなに理解させること自体が、戦略であり、戦術」。</desc>
+  <rect x="0" y="0" width="560" height="981" fill="#FFFDF7"/>
+  <rect x="44" y="102" width="472" height="123" fill="#EFEBE0"/>
+  <rect x="44" y="102" width="6" height="123" fill="#2D5BFF"/>
+  <text x="66" y="136" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">メディカル（体を管理するスタッフ）へ</text>
+  <text x="66" y="167" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">たとえば</text>
+  <text x="66" y="201" font-size="23" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="66" dy="0">「月150kmを超えさせない」</tspan></text>
+  <rect x="44" y="235" width="472" height="125" fill="#EFEBE0"/>
+  <rect x="44" y="235" width="6" height="125" fill="#2D5BFF"/>
+  <text x="66" y="269" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">選手へ</text>
+  <text x="66" y="303" font-size="23" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="66" dy="0">「ここにクロスを上げる。</tspan><tspan x="66" dy="33">フォワードは相手を引きつける」</tspan></text>
+  <rect x="24" y="24" width="512" height="356" fill="none" stroke="#16161D" stroke-width="3"/>
+  <rect x="44" y="46" width="112" height="34" fill="#16161D"/>
+  <text x="100" y="70.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">サッカー</text>
+  <text x="170" y="72" font-size="25" font-weight="700" fill="#16161D" text-anchor="start">監督のホワイトボード</text>
+  <line x1="190" y1="392" x2="190" y2="422.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="190,434 181.9,417.8 198.1,417.8" fill="#2D5BFF"/>
+  <text x="214" y="421" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">会社に置き換えると</text>
+  <rect x="44" y="524" width="472" height="92" fill="#E8EEFF"/>
+  <rect x="44" y="524" width="6" height="92" fill="#2D5BFF"/>
+  <text x="66" y="558" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">数字はどれも大事。そのうえで</text>
+  <text x="66" y="592" font-size="23" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="66" dy="0">意識させる数字を、絞って伝える</tspan></text>
+  <rect x="44" y="626" width="472" height="125" fill="#E8EEFF"/>
+  <rect x="44" y="626" width="6" height="125" fill="#2D5BFF"/>
+  <text x="66" y="660" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">だから</text>
+  <text x="66" y="694" font-size="23" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="66" dy="0">どんな画面を作るかは、メンバーに</tspan><tspan x="66" dy="33">どう動いてほしいかで決まる</tspan></text>
+  <rect x="24" y="446" width="512" height="325" fill="none" stroke="#16161D" stroke-width="3"/>
+  <rect x="44" y="468" width="70" height="34" fill="#16161D"/>
+  <text x="79" y="492.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">会社</text>
+  <text x="128" y="494" font-size="25" font-weight="700" fill="#16161D" text-anchor="start">数字の画面</text>
+  <rect x="24" y="787" width="512" height="170" fill="#EEF6C9"/>
+  <text x="280" y="827" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle"><tspan x="280" dy="0">どちらも、意識させることを</tspan><tspan x="280" dy="28">絞って伝える</tspan></text>
+  <text x="280" y="895" font-size="23" font-weight="700" fill="#16161D" text-anchor="middle"><tspan x="280" dy="0">「みんなに理解させること自体が、</tspan><tspan x="280" dy="34">戦略であり、戦術」</tspan></text>
+</svg>

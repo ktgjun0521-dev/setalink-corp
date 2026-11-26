@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="1034" viewBox="0 0 560 1034" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">画面ができるのは3つ目。使われるかは、4つ目から先で決まる</title>
+  <desc id="fig-desc">6つの順番を上から並べた図。1 いまの改善活動と目標を伺う。2 何が成果を左右しているか、仮説を立てる。この1つ目と2つ目で、「この画面で何を決めるか」が決まる。3 数字をそろえ、いつでも見られる状態にする。画面ができるのは、この3つ目。4 いちばん成果が落ちている所（ボトルネック）を見つける。5 現場の行動に落とし込み、実行する。6 効いたかどうかを測り、次の改善につなげる。画面が使われるかは、4つ目から先で決まる。その下に、見て、決めて、動く、の3つが矢印で輪になっている。輪の真ん中に画面がある。回っているあいだ、画面は開かれ続ける。</desc>
+  <rect x="0" y="0" width="560" height="1034" fill="#FFFDF7"/>
+  <rect x="24" y="24" width="512" height="213" fill="#EFEBE0"/>
+  <circle cx="64" cy="116" r="18" fill="#2D5BFF"/>
+  <text x="64" y="123" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">1</text>
+  <text x="98" y="124" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="98" dy="0">いまの改善活動と目標を伺う</tspan></text>
+  <circle cx="64" cy="172" r="18" fill="#2D5BFF"/>
+  <text x="64" y="179" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">2</text>
+  <text x="98" y="180" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="98" dy="0">何が成果を左右しているか、</tspan><tspan x="98" dy="31">仮説を立てる</tspan></text>
+  <rect x="44" y="44" width="435.4" height="34" fill="#16161D"/>
+  <text x="261.7" y="68.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">「この画面で何を決めるか」が決まる</text>
+  <line x1="280" y1="247" x2="280" y2="273.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="280,285 271.9,268.8 288.1,268.8" fill="#2D5BFF"/>
+  <rect x="24" y="297" width="512" height="157" fill="#E8EEFF"/>
+  <circle cx="64" cy="389" r="18" fill="#2D5BFF"/>
+  <text x="64" y="396" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">3</text>
+  <text x="98" y="397" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="98" dy="0">数字をそろえ、</tspan><tspan x="98" dy="31">いつでも見られる状態にする</tspan></text>
+  <rect x="44" y="317" width="297.6" height="34" fill="#2D5BFF"/>
+  <text x="192.8" y="341.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">画面ができるのは、3つ目</text>
+  <line x1="280" y1="464" x2="280" y2="490.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="280,502 271.9,485.8 288.1,485.8" fill="#2D5BFF"/>
+  <rect x="24" y="514" width="512" height="496" fill="#EEF6C9"/>
+  <circle cx="64" cy="606" r="18" fill="#2D5BFF"/>
+  <text x="64" y="613" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">4</text>
+  <text x="98" y="614" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="98" dy="0">いちばん成果が落ちている所</tspan><tspan x="98" dy="31">（ボトルネック）を見つける</tspan></text>
+  <circle cx="64" cy="693" r="18" fill="#2D5BFF"/>
+  <text x="64" y="700" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">5</text>
+  <text x="98" y="701" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="98" dy="0">現場の行動に落とし込み、</tspan><tspan x="98" dy="31">実行する</tspan></text>
+  <circle cx="64" cy="780" r="18" fill="#2D5BFF"/>
+  <text x="64" y="787" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">6</text>
+  <text x="98" y="788" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="98" dy="0">効いたかどうかを測り、</tspan><tspan x="98" dy="31">次の改善につなげる</tspan></text>
+  <rect x="64" y="859" width="120" height="48" fill="#FFFDF7" stroke="#16161D" stroke-width="2"/>
+  <text x="124" y="891" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">見て</text>
+  <rect x="220" y="859" width="120" height="48" fill="#FFFDF7" stroke="#16161D" stroke-width="2"/>
+  <text x="280" y="891" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">決めて</text>
+  <rect x="376" y="859" width="120" height="48" fill="#FFFDF7" stroke="#16161D" stroke-width="2"/>
+  <text x="436" y="891" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">動く</text>
+  <line x1="189" y1="883" x2="203" y2="883" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="215,883 198.8,891.1 198.8,874.9" fill="#2D5BFF"/>
+  <line x1="345" y1="883" x2="359" y2="883" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="371,883 354.8,891.1 354.8,874.9" fill="#2D5BFF"/>
+  <line x1="436" y1="912" x2="436" y2="937" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <line x1="436" y1="937" x2="124" y2="937" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <line x1="124" y1="937" x2="124" y2="926" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="124,912 115.9,928.2 132.1,928.2" fill="#2D5BFF"/>
+  <text x="280" y="983" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">回っているあいだ、画面は開かれ続ける</text>
+  <rect x="44" y="534" width="425.6" height="34" fill="#16161D"/>
+  <text x="256.8" y="558.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">使われるかは、4つ目から先で決まる</text>
+</svg>

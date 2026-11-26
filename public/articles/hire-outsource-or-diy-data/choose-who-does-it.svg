@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="1039" viewBox="0 0 560 1039" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">確かめる順番と、自分たちでやる・外に頼む・データ担当を採るの分かれ方</title>
+  <desc id="fig-desc">最初に確かめるのは、1「この数字で、誰が何を決めるか」を一文で書けるか。1が書けないなら、先に整理する。方法を選ぶ前に、何を決めたいのかの整理から始める。1が書けたら、次の3つを確かめる。2 毎週数時間を続けて使える人がいるか。3 その人が抜けても続くか。4 いつまでに要るか。2と3も満たせるなら、自分たちでやる。2か3が難しい、または急いでいるなら、外に頼む。仕事の中身が固まっていて、量が増え続けているなら、データ担当を採る。</desc>
+  <rect x="0" y="0" width="560" height="1039" fill="#FFFDF7"/>
+  <rect x="24" y="24" width="512" height="148" fill="#FFFDF7" stroke="#16161D" stroke-width="2"/>
+  <circle cx="64" cy="62" r="18" fill="#2D5BFF"/>
+  <text x="64" y="69" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">1</text>
+  <text x="98" y="69" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">最初に確かめる</text>
+  <text x="44" y="114" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="44" dy="0">「この数字で、誰が何を決めるか」を</tspan><tspan x="44" dy="32">一文で書けるか</tspan></text>
+  <rect x="64" y="192" width="472" height="162" fill="#EFEBE0"/>
+  <text x="88" y="228" font-size="20" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="88" dy="0">1が書けない</tspan></text>
+  <text x="88" y="268" font-size="25" font-weight="700" fill="#16161D" text-anchor="start">先に整理する</text>
+  <text x="88" y="300" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="88" dy="0">方法を選ぶ前に、</tspan><tspan x="88" dy="28">何を決めたいのかの整理から始める</tspan></text>
+  <line x1="40" y1="172" x2="40" y2="366" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="40,378 33.8,365.5 46.2,365.5" fill="#16161D"/>
+  <line x1="40" y1="232" x2="55" y2="232" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="64,232 51.5,238.2 51.5,225.8" fill="#16161D"/>
+  <rect x="24" y="378" width="512" height="259" fill="#FFFDF7" stroke="#16161D" stroke-width="2"/>
+  <text x="44" y="418" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">1が書けたら、次の3つを確かめる</text>
+  <circle cx="64" cy="460" r="18" fill="#2D5BFF"/>
+  <text x="64" y="467" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">2</text>
+  <text x="98" y="468" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="98" dy="0">毎週数時間を続けて</tspan><tspan x="98" dy="31">使える人がいるか</tspan></text>
+  <circle cx="64" cy="547" r="18" fill="#2D5BFF"/>
+  <text x="64" y="554" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">3</text>
+  <text x="98" y="555" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="98" dy="0">その人が抜けても続くか</tspan></text>
+  <circle cx="64" cy="603" r="18" fill="#2D5BFF"/>
+  <text x="64" y="610" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">4</text>
+  <text x="98" y="611" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="98" dy="0">いつまでに要るか</tspan></text>
+  <rect x="64" y="657" width="472" height="102" fill="#EEF6C9"/>
+  <rect x="64" y="657" width="6" height="102" fill="#2D5BFF"/>
+  <text x="88" y="693" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start"><tspan x="88" dy="0">2と3も満たせる</tspan></text>
+  <text x="88" y="733" font-size="25" font-weight="700" fill="#16161D" text-anchor="start">自分たちでやる</text>
+  <rect x="64" y="771" width="472" height="102" fill="#EEF6C9"/>
+  <rect x="64" y="771" width="6" height="102" fill="#2D5BFF"/>
+  <text x="88" y="807" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start"><tspan x="88" dy="0">2か3が難しい。または急いでいる</tspan></text>
+  <text x="88" y="847" font-size="25" font-weight="700" fill="#16161D" text-anchor="start">外に頼む</text>
+  <rect x="64" y="885" width="472" height="130" fill="#EEF6C9"/>
+  <rect x="64" y="885" width="6" height="130" fill="#2D5BFF"/>
+  <text x="88" y="921" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start"><tspan x="88" dy="0">仕事の中身が固まっていて、</tspan><tspan x="88" dy="28">量が増え続けている</tspan></text>
+  <text x="88" y="989" font-size="25" font-weight="700" fill="#16161D" text-anchor="start">データ担当を採る</text>
+  <line x1="40" y1="637" x2="40" y2="925" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="40" y1="697" x2="55" y2="697" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="64,697 51.5,703.2 51.5,690.8" fill="#16161D"/>
+  <line x1="40" y1="811" x2="55" y2="811" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="64,811 51.5,817.2 51.5,804.8" fill="#16161D"/>
+  <line x1="40" y1="925" x2="55" y2="925" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="64,925 51.5,931.2 51.5,918.8" fill="#16161D"/>
+</svg>

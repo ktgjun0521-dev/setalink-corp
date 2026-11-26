@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="1018" viewBox="0 0 560 1018" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">自分たちで作って足りる会社と、作り分けが要る会社</title>
+  <desc id="fig-desc">見分ける問いは、社長から現場まで、全員が同じ理解で動けるか。「はい」なら、自分たちで作って、足りる会社。小さな組織で、全員が同じ理解で動ける。経営者も現場も、同じ1つの画面を見る。「いいえ」なら、作り分けが要る会社。役割によって、見るものも、やることも違う。経営者は経営者の画面を、現場は現場の画面を見る。経営者には経営者の画面、現場には現場の画面。経営者の目線だけで作った画面は、現場の行動を変えない。</desc>
+  <rect x="0" y="0" width="560" height="1018" fill="#FFFDF7"/>
+  <rect x="24" y="24" width="512" height="138" fill="none" stroke="#16161D" stroke-width="2"/>
+  <text x="44" y="62" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">見分ける問い</text>
+  <text x="44" y="100" font-size="25" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="44" dy="0">社長から現場まで、全員が</tspan><tspan x="44" dy="36">同じ理解で動けるか</tspan></text>
+  <line x1="40" y1="162" x2="40" y2="561" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="40" y1="225" x2="55" y2="225" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="64,225 51.5,231.2 51.5,218.8" fill="#16161D"/>
+  <line x1="40" y1="561" x2="55" y2="561" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="64,561 51.5,567.2 51.5,554.8" fill="#16161D"/>
+  <rect x="64" y="186" width="472" height="316" fill="#EEF6C9"/>
+  <rect x="84" y="208" width="70" height="34" fill="#2D5BFF"/>
+  <text x="119" y="232.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">はい</text>
+  <text x="84" y="280" font-size="24" font-weight="700" fill="#16161D" text-anchor="start">自分たちで作って、足りる会社</text>
+  <text x="84" y="312" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="84" dy="0">小さな組織で、</tspan><tspan x="84" dy="28">全員が同じ理解で動ける</tspan></text>
+  <rect x="84" y="364" width="124" height="48" fill="#FFFDF7" stroke="#16161D" stroke-width="2"/>
+  <text x="146" y="396" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">経営者</text>
+  <rect x="84" y="430" width="124" height="48" fill="#FFFDF7" stroke="#16161D" stroke-width="2"/>
+  <text x="146" y="462" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">現場</text>
+  <rect x="340" y="362" width="176" height="118" fill="#FFFDF7" stroke="#16161D" stroke-width="2"/>
+  <rect x="340" y="362" width="176" height="10" fill="#16161D"/>
+  <text x="428" y="408" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">1つの画面</text>
+  <rect x="383" y="448" width="16" height="18" fill="#EFEBE0" stroke="#16161D" stroke-width="1.5"/>
+  <rect x="407" y="436" width="16" height="30" fill="#EFEBE0" stroke="#16161D" stroke-width="1.5"/>
+  <rect x="431" y="442" width="16" height="24" fill="#EFEBE0" stroke="#16161D" stroke-width="1.5"/>
+  <rect x="455" y="426" width="16" height="40" fill="#2D5BFF" stroke="#16161D" stroke-width="1.5"/>
+  <line x1="208" y1="388" x2="328.2" y2="408.3" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="338,410 323.3,414.4 325.6,401" fill="#16161D"/>
+  <line x1="208" y1="454" x2="328.2" y2="433.7" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="338,432 325.6,441 323.3,427.6" fill="#16161D"/>
+  <rect x="64" y="522" width="472" height="472" fill="#E8EEFF"/>
+  <rect x="84" y="544" width="91" height="34" fill="#16161D"/>
+  <text x="129.5" y="568.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">いいえ</text>
+  <text x="84" y="616" font-size="24" font-weight="700" fill="#16161D" text-anchor="start">作り分けが要る会社</text>
+  <text x="84" y="648" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="84" dy="0">役割によって、</tspan><tspan x="84" dy="28">見るものも、やることも違う</tspan></text>
+  <rect x="84" y="700" width="124" height="48" fill="#FFFDF7" stroke="#16161D" stroke-width="2"/>
+  <text x="146" y="732" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">経営者</text>
+  <rect x="84" y="772" width="124" height="48" fill="#FFFDF7" stroke="#16161D" stroke-width="2"/>
+  <text x="146" y="804" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">現場</text>
+  <rect x="340" y="694" width="176" height="60" fill="#FFFDF7" stroke="#16161D" stroke-width="2"/>
+  <rect x="340" y="694" width="176" height="10" fill="#16161D"/>
+  <text x="428" y="737" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">経営者の画面</text>
+  <rect x="340" y="766" width="176" height="60" fill="#FFFDF7" stroke="#16161D" stroke-width="2"/>
+  <rect x="340" y="766" width="176" height="10" fill="#16161D"/>
+  <text x="428" y="809" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">現場の画面</text>
+  <line x1="208" y1="724" x2="328.1" y2="724" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="338,724 324.2,730.8 324.2,717.2" fill="#16161D"/>
+  <line x1="208" y1="796" x2="328.1" y2="796" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="338,796 324.2,802.8 324.2,789.2" fill="#16161D"/>
+  <text x="84" y="868" font-size="23" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="84" dy="0">経営者には経営者の画面、</tspan><tspan x="84" dy="33">現場には現場の画面</tspan></text>
+  <text x="84" y="940" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="84" dy="0">経営者の目線だけで作った画面は、</tspan><tspan x="84" dy="28">現場の行動を変えない</tspan></text>
+</svg>

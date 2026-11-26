@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="1085" viewBox="0 0 560 1085" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">サッカーの例②：クロスの位置の記録が、点を取る作戦に変わるまで</title>
+  <desc id="fig-desc">生のデータは、クロスを上げた位置の記録と、シュートが決まった割合。手順1で、この2つを照らし合わせる。手順2で関係を見つける。グラウンドの図では、ゴールに向かって右のサイドの一角に「この位置」という印があり、そこからゴール前へクロスが上がり、シュートにつながっている。見えたことは、この位置からのクロスは、決まりやすい。考え方を伝えるためのたとえ。手順3で打ち手を決める。打ち手は4つ。そこまでボールを運べる選手を獲得する。そのクロスを決められる選手を起用する。そこへ運ぶまでの組み立てを決める。フォワードが相手を引きつけ、後ろの選手が飛び込む。</desc>
+  <rect x="0" y="0" width="560" height="1085" fill="#FFFDF7"/>
+  <rect x="24" y="24" width="133" height="34" fill="#16161D"/>
+  <text x="90.5" y="48.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">生のデータ</text>
+  <text x="536" y="48" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="end">手順1 照らし合わせる</text>
+  <rect x="24" y="70" width="226" height="100" fill="#EFEBE0"/>
+  <rect x="310" y="70" width="226" height="100" fill="#EFEBE0"/>
+  <text x="137" y="112" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle"><tspan x="137" dy="0">クロスを</tspan><tspan x="137" dy="31">上げた位置</tspan></text>
+  <text x="423" y="112" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle"><tspan x="423" dy="0">シュートが</tspan><tspan x="423" dy="31">決まった割合</tspan></text>
+  <text x="280" y="131" font-size="32" font-weight="700" fill="#2D5BFF" text-anchor="middle">×</text>
+  <line x1="280" y1="180" x2="280" y2="206.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="280,218 271.9,201.8 288.1,201.8" fill="#2D5BFF"/>
+  <rect x="24" y="230" width="133" height="34" fill="#16161D"/>
+  <text x="90.5" y="254.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">見えたこと</text>
+  <text x="536" y="254" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="end">手順2 関係を見つける</text>
+  <rect x="24" y="276" width="512" height="326" fill="#FFFDF7"/>
+  <rect x="24" y="498" width="512" height="104" fill="#E8EEFF"/>
+  <text x="280" y="304" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle">ゴール</text>
+  <rect x="60" y="324" width="440" height="158" fill="#EEF6C9" stroke="#16161D" stroke-width="1.5"/>
+  <rect x="250" y="314" width="60" height="10" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <rect x="170" y="324" width="220" height="100" fill="none" stroke="#16161D" stroke-width="1.5"/>
+  <rect x="225" y="324" width="110" height="38" fill="none" stroke="#16161D" stroke-width="1.5"/>
+  <path d="M 231.6 424 A 58 58 0 0 0 328.4 424" fill="none" stroke="#16161D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="404" y="336" width="82" height="76" fill="#E8EEFF" stroke="#2D5BFF" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="445" y="442" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="middle">この位置</text>
+  <path d="M 414 374 Q 356 336 311 367" fill="none" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="304,372 312.1,357.4 320.6,369.6" fill="#2D5BFF"/>
+  <text x="352" y="403" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="middle">クロス</text>
+  <circle cx="296" cy="380" r="6" fill="#16161D"/>
+  <line x1="292" y1="372" x2="284.1" y2="338.8" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="282,330 290.9,340.7 278.9,343.6" fill="#16161D"/>
+  <text x="230" y="405" font-size="20" font-weight="700" fill="#16161D" text-anchor="middle">シュート</text>
+  <text x="48" y="540" font-size="24" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="48" dy="0">この位置からのクロスは、</tspan><tspan x="48" dy="34">決まりやすい</tspan></text>
+  <rect x="24" y="276" width="512" height="326" fill="none" stroke="#16161D" stroke-width="1.5"/>
+  <text x="48" y="633" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">※ 考え方を伝えるための、たとえです。</text>
+  <line x1="280" y1="648" x2="280" y2="674.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="280,686 271.9,669.8 288.1,669.8" fill="#2D5BFF"/>
+  <rect x="24" y="698" width="91" height="34" fill="#16161D"/>
+  <text x="69.5" y="722.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">打ち手</text>
+  <text x="536" y="722" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="end">手順3 打ち手を決める</text>
+  <rect x="24" y="744" width="512" height="64" fill="#EEF6C9"/>
+  <rect x="24" y="744" width="6" height="64" fill="#2D5BFF"/>
+  <text x="46" y="784" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="46" dy="0">そこまでボールを運べる選手を獲得する</tspan></text>
+  <rect x="24" y="818" width="512" height="64" fill="#EEF6C9"/>
+  <rect x="24" y="818" width="6" height="64" fill="#2D5BFF"/>
+  <text x="46" y="858" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="46" dy="0">そのクロスを決められる選手を起用する</tspan></text>
+  <rect x="24" y="892" width="512" height="64" fill="#EEF6C9"/>
+  <rect x="24" y="892" width="6" height="64" fill="#2D5BFF"/>
+  <text x="46" y="932" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="46" dy="0">そこへ運ぶまでの組み立てを決める</tspan></text>
+  <rect x="24" y="966" width="512" height="95" fill="#EEF6C9"/>
+  <rect x="24" y="966" width="6" height="95" fill="#2D5BFF"/>
+  <text x="46" y="1006" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="46" dy="0">フォワードが相手を引きつけ、</tspan><tspan x="46" dy="31">後ろの選手が飛び込む</tspan></text>
+</svg>

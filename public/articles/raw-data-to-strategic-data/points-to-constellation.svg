@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="906" viewBox="0 0 560 906" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">生のデータ（点）を結ぶと、ストラテジックデータ（星座）になる</title>
+  <desc id="fig-desc">上の段は、生のデータ。契約の記録、営業の動き、売上の記録などが、ばらばらの点として置かれている。記録のまま。真ん中は、3つの手順。1 照らし合わせる（生のデータを、別のデータと並べる）。2 関係を見つける（数字どうしの関係、傾向を見つける）。3 打ち手を決める（関係から、何を変えるかを決める）。下の段は、ストラテジックデータ。同じ位置の点が線で結ばれ、枝分かれのある星座の形になっている。打ち手が決まる形。数字は点。結んで、はじめて星座になる。</desc>
+  <rect x="0" y="0" width="560" height="906" fill="#FFFDF7"/>
+  <rect x="24" y="24" width="512" height="264" fill="#EFEBE0"/>
+  <text x="44" y="68" font-size="26" font-weight="700" fill="#16161D" text-anchor="start">生のデータ</text>
+  <text x="44" y="100" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">記録のまま。ばらばらの点</text>
+  <circle cx="96" cy="176" r="7" fill="#16161D"/>
+  <text x="96" y="156" font-size="20" font-weight="500" fill="#16161D" text-anchor="middle">契約の記録</text>
+  <circle cx="184" cy="242" r="7" fill="#16161D"/>
+  <circle cx="280" cy="194" r="7" fill="#16161D"/>
+  <text x="280" y="174" font-size="20" font-weight="500" fill="#16161D" text-anchor="middle">営業の動き</text>
+  <circle cx="360" cy="268" r="7" fill="#16161D"/>
+  <circle cx="456" cy="216" r="7" fill="#16161D"/>
+  <text x="456" y="196" font-size="20" font-weight="500" fill="#16161D" text-anchor="middle">売上の記録</text>
+  <line x1="60" y1="288" x2="60" y2="518" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="60,532 51.9,515.8 68.1,515.8" fill="#2D5BFF"/>
+  <circle cx="60" cy="336" r="20" fill="#2D5BFF"/>
+  <text x="60" y="343.5" font-size="21" font-weight="700" fill="#FFFDF7" text-anchor="middle">1</text>
+  <text x="98" y="333" font-size="24" font-weight="700" fill="#16161D" text-anchor="start">照らし合わせる</text>
+  <text x="98" y="361" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">生のデータを、別のデータと並べる</text>
+  <circle cx="60" cy="408" r="20" fill="#2D5BFF"/>
+  <text x="60" y="415.5" font-size="21" font-weight="700" fill="#FFFDF7" text-anchor="middle">2</text>
+  <text x="98" y="405" font-size="24" font-weight="700" fill="#16161D" text-anchor="start">関係を見つける</text>
+  <text x="98" y="433" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">数字どうしの関係（傾向）を見つける</text>
+  <circle cx="60" cy="480" r="20" fill="#2D5BFF"/>
+  <text x="60" y="487.5" font-size="21" font-weight="700" fill="#FFFDF7" text-anchor="middle">3</text>
+  <text x="98" y="477" font-size="24" font-weight="700" fill="#16161D" text-anchor="start">打ち手を決める</text>
+  <text x="98" y="505" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">関係から、何を変えるかを決める</text>
+  <rect x="24" y="532" width="512" height="272" fill="#E8EEFF"/>
+  <text x="44" y="576" font-size="26" font-weight="700" fill="#16161D" text-anchor="start">ストラテジックデータ</text>
+  <text x="44" y="608" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">点を結んだ「星座」。打ち手が決まる形</text>
+  <line x1="96" y1="686" x2="184" y2="752" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <line x1="184" y1="752" x2="280" y2="704" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <line x1="280" y1="704" x2="360" y2="778" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <line x1="360" y1="778" x2="456" y2="726" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <line x1="456" y1="726" x2="280" y2="704" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="96" cy="686" r="8" fill="#2D5BFF"/>
+  <text x="96" y="666" font-size="20" font-weight="500" fill="#16161D" text-anchor="middle">契約の記録</text>
+  <circle cx="184" cy="752" r="8" fill="#2D5BFF"/>
+  <circle cx="280" cy="704" r="8" fill="#2D5BFF"/>
+  <text x="280" y="684" font-size="20" font-weight="500" fill="#16161D" text-anchor="middle">営業の動き</text>
+  <circle cx="360" cy="778" r="8" fill="#2D5BFF"/>
+  <circle cx="456" cy="726" r="8" fill="#2D5BFF"/>
+  <text x="456" y="706" font-size="20" font-weight="500" fill="#16161D" text-anchor="middle">売上の記録</text>
+  <text x="280" y="848" font-size="23" font-weight="700" fill="#16161D" text-anchor="middle"><tspan x="280" dy="0">数字は点。</tspan><tspan x="280" dy="33">結んで、はじめて星座になる。</tspan></text>
+</svg>
