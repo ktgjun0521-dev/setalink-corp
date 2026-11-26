@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="1046" viewBox="0 0 560 1046" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">店舗ごとのExcel集計をやめるまでの5つの段階。自動にするのは3つ目</title>
+  <desc id="fig-desc">5つの段階を上から順に並べた図。1 問いの整理（この集計を見て、誰が何を決めるのかを書き出す）。2 定義（「売上」「客数」「人件費」の意味を、全店でそろえる）。この1と2を、飛ばさない。3 入力・集計（レジや予約の記録など、元のデータから直接集める）。自動にするのは、この3つ目。4 画面（決めることに合わせて、見る数字を並べる）。5 運用（いつ、どの場で見るか。数字がおかしいとき誰が直すか）。1と2を飛ばして3から始めると、いまのExcelと同じものが、別の道具の上にもう1つできる。</desc>
+  <rect x="0" y="0" width="560" height="1046" fill="#FFFDF7"/>
+  <rect x="24" y="24" width="512" height="296" fill="#EEF6C9"/>
+  <circle cx="64" cy="116" r="18" fill="#2D5BFF"/>
+  <text x="64" y="123" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">1</text>
+  <text x="98" y="124" font-size="24" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="98" dy="0">問いの整理</tspan></text>
+  <text x="98" y="154" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="98" dy="0">この集計を見て、誰が何を</tspan><tspan x="98" dy="28">決めるのかを書き出す</tspan></text>
+  <circle cx="64" cy="230" r="18" fill="#2D5BFF"/>
+  <text x="64" y="237" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">2</text>
+  <text x="98" y="238" font-size="24" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="98" dy="0">定義</tspan></text>
+  <text x="98" y="268" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="98" dy="0">「売上」「客数」「人件費」の</tspan><tspan x="98" dy="28">意味を、全店でそろえる</tspan></text>
+  <rect x="44" y="44" width="236.6" height="34" fill="#16161D"/>
+  <text x="162.3" y="68.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">1と2を、飛ばさない</text>
+  <line x1="280" y1="330" x2="280" y2="356.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="280,368 271.9,351.8 288.1,351.8" fill="#2D5BFF"/>
+  <rect x="24" y="380" width="512" height="182" fill="#E8EEFF"/>
+  <circle cx="64" cy="472" r="18" fill="#2D5BFF"/>
+  <text x="64" y="479" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">3</text>
+  <text x="98" y="480" font-size="24" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="98" dy="0">入力・集計</tspan></text>
+  <text x="98" y="510" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="98" dy="0">レジや予約の記録など、</tspan><tspan x="98" dy="28">元のデータから直接集める</tspan></text>
+  <rect x="44" y="400" width="272" height="34" fill="#2D5BFF"/>
+  <text x="180" y="424.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">自動にするのは、3つ目</text>
+  <line x1="280" y1="572" x2="280" y2="598.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="280,610 271.9,593.8 288.1,593.8" fill="#2D5BFF"/>
+  <rect x="24" y="622" width="512" height="242" fill="#EFEBE0"/>
+  <circle cx="64" cy="660" r="18" fill="#2D5BFF"/>
+  <text x="64" y="667" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">4</text>
+  <text x="98" y="668" font-size="24" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="98" dy="0">画面</tspan></text>
+  <text x="98" y="698" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="98" dy="0">決めることに合わせて、</tspan><tspan x="98" dy="28">見る数字を並べる</tspan></text>
+  <circle cx="64" cy="774" r="18" fill="#2D5BFF"/>
+  <text x="64" y="781" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">5</text>
+  <text x="98" y="782" font-size="24" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="98" dy="0">運用</tspan></text>
+  <text x="98" y="812" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="98" dy="0">いつ、どの場で見るか。</tspan><tspan x="98" dy="28">数字がおかしいとき誰が直すか</tspan></text>
+  <rect x="24" y="880" width="512" height="142" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <text x="48" y="924" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="48" dy="0">1と2を飛ばして3から始めると、</tspan><tspan x="48" dy="33">いまのExcelと同じものが、</tspan><tspan x="48" dy="33">別の道具の上にもう1つできる</tspan></text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="945" viewBox="0 0 560 945" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">サッカーの例①：走った距離の記録が、ケガを防ぐ打ち手に変わるまで</title>
+  <desc id="fig-desc">生のデータは、選手が走った距離の記録と、筋肉の疲れによるケガの記録。手順1で、この2つを照らし合わせる。手順2で関係を見つける。月に走った距離の帯の図があり、150kmの線より短い側は「ケガは少ない」、超えた側は「ケガが増える」。見えたことは、たとえば、月150kmを超えると、ケガが増える。月150kmは説明のためのたとえで、調査の結果ではない。手順3で打ち手を決める。打ち手は3つ。練習の量を落とす。出る大会・試合を絞る。1つのポジションを、3人で回す（これまでは、先発と控えの1人ずつ）。</desc>
+  <rect x="0" y="0" width="560" height="945" fill="#FFFDF7"/>
+  <rect x="24" y="24" width="133" height="34" fill="#16161D"/>
+  <text x="90.5" y="48.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">生のデータ</text>
+  <text x="536" y="48" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="end">手順1 照らし合わせる</text>
+  <rect x="24" y="70" width="226" height="100" fill="#EFEBE0"/>
+  <rect x="310" y="70" width="226" height="100" fill="#EFEBE0"/>
+  <text x="137" y="112" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle"><tspan x="137" dy="0">選手が走った</tspan><tspan x="137" dy="31">距離の記録</tspan></text>
+  <text x="423" y="112" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle"><tspan x="423" dy="0">筋肉の疲れによる</tspan><tspan x="423" dy="31">ケガの記録</tspan></text>
+  <text x="280" y="131" font-size="32" font-weight="700" fill="#2D5BFF" text-anchor="middle">×</text>
+  <line x1="280" y1="180" x2="280" y2="206.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="280,218 271.9,201.8 288.1,201.8" fill="#2D5BFF"/>
+  <rect x="24" y="230" width="133" height="34" fill="#16161D"/>
+  <text x="90.5" y="254.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">見えたこと</text>
+  <text x="536" y="254" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="end">手順2 関係を見つける</text>
+  <rect x="24" y="276" width="512" height="236" fill="#FFFDF7"/>
+  <rect x="24" y="404" width="512" height="108" fill="#E8EEFF"/>
+  <text x="48" y="312" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">月に走った距離</text>
+  <text x="340" y="312" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">150km</text>
+  <rect x="48" y="324" width="292" height="30" fill="#EFEBE0"/>
+  <rect x="340" y="324" width="172" height="30" fill="#2D5BFF"/>
+  <line x1="340" y1="318" x2="340" y2="362" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="194" y="384" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle">ケガは少ない</text>
+  <text x="426" y="384" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="middle">ケガが増える</text>
+  <text x="48" y="446" font-size="24" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="48" dy="0">たとえば、月150kmを</tspan><tspan x="48" dy="34">超えると、ケガが増える</tspan></text>
+  <rect x="24" y="276" width="512" height="236" fill="none" stroke="#16161D" stroke-width="1.5"/>
+  <text x="48" y="543" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="48" dy="0">※ 月150kmは、説明のためのたとえです。</tspan><tspan x="48" dy="27">調査の結果ではありません。</tspan></text>
+  <line x1="280" y1="586" x2="280" y2="610.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="280,622 271.9,605.8 288.1,605.8" fill="#2D5BFF"/>
+  <rect x="24" y="634" width="91" height="34" fill="#16161D"/>
+  <text x="69.5" y="658.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">打ち手</text>
+  <text x="536" y="658" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="end">手順3 打ち手を決める</text>
+  <rect x="24" y="680" width="512" height="64" fill="#EEF6C9"/>
+  <rect x="24" y="680" width="6" height="64" fill="#2D5BFF"/>
+  <text x="46" y="720" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="46" dy="0">練習の量を落とす</tspan></text>
+  <rect x="24" y="754" width="512" height="64" fill="#EEF6C9"/>
+  <rect x="24" y="754" width="6" height="64" fill="#2D5BFF"/>
+  <text x="46" y="794" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="46" dy="0">出る大会・試合を絞る</tspan></text>
+  <rect x="24" y="828" width="512" height="93" fill="#EEF6C9"/>
+  <rect x="24" y="828" width="6" height="93" fill="#2D5BFF"/>
+  <text x="46" y="868" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="46" dy="0">1つのポジションを、3人で回す</tspan></text>
+  <text x="46" y="898" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">これまでは、先発と控えの1人ずつ</text>
+</svg>
