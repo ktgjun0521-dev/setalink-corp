@@ -84,15 +84,22 @@ export default function ArticleView({ article, related }: { article: Article; re
             </dl>
 
             <p className="mt-2 text-xs leading-[1.9] text-gray">
-              執筆：セタリンク編集部 ／ 監修：
-              <Link href="/company" className={inlineLink}>
-                片口 潤哉
-              </Link>
-              （代表）
+              <span className="inline-block">執筆：セタリンク編集部</span>
+              <span className="mx-1" aria-hidden="true">
+                ／
+              </span>
+              {/* 語の途中で折り返さないよう、まとまりごとに区切る */}
+              <span className="inline-block">
+                監修：
+                <Link href="/company" className={inlineLink}>
+                  片口 潤哉
+                </Link>
+                （代表）
+              </span>
               <span className="mx-2" aria-hidden="true">
                 ｜
               </span>
-              <Link href="/editorial-policy" className={inlineLink}>
+              <Link href="/editorial-policy" className={`${inlineLink} inline-block`}>
                 編集方針
               </Link>
             </p>
