@@ -3,6 +3,7 @@ import { Noto_Sans_JP, Inter, Zen_Old_Mincho, Klee_One } from "next/font/google"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileCta from "@/components/MobileCta";
+import { feedAlternates } from "@/lib/site";
 import "./globals.css";
 
 const notoSansJP = Noto_Sans_JP({
@@ -45,6 +46,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://setalinkapp.com"),
   alternates: {
     canonical: "https://setalinkapp.com",
+    // コラム・事例のフィード（RSS）の案内
+    types: feedAlternates,
   },
   openGraph: {
     title: "セタリンク | がんばっている改善を、ちゃんと成果につなげる",
