@@ -5,9 +5,12 @@ import LogoMark from "@/components/LogoMark";
 const navLinks = [
   { href: "/#support", label: "支援内容" },
   { href: "/cases", label: "支援実績・事例" },
+  { href: "/column", label: "コラム" },
   { href: "/company", label: "会社概要" },
   { href: "/faq", label: "よくある質問" },
   { href: "/contact", label: "お問い合わせ" },
+  { href: "/editorial-policy", label: "編集方針" },
+  { href: "/privacy", label: "プライバシーポリシー" },
   { href: "/notice", label: "電子公告" },
 ];
 

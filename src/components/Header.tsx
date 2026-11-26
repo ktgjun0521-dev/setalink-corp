@@ -9,9 +9,13 @@ import LogoMark from "@/components/LogoMark";
 const navLinks = [
   { href: "/#support", label: "支援内容" },
   { href: "/cases", label: "支援実績・事例" },
+  { href: "/column", label: "コラム" },
   { href: "/company", label: "会社概要" },
   { href: "/faq", label: "よくある質問" },
 ];
+
+// 現在地の判定。/column/〇〇 のような配下のページでも、親のメニューを現在地の色にする
+const isCurrent = (pathname: string, href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,13 +38,14 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-5 md:flex lg:gap-7">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`link-underline text-sm font-bold transition-colors ${
-                pathname === link.href ? "text-accent-blue" : "text-foreground/80 hover:text-foreground"
+              aria-current={isCurrent(pathname, link.href) ? "page" : undefined}
+              className={`link-underline whitespace-nowrap text-sm font-bold transition-colors ${
+                isCurrent(pathname, link.href) ? "text-accent-blue" : "text-foreground/80 hover:text-foreground"
               }`}
             >
               {link.label}
@@ -83,7 +88,7 @@ export default function Header() {
               onClick={() => setMenuOpen(false)}
               className="flex items-baseline gap-4 border-b border-ink py-5 font-display text-2xl font-black transition-colors hover:text-accent-blue"
             >
-              <span className="font-inter text-xs font-bold text-gray">0{i + 1}</span>
+              <span className="font-inter text-xs font-bold tabular-nums text-gray">{String(i + 1).padStart(2, "0")}</span>
               {link.label}
             </Link>
           ))}
