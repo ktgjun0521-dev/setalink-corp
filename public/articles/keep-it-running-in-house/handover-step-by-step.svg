@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="938" viewBox="0 0 560 938" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">引き継ぎは、契約が終わる日ではなく、途中から少しずつ</title>
+  <desc id="fig-desc">4つの時期を上から並べ、それぞれで外の会社と社内が何をするかを、左右に並べた図。青い札が、手を動かす側。1 作る：外の会社が作る・直す。社内は決める・試す。2 一緒に直す：外の会社が直す。社内は横で見て、手順書を確かめる。運用が始まったら、ここから引き継ぐ。3 社内が直す：社内が手順書で直す。外の会社は確かめる。4 社内で回す：社内が回す・直す。外の会社は相談を受ける。契約が終わる日に、まとめて渡さない。運用が始まった所から、少しずつ社内に移す。</desc>
+  <rect x="0" y="0" width="560" height="938" fill="#FFFDF7"/>
+  <rect x="24" y="24" width="26" height="22" fill="#2D5BFF"/>
+  <text x="60" y="43" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">青い札が、手を動かす側</text>
+  <rect x="24" y="64" width="250" height="40" fill="#EFEBE0"/>
+  <rect x="286" y="64" width="250" height="40" fill="#EFEBE0"/>
+  <text x="149" y="92" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">外の会社</text>
+  <text x="411" y="92" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">社内</text>
+  <circle cx="46" cy="144" r="18" fill="#2D5BFF"/>
+  <text x="46" y="151" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">1</text>
+  <text x="76" y="152" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">作る</text>
+  <rect x="24" y="172" width="250" height="96" fill="#2D5BFF"/>
+  <text x="149" y="228" font-size="21" font-weight="700" fill="#FFFDF7" text-anchor="middle"><tspan x="149" dy="0">作る・直す</tspan></text>
+  <rect x="286" y="172" width="250" height="96" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <text x="411" y="228" font-size="21" font-weight="700" fill="#16161D" text-anchor="middle"><tspan x="411" dy="0">決める・試す</tspan></text>
+  <circle cx="46" cy="312" r="18" fill="#2D5BFF"/>
+  <text x="46" y="319" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">2</text>
+  <text x="76" y="320" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">一緒に直す</text>
+  <rect x="331.1" y="296" width="204.9" height="34" fill="#2D5BFF"/>
+  <text x="433.6" y="320.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">ここから引き継ぐ</text>
+  <rect x="24" y="340" width="250" height="96" fill="#2D5BFF"/>
+  <text x="149" y="396" font-size="21" font-weight="700" fill="#FFFDF7" text-anchor="middle"><tspan x="149" dy="0">直す</tspan></text>
+  <rect x="286" y="340" width="250" height="96" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <text x="411" y="381" font-size="21" font-weight="700" fill="#16161D" text-anchor="middle"><tspan x="411" dy="0">横で見て、</tspan><tspan x="411" dy="30">手順書を確かめる</tspan></text>
+  <circle cx="46" cy="480" r="18" fill="#2D5BFF"/>
+  <text x="46" y="487" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">3</text>
+  <text x="76" y="488" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">社内が直す</text>
+  <rect x="24" y="508" width="250" height="96" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <text x="149" y="564" font-size="21" font-weight="700" fill="#16161D" text-anchor="middle"><tspan x="149" dy="0">確かめる</tspan></text>
+  <rect x="286" y="508" width="250" height="96" fill="#2D5BFF"/>
+  <text x="411" y="564" font-size="21" font-weight="700" fill="#FFFDF7" text-anchor="middle"><tspan x="411" dy="0">手順書で直す</tspan></text>
+  <circle cx="46" cy="648" r="18" fill="#2D5BFF"/>
+  <text x="46" y="655" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">4</text>
+  <text x="76" y="656" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">社内で回す</text>
+  <rect x="24" y="676" width="250" height="96" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <text x="149" y="732" font-size="21" font-weight="700" fill="#16161D" text-anchor="middle"><tspan x="149" dy="0">相談を受ける</tspan></text>
+  <rect x="286" y="676" width="250" height="96" fill="#2D5BFF"/>
+  <text x="411" y="732" font-size="21" font-weight="700" fill="#FFFDF7" text-anchor="middle"><tspan x="411" dy="0">回す・直す</tspan></text>
+  <rect x="24" y="794" width="512" height="120" fill="#EEF6C9"/>
+  <rect x="24" y="794" width="6" height="120" fill="#2D5BFF"/>
+  <text x="46" y="836" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">契約が終わる日に、まとめて渡さない</text>
+  <text x="46" y="874" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="46" dy="0">運用が始まった所から、</tspan><tspan x="46" dy="28">少しずつ社内に移す</tspan></text>
+</svg>

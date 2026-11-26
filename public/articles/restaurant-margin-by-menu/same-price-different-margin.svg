@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="943" viewBox="0 0 560 943" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">同じ1,000円のセットでも、組み合わせで残る額が変わる（説明のための計算例）</title>
+  <desc id="fig-desc">説明のための計算例で、実在の店の数字ではない。棒の長さは金額。薄い灰色の部分は原価、青い部分は残る額（粗利）。参考として、丼だけ（800円）は、原価400円、残る額400円（利益率50%）。丼とサラダのセット（1,000円）は、原価580円（丼400円とサラダ180円）、残る額420円（42%）。丼とデザートのセット（1,000円）は、原価460円（丼400円とデザート60円）、残る額540円（54%）。1セットで残る額の差は120円。よく出る商品に、利益率の高い商品を添える。</desc>
+  <rect x="0" y="0" width="560" height="943" fill="#FFFDF7"/>
+  <rect x="24" y="24" width="361" height="34" fill="#16161D"/>
+  <text x="204.5" y="48.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">同じ1,000円のセットで比べる</text>
+  <text x="24" y="90" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="24" dy="0">※ 説明のための計算例です。</tspan><tspan x="24" dy="27">実在の店の数字ではありません。</tspan></text>
+  <rect x="24" y="151" width="26" height="22" fill="#EFEBE0" stroke="#16161D" stroke-width="1.5"/>
+  <text x="60" y="170" font-size="20" font-weight="500" fill="#16161D" text-anchor="start">原価</text>
+  <rect x="150" y="151" width="26" height="22" fill="#2D5BFF"/>
+  <text x="186" y="170" font-size="20" font-weight="500" fill="#16161D" text-anchor="start">残る額（粗利）</text>
+  <rect x="24" y="197" width="512" height="182" fill="#FFFDF7"/>
+  <text x="44" y="235" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">参考：丼だけ（800円）</text>
+  <rect x="44" y="253" width="188.8" height="40" fill="#EFEBE0" stroke="#16161D" stroke-width="1.5"/>
+  <rect x="232.8" y="253" width="188.8" height="40" fill="#2D5BFF"/>
+  <text x="44" y="325" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">原価 400円</text>
+  <text x="44" y="359" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">残る額 400円（50%）</text>
+  <rect x="24" y="393" width="512" height="182" fill="#EFEBE0"/>
+  <text x="44" y="431" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">丼＋サラダ（1,000円）</text>
+  <rect x="44" y="449" width="188.8" height="40" fill="#EFEBE0" stroke="#16161D" stroke-width="1.5"/>
+  <rect x="232.8" y="449" width="85" height="40" fill="#EFEBE0" stroke="#16161D" stroke-width="1.5"/>
+  <rect x="317.8" y="449" width="198.2" height="40" fill="#2D5BFF"/>
+  <text x="44" y="521" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">原価 580円（丼400円＋サラダ180円）</text>
+  <text x="44" y="555" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">残る額 420円（42%）</text>
+  <rect x="24" y="589" width="512" height="182" fill="#E8EEFF"/>
+  <text x="44" y="627" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">丼＋デザート（1,000円）</text>
+  <rect x="44" y="645" width="188.8" height="40" fill="#EFEBE0" stroke="#16161D" stroke-width="1.5"/>
+  <rect x="232.8" y="645" width="28.3" height="40" fill="#EFEBE0" stroke="#16161D" stroke-width="1.5"/>
+  <rect x="261.1" y="645" width="254.9" height="40" fill="#2D5BFF"/>
+  <text x="44" y="717" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">原価 460円（丼400円＋デザート60円）</text>
+  <text x="44" y="751" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="start">残る額 540円（54%）</text>
+  <rect x="24" y="791" width="512" height="128" fill="#EEF6C9"/>
+  <rect x="24" y="791" width="6" height="128" fill="#2D5BFF"/>
+  <text x="46" y="831" font-size="23" font-weight="700" fill="#16161D" text-anchor="start">1セットで残る額の差は、120円</text>
+  <text x="46" y="869" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="46" dy="0">よく出る商品に、</tspan><tspan x="46" dy="28">利益率の高い商品を添える</tspan></text>
+</svg>

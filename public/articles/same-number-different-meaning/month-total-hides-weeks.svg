@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="990" viewBox="0 0 560 990" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">月の合計では横ばいでも、週に分けると下がり続けている（計算例）</title>
+  <desc id="fig-desc">説明のための計算例で、実在の会社の数字ではない。1か月を4週として計算している。ECの注文の数。月で見ると、先月1,200件、今月1,180件で、ほぼ同じ。打ち手は出ない。同じ今月を週に分けると、1週目340件、2週目320件、3週目280件、4週目240件。3週目から、大きく下がっている。3週目に何が変わったかを確かめる。月の合計では、前半の多い週が、後半の落ち込みを隠す。</desc>
+  <rect x="0" y="0" width="560" height="990" fill="#FFFDF7"/>
+  <text x="24" y="46" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="24" dy="0">※ 説明のための計算例です。</tspan><tspan x="24" dy="28">実在の会社の数字ではありません。</tspan><tspan x="24" dy="28">1か月を4週として計算しています。</tspan></text>
+  <rect x="24" y="132" width="512" height="256" fill="#EFEBE0"/>
+  <rect x="44" y="152" width="112" height="34" fill="#16161D"/>
+  <text x="100" y="176.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">月で見る</text>
+  <text x="44" y="224" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">先月</text>
+  <text x="516" y="224" font-size="22" font-weight="700" fill="#16161D" text-anchor="end">1,200件</text>
+  <rect x="44" y="236" width="472" height="16" fill="#FFFDF7"/>
+  <rect x="44" y="236" width="472" height="16" fill="#16161D"/>
+  <text x="44" y="286" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">今月</text>
+  <text x="516" y="286" font-size="22" font-weight="700" fill="#16161D" text-anchor="end">1,180件</text>
+  <rect x="44" y="298" width="472" height="16" fill="#FFFDF7"/>
+  <rect x="44" y="298" width="464.1" height="16" fill="#16161D"/>
+  <text x="44" y="360" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">ほぼ同じ。打ち手は出ない</text>
+  <line x1="60" y1="398" x2="60" y2="424.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="60,436 51.9,419.8 68.1,419.8" fill="#2D5BFF"/>
+  <text x="88" y="425" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">同じ今月を、週に分けると</text>
+  <rect x="24" y="448" width="512" height="398" fill="#E8EEFF"/>
+  <rect x="44" y="468" width="112" height="34" fill="#2D5BFF"/>
+  <text x="100" y="492.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">週で見る</text>
+  <text x="44" y="540" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">1週目</text>
+  <text x="516" y="540" font-size="22" font-weight="700" fill="#16161D" text-anchor="end">340件</text>
+  <rect x="44" y="552" width="472" height="16" fill="#FFFDF7"/>
+  <rect x="44" y="552" width="472" height="16" fill="#16161D"/>
+  <text x="44" y="602" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">2週目</text>
+  <text x="516" y="602" font-size="22" font-weight="700" fill="#16161D" text-anchor="end">320件</text>
+  <rect x="44" y="614" width="472" height="16" fill="#FFFDF7"/>
+  <rect x="44" y="614" width="444.2" height="16" fill="#16161D"/>
+  <text x="44" y="664" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="start">3週目</text>
+  <text x="516" y="664" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="end">280件</text>
+  <rect x="44" y="676" width="472" height="16" fill="#FFFDF7"/>
+  <rect x="44" y="676" width="388.7" height="16" fill="#2D5BFF"/>
+  <text x="44" y="726" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="start">4週目</text>
+  <text x="516" y="726" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="end">240件</text>
+  <rect x="44" y="738" width="472" height="16" fill="#FFFDF7"/>
+  <rect x="44" y="738" width="333.2" height="16" fill="#2D5BFF"/>
+  <text x="44" y="784" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="start">3週目から、大きく下がっている</text>
+  <text x="44" y="818" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">3週目に何が変わったかを確かめる</text>
+  <rect x="24" y="862" width="512" height="104" fill="#EEF6C9"/>
+  <text x="46" y="904" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="46" dy="0">月の合計では、前半の多い週が、</tspan><tspan x="46" dy="32">後半の落ち込みを隠す</tspan></text>
+</svg>

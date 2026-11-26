@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="820" viewBox="0 0 560 820" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">面談の数と支援率、今月どちらを意識してもらうか</title>
+  <desc id="fig-desc">最初に見るのは、今月、流れのどこで人が減っているか。面談の前で減っているなら、面談の数を意識してもらう。行動の例は、面談につながる集め方に寄せることや、応募した人への連絡の仕方を見直すこと。面談のあとで減っているなら、支援率を意識してもらう。行動の例は、面談で聞くことや、支援の案内の仕方をそろえること。面談の数と支援率は、片方を押すと、もう片方が下がりやすい。だから月に1回、2つを並べて見る。</desc>
+  <rect x="0" y="0" width="560" height="820" fill="#FFFDF7"/>
+  <rect x="24" y="24" width="512" height="140" fill="#FFFDF7" stroke="#16161D" stroke-width="2"/>
+  <text x="44" y="62" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">最初に見る所</text>
+  <text x="44" y="102" font-size="25" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="44" dy="0">今月、流れのどこで</tspan><tspan x="44" dy="36">人が減っているか</tspan></text>
+  <rect x="64" y="186" width="472" height="196" fill="#EEF6C9"/>
+  <rect x="64" y="186" width="6" height="196" fill="#2D5BFF"/>
+  <text x="88" y="222" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">面談の前で減っている</text>
+  <text x="88" y="264" font-size="24" font-weight="700" fill="#16161D" text-anchor="start">面談の数を意識してもらう</text>
+  <text x="88" y="298" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="88" dy="0">行動の例：面談につながる</tspan><tspan x="88" dy="28">集め方に寄せる、応募した人への</tspan><tspan x="88" dy="28">連絡の仕方を見直す</tspan></text>
+  <rect x="64" y="396" width="472" height="168" fill="#E8EEFF"/>
+  <rect x="64" y="396" width="6" height="168" fill="#2D5BFF"/>
+  <text x="88" y="432" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">面談のあとで減っている</text>
+  <text x="88" y="474" font-size="24" font-weight="700" fill="#16161D" text-anchor="start">支援率を意識してもらう</text>
+  <text x="88" y="508" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="88" dy="0">行動の例：面談で聞くことと、</tspan><tspan x="88" dy="28">支援の案内の仕方をそろえる</tspan></text>
+  <line x1="40" y1="164" x2="40" y2="436" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="40" y1="226" x2="55" y2="226" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="64,226 51.5,232.2 51.5,219.8" fill="#16161D"/>
+  <line x1="40" y1="436" x2="55" y2="436" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="64,436 51.5,442.2 51.5,429.8" fill="#16161D"/>
+  <rect x="24" y="586" width="512" height="210" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <text x="48" y="630" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="48" dy="0">面談の数と支援率は、</tspan><tspan x="48" dy="33">片方を押すと、もう片方が</tspan><tspan x="48" dy="33">下がりやすい</tspan></text>
+  <text x="48" y="738" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="48" dy="0">だから月に1回、</tspan><tspan x="48" dy="28">2つを並べて見る</tspan></text>
+</svg>

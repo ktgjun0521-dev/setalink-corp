@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="868" viewBox="0 0 560 868" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">つなぐ順番の例。決めたいことに近い2つの段階から始め、前後へ広げる</title>
+  <desc id="fig-desc">たとえば、決めたいことが、商談から契約に進む割合を上げたい、の場合。広告、問い合わせ、商談、契約、入金の5つの段階が上から並び、段階と段階のあいだに、つなぐ順番の番号がある。1 商談と契約：決めたいことに近い2つ。まず、ここだけつなぐ。2 問い合わせと商談：1つ前へ広げる。どんな問い合わせが進むか。3 広告と問い合わせ：入口の広告まで広げる。どこから来たお客様か。4 契約と入金：入金まで広げる。売上として残ったか。全部を一度につながない。1つつないだら、数字を確かめてから次へ。</desc>
+  <rect x="0" y="0" width="560" height="868" fill="#FFFDF7"/>
+  <rect x="24" y="24" width="512" height="100" fill="#FFFDF7" stroke="#16161D" stroke-width="2"/>
+  <text x="44" y="62" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">たとえば、決めたいことが</text>
+  <text x="44" y="100" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">商談から契約に進む割合を上げたい</text>
+  <rect x="24" y="402" width="512" height="194" fill="#E8EEFF"/>
+  <line x1="104" y1="202" x2="104" y2="280" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="104" cy="241" r="18" fill="#2D5BFF"/>
+  <text x="104" y="248" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">3</text>
+  <text x="214" y="238" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">入口の広告まで広げる</text>
+  <text x="214" y="267" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">どこから来たお客様か</text>
+  <line x1="104" y1="330" x2="104" y2="408" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="104" cy="369" r="18" fill="#2D5BFF"/>
+  <text x="104" y="376" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">2</text>
+  <text x="214" y="363" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">1つ前へ広げる</text>
+  <text x="214" y="391" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">どんな問い合わせが進むか</text>
+  <line x1="104" y1="458" x2="104" y2="536" stroke="#2D5BFF" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="104" cy="497" r="18" fill="#2D5BFF"/>
+  <text x="104" y="504" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">1</text>
+  <text x="214" y="494" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="start">決めたいことに近い2つ</text>
+  <text x="214" y="523" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">まず、ここだけつなぐ</text>
+  <line x1="104" y1="586" x2="104" y2="664" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="104" cy="625" r="18" fill="#2D5BFF"/>
+  <text x="104" y="632" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">4</text>
+  <text x="214" y="622" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">入金まで広げる</text>
+  <text x="214" y="651" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">売上として残ったか</text>
+  <rect x="24" y="152" width="160" height="50" fill="#EFEBE0"/>
+  <text x="104" y="185" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">広告</text>
+  <rect x="24" y="280" width="160" height="50" fill="#EFEBE0"/>
+  <text x="104" y="313" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">問い合わせ</text>
+  <rect x="24" y="408" width="160" height="50" fill="#EFEBE0"/>
+  <text x="104" y="441" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">商談</text>
+  <rect x="24" y="536" width="160" height="50" fill="#EFEBE0"/>
+  <text x="104" y="569" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">契約</text>
+  <rect x="24" y="664" width="160" height="50" fill="#EFEBE0"/>
+  <text x="104" y="697" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">入金</text>
+  <rect x="24" y="740" width="512" height="104" fill="#EEF6C9"/>
+  <rect x="24" y="740" width="6" height="104" fill="#2D5BFF"/>
+  <text x="46" y="782" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">全部を一度につながない</text>
+  <text x="46" y="816" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">1つつないだら、数字を確かめてから次へ</text>
+</svg>

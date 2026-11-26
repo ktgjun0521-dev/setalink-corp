@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="998" viewBox="0 0 560 998" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">ご相談から伴走まで、4つの段階と、頼む側が用意しておくと早いもの</title>
+  <desc id="fig-desc">上から順に4つの段階。黄緑の帯は、頼む側が用意しておくと早いもの。1 お問い合わせ。送ると、セタリンクから連絡が届く。用意しておくもの：困っていることを、一言で。2 初回相談（60分・無料）。改善ポイントの仮説、見るべき数字、進め方のイメージを持ち帰れる。用意しておくもの：いま見ている数字と、その置き場所。いちばん改善したいこと。3 ご提案。課題・進め方・期間・費用を示す。用意しておくもの：社内で決める人の同席。最初のテーマを1つにしぼるか。ここで、進めるかどうかを決める。相談だけで終えても大丈夫。4 伴走スタート。定例ミーティングで、改善を一緒に回す。用意しておくもの：言葉の意味を決める人。データを取り出す許可。数字を見る場と、持ち主。</desc>
+  <rect x="0" y="0" width="560" height="998" fill="#FFFDF7"/>
+  <rect x="24" y="22" width="26" height="22" fill="#EEF6C9"/>
+  <rect x="24" y="22" width="5" height="22" fill="#2D5BFF"/>
+  <text x="60" y="41" font-size="20" font-weight="700" fill="#16161D" text-anchor="start">頼む側が、用意しておくと早いもの</text>
+  <rect x="24" y="60" width="512" height="149" fill="#FFFDF7" stroke="#16161D" stroke-width="2"/>
+  <circle cx="62" cy="92" r="18" fill="#2D5BFF"/>
+  <text x="62" y="99" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">1</text>
+  <text x="94" y="100" font-size="23" font-weight="700" fill="#16161D" text-anchor="start">お問い合わせ</text>
+  <text x="44" y="132" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="44" dy="0">送ると、セタリンクから連絡が届く</tspan></text>
+  <rect x="44" y="148" width="472" height="47" fill="#EEF6C9"/>
+  <rect x="44" y="148" width="6" height="47" fill="#2D5BFF"/>
+  <text x="66" y="179" font-size="21" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="66" dy="0">困っていることを、一言で</tspan></text>
+  <line x1="280" y1="213" x2="280" y2="220.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="280,232 271.9,215.8 288.1,215.8" fill="#2D5BFF"/>
+  <rect x="24" y="236" width="512" height="205" fill="#FFFDF7" stroke="#16161D" stroke-width="2"/>
+  <circle cx="62" cy="268" r="18" fill="#2D5BFF"/>
+  <text x="62" y="275" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">2</text>
+  <text x="94" y="276" font-size="23" font-weight="700" fill="#16161D" text-anchor="start">初回相談（60分・無料）</text>
+  <text x="44" y="308" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="44" dy="0">改善ポイントの仮説、見るべき数字、</tspan><tspan x="44" dy="27">進め方のイメージを持ち帰れる</tspan></text>
+  <rect x="44" y="351" width="472" height="76" fill="#EEF6C9"/>
+  <rect x="44" y="351" width="6" height="76" fill="#2D5BFF"/>
+  <text x="66" y="382" font-size="21" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="66" dy="0">いま見ている数字と、その置き場所</tspan><tspan x="66" dy="29">いちばん改善したいこと</tspan></text>
+  <line x1="280" y1="445" x2="280" y2="452.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="280,464 271.9,447.8 288.1,447.8" fill="#2D5BFF"/>
+  <rect x="24" y="468" width="512" height="178" fill="#FFFDF7" stroke="#16161D" stroke-width="2"/>
+  <circle cx="62" cy="500" r="18" fill="#2D5BFF"/>
+  <text x="62" y="507" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">3</text>
+  <text x="94" y="508" font-size="23" font-weight="700" fill="#16161D" text-anchor="start">ご提案</text>
+  <text x="44" y="540" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="44" dy="0">課題・進め方・期間・費用を示す</tspan></text>
+  <rect x="44" y="556" width="472" height="76" fill="#EEF6C9"/>
+  <rect x="44" y="556" width="6" height="76" fill="#2D5BFF"/>
+  <text x="66" y="587" font-size="21" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="66" dy="0">社内で決める人の同席</tspan><tspan x="66" dy="29">最初のテーマを1つにしぼるか</tspan></text>
+  <rect x="24" y="656" width="512" height="84" fill="#16161D"/>
+  <text x="280" y="692" font-size="23" font-weight="700" fill="#FFFDF7" text-anchor="middle">ここで、進めるかどうかを決める</text>
+  <text x="280" y="724" font-size="20" font-weight="500" fill="#FFFDF7" text-anchor="middle">相談だけで終えても大丈夫</text>
+  <line x1="280" y1="744" x2="280" y2="751.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="280,763 271.9,746.8 288.1,746.8" fill="#2D5BFF"/>
+  <rect x="24" y="767" width="512" height="207" fill="#FFFDF7" stroke="#16161D" stroke-width="2"/>
+  <circle cx="62" cy="799" r="18" fill="#2D5BFF"/>
+  <text x="62" y="806" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">4</text>
+  <text x="94" y="807" font-size="23" font-weight="700" fill="#16161D" text-anchor="start">伴走スタート</text>
+  <text x="44" y="839" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="44" dy="0">定例ミーティングで、改善を一緒に回す</tspan></text>
+  <rect x="44" y="855" width="472" height="105" fill="#EEF6C9"/>
+  <rect x="44" y="855" width="6" height="105" fill="#2D5BFF"/>
+  <text x="66" y="886" font-size="21" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="66" dy="0">言葉の意味を決める人</tspan><tspan x="66" dy="29">データを取り出す許可</tspan><tspan x="66" dy="29">数字を見る場と、持ち主</tspan></text>
+</svg>

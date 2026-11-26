@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="869" viewBox="0 0 560 869" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">差の出方から、ずれの原因の当たりをつける</title>
+  <desc id="fig-desc">2つの資料の売上の差を出したら、差の出方を見て、疑う原因の当たりをつける。差が、ほぼ1割なら、税込か税抜か。月初・月末の日に差が集まるなら、日付の区切り・締め日。返品の多い日に差が出るなら、返品・値引き。前払いの多い月に差が大きいなら、売上にする時点。一部の店舗・商品だけ差があるなら、集計の範囲。差が9で割り切れるなら、数字の入れ替え・桁のずれ（手で写すときの間違い）。当たりがついたら、その日・その店舗の、1件ずつの記録（明細）で確かめる。</desc>
+  <rect x="0" y="0" width="560" height="869" fill="#FFFDF7"/>
+  <rect x="24" y="24" width="435.4" height="34" fill="#16161D"/>
+  <text x="241.7" y="48.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">差を出したら、出方で当たりをつける</text>
+  <text x="42" y="98" font-size="20" font-weight="700" fill="#5A5D66" text-anchor="start">差の出方</text>
+  <text x="322" y="98" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">疑う原因</text>
+  <rect x="24" y="116" width="238" height="65" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <rect x="304" y="116" width="232" height="65" fill="#E8EEFF"/>
+  <text x="42" y="156.5" font-size="22" font-weight="500" fill="#16161D" text-anchor="start"><tspan x="42" dy="0">差が、ほぼ1割</tspan></text>
+  <text x="322" y="156.5" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="322" dy="0">税込か税抜か</tspan></text>
+  <line x1="268" y1="148.5" x2="289.1" y2="148.5" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="299,148.5 285.2,155.3 285.2,141.7" fill="#2D5BFF"/>
+  <rect x="24" y="193" width="238" height="96" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <rect x="304" y="193" width="232" height="96" fill="#E8EEFF"/>
+  <text x="42" y="233.5" font-size="22" font-weight="500" fill="#16161D" text-anchor="start"><tspan x="42" dy="0">月初・月末の日に</tspan><tspan x="42" dy="31">差が集まる</tspan></text>
+  <text x="322" y="233.5" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="322" dy="0">日付の区切り・</tspan><tspan x="322" dy="31">締め日</tspan></text>
+  <line x1="268" y1="241" x2="289.1" y2="241" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="299,241 285.2,247.8 285.2,234.2" fill="#2D5BFF"/>
+  <rect x="24" y="301" width="238" height="96" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <rect x="304" y="301" width="232" height="96" fill="#E8EEFF"/>
+  <text x="42" y="341.5" font-size="22" font-weight="500" fill="#16161D" text-anchor="start"><tspan x="42" dy="0">返品の多い日に</tspan><tspan x="42" dy="31">差が出る</tspan></text>
+  <text x="322" y="357" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="322" dy="0">返品・値引き</tspan></text>
+  <line x1="268" y1="349" x2="289.1" y2="349" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="299,349 285.2,355.8 285.2,342.2" fill="#2D5BFF"/>
+  <rect x="24" y="409" width="238" height="96" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <rect x="304" y="409" width="232" height="96" fill="#E8EEFF"/>
+  <text x="42" y="449.5" font-size="22" font-weight="500" fill="#16161D" text-anchor="start"><tspan x="42" dy="0">前払いの多い月に</tspan><tspan x="42" dy="31">差が大きい</tspan></text>
+  <text x="322" y="465" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="322" dy="0">売上にする時点</tspan></text>
+  <line x1="268" y1="457" x2="289.1" y2="457" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="299,457 285.2,463.8 285.2,450.2" fill="#2D5BFF"/>
+  <rect x="24" y="517" width="238" height="96" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <rect x="304" y="517" width="232" height="96" fill="#E8EEFF"/>
+  <text x="42" y="557.5" font-size="22" font-weight="500" fill="#16161D" text-anchor="start"><tspan x="42" dy="0">一部の店舗・</tspan><tspan x="42" dy="31">商品だけ差がある</tspan></text>
+  <text x="322" y="573" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="322" dy="0">集計の範囲</tspan></text>
+  <line x1="268" y1="565" x2="289.1" y2="565" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="299,565 285.2,571.8 285.2,558.2" fill="#2D5BFF"/>
+  <rect x="24" y="625" width="238" height="96" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <rect x="304" y="625" width="232" height="96" fill="#E8EEFF"/>
+  <text x="42" y="665.5" font-size="22" font-weight="500" fill="#16161D" text-anchor="start"><tspan x="42" dy="0">差が9で</tspan><tspan x="42" dy="31">割り切れる</tspan></text>
+  <text x="322" y="665.5" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="322" dy="0">数字の入れ替え・</tspan><tspan x="322" dy="31">桁のずれ</tspan></text>
+  <line x1="268" y1="673" x2="289.1" y2="673" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="299,673 285.2,679.8 285.2,666.2" fill="#2D5BFF"/>
+  <rect x="24" y="741" width="512" height="104" fill="#EEF6C9"/>
+  <rect x="24" y="741" width="6" height="104" fill="#2D5BFF"/>
+  <text x="46" y="783" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">当たりがついたら、明細で確かめる</text>
+  <text x="46" y="817" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">その日・その店舗の、1件ずつの記録で</text>
+</svg>
