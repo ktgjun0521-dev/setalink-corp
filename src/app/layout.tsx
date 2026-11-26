@@ -3,6 +3,8 @@ import { Noto_Sans_JP, Inter, Zen_Old_Mincho, Klee_One } from "next/font/google"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileCta from "@/components/MobileCta";
+import Analytics from "@/components/Analytics";
+import AttributionCapture from "@/components/AttributionCapture";
 import { feedAlternates } from "@/lib/site";
 import "./globals.css";
 
@@ -132,6 +134,8 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <MobileCta />
+        <AttributionCapture />
+        <Analytics />
       </body>
     </html>
   );
