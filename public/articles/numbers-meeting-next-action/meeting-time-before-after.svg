@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="986" viewBox="0 0 560 986" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">同じ60分でも、順番と時間の配り方で、決められることが変わる（例）</title>
+  <desc id="fig-desc">たとえば60分の定例の場合の、説明のための例で、実在の会社のものではない。棒は、定例の始まり（0分）から終わり（60分）までの時間の使い方。報告会で終わる定例は、数字の報告40分、下がった理由の話20分。次に何を変えるかを決める時間は0分で、次の一手が決まらないまま終わる。順番と時間の配り方を変えると、次の一手まで決める定例になる。1 前回決めたことの結果10分、2 今週の数字15分、3 次に何を変えるかを決める25分、4 誰が・何を・いつまでに10分。決めたことは表に書き、次の定例の最初に確かめる。</desc>
+  <rect x="0" y="0" width="560" height="986" fill="#FFFDF7"/>
+  <text x="24" y="46" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="24" dy="0">※ たとえば60分の定例の場合の例です。</tspan><tspan x="24" dy="28">実在の会社の数字ではありません。</tspan></text>
+  <rect x="24" y="104" width="512" height="350" fill="#EFEBE0"/>
+  <rect x="44" y="124" width="230.5" height="34" fill="#16161D"/>
+  <text x="159.2" y="148.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">報告会で終わる定例</text>
+  <text x="44" y="196" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">数字の報告</text>
+  <text x="516" y="196" font-size="22" font-weight="700" fill="#16161D" text-anchor="end">40分</text>
+  <rect x="44" y="210" width="472" height="18" fill="#FFFDF7"/>
+  <rect x="44" y="210" width="314.7" height="18" fill="#16161D"/>
+  <text x="44" y="262" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">下がった理由の話</text>
+  <text x="516" y="262" font-size="22" font-weight="700" fill="#16161D" text-anchor="end">20分</text>
+  <rect x="44" y="276" width="472" height="18" fill="#FFFDF7"/>
+  <rect x="358.7" y="276" width="157.3" height="18" fill="#5A5D66"/>
+  <text x="44" y="328" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="start">次に何を変えるかを決める</text>
+  <text x="516" y="328" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="end">0分</text>
+  <rect x="44" y="342" width="472" height="18" fill="#FFFDF7"/>
+  <text x="44" y="380" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">0分</text>
+  <text x="280" y="380" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle">30分</text>
+  <text x="516" y="380" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="end">60分</text>
+  <text x="44" y="428" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">次の一手が決まらないまま終わる</text>
+  <line x1="60" y1="464" x2="60" y2="490.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="60,502 51.9,485.8 68.1,485.8" fill="#2D5BFF"/>
+  <text x="88" y="491" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">順番と、時間の配り方を変えると</text>
+  <rect x="24" y="514" width="512" height="448" fill="#E8EEFF"/>
+  <rect x="44" y="534" width="281.7" height="34" fill="#2D5BFF"/>
+  <text x="184.9" y="558.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">次の一手まで決める定例</text>
+  <circle cx="62" cy="603" r="18" fill="#2D5BFF"/>
+  <text x="62" y="610" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">1</text>
+  <text x="92" y="610" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">前回決めたことの結果</text>
+  <text x="516" y="610" font-size="22" font-weight="700" fill="#16161D" text-anchor="end">10分</text>
+  <rect x="44" y="624" width="472" height="18" fill="#FFFDF7"/>
+  <rect x="44" y="624" width="78.7" height="18" fill="#16161D"/>
+  <circle cx="62" cy="669" r="18" fill="#2D5BFF"/>
+  <text x="62" y="676" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">2</text>
+  <text x="92" y="676" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">今週の数字</text>
+  <text x="516" y="676" font-size="22" font-weight="700" fill="#16161D" text-anchor="end">15分</text>
+  <rect x="44" y="690" width="472" height="18" fill="#FFFDF7"/>
+  <rect x="122.7" y="690" width="118" height="18" fill="#16161D"/>
+  <circle cx="62" cy="735" r="18" fill="#2D5BFF"/>
+  <text x="62" y="742" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">3</text>
+  <text x="92" y="742" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="start">次に何を変えるかを決める</text>
+  <text x="516" y="742" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="end">25分</text>
+  <rect x="44" y="756" width="472" height="18" fill="#FFFDF7"/>
+  <rect x="240.7" y="756" width="196.7" height="18" fill="#2D5BFF"/>
+  <circle cx="62" cy="801" r="18" fill="#2D5BFF"/>
+  <text x="62" y="808" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">4</text>
+  <text x="92" y="808" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">誰が・何を・いつまでに</text>
+  <text x="516" y="808" font-size="22" font-weight="700" fill="#16161D" text-anchor="end">10分</text>
+  <rect x="44" y="822" width="472" height="18" fill="#FFFDF7"/>
+  <rect x="437.3" y="822" width="78.7" height="18" fill="#16161D"/>
+  <text x="44" y="860" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">0分</text>
+  <text x="280" y="860" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle">30分</text>
+  <text x="516" y="860" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="end">60分</text>
+  <text x="44" y="906" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="44" dy="0">決めたことは表に書き、</tspan><tspan x="44" dy="31">次の定例の最初に確かめる</tspan></text>
+</svg>

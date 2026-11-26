@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="938" viewBox="0 0 560 938" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">人材紹介の流れを区間に分け、役割ごとに意識してもらう数字を1つ渡す</title>
+  <desc id="fig-desc">左に、人材紹介の流れを上から並べる。集客（広告・スカウトなど）、応募、面談、支援に進む、内定・入社。右に、役割ごとの区間と、意識してもらう数字。マーケ担当は、集客から面談の手前まで。意識してもらう数字は、面談につながった応募の数。面談担当は、面談から支援に進むまで。意識してもらう数字は、支援率（面談した人のうち、支援に進んだ人の割合）。応募から面談の日程を決める所は、あいだの所。持ち主を決めておく。内定・入社・売上は、結果として出る数字。役割ごとには追わず、全員で月に1回見る。区切り方は、たとえばの例。</desc>
+  <rect x="0" y="0" width="560" height="938" fill="#FFFDF7"/>
+  <rect x="24" y="24" width="451.2" height="34" fill="#16161D"/>
+  <text x="249.6" y="48.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">流れを区間に分け、役割ごとに1つ渡す</text>
+  <text x="24" y="90" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="24" dy="0">※ 区切り方は、たとえばの例です。</tspan></text>
+  <rect x="24" y="130" width="230" height="72" fill="#EFEBE0"/>
+  <text x="42" y="160" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">集客</text>
+  <text x="42" y="188" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">広告・スカウトなど</text>
+  <line x1="64" y1="208" x2="64" y2="225.2" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="64,236 56.6,221 71.4,221" fill="#16161D"/>
+  <rect x="24" y="242" width="230" height="60" fill="#EFEBE0"/>
+  <text x="42" y="280" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">応募</text>
+  <line x1="64" y1="308" x2="64" y2="337.2" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="64,348 56.6,333 71.4,333" fill="#2D5BFF"/>
+  <text x="90" y="336" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">日程を決める</text>
+  <rect x="24" y="354" width="230" height="60" fill="#EFEBE0"/>
+  <text x="42" y="392" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">面談</text>
+  <line x1="64" y1="420" x2="64" y2="449.2" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="64,460 56.6,445 71.4,445" fill="#16161D"/>
+  <rect x="24" y="466" width="230" height="60" fill="#EFEBE0"/>
+  <text x="42" y="504" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">支援に進む</text>
+  <line x1="64" y1="532" x2="64" y2="561.2" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="64,572 56.6,557 71.4,557" fill="#16161D"/>
+  <rect x="24" y="578" width="230" height="60" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <text x="42" y="616" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">内定・入社</text>
+  <rect x="284" y="130" width="252" height="176" fill="#EEF6C9"/>
+  <line x1="266" y1="134" x2="266" y2="302" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="266" y1="134" x2="276" y2="134" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="266" y1="302" x2="276" y2="302" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="302" y="146" width="133" height="34" fill="#16161D"/>
+  <text x="368.5" y="170.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">マーケ担当</text>
+  <text x="302" y="218" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">意識してもらう数字</text>
+  <text x="302" y="254" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="302" dy="0">面談につながった</tspan><tspan x="302" dy="31">応募の数</tspan></text>
+  <rect x="284" y="354" width="252" height="212" fill="#E8EEFF"/>
+  <line x1="266" y1="358" x2="266" y2="522" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="266" y1="358" x2="276" y2="358" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="266" y1="522" x2="276" y2="522" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="302" y="370" width="112" height="34" fill="#2D5BFF"/>
+  <text x="358" y="394.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">面談担当</text>
+  <text x="302" y="442" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">意識してもらう数字</text>
+  <text x="302" y="478" font-size="24" font-weight="700" fill="#16161D" text-anchor="start">支援率</text>
+  <text x="302" y="510" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="302" dy="0">面談した人のうち、</tspan><tspan x="302" dy="27">支援に進んだ人の割合</tspan></text>
+  <rect x="24" y="660" width="512" height="104" fill="#FFFDF7" stroke="#2D5BFF" stroke-width="2"/>
+  <text x="48" y="700" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">あいだ（日程を決める所）は、</text>
+  <text x="48" y="736" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="start">どちらが持つかを先に決める</text>
+  <rect x="24" y="778" width="512" height="136" fill="#EFEBE0"/>
+  <text x="48" y="818" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">内定・入社・売上は、結果として出る数字</text>
+  <text x="48" y="854" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="48" dy="0">役割ごとには追わず、</tspan><tspan x="48" dy="31">全員で月に1回見る</tspan></text>
+</svg>

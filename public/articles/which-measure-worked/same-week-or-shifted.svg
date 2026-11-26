@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="916" viewBox="0 0 560 916" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">同じ週に始めると、どれが効いたか分からない。ずらして、始めた日を残すと、見当がつく</title>
+  <desc id="fig-desc">説明のための図で、実在の会社の数字ではない。同じ数字（入会数）を動かす3つの施策、A・B・Cを比べる。上は、3つを同じ週に始めた場合。A・B・Cとも4週目に始め、入会数は4週目から上がった。でも、どれが効いたかは分からない。下は、始める週をずらし、始めた日を残した場合。Aは2週目、Bは4週目、Cは6週目に始めた。入会数の動きは上と同じで、4週目から上がった。上がったのは、Bを始めた週から。Bは続ける。AとCは、やり方を見直す候補。</desc>
+  <rect x="0" y="0" width="560" height="916" fill="#FFFDF7"/>
+  <text x="24" y="46" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="24" dy="0">※ 説明のための図です。</tspan><tspan x="24" dy="28">実在の会社の数字ではありません。</tspan></text>
+  <rect x="24" y="104" width="512" height="370" fill="#EFEBE0"/>
+  <rect x="44" y="124" width="272" height="34" fill="#16161D"/>
+  <text x="180" y="148.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">3つを同じ週に始めると</text>
+  <text x="44" y="199" font-size="20" font-weight="700" fill="#16161D" text-anchor="start">施策A</text>
+  <rect x="271" y="181" width="245" height="22" fill="#16161D"/>
+  <text x="44" y="233" font-size="20" font-weight="700" fill="#16161D" text-anchor="start">施策B</text>
+  <rect x="271" y="215" width="245" height="22" fill="#16161D"/>
+  <text x="44" y="267" font-size="20" font-weight="700" fill="#16161D" text-anchor="start">施策C</text>
+  <rect x="271" y="249" width="245" height="22" fill="#16161D"/>
+  <line x1="271" y1="174" x2="271" y2="388" stroke="#16161D" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="44" y="310" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">入会数</text>
+  <line x1="124" y1="388" x2="516" y2="388" stroke="#16161D" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M 148.5 369.5 L 197.5 369.5 L 246.5 369.5 L 295.5 330.5 L 344.5 304.5 L 393.5 304.5 L 442.5 304.5 L 491.5 304.5" fill="none" stroke="#16161D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="148.5" cy="369.5" r="4.5" fill="#16161D"/>
+  <circle cx="197.5" cy="369.5" r="4.5" fill="#16161D"/>
+  <circle cx="246.5" cy="369.5" r="4.5" fill="#16161D"/>
+  <circle cx="295.5" cy="330.5" r="4.5" fill="#16161D"/>
+  <circle cx="344.5" cy="304.5" r="4.5" fill="#16161D"/>
+  <circle cx="393.5" cy="304.5" r="4.5" fill="#16161D"/>
+  <circle cx="442.5" cy="304.5" r="4.5" fill="#16161D"/>
+  <circle cx="491.5" cy="304.5" r="4.5" fill="#16161D"/>
+  <text x="44" y="416" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">週</text>
+  <text x="148.5" y="416" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle">1</text>
+  <text x="197.5" y="416" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle">2</text>
+  <text x="246.5" y="416" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle">3</text>
+  <text x="295.5" y="416" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle">4</text>
+  <text x="344.5" y="416" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle">5</text>
+  <text x="393.5" y="416" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle">6</text>
+  <text x="442.5" y="416" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle">7</text>
+  <text x="491.5" y="416" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle">8</text>
+  <text x="44" y="454" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">どれが効いたかは、分からない</text>
+  <rect x="24" y="490" width="512" height="402" fill="#E8EEFF"/>
+  <rect x="44" y="510" width="435.4" height="34" fill="#2D5BFF"/>
+  <text x="261.7" y="534.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">始める週をずらし、始めた日を残すと</text>
+  <text x="44" y="585" font-size="20" font-weight="700" fill="#16161D" text-anchor="start">施策A</text>
+  <rect x="173" y="567" width="343" height="22" fill="#16161D"/>
+  <text x="44" y="619" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">施策B</text>
+  <rect x="271" y="601" width="245" height="22" fill="#2D5BFF"/>
+  <text x="44" y="653" font-size="20" font-weight="700" fill="#16161D" text-anchor="start">施策C</text>
+  <rect x="369" y="635" width="147" height="22" fill="#16161D"/>
+  <line x1="173" y1="560" x2="173" y2="774" stroke="#16161D" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="271" y1="560" x2="271" y2="774" stroke="#2D5BFF" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="369" y1="560" x2="369" y2="774" stroke="#16161D" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="44" y="696" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">入会数</text>
+  <line x1="124" y1="774" x2="516" y2="774" stroke="#16161D" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M 148.5 755.5 L 197.5 755.5 L 246.5 755.5 L 295.5 716.5 L 344.5 690.5 L 393.5 690.5 L 442.5 690.5 L 491.5 690.5" fill="none" stroke="#16161D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="148.5" cy="755.5" r="4.5" fill="#16161D"/>
+  <circle cx="197.5" cy="755.5" r="4.5" fill="#16161D"/>
+  <circle cx="246.5" cy="755.5" r="4.5" fill="#16161D"/>
+  <circle cx="295.5" cy="716.5" r="4.5" fill="#16161D"/>
+  <circle cx="344.5" cy="690.5" r="4.5" fill="#16161D"/>
+  <circle cx="393.5" cy="690.5" r="4.5" fill="#16161D"/>
+  <circle cx="442.5" cy="690.5" r="4.5" fill="#16161D"/>
+  <circle cx="491.5" cy="690.5" r="4.5" fill="#16161D"/>
+  <text x="44" y="802" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">週</text>
+  <text x="148.5" y="802" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle">1</text>
+  <text x="197.5" y="802" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle">2</text>
+  <text x="246.5" y="802" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle">3</text>
+  <text x="295.5" y="802" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle">4</text>
+  <text x="344.5" y="802" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle">5</text>
+  <text x="393.5" y="802" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle">6</text>
+  <text x="442.5" y="802" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle">7</text>
+  <text x="491.5" y="802" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle">8</text>
+  <text x="44" y="840" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="start">上がったのは、Bを始めた週から</text>
+  <text x="44" y="872" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">Bは続ける。AとCは、やり方を見直す候補</text>
+</svg>

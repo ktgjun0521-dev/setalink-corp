@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="820" viewBox="0 0 560 820" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">外に頼んだ仕組みが社内で止まる原因と、先に決めておくこと</title>
+  <desc id="fig-desc">左は止まる原因、右は先に決めておくこと。担当が1人しかいない、には、持ち主を2人決める（主と副。アカウントの名義は会社に）。定義が、作った人の頭の中にしかない、には、言葉の定義書を残す。数字がおかしいとき、直し方が分からない、には、直し方の手順を残す。3つとも、引き継ぎの時期を先に決め、途中から少しずつ社内に移す。</desc>
+  <rect x="0" y="0" width="560" height="820" fill="#FFFDF7"/>
+  <text x="28" y="52" font-size="21" font-weight="700" fill="#5A5D66" text-anchor="start">止まる原因</text>
+  <text x="304" y="52" font-size="21" font-weight="700" fill="#2D5BFF" text-anchor="start">先に決めておくこと</text>
+  <rect x="24" y="74" width="236" height="164" fill="#EFEBE0"/>
+  <text x="42" y="148.5" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="42" dy="0">担当が</tspan><tspan x="42" dy="31">1人しかいない</tspan></text>
+  <rect x="300" y="74" width="236" height="164" fill="#EEF6C9"/>
+  <rect x="300" y="74" width="6" height="164" fill="#2D5BFF"/>
+  <text x="322" y="118" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="322" dy="0">持ち主を</tspan><tspan x="322" dy="32">2人決める</tspan></text>
+  <text x="322" y="188" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="322" dy="0">主と副。</tspan><tspan x="322" dy="27">名義は会社に</tspan></text>
+  <line x1="266" y1="156" x2="284.1" y2="156" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="294,156 280.2,162.8 280.2,149.2" fill="#2D5BFF"/>
+  <rect x="24" y="252" width="236" height="164" fill="#EFEBE0"/>
+  <text x="42" y="311" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="42" dy="0">定義が、</tspan><tspan x="42" dy="31">作った人の</tspan><tspan x="42" dy="31">頭の中にしかない</tspan></text>
+  <rect x="300" y="252" width="236" height="164" fill="#EEF6C9"/>
+  <rect x="300" y="252" width="6" height="164" fill="#2D5BFF"/>
+  <text x="322" y="296" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="322" dy="0">言葉の定義書を</tspan><tspan x="322" dy="32">残す</tspan></text>
+  <text x="322" y="366" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="322" dy="0">数字ごとの</tspan><tspan x="322" dy="27">意味と数え方</tspan></text>
+  <line x1="266" y1="334" x2="284.1" y2="334" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="294,334 280.2,340.8 280.2,327.2" fill="#2D5BFF"/>
+  <rect x="24" y="430" width="236" height="164" fill="#EFEBE0"/>
+  <text x="42" y="489" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="42" dy="0">数字がおかしい</tspan><tspan x="42" dy="31">とき、直し方が</tspan><tspan x="42" dy="31">分からない</tspan></text>
+  <rect x="300" y="430" width="236" height="164" fill="#EEF6C9"/>
+  <rect x="300" y="430" width="6" height="164" fill="#2D5BFF"/>
+  <text x="322" y="474" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="322" dy="0">直し方の手順を</tspan><tspan x="322" dy="32">残す</tspan></text>
+  <text x="322" y="544" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="322" dy="0">止まり方ごとに</tspan></text>
+  <line x1="266" y1="512" x2="284.1" y2="512" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="294,512 280.2,518.8 280.2,505.2" fill="#2D5BFF"/>
+  <line x1="280" y1="610" x2="280" y2="634.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="280,646 271.9,629.8 288.1,629.8" fill="#2D5BFF"/>
+  <rect x="24" y="656" width="512" height="140" fill="#E8EEFF"/>
+  <text x="48" y="694" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">3つとも</text>
+  <text x="48" y="732" font-size="23" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="48" dy="0">引き継ぎの時期を先に決め、</tspan><tspan x="48" dy="33">途中から少しずつ社内に移す</tspan></text>
+</svg>

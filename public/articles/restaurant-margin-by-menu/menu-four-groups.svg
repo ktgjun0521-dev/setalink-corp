@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="925" viewBox="0 0 560 925" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">売れた数と利益率で、商品を4つに分ける（説明のための計算例）</title>
+  <desc id="fig-desc">説明のための計算例で、実在の店の数字ではない。商品を、売れた数（あまり出ない／よく出る）と利益率（高い／低い）で4つに分ける。利益率が高く、よく出る商品は主役。例は定食（利益率65%・1か月1,200食）。打ち手は、セットの軸にする、切らさない。利益率が高いのに、あまり出ない商品は、すすめ方しだい。例はデザート（80%・150食）。打ち手は、セットに入れる、目に入る所に置く。よく出るのに、利益率が低い商品は、人気だが残りにくい。例は丼（50%・1,000食）。打ち手は、組み合わせで補う、値付けを見直す。あまり出ず、利益率も低い商品は、見直し候補。例はサラダ（40%・200食）。打ち手は、メニューから外す、量や仕入れを見直す。線は、たとえば全商品の平均で引く。商品ごとに、打ち手が変わる。</desc>
+  <rect x="0" y="0" width="560" height="925" fill="#FFFDF7"/>
+  <rect x="24" y="24" width="417.1" height="34" fill="#16161D"/>
+  <text x="232.5" y="48.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">売れた数 × 利益率で、4つに分ける</text>
+  <text x="24" y="90" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="24" dy="0">※ 商品と数字は、説明のための計算例です。</tspan><tspan x="24" dy="27">実在の店の数字ではありません。</tspan></text>
+  <text x="280" y="157" font-size="20" font-weight="700" fill="#5A5D66" text-anchor="middle">売れた数</text>
+  <line x1="60" y1="175" x2="490.1" y2="175" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="500,175 486.2,181.8 486.2,168.2" fill="#16161D"/>
+  <text x="149" y="213" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">あまり出ない</text>
+  <text x="411" y="213" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">よく出る</text>
+  <rect x="24" y="235" width="187.8" height="34" fill="#2D5BFF"/>
+  <text x="117.9" y="259.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">利益率が高い ↑</text>
+  <rect x="24" y="281" width="250" height="214" fill="#E8EEFF"/>
+  <text x="42" y="319" font-size="21" font-weight="700" fill="#2D5BFF" text-anchor="start">すすめ方しだい</text>
+  <text x="42" y="353" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="42" dy="0">例：デザート</tspan><tspan x="42" dy="27">80%・150食</tspan></text>
+  <rect x="42" y="397" width="4" height="76" fill="#2D5BFF"/>
+  <text x="56" y="425" font-size="21" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="56" dy="0">セットに入れる</tspan><tspan x="56" dy="31">目に入る所に置く</tspan></text>
+  <rect x="286" y="281" width="250" height="214" fill="#EEF6C9"/>
+  <text x="304" y="319" font-size="21" font-weight="700" fill="#2D5BFF" text-anchor="start">主役</text>
+  <text x="304" y="353" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="304" dy="0">例：定食</tspan><tspan x="304" dy="27">65%・1,200食</tspan></text>
+  <rect x="304" y="397" width="4" height="76" fill="#2D5BFF"/>
+  <text x="318" y="425" font-size="21" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="318" dy="0">セットの軸にする</tspan><tspan x="318" dy="31">切らさない</tspan></text>
+  <rect x="24" y="513" width="187.8" height="34" fill="#16161D"/>
+  <text x="117.9" y="537.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">利益率が低い ↓</text>
+  <rect x="24" y="559" width="250" height="214" fill="#EFEBE0"/>
+  <text x="42" y="597" font-size="21" font-weight="700" fill="#16161D" text-anchor="start">見直し候補</text>
+  <text x="42" y="631" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="42" dy="0">例：サラダ</tspan><tspan x="42" dy="27">40%・200食</tspan></text>
+  <rect x="42" y="675" width="4" height="76" fill="#2D5BFF"/>
+  <text x="56" y="703" font-size="21" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="56" dy="0">メニューから外す</tspan><tspan x="56" dy="31">量や仕入れを見直す</tspan></text>
+  <rect x="286" y="559" width="250" height="214" fill="#E8EEFF"/>
+  <text x="304" y="597" font-size="21" font-weight="700" fill="#2D5BFF" text-anchor="start">人気だが残りにくい</text>
+  <text x="304" y="631" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="304" dy="0">例：丼</tspan><tspan x="304" dy="27">50%・1,000食</tspan></text>
+  <rect x="304" y="675" width="4" height="76" fill="#2D5BFF"/>
+  <text x="318" y="703" font-size="21" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="318" dy="0">組み合わせで補う</tspan><tspan x="318" dy="31">値付けを見直す</tspan></text>
+  <rect x="24" y="793" width="512" height="108" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <text x="48" y="831" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">線は、たとえば全商品の平均で引く</text>
+  <text x="48" y="871" font-size="23" font-weight="700" fill="#16161D" text-anchor="start">商品ごとに、打ち手が変わる</text>
+</svg>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="986" viewBox="0 0 560 986" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">日報の入力を1か所にすると、面談1回を1行として1枚の表にたまり、表から自動で集計できる</title>
+  <desc id="fig-desc">上の段は、いま。日報が、Aさんの日報、Bさんの日報のように、人ごとのファイルに分かれている。集計の前に、人の手で毎週、集めて、写して、数える。下の段は、入力を1か所にしたあと。入力の画面は1つ。面談1回が1行として、1枚の表にたまる。表の列は、日付・担当・お客様・段階・次回。行の例：11/24、Aさん、0123、提案、12/1。11/24、Bさん、0456、初回、11/28。11/25、Aさん、0123、受注、なし。表から自動で集計する。人が集めない、写さない。名前と番号は、説明のための例。</desc>
+  <rect x="0" y="0" width="560" height="986" fill="#FFFDF7"/>
+  <rect x="24" y="24" width="512" height="304" fill="#EFEBE0"/>
+  <rect x="44" y="44" width="70" height="34" fill="#16161D"/>
+  <text x="79" y="68.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">いま</text>
+  <text x="128" y="70" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">日報が、人ごとのファイルに</text>
+  <rect x="44" y="100" width="196" height="64" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <rect x="44" y="100" width="196" height="8" fill="#16161D"/>
+  <text x="142" y="144" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">Aさんの日報</text>
+  <rect x="258" y="100" width="196" height="64" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <rect x="258" y="100" width="196" height="8" fill="#16161D"/>
+  <text x="356" y="144" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">Bさんの日報</text>
+  <text x="484" y="140" font-size="22" font-weight="700" fill="#5A5D66" text-anchor="middle">…</text>
+  <line x1="280" y1="174" x2="280" y2="204.1" stroke="#16161D" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="280,214 273.2,200.2 286.8,200.2" fill="#16161D"/>
+  <rect x="44" y="222" width="472" height="86" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <text x="64" y="260" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">集めて、写して、数える</text>
+  <text x="64" y="292" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">人の手で、毎週</text>
+  <line x1="190" y1="340" x2="190" y2="368.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="190,380 181.9,363.8 198.1,363.8" fill="#2D5BFF"/>
+  <text x="214" y="368" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">入力を1か所にすると</text>
+  <rect x="24" y="392" width="512" height="570" fill="#E8EEFF"/>
+  <rect x="44" y="412" width="70" height="34" fill="#2D5BFF"/>
+  <text x="79" y="436.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">あと</text>
+  <text x="128" y="438" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">面談1回が1行で、表にたまる</text>
+  <rect x="44" y="464" width="472" height="56" fill="#FFFDF7" stroke="#16161D" stroke-width="2"/>
+  <text x="280" y="500" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">入力の画面は、1つ</text>
+  <line x1="280" y1="528" x2="280" y2="550.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="280,562 271.9,545.8 288.1,545.8" fill="#2D5BFF"/>
+  <rect x="44" y="570" width="94.4" height="40" fill="#16161D" stroke="#16161D" stroke-width="1"/>
+  <text x="91.2" y="597" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">日付</text>
+  <rect x="138.4" y="570" width="94.4" height="40" fill="#16161D" stroke="#16161D" stroke-width="1"/>
+  <text x="185.6" y="597" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">担当</text>
+  <rect x="232.8" y="570" width="94.4" height="40" fill="#16161D" stroke="#16161D" stroke-width="1"/>
+  <text x="280" y="597" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">お客様</text>
+  <rect x="327.2" y="570" width="94.4" height="40" fill="#16161D" stroke="#16161D" stroke-width="1"/>
+  <text x="374.4" y="597" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">段階</text>
+  <rect x="421.6" y="570" width="94.4" height="40" fill="#16161D" stroke="#16161D" stroke-width="1"/>
+  <text x="468.8" y="597" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">次回</text>
+  <rect x="44" y="610" width="94.4" height="40" fill="#FFFDF7" stroke="#16161D" stroke-width="1"/>
+  <text x="91.2" y="637" font-size="20" font-weight="500" fill="#16161D" text-anchor="middle">11/24</text>
+  <rect x="138.4" y="610" width="94.4" height="40" fill="#FFFDF7" stroke="#16161D" stroke-width="1"/>
+  <text x="185.6" y="637" font-size="20" font-weight="500" fill="#16161D" text-anchor="middle">Aさん</text>
+  <rect x="232.8" y="610" width="94.4" height="40" fill="#FFFDF7" stroke="#16161D" stroke-width="1"/>
+  <text x="280" y="637" font-size="20" font-weight="500" fill="#16161D" text-anchor="middle">0123</text>
+  <rect x="327.2" y="610" width="94.4" height="40" fill="#FFFDF7" stroke="#16161D" stroke-width="1"/>
+  <text x="374.4" y="637" font-size="20" font-weight="500" fill="#16161D" text-anchor="middle">提案</text>
+  <rect x="421.6" y="610" width="94.4" height="40" fill="#FFFDF7" stroke="#16161D" stroke-width="1"/>
+  <text x="468.8" y="637" font-size="20" font-weight="500" fill="#16161D" text-anchor="middle">12/1</text>
+  <rect x="44" y="650" width="94.4" height="40" fill="#FFFDF7" stroke="#16161D" stroke-width="1"/>
+  <text x="91.2" y="677" font-size="20" font-weight="500" fill="#16161D" text-anchor="middle">11/24</text>
+  <rect x="138.4" y="650" width="94.4" height="40" fill="#FFFDF7" stroke="#16161D" stroke-width="1"/>
+  <text x="185.6" y="677" font-size="20" font-weight="500" fill="#16161D" text-anchor="middle">Bさん</text>
+  <rect x="232.8" y="650" width="94.4" height="40" fill="#FFFDF7" stroke="#16161D" stroke-width="1"/>
+  <text x="280" y="677" font-size="20" font-weight="500" fill="#16161D" text-anchor="middle">0456</text>
+  <rect x="327.2" y="650" width="94.4" height="40" fill="#FFFDF7" stroke="#16161D" stroke-width="1"/>
+  <text x="374.4" y="677" font-size="20" font-weight="500" fill="#16161D" text-anchor="middle">初回</text>
+  <rect x="421.6" y="650" width="94.4" height="40" fill="#FFFDF7" stroke="#16161D" stroke-width="1"/>
+  <text x="468.8" y="677" font-size="20" font-weight="500" fill="#16161D" text-anchor="middle">11/28</text>
+  <rect x="44" y="690" width="94.4" height="40" fill="#FFFDF7" stroke="#16161D" stroke-width="1"/>
+  <text x="91.2" y="717" font-size="20" font-weight="500" fill="#16161D" text-anchor="middle">11/25</text>
+  <rect x="138.4" y="690" width="94.4" height="40" fill="#FFFDF7" stroke="#16161D" stroke-width="1"/>
+  <text x="185.6" y="717" font-size="20" font-weight="500" fill="#16161D" text-anchor="middle">Aさん</text>
+  <rect x="232.8" y="690" width="94.4" height="40" fill="#FFFDF7" stroke="#16161D" stroke-width="1"/>
+  <text x="280" y="717" font-size="20" font-weight="500" fill="#16161D" text-anchor="middle">0123</text>
+  <rect x="327.2" y="690" width="94.4" height="40" fill="#FFFDF7" stroke="#16161D" stroke-width="1"/>
+  <text x="374.4" y="717" font-size="20" font-weight="500" fill="#16161D" text-anchor="middle">受注</text>
+  <rect x="421.6" y="690" width="94.4" height="40" fill="#FFFDF7" stroke="#16161D" stroke-width="1"/>
+  <text x="468.8" y="717" font-size="20" font-weight="500" fill="#16161D" text-anchor="middle">－</text>
+  <text x="516" y="760" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="end">面談1回が、1行</text>
+  <line x1="280" y1="774" x2="280" y2="798.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="280,810 271.9,793.8 288.1,793.8" fill="#2D5BFF"/>
+  <rect x="44" y="818" width="472" height="90" fill="#EEF6C9"/>
+  <rect x="44" y="818" width="6" height="90" fill="#2D5BFF"/>
+  <text x="66" y="856" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">表から、自動で集計</text>
+  <text x="66" y="888" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">人が集めない・写さない</text>
+  <text x="44" y="942" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">※ 名前と番号は、説明のための例です。</text>
+</svg>

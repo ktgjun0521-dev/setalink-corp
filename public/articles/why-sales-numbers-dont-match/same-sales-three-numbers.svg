@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="762" viewBox="0 0 560 762" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">同じ店舗・同じ月の売上でも、決まりが違うと3つの数字になる（説明のための計算例）</title>
+  <desc id="fig-desc">説明のための計算例で、実在の会社の数字ではない。同じ店舗・同じ11月の売上を、3つの資料で見る。店舗の報告は、税込・返品を引く前で、1,100,000円。本部の集計は、税抜・返品を引く前で、1,000,000円。経理の数字は、税抜・返品を引いた後で、950,000円。店舗の報告と本部の集計の差100,000円は、税込と税抜の違い（税率10%で計算）。本部の集計と経理の数字の差50,000円は、返品を引いたかどうかの違い。どれも間違いではない。決まりが違うだけ。決まりをそろえると、同じ数字になる。</desc>
+  <rect x="0" y="0" width="560" height="762" fill="#FFFDF7"/>
+  <rect x="24" y="24" width="313.4" height="34" fill="#16161D"/>
+  <text x="180.7" y="48.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">同じ店舗・同じ11月の売上</text>
+  <text x="24" y="86" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="24" dy="0">※ 説明のための計算例です。</tspan><tspan x="24" dy="27">実在の会社の数字ではありません。</tspan></text>
+  <rect x="24" y="138" width="512" height="104" fill="#EFEBE0"/>
+  <text x="44" y="178" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">店舗の報告</text>
+  <rect x="44" y="194" width="66" height="32" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <text x="77" y="217.2" font-size="20" font-weight="700" fill="#16161D" text-anchor="middle">税込</text>
+  <rect x="120" y="194" width="153.7" height="32" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <text x="196.8" y="217.2" font-size="20" font-weight="700" fill="#16161D" text-anchor="middle">返品を引く前</text>
+  <text x="516" y="202" font-size="26" font-weight="700" fill="#16161D" text-anchor="end">1,100,000円</text>
+  <line x1="60" y1="250" x2="60" y2="286.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="60,298 51.9,281.8 68.1,281.8" fill="#2D5BFF"/>
+  <text x="88" y="282" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="start">差 100,000円</text>
+  <text x="262" y="282" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">税込と税抜の違い</text>
+  <rect x="24" y="306" width="512" height="104" fill="#EFEBE0"/>
+  <text x="44" y="346" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">本部の集計</text>
+  <rect x="44" y="362" width="66" height="32" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <text x="77" y="385.2" font-size="20" font-weight="700" fill="#16161D" text-anchor="middle">税抜</text>
+  <rect x="120" y="362" width="153.7" height="32" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <text x="196.8" y="385.2" font-size="20" font-weight="700" fill="#16161D" text-anchor="middle">返品を引く前</text>
+  <text x="516" y="370" font-size="26" font-weight="700" fill="#16161D" text-anchor="end">1,000,000円</text>
+  <line x1="60" y1="418" x2="60" y2="454.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="60,466 51.9,449.8 68.1,449.8" fill="#2D5BFF"/>
+  <text x="88" y="450" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="start">差 50,000円</text>
+  <text x="262" y="450" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">返品を引いたかどうか</text>
+  <rect x="24" y="474" width="512" height="104" fill="#EFEBE0"/>
+  <text x="44" y="514" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">経理の数字</text>
+  <rect x="44" y="530" width="66" height="32" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <text x="77" y="553.2" font-size="20" font-weight="700" fill="#16161D" text-anchor="middle">税抜</text>
+  <rect x="120" y="530" width="179.3" height="32" fill="#FFFDF7" stroke="#16161D" stroke-width="1.5"/>
+  <text x="209.6" y="553.2" font-size="20" font-weight="700" fill="#16161D" text-anchor="middle">返品を引いた後</text>
+  <text x="516" y="538" font-size="26" font-weight="700" fill="#16161D" text-anchor="end">950,000円</text>
+  <rect x="24" y="596" width="512" height="142" fill="#EEF6C9"/>
+  <rect x="24" y="596" width="6" height="142" fill="#2D5BFF"/>
+  <text x="46" y="638" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="46" dy="0">どれも間違いではない。</tspan><tspan x="46" dy="33">決まりが違うだけ</tspan></text>
+  <text x="46" y="708" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">決まりをそろえると、同じ数字になる</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="967" viewBox="0 0 560 967" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">決めたことの表が、今週の定例と来週の定例をつなぐ</title>
+  <desc id="fig-desc">上は今週の定例。1 前回決めたことの結果、2 今週の数字、3 次に何を変えるかを決める、4 誰が・何を・いつまでに、の順に進める。4で決めたことを、決めたことの表に書く。表の例（たとえば）：決めたこと、体験の当日に、お礼の連絡を入れる。誰が、本部の店舗担当。いつまでに、12月21日まで。確かめる数字、体験からの入会の割合。結果、次の定例の最初に書く。1週間動いたあと、来週の定例の1で、前回決めたことの結果として、表の結果の欄を最初に確かめる。2から4は、今週と同じ順番で進める。</desc>
+  <rect x="0" y="0" width="560" height="967" fill="#FFFDF7"/>
+  <rect x="24" y="24" width="512" height="270" fill="#FFFDF7" stroke="#16161D" stroke-width="2"/>
+  <rect x="44" y="44" width="133" height="34" fill="#16161D"/>
+  <text x="110.5" y="68.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">今週の定例</text>
+  <rect x="40" y="231" width="480" height="46" fill="#E8EEFF"/>
+  <circle cx="64" cy="116" r="18" fill="#2D5BFF"/>
+  <text x="64" y="123" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">1</text>
+  <text x="98" y="124" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">前回決めたことの結果</text>
+  <circle cx="64" cy="162" r="18" fill="#2D5BFF"/>
+  <text x="64" y="169" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">2</text>
+  <text x="98" y="170" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">今週の数字</text>
+  <circle cx="64" cy="208" r="18" fill="#2D5BFF"/>
+  <text x="64" y="215" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">3</text>
+  <text x="98" y="216" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">次に何を変えるかを決める</text>
+  <circle cx="64" cy="254" r="18" fill="#2D5BFF"/>
+  <text x="64" y="261" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">4</text>
+  <text x="98" y="262" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="start">誰が・何を・いつまでに</text>
+  <line x1="60" y1="304" x2="60" y2="330.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="60,342 51.9,325.8 68.1,325.8" fill="#2D5BFF"/>
+  <text x="88" y="331" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">4で決めたことを、表に書く</text>
+  <rect x="24" y="354" width="512" height="349" fill="#EEF6C9"/>
+  <rect x="24" y="354" width="6" height="349" fill="#2D5BFF"/>
+  <line x1="50" y1="424" x2="516" y2="424" stroke="#16161D" stroke-width="1" stroke-linecap="round"/>
+  <text x="50" y="456" font-size="20" font-weight="700" fill="#5A5D66" text-anchor="start">決めたこと</text>
+  <text x="214" y="456" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="214" dy="0">体験の当日に、</tspan><tspan x="214" dy="31">お礼の連絡を入れる</tspan></text>
+  <line x1="50" y1="501" x2="516" y2="501" stroke="#16161D" stroke-width="1" stroke-linecap="round"/>
+  <text x="50" y="533" font-size="20" font-weight="700" fill="#5A5D66" text-anchor="start">誰が</text>
+  <text x="214" y="533" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="214" dy="0">本部の店舗担当</tspan></text>
+  <line x1="50" y1="547" x2="516" y2="547" stroke="#16161D" stroke-width="1" stroke-linecap="round"/>
+  <text x="50" y="579" font-size="20" font-weight="700" fill="#5A5D66" text-anchor="start">いつまでに</text>
+  <text x="214" y="579" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="214" dy="0">12月21日まで</tspan></text>
+  <line x1="50" y1="593" x2="516" y2="593" stroke="#16161D" stroke-width="1" stroke-linecap="round"/>
+  <text x="50" y="625" font-size="20" font-weight="700" fill="#5A5D66" text-anchor="start">確かめる数字</text>
+  <text x="214" y="625" font-size="22" font-weight="700" fill="#16161D" text-anchor="start"><tspan x="214" dy="0">体験からの入会の割合</tspan></text>
+  <line x1="50" y1="639" x2="516" y2="639" stroke="#16161D" stroke-width="1" stroke-linecap="round"/>
+  <text x="50" y="671" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">結果</text>
+  <text x="214" y="671" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="start"><tspan x="214" dy="0">次の定例の最初に書く</tspan></text>
+  <line x1="50" y1="685" x2="516" y2="685" stroke="#16161D" stroke-width="1" stroke-linecap="round"/>
+  <rect x="46" y="374" width="332.9" height="34" fill="#16161D"/>
+  <text x="212.5" y="398.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">決めたことの表（たとえば）</text>
+  <line x1="60" y1="713" x2="60" y2="739.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="60,751 51.9,734.8 68.1,734.8" fill="#2D5BFF"/>
+  <text x="88" y="740" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">1週間、動く</text>
+  <rect x="24" y="763" width="512" height="180" fill="#FFFDF7" stroke="#16161D" stroke-width="2"/>
+  <rect x="44" y="783" width="133" height="34" fill="#16161D"/>
+  <text x="110.5" y="807.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">来週の定例</text>
+  <rect x="40" y="829" width="480" height="76" fill="#E8EEFF"/>
+  <circle cx="64" cy="853" r="18" fill="#2D5BFF"/>
+  <text x="64" y="860" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">1</text>
+  <text x="98" y="861" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="start">前回決めたことの結果</text>
+  <text x="98" y="891" font-size="20" font-weight="500" fill="#16161D" text-anchor="start">表の結果の欄を、最初に確かめる</text>
+  <text x="44" y="929" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">2〜4は、今週と同じ順番で進める</text>
+</svg>

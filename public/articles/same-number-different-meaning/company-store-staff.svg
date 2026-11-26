@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="974" viewBox="0 0 560 974" role="img" aria-labelledby="fig-title fig-desc" font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif">
+  <title id="fig-title">細かくするほど、手を入れる場所と打ち手が具体的になる（計算例）</title>
+  <desc id="fig-desc">説明のための計算例で、実在の会社の数字ではない。多店舗のフィットネスで、体験に来た人のうち入会した人の割合。灰色の縦の点線は、先月の割合（30%）。会社全体では30%で、先月と同じ。打ち手は出ない。店舗別に分けると、A店36%、B店20%、C店34%。B店だけが、30%から20%に下がった。手を入れるのは、B店。B店を担当者別に分けると、担当X 28%、担当Y 12%。2人の体験の案内のしかたを見比べる。細かくするほど、打ち手が具体的になる。</desc>
+  <rect x="0" y="0" width="560" height="974" fill="#FFFDF7"/>
+  <text x="24" y="46" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start"><tspan x="24" dy="0">※ 説明のための計算例です。実在の会社の</tspan><tspan x="24" dy="28">数字ではありません。点線は先月（30%）。</tspan></text>
+  <rect x="24" y="104" width="512" height="176" fill="#EFEBE0"/>
+  <rect x="44" y="124" width="112" height="34" fill="#16161D"/>
+  <text x="100" y="148.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">会社全体</text>
+  <text x="516" y="148" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="end">体験からの入会の割合</text>
+  <text x="44" y="204" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">全体</text>
+  <rect x="124" y="184" width="225" height="24" fill="#16161D"/>
+  <text x="516" y="204" font-size="22" font-weight="700" fill="#16161D" text-anchor="end">30%</text>
+  <line x1="349" y1="178" x2="349" y2="214" stroke="#5A5D66" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="44" y="254" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">先月と同じ。打ち手は出ない</text>
+  <line x1="60" y1="290" x2="60" y2="316.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="60,328 51.9,311.8 68.1,311.8" fill="#2D5BFF"/>
+  <text x="88" y="317" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">店舗別に分けると</text>
+  <rect x="24" y="340" width="512" height="286" fill="#E8EEFF"/>
+  <rect x="44" y="360" width="91" height="34" fill="#16161D"/>
+  <text x="89.5" y="384.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">店舗別</text>
+  <text x="349" y="404" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="middle">先月30%</text>
+  <text x="44" y="440" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">A店</text>
+  <rect x="124" y="420" width="270" height="24" fill="#16161D"/>
+  <text x="516" y="440" font-size="22" font-weight="700" fill="#16161D" text-anchor="end">36%</text>
+  <line x1="349" y1="414" x2="349" y2="450" stroke="#5A5D66" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="44" y="488" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="start">B店</text>
+  <rect x="124" y="468" width="150" height="24" fill="#2D5BFF"/>
+  <text x="516" y="488" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="end">20%</text>
+  <line x1="349" y1="462" x2="349" y2="498" stroke="#5A5D66" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="44" y="536" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">C店</text>
+  <rect x="124" y="516" width="255" height="24" fill="#16161D"/>
+  <text x="516" y="536" font-size="22" font-weight="700" fill="#16161D" text-anchor="end">34%</text>
+  <line x1="349" y1="510" x2="349" y2="546" stroke="#5A5D66" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="44" y="578" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="start">B店だけが、30%から20%に下がった</text>
+  <text x="44" y="610" font-size="20" font-weight="500" fill="#5A5D66" text-anchor="start">手を入れるのは、B店</text>
+  <line x1="60" y1="636" x2="60" y2="662.3" stroke="#2D5BFF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="60,674 51.9,657.8 68.1,657.8" fill="#2D5BFF"/>
+  <text x="88" y="663" font-size="20" font-weight="700" fill="#2D5BFF" text-anchor="start">B店を、担当者別に分けると</text>
+  <rect x="24" y="686" width="512" height="220" fill="#EEF6C9"/>
+  <rect x="44" y="706" width="169.5" height="34" fill="#16161D"/>
+  <text x="128.8" y="730.2" font-size="20" font-weight="700" fill="#FFFDF7" text-anchor="middle">B店の担当者別</text>
+  <text x="44" y="786" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">担当X</text>
+  <rect x="124" y="766" width="210" height="24" fill="#16161D"/>
+  <text x="516" y="786" font-size="22" font-weight="700" fill="#16161D" text-anchor="end">28%</text>
+  <text x="44" y="834" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="start">担当Y</text>
+  <rect x="124" y="814" width="90" height="24" fill="#2D5BFF"/>
+  <text x="516" y="834" font-size="22" font-weight="700" fill="#2D5BFF" text-anchor="end">12%</text>
+  <text x="44" y="882" font-size="22" font-weight="700" fill="#16161D" text-anchor="start">2人の体験の案内のしかたを見比べる</text>
+  <text x="280" y="950" font-size="22" font-weight="700" fill="#16161D" text-anchor="middle">細かくするほど、打ち手が具体的になる</text>
+</svg>
