@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import MobileCta from "@/components/MobileCta";
 import Analytics from "@/components/Analytics";
 import AttributionCapture from "@/components/AttributionCapture";
-import { feedAlternates } from "@/lib/site";
+import { LOGO_URL, feedAlternates, jsonLd } from "@/lib/site";
 import "./globals.css";
 
 const notoSansJP = Noto_Sans_JP({
@@ -90,7 +90,7 @@ const organizationSchema = {
   name: "株式会社セタリンク",
   alternateName: ["セタリンク", "SETALINK Inc."],
   url: "https://setalinkapp.com",
-  logo: "https://setalinkapp.com/images/hero-bg.jpg",
+  logo: LOGO_URL,
   description:
     "改善活動の精度を高める会社。データコンサルティング・AI導入支援・業務改善（BPR）を提供。",
   address: {
@@ -128,7 +128,7 @@ export default function RootLayout({
       >
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{ __html: jsonLd(organizationSchema) }}
         />
         <Header />
         <main>{children}</main>
